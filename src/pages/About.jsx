@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cpu, ShieldCheck, Box, User } from 'lucide-react';
 import drAidaPhoto from '../assets/aida-mehrad.jpeg';
+import VJphoto from '../assets/VJ.png';
 import LMphoto from '../assets/LM.jpeg';
 
 import CFphoto from '../assets/cf.jpeg';
@@ -33,6 +34,12 @@ const About = () => {
       role: "Executive Director",
       glow: "rgba(210,170,100,0.15)",
       image: drAidaPhoto
+    },
+    {
+      name: "Dr. Vilas Joshi",
+      role: "Executive Director",
+      glow: "rgba(0,240,255,0.12)",
+      image: VJphoto
     },
     {
       name: "Lawrence Mazaki Mashati",

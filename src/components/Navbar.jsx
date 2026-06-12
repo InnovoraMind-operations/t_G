@@ -83,6 +83,7 @@ const Navbar = ({ isLight = false, accentColor = '#00f0ff' }) => {
             {[
               { label: 'Home', to: '/' },
               { label: 'About Us', to: '/about' },
+              { label: 'Advisory Board', to: '/advisory-board' },
               { label: 'Services', to: '/services' },
               { label: 'Events', to: '/events' },
               { label: 'Contact', to: '/contact' }
