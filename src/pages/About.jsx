@@ -31,13 +31,13 @@ const About = () => {
   const team = [
     {
       name: "Dr. Aida Mehrad",
-      role: "Executive Director",
+      role: "Executive Director-Operations",
       glow: "rgba(210,170,100,0.15)",
       image: drAidaPhoto
     },
     {
       name: "Dr. Vilas Joshi",
-      role: "Executive Director",
+      role: "Executive Director-Technology",
       glow: "rgba(0,240,255,0.12)",
       image: VJphoto
     },
