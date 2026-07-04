@@ -1,16 +1,45 @@
-# React + Vite
+# Techryon Global
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Techryon Global bridges the gap between complex IT infrastructure and seamless business execution. This repository contains the source code for the official Techryon Global website, built with React and Vite.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The website features a modern, responsive design that highlights the core offerings of Techryon Global:
+- **IT Consultancy**: Enterprise-grade software development, artificial intelligence implementation, and secure architectures.
+- **Technical Events**: World-class technological gatherings and conferences (e.g., Infratech) bridging the industry.
 
-## React Compiler
+## Key Features & Recent Updates
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Complete Redesign**: Overhauled the UI with a modern tech-focused aesthetic using custom CSS and Lucide-React icons.
+- **Dynamic Content**: Transitioned to data-driven content management for Services and Events (`src/data/servicesData.js`, `src/data/eventsData.js`).
+- **New Pages & Routing**:
+  - `Home`, `About`, `Contact`
+  - `Services` & `Service Detail`
+  - `Events` & `Event Detail` (replacing the former Conferences page)
+  - `Advisory Board`
+- **Deployment**: Added Vercel configuration (`vercel.json`) for seamless routing and deployment.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Icons**: Lucide-React
+- **Styling**: Vanilla CSS with modern glassmorphism and glow effects
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
