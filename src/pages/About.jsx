@@ -1,11 +1,9 @@
 import React from 'react';
 import { Cpu, ShieldCheck, Box, User } from 'lucide-react';
-import drAidaPhoto from '../assets/aida-mehrad.jpeg';
 import VJphoto from '../assets/VJ.png';
 import LMphoto from '../assets/LM.jpeg';
 
 import CFphoto from '../assets/cf.jpeg';
-import ZRphoto from '../assets/ZR.jpeg';
 
 const About = () => {
   const values = [
@@ -30,18 +28,6 @@ const About = () => {
   ];
 
   const team = [
-    {
-      name: "Dr. Aida Mehrad",
-      role: "Executive Director-Operations",
-      glow: "rgba(210,170,100,0.15)",
-      image: drAidaPhoto
-    },
-    {
-      name: "Dr. Zoha Rahman",
-      role: "Executive Director-Strategy",
-      glow: "rgba(139,92,246,0.15)",
-      image: ZRphoto
-    },
     {
       name: "Dr. Vilas Joshi",
       role: "Executive Director-Technology",
