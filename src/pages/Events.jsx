@@ -290,10 +290,12 @@ const EventCard = ({ ev, visual, idx, IconComp, catStyle, onLearnMore }) => {
           <CalendarDays size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
           <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.date}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <MapPin size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
-          <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.location}</span>
-        </div>
+        {ev.location && ev.location !== ev.format && !(ev.location === 'Virtual' && ev.format.includes('Virtual')) && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <MapPin size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.location}</span>
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <Globe size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
           <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#d2aa64', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -410,10 +412,12 @@ const UpcomingEventCard = ({ event, idx, onLearnMore }) => {
           <CalendarDays size={14} style={{ color: event.accent, flexShrink: 0 }} />
           <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.date}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <MapPin size={14} style={{ color: event.accent, flexShrink: 0 }} />
-          <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.location}</span>
-        </div>
+        {event.location && event.location !== event.format && !(event.location === 'Virtual' && event.format.includes('Virtual')) && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <MapPin size={14} style={{ color: event.accent, flexShrink: 0 }} />
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.location}</span>
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <Globe size={14} style={{ color: event.accent, flexShrink: 0 }} />
           <span style={{ fontSize: '0.75rem', fontWeight: 600, color: event.accent, textTransform: 'uppercase', letterSpacing: '0.06em' }}>

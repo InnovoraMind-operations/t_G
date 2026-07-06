@@ -144,9 +144,9 @@ const EventDetail = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
               {[
                 { Icon: CalendarDays, text: ev.date },
-                { Icon: MapPin, text: ev.location },
+                (ev.location && ev.location !== ev.format && !(ev.location === 'Virtual' && ev.format.includes('Virtual'))) ? { Icon: MapPin, text: ev.location } : null,
                 { Icon: Globe, text: ev.format },
-              ].map(({ Icon, text }, i) => (
+              ].filter(Boolean).map(({ Icon, text }, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Icon size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
                   <span style={{ fontSize: '0.85rem', color: '#a09080' }}>{text}</span>

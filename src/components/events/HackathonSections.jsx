@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   Sparkles, Target, CalendarClock, Award, Users, Star, ArrowRight, 
   BrainCircuit, Globe, CheckCircle, UserCheck, FileText, BarChart, 
-  Calendar, Handshake, Mail, MapPin 
+  Calendar, Handshake, Mail, MapPin, Laptop, Rocket, Medal, Trophy,
+  GraduationCap
 } from 'lucide-react';
 
 const HackathonSections = () => {
@@ -90,25 +91,37 @@ const HackathonSections = () => {
           <CheckCircle size={18} style={{ color: '#64b4d2' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Event Highlights</h3>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
           {[
-            { text: '🌍 Global Virtual Event', glow: 'rgba(100,180,210,0.1)', color: '#64b4d2' },
-            { text: '🤖 AI-Focused Innovation Challenge', glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
-            { text: '🎓 International Judges & Mentors', glow: 'rgba(210,170,100,0.1)', color: '#d2aa64' },
-            { text: '👥 Team Size: 1–5 Members', glow: 'rgba(180,110,210,0.1)', color: '#b46ed2' },
-            { text: '🏅 Digital Certificates', glow: 'rgba(210,110,110,0.1)', color: '#d26e6e' },
-            { text: '🌐 Open Worldwide', glow: 'rgba(100,180,210,0.1)', color: '#64b4d2' },
-            { text: '💻 Fully Online Participation', glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
-            { text: '🚀 Multiple Innovation Tracks', glow: 'rgba(210,170,100,0.1)', color: '#d2aa64' },
-          ].map((item, i) => (
-            <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '1rem',
-              border: `1px solid rgba(255,255,255,0.1)`, display: 'flex', alignItems: 'center', gap: '0.75rem',
-              boxShadow: `inset 0 0 15px ${item.glow}`
-            }}>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{item.text}</span>
-            </div>
-          ))}
+            { title: 'Global Virtual Event', desc: 'Join from anywhere in the world through our immersive online platform, breaking geographical barriers.', icon: Globe, glow: 'rgba(100,180,210,0.1)', color: '#64b4d2' },
+            { title: 'AI-Focused Innovation Challenge', desc: 'Tackle real-world problems by building cutting-edge solutions powered by Artificial Intelligence and Machine Learning.', icon: BrainCircuit, glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
+            { title: 'International Judges & Mentors', desc: 'Get evaluated and guided by a diverse panel of esteemed industry leaders, researchers, and academic experts.', icon: GraduationCap, glow: 'rgba(210,170,100,0.1)', color: '#d2aa64' },
+            { title: 'Team Size: 1–5 Members', desc: 'Participate as an individual or collaborate with a team to combine diverse skills and perspectives.', icon: Users, glow: 'rgba(180,110,210,0.1)', color: '#b46ed2' },
+            { title: 'Digital Certificates', desc: 'Earn verifiable digital certificates to recognize your participation, achievements, and contributions.', icon: Award, glow: 'rgba(210,110,110,0.1)', color: '#d26e6e' },
+            { title: 'Open Worldwide', desc: 'Accessible to students, developers, and professionals globally, fostering a truly international community.', icon: Globe, glow: 'rgba(100,180,210,0.1)', color: '#64b4d2' },
+            { title: 'Fully Online Participation', desc: 'Experience seamless collaboration, project submission, and live demonstrations entirely online.', icon: Laptop, glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
+            { title: 'Multiple Innovation Tracks', desc: 'Choose from various specialized tracks including Healthcare, FinTech, Smart Cities, and Education Technology.', icon: Target, glow: 'rgba(210,170,100,0.1)', color: '#d2aa64' },
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '1rem',
+                border: `1px solid rgba(255,255,255,0.1)`, display: 'flex', alignItems: 'flex-start', gap: '1rem',
+                boxShadow: `inset 0 0 15px ${item.glow}`, transition: 'transform 0.2s', cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; }}
+              >
+                <div style={{ padding: '0.6rem', borderRadius: '0.5rem', background: item.glow, flexShrink: 0 }}>
+                  <Icon size={24} style={{ color: item.color }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#e8e8ee', marginBottom: '0.4rem' }}>{item.title}</h4>
+                  <p style={{ fontSize: '0.85rem', color: '#9090a0', lineHeight: 1.5 }}>{item.desc}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -241,22 +254,25 @@ const HackathonSections = () => {
         <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Certificates Available</h4>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
           {[
-            { title: 'Participation Certificate', icon: '🏅', glow: 'rgba(0,220,180,0.1)' },
-            { title: 'Winner Certificate', icon: '🏆', glow: 'rgba(250,204,21,0.1)' },
-            { title: 'Runner-Up Certificate', icon: '🥈', glow: 'rgba(200,200,200,0.1)' },
-            { title: 'Judge Certificate', icon: '🎓', glow: 'rgba(100,180,210,0.1)' },
-            { title: 'Mentor Certificate', icon: '🤝', glow: 'rgba(210,170,100,0.1)' },
-            { title: 'Organizing Team Certificate', icon: '📜', glow: 'rgba(180,110,210,0.1)' }
-          ].map((cert, i) => (
-            <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '1rem',
-              border: `1px solid rgba(255,255,255,0.1)`, display: 'flex', alignItems: 'center', gap: '1rem',
-              boxShadow: `inset 0 0 20px ${cert.glow}`
-            }}>
-              <span style={{ fontSize: '1.5rem' }}>{cert.icon}</span>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{cert.title}</span>
-            </div>
-          ))}
+            { title: 'Participation Certificate', icon: Award, glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
+            { title: 'Winner Certificate', icon: Trophy, glow: 'rgba(250,204,21,0.1)', color: '#facc15' },
+            { title: 'Runner-Up Certificate', icon: Medal, glow: 'rgba(200,200,200,0.1)', color: '#c8c8c8' },
+            { title: 'Judge Certificate', icon: GraduationCap, glow: 'rgba(100,180,210,0.1)', color: '#64b4d2' },
+            { title: 'Mentor Certificate', icon: Handshake, glow: 'rgba(210,170,100,0.1)', color: '#d2aa64' },
+            { title: 'Organizing Team Certificate', icon: FileText, glow: 'rgba(180,110,210,0.1)', color: '#b46ed2' }
+          ].map((cert, i) => {
+            const Icon = cert.icon;
+            return (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '1rem',
+                border: `1px solid rgba(255,255,255,0.1)`, display: 'flex', alignItems: 'center', gap: '1rem',
+                boxShadow: `inset 0 0 20px ${cert.glow}`
+              }}>
+                <Icon size={24} style={{ color: cert.color }} />
+                <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{cert.title}</span>
+              </div>
+            );
+          })}
         </div>
 
         <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Special Recognitions</h4>
@@ -421,7 +437,7 @@ const HackathonSections = () => {
             boxShadow: '0 8px 32px rgba(0,220,180,0.05)'
           }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span>🚀</span> Participant Registration
+              <Rocket size={24} style={{ color: '#00dcb4' }} /> Participant Registration
             </h3>
             <p style={{ fontSize: '0.95rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem' }}>
               Ready to innovate and compete with participants from around the world?
@@ -462,7 +478,7 @@ const HackathonSections = () => {
             boxShadow: '0 8px 32px rgba(210,170,100,0.05)'
           }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span>🎓</span> Judge Registration
+              <GraduationCap size={24} style={{ color: '#d2aa64' }} /> Judge Registration
             </h3>
             <p style={{ fontSize: '0.95rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem' }}>
               Join our distinguished panel of industry experts, researchers, and academic leaders.
