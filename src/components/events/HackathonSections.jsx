@@ -297,35 +297,54 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── JUDGES & MENTORS ── */}
+      {/* ── INTERNATIONAL JUDGES ── */}
       <section>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Users size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>International Judges & Mentors</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>International Judges</h3>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            TechryonGlobal AI Hackathon 2026 will feature an international panel of experts from academia, industry, research organizations, and technology companies.
+            Meet the distinguished panel of international experts, researchers, professors, and industry leaders responsible for evaluating innovative AI solutions.
           </p>
-          <h4 style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600, marginBottom: '1rem' }}>Areas of expertise include:</h4>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.5rem' }}>
-             {[
-               'Artificial Intelligence & Machine Learning',
-               'Data Science & Analytics',
-               'Software Engineering',
-               'Cybersecurity',
-               'Healthcare Technology',
-               'FinTech',
-               'Sustainability',
-               'Entrepreneurship & Innovation'
-             ].map((org, i) => (
-               <span key={i} style={{
-                 padding: '0.5rem 1rem', background: 'rgba(100,180,210,0.1)', color: '#64b4d2',
-                 borderRadius: '2rem', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(100,180,210,0.2)'
-               }}>{org}</span>
-             ))}
+          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(100,180,210,0.05)', borderRadius: '1rem', border: '1px dashed rgba(100,180,210,0.3)' }}>
+             <p style={{ fontSize: '1.1rem', color: '#64b4d2', fontWeight: 600 }}>Panel Announcements Coming Soon</p>
+             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>We are curating an exceptional lineup of global AI leaders. Stay tuned for updates.</p>
           </div>
-          <p style={{ fontSize: '0.9rem', color: '#808090', fontStyle: 'italic' }}>* Judge and mentor profiles will be announced soon.</p>
+        </div>
+      </section>
+
+      {/* ── MENTORS & EXPERTS ── */}
+      <section>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
+          <GraduationCap size={18} style={{ color: '#d2aa64' }} />
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Mentors & Experts</h3>
+        </div>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+            Connect with experienced professionals, researchers, and technology experts who will provide guidance, technical insights, and mentorship throughout the hackathon.
+          </p>
+          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(210,170,100,0.05)', borderRadius: '1rem', border: '1px dashed rgba(210,170,100,0.3)' }}>
+             <p style={{ fontSize: '1.1rem', color: '#d2aa64', fontWeight: 600 }}>Mentorship Roster to be Revealed</p>
+             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>Our network of industry professionals is currently being finalized.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FEATURED PARTICIPANTS ── */}
+      <section>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
+          <Rocket size={18} style={{ color: '#00dcb4' }} />
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Participants</h3>
+        </div>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+            Discover outstanding teams, innovators, startups, researchers, and developers participating in the TechryonGlobal AI Hackathon 2026.
+          </p>
+          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(0,220,180,0.05)', borderRadius: '1rem', border: '1px dashed rgba(0,220,180,0.3)' }}>
+             <p style={{ fontSize: '1.1rem', color: '#00dcb4', fontWeight: 600 }}>Participants Showcase Launching Soon</p>
+             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>Exciting teams and startups will be featured here as registrations progress.</p>
+          </div>
         </div>
       </section>
 
