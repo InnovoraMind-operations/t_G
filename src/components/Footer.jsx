@@ -58,7 +58,7 @@ const Footer = () => {
         }}
       >
         {/* Top row */}
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
           {/* Brand & Social */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity" style={{ width: 'fit-content' }}>
@@ -121,6 +121,15 @@ const Footer = () => {
                 <span style={{ fontSize: '0.95rem', fontWeight: 500, letterSpacing: '0.02em' }}>inquiries@techryonglobal.com</span>
               </a>
             </div>
+          </div>
+
+          {/* Address Details */}
+          <div className="text-left md:text-right" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '300px' }}>
+            <h3 style={{ color: t.text, fontSize: '1.1rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Office Address</h3>
+            <p style={{ fontSize: '0.9rem', color: t.subtle, lineHeight: '1.6' }}>
+              B1-501, Nandan Acura, Laxman Nagar,<br />
+              Baner Pune -411045
+            </p>
           </div>
         </div>
 
