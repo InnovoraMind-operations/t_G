@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { eventsData } from '../data/eventsData';
 import InfratechSections from '../components/events/InfratechSections';
+import HackathonSections from '../components/events/HackathonSections';
 
 /* ─── Visual Mapping ───────────────────────────────────────── */
 const visualMap = {
@@ -131,6 +132,11 @@ const EventDetail = () => {
             <IconComp size={32} />
           </div>
           <div>
+            {ev.id === 'evt_012' && (
+              <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#00dcb4', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                TechryonGlobal Presents
+              </div>
+            )}
             <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: '1rem' }}>
               {ev.title}
             </h1>
@@ -138,9 +144,9 @@ const EventDetail = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
               {[
                 { Icon: CalendarDays, text: ev.date },
-                { Icon: MapPin, text: ev.location },
+                (ev.location && ev.location !== ev.format && !(ev.location === 'Virtual' && ev.format.includes('Virtual'))) ? { Icon: MapPin, text: ev.location } : null,
                 { Icon: Globe, text: ev.format },
-              ].map(({ Icon, text }, i) => (
+              ].filter(Boolean).map(({ Icon, text }, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Icon size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
                   <span style={{ fontSize: '0.85rem', color: '#a09080' }}>{text}</span>
@@ -173,6 +179,28 @@ const EventDetail = () => {
                     background: 'rgba(210,170,100,0.07)',
                     border: '1px solid rgba(210,170,100,0.18)',
                     color: '#a09070',
+                  }}>
+                    <Tag size={11} />{tag}
+                  </span>
+                ))}
+              </div>
+            </section>
+          </>
+        ) : ev.id === 'evt_012' ? (
+          <>
+            <HackathonSections />
+
+            {/* Tags */}
+            <section>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {ev.tags.map(tag => (
+                  <span key={tag} style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '0.25rem',
+                    fontSize: '0.78rem', fontWeight: 600,
+                    padding: '0.3rem 0.8rem', borderRadius: '2rem',
+                    background: 'rgba(0,220,180,0.07)',
+                    border: '1px solid rgba(0,220,180,0.18)',
+                    color: '#00dcb4',
                   }}>
                     <Tag size={11} />{tag}
                   </span>

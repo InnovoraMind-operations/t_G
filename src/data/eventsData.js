@@ -421,5 +421,22 @@ export const eventsData = [
     ],
     "speakers": [],
     "pricing": []
+  },
+  {
+    "id": "evt_012",
+    "slug": "ai-software-hackathon-2026",
+    "title": "TechryonGlobal AI Hackathon 2026",
+    "format": "Virtual (Worldwide Participation)",
+    "location": "Virtual",
+    "date": "02 August 2026",
+    "category": "Technical Summit",
+    "tags": [],
+    "overview": "The TechryonGlobal AI Hackathon 2026 is an international virtual innovation challenge that brings together students, developers, researchers, entrepreneurs, startups, and technology enthusiasts from across the globe. Organized by TechryonGlobal, this hackathon aims to foster innovation, collaboration, and technological excellence by encouraging participants to develop impactful solutions using Artificial Intelligence and emerging technologies.",
+    "themes": [
+      "AI for a Smarter, Sustainable & Inclusive Future"
+    ],
+    "agenda": [],
+    "speakers": [],
+    "pricing": []
   }
 ];

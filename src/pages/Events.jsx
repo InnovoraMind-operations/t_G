@@ -115,6 +115,7 @@ const Events = () => {
             gap: '1.75rem',
           }}>
             {[
+              /*
               {
                 id: 'evt_008',
                 slug: 'infratech-world-2026',
@@ -166,6 +167,23 @@ const Events = () => {
                 glow: 'rgba(220,60,60,0.15)',
                 description: 'Global Conference on Core IT Infrastructure & Technologies: a premier summit uniting industry leaders and researchers to address mission-critical IT infrastructure, cybersecurity frameworks, networking innovations, and the future of enterprise technology stacks.',
                 tags: ['#ITInfra', '#CoreIT', '#Cybersecurity', '#Networking'],
+              },
+              */
+              {
+                id: 'evt_012',
+                slug: 'ai-software-hackathon-2026',
+                title: 'Global Innovation Hackathon 2026 (GIH-26)',
+                date: '2 August 2026',
+                dateShort: { month: 'AUG', day: '02' },
+                location: 'Virtual',
+                format: 'Virtual',
+                duration: '24 Hours',
+                teamSize: '1–5 Members',
+                theme: 'AI for a Smarter, Sustainable & Inclusive Future',
+                accent: 'rgba(0,220,180,0.85)',
+                glow: 'rgba(0,220,180,0.15)',
+                description: 'Build innovative AI-powered solutions addressing real-world challenges in healthcare, education, sustainability, smart cities, fintech, cybersecurity, and social impact.',
+                tags: ['#AI', '#GenAI', '#Innovation', '#Hackathon', '#Global', '#Technology'],
               },
             ].map((upcoming, idx) => (
               <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />
@@ -272,10 +290,12 @@ const EventCard = ({ ev, visual, idx, IconComp, catStyle, onLearnMore }) => {
           <CalendarDays size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
           <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.date}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <MapPin size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
-          <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.location}</span>
-        </div>
+        {ev.location && ev.location !== ev.format && !(ev.location === 'Virtual' && ev.format.includes('Virtual')) && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <MapPin size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{ev.location}</span>
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <Globe size={14} style={{ color: '#d2aa64', flexShrink: 0 }} />
           <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#d2aa64', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -392,16 +412,40 @@ const UpcomingEventCard = ({ event, idx, onLearnMore }) => {
           <CalendarDays size={14} style={{ color: event.accent, flexShrink: 0 }} />
           <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.date}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <MapPin size={14} style={{ color: event.accent, flexShrink: 0 }} />
-          <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.location}</span>
-        </div>
+        {event.location && event.location !== event.format && !(event.location === 'Virtual' && event.format.includes('Virtual')) && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <MapPin size={14} style={{ color: event.accent, flexShrink: 0 }} />
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.location}</span>
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <Globe size={14} style={{ color: event.accent, flexShrink: 0 }} />
           <span style={{ fontSize: '0.75rem', fontWeight: 600, color: event.accent, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
             {event.format}
           </span>
         </div>
+        {event.duration && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: event.accent, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              Duration:
+            </span>
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.duration}</span>
+          </div>
+        )}
+        {event.teamSize && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: event.accent, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              Team Size:
+            </span>
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.teamSize}</span>
+          </div>
+        )}
+        {event.theme && (
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginTop: '0.2rem' }}>
+            <Brain size={14} style={{ color: event.accent, flexShrink: 0, marginTop: '2px' }} />
+            <span style={{ fontSize: '0.83rem', color: '#b0a090' }}><strong>Theme:</strong> {event.theme}</span>
+          </div>
+        )}
       </div>
 
       {/* Divider */}
@@ -439,7 +483,7 @@ const UpcomingEventCard = ({ event, idx, onLearnMore }) => {
             letterSpacing: '0.06em', textTransform: 'uppercase',
           }}
         >
-          Learn More <ArrowUpRight size={14} style={{
+          Register Now / Learn More <ArrowUpRight size={14} style={{
             transition: 'transform 0.25s ease',
             transform: hovered ? 'translate(2px, -2px)' : 'translate(0, 0)'
           }} />
