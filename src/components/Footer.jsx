@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import tgLogo from '../assets/tg-logo.png';
 
 const Footer = () => {
@@ -119,6 +119,23 @@ const Footer = () => {
               >
                 <Mail size={22} />
                 <span style={{ fontSize: '0.95rem', fontWeight: 500, letterSpacing: '0.02em' }}>inquiries@techryonglobal.com</span>
+              </a>
+
+              <a
+                href="tel:+919322407176"
+                style={{
+                  color: t.subtle,
+                  transition: 'color 0.2s',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.6rem'
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = t.accent}
+                onMouseLeave={e => e.currentTarget.style.color = t.subtle}
+                aria-label="Call Us"
+              >
+                <Phone size={22} />
+                <span style={{ fontSize: '0.95rem', fontWeight: 500, letterSpacing: '0.02em' }}>+91 9322407176</span>
               </a>
             </div>
           </div>
