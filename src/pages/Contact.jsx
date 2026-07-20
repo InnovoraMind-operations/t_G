@@ -28,20 +28,17 @@ const Contact = () => {
               </h2>
               <div className="flex flex-col gap-6">
 
-                {/* TODO: Uncomment real address and phone when ready
-                
                 <div className="group flex items-center" style={{ gap: '1.25rem' }}>
                   <div className="transition-all duration-300" style={{ padding: '0.75rem', background: 'rgba(0, 240, 255, 0.1)', color: '#00f0ff', borderRadius: '0.75rem' }}>
                     <MapPin size={22} />
                   </div>
                   <div>
                     <p className="text-secondary leading-relaxed text-lg">
-                      1 Example Street,<br />
-                      Innovation District, TX 00000
+                      B1-501, Nandan Acura,<br />
+                      Laxman Nagar, Baner Pune -411045
                     </p>
                   </div>
                 </div>
-                */}
 
                 <div className="group flex items-center" style={{ gap: '1.25rem' }}>
                   <div className="transition-all duration-300" style={{ padding: '0.75rem', background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', borderRadius: '0.75rem' }}>
@@ -54,18 +51,16 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/*
                 <div className="group flex items-center" style={{ gap: '1.25rem' }}>
                   <div className="transition-all duration-300" style={{ padding: '0.75rem', background: 'rgba(236, 72, 153, 0.1)', color: '#ec4899', borderRadius: '0.75rem' }}>
                     <Phone size={22} />
                   </div>
                   <div>
                     <p className="text-secondary leading-relaxed text-lg">
-                      +1 (800) TECH-RYON
+                      +91 93224 07176
                     </p>
                   </div>
                 </div>
-                */}
 
               </div>
             </div>
