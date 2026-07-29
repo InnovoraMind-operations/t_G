@@ -424,14 +424,14 @@ export const eventsData = [
   },
   {
     "id": "evt_012",
-    "slug": "ai-software-hackathon-2026",
-    "title": "TechryonGlobal AI Hackathon 2026",
-    "format": "Virtual (Worldwide Participation)",
+    "slug": "innovation-forum-hackathon-2026",
+    "title": "TechryonGlobal Innovation Forum & Global Hackathon 2026",
+    "format": "Virtual | Worldwide Participation",
     "location": "Virtual",
-    "date": "02 August 2026",
+    "date": "30 August 2026",
     "category": "Technical Summit",
     "tags": [],
-    "overview": "The TechryonGlobal AI Hackathon 2026 is an international virtual innovation challenge that brings together students, developers, researchers, entrepreneurs, startups, and technology enthusiasts from across the globe. Organized by TechryonGlobal, this hackathon aims to foster innovation, collaboration, and technological excellence by encouraging participants to develop impactful solutions using Artificial Intelligence and emerging technologies.",
+    "overview": "The TechryonGlobal Innovation Forum & Global Hackathon 2026 is an international virtual platform that brings together students, researchers, developers, entrepreneurs, startups, faculty members, innovators, and industry professionals from across the world. Organized by TechryonGlobal, this event aims to foster innovation, collaboration, and technological excellence by encouraging participants to develop impactful solutions using Artificial Intelligence and emerging technologies.",
     "themes": [
       "AI for a Smarter, Sustainable & Inclusive Future"
     ],

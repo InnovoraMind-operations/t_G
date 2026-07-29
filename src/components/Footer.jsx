@@ -140,6 +140,35 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links (Only on Events) */}
+          {isEvents && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', minWidth: '150px' }}>
+              <h3 style={{ color: t.text, fontSize: '1.1rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Quick Links</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem 2rem' }}>
+                {[
+                  { label: 'About', href: '#about-event' },
+                  { label: 'Innovation Forum', href: '#innovation-forum' },
+                  { label: 'Global Hackathon', href: '#global-hackathon' },
+                  { label: 'Tracks', href: '#tracks' },
+                  { label: 'Schedule', href: '#schedule' },
+                  { label: 'Judges', href: '#judges' },
+                  { label: 'Speakers', href: '#speakers' },
+                  { label: 'Mentors', href: '#mentors' },
+                  { label: 'Registration', href: '#registration' },
+                  { label: 'FAQs', href: '#faq' },
+                  { label: 'Contact', href: '#contact' },
+                  { label: 'Privacy Policy', href: '#' },
+                  { label: 'Terms & Conditions', href: '#' },
+                  { label: 'Code of Conduct', href: '#' }
+                ].map((link, i) => (
+                  <a key={i} href={link.href} style={{ fontSize: '0.9rem', color: t.subtle, textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = t.accent} onMouseLeave={e => e.currentTarget.style.color = t.subtle}>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Address Details */}
           <div className="text-left md:text-right" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '300px' }}>
             <h3 style={{ color: t.text, fontSize: '1.1rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Office Address</h3>

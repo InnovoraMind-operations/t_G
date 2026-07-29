@@ -171,10 +171,10 @@ const Events = () => {
               */
               {
                 id: 'evt_012',
-                slug: 'ai-software-hackathon-2026',
-                title: 'Global Innovation Hackathon 2026 (GIH-26)',
-                date: '2 August 2026',
-                dateShort: { month: 'AUG', day: '02' },
+                slug: 'innovation-forum-hackathon-2026',
+                title: 'TechryonGlobal Innovation Forum & Global Hackathon 2026',
+                date: '30 August 2026',
+                dateShort: { month: 'AUG', day: '30' },
                 location: 'Virtual',
                 format: 'Virtual',
                 duration: '24 Hours',

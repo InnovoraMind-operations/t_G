@@ -137,9 +137,14 @@ const EventDetail = () => {
                 TechryonGlobal Presents
               </div>
             )}
-            <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: '1rem' }}>
+            <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: ev.id === 'evt_012' ? '0.5rem' : '1rem' }}>
               {ev.title}
             </h1>
+            {ev.id === 'evt_012' && (
+              <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00dcb4', marginBottom: '1.5rem' }}>
+                Innovate. Collaborate. Transform the Future.
+              </div>
+            )}
             {/* Meta row */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
               {[
