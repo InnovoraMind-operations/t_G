@@ -438,5 +438,20 @@ export const eventsData = [
     "agenda": [],
     "speakers": [],
     "pricing": []
+  },
+  {
+    "id": "evt_013",
+    "slug": "iccint-2027",
+    "title": "International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2027)",
+    "format": "Hybrid (Online & Offline)",
+    "location": "Hybrid (Online & Offline)",
+    "date": "August 9, 2026",
+    "category": "Technical Conference",
+    "tags": ["#ArtificialIntelligence", "#ConnectedIntelligence", "#NextGenTech", "#DataScience", "#Cybersecurity", "#CloudComputing", "#IoT", "#Robotics", "#Industry5.0", "#SmartManufacturing"],
+    "overview": "The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2027) serves as a premier global platform for researchers, academicians, industry professionals, innovators, entrepreneurs, policymakers, and students to exchange cutting-edge research, emerging technological advancements, and practical innovations shaping the future of intelligent systems.",
+    "themes": [],
+    "agenda": [],
+    "speakers": [],
+    "pricing": []
   }
 ];

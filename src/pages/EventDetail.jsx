@@ -8,6 +8,7 @@ import {
 import { eventsData } from '../data/eventsData';
 import InfratechSections from '../components/events/InfratechSections';
 import HackathonSections from '../components/events/HackathonSections';
+import IccintSections from '../components/events/IccintSections';
 
 /* ─── Visual Mapping ───────────────────────────────────────── */
 const visualMap = {
@@ -206,6 +207,28 @@ const EventDetail = () => {
                     background: 'rgba(0,220,180,0.07)',
                     border: '1px solid rgba(0,220,180,0.18)',
                     color: '#00dcb4',
+                  }}>
+                    <Tag size={11} />{tag}
+                  </span>
+                ))}
+              </div>
+            </section>
+          </>
+        ) : ev.id === 'evt_013' ? (
+          <>
+            <IccintSections />
+
+            {/* Tags */}
+            <section>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {ev.tags.map(tag => (
+                  <span key={tag} style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '0.25rem',
+                    fontSize: '0.78rem', fontWeight: 600,
+                    padding: '0.3rem 0.8rem', borderRadius: '2rem',
+                    background: 'rgba(100,180,210,0.07)',
+                    border: '1px solid rgba(100,180,210,0.18)',
+                    color: '#64b4d2',
                   }}>
                     <Tag size={11} />{tag}
                   </span>

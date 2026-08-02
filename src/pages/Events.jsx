@@ -185,6 +185,19 @@ const Events = () => {
                 description: 'Build innovative AI-powered solutions addressing real-world challenges in healthcare, education, sustainability, smart cities, fintech, cybersecurity, and social impact.',
                 tags: ['#AI', '#GenAI', '#Innovation', '#Hackathon', '#Global', '#Technology'],
               },
+              {
+                id: 'evt_013',
+                slug: 'iccint-2027',
+                title: 'International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2027)',
+                date: '9 August 2026',
+                dateShort: { month: 'AUG', day: '09' },
+                location: 'Hybrid (Online & Offline)',
+                format: 'Hybrid',
+                accent: 'rgba(100,180,210,0.85)',
+                glow: 'rgba(100,180,210,0.15)',
+                description: 'The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2027) serves as a premier global platform for researchers, academicians, industry professionals, innovators, and entrepreneurs.',
+                tags: ['#ConnectedIntelligence', '#NextGenTech', '#IoT', '#AI', '#Industry5.0', '#DigitalTransformation'],
+              },
             ].map((upcoming, idx) => (
               <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />
             ))}
