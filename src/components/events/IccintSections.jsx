@@ -59,24 +59,307 @@ const IccintSections = () => {
 
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
 
+
       <section>
-        <SectionHeading icon={Users} label="Who Should Attend" accent={accentSolid} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+        <SectionHeading icon={Users} label="Featured Speakers" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+          gap: '2.5rem',
+          marginTop: '1.5rem',
+          justifyItems: 'center'
+        }}>
           {[
-            "Researchers", "Faculty Members", "Scientists", "Industry Professionals",
-            "Engineers", "Technology Leaders", "Startup Founders", "Entrepreneurs",
-            "PhD Scholars", "Postgraduate Students", "Undergraduate Students", 
-            "Government Officials", "Innovation Centers", "Research Organizations"
-          ].map((item, idx) => (
-            <div key={idx} style={{ 
-              background: 'rgba(255,255,255,0.03)', 
-              padding: '0.75rem 1rem', 
-              borderRadius: '0.5rem',
-              border: '1px solid rgba(255,255,255,0.06)',
-              fontSize: '0.9rem',
-              color: '#d2d2d2'
+            {
+              name: 'Dr. Ayoub Regragui',
+              role: 'Researcher',
+              institution: 'Mohammed V University, Rabat',
+              country: 'Morocco',
+              photo: '/images/iccint/dr-ayoub-regragui.jpg'
+            },
+            {
+              name: 'Hicham ELKHOUAJA',
+              role: 'Researcher',
+              institution: '',
+              country: 'Morocco',
+              photo: '/images/iccint/hicham-elkhouaja.jpg'
+            },
+            {
+              name: 'Dr. Ruth Abiola Adimula',
+              role: 'Academic & Researcher',
+              institution: 'University of Ilorin',
+              country: 'Nigeria',
+              photo: '/images/iccint/dr-ruth-adimula.jpg'
+            },
+            {
+              name: 'Roksolana Trach',
+              role: 'Independent Crypto Analyst & International Financial Market Analyst',
+              institution: '',
+              country: 'USA',
+              photo: '/images/iccint/roksolana-trach.jpg'
+            },
+            {
+              name: 'Mouhssin Ait El Mouden',
+              role: 'Researcher',
+              institution: 'Ibn Tofail University',
+              country: 'Morocco',
+              photo: '/images/iccint/mouhssin-ait-el-mouden.jpeg'
+            },
+          ].map((speaker, idx) => (
+            <div key={idx} style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              width: '100%',
+              maxWidth: '220px'
             }}>
-              {item}
+              {/* Circular Photo */}
+              <div style={{
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                background: 'rgba(255,255,255,0.04)',
+                marginBottom: '1rem',
+                border: `2px solid transparent`,
+                transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+                cursor: 'pointer',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = '#00d285';
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 210, 133, 0.4)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'transparent';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
+                <img
+                  src={speaker.photo}
+                  alt={speaker.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    display: 'block',
+                  }}
+                />
+              </div>
+
+              {/* Info */}
+              <h5 style={{
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                color: '#00d285',
+                margin: '0 0 0.3rem 0',
+                lineHeight: 1.3,
+              }}>
+                {speaker.name}
+              </h5>
+              <p style={{
+                fontSize: '0.85rem',
+                color: '#9090a0',
+                margin: '0 0 0.5rem 0',
+                lineHeight: 1.4,
+              }}>
+                {speaker.role}{speaker.institution ? `, ${speaker.institution}` : ''}
+              </p>
+              <div style={{
+                fontSize: '0.75rem',
+                color: '#00d285',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                {speaker.country}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
+
+      <section>
+        <SectionHeading icon={User} label="Session Experts" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+          gap: '2.5rem',
+          marginTop: '1.5rem',
+          justifyItems: 'center'
+        }}>
+          {[
+            {
+              name: 'Dr. Muhammad Tahir Jan',
+              role: 'Associate Professor',
+              institution: '',
+              country: 'Malaysia',
+              photo: '/images/iccint/dr-muhammad-tahir-jan.jpg'
+            },
+            {
+              name: 'Dr. Nadia Adnan',
+              role: 'Assistant Professor & Research Scientist',
+              institution: '',
+              country: 'Saudi Arabia',
+              photo: '/images/iccint/dr-nadia-adnan.jpg'
+            },
+            {
+              name: 'Osman ARAYICI',
+              role: 'Professor',
+              institution: 'Mimar Sinan University',
+              country: 'Turkey',
+              photo: '/images/iccint/osman-arayici.jpg'
+            },
+            {
+              name: 'Jawaher Al-Zeidi',
+              role: 'English Language Lecturer',
+              institution: '',
+              country: 'Oman',
+              photo: '/images/iccint/jawaher-al-zeidi.jpg'
+            }
+          ].map((expert, idx) => (
+            <div key={idx} style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              width: '100%',
+              maxWidth: '220px'
+            }}>
+              {/* Circular Photo */}
+              <div style={{
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                background: 'rgba(255,255,255,0.04)',
+                marginBottom: '1rem',
+                border: `2px solid transparent`,
+                transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+                cursor: 'pointer',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = '#00d285';
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 210, 133, 0.4)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'transparent';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
+                <img
+                  src={expert.photo}
+                  alt={expert.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    display: 'block',
+                  }}
+                />
+              </div>
+
+              {/* Info */}
+              <h5 style={{
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                color: '#00d285',
+                margin: '0 0 0.3rem 0',
+                lineHeight: 1.3,
+              }}>
+                {expert.name}
+              </h5>
+              <p style={{
+                fontSize: '0.85rem',
+                color: '#9090a0',
+                margin: '0 0 0.5rem 0',
+                lineHeight: 1.4,
+              }}>
+                {expert.role}{expert.institution ? `, ${expert.institution}` : ''}
+              </p>
+              <div style={{
+                fontSize: '0.75rem',
+                color: '#00d285',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                {expert.country}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
+
+      <section>
+        <SectionHeading icon={User} label="International Delegates" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '0.5rem'
+        }}>
+          {[
+            { name: 'Andreza Malena Guedes da Costa Silva', role: 'IPM', country: 'Brazil' },
+            { name: 'Fatimah Alneel', role: 'The University of Arizona', country: 'United States' },
+            { name: 'Marghescu Cristina-Florentina', role: 'University Politehnica of Bucharest', country: 'Romania' },
+            { name: 'Khadran Mohammed A Alsahaimi', role: 'Jamia Hamdard', country: 'Saudi Arabia' },
+            { name: 'James Abdul Malik', role: 'Academy for Cultural Diplomacy', country: 'Germany' },
+            { name: 'Dr. Jitendra Pandey, FHEA', role: 'Middle East College', country: 'Oman' },
+            { name: 'Emem Akpabio', role: 'Invited Delegate', country: 'South Africa' }
+          ].map((delegate, idx) => (
+            <div key={idx} style={{
+              background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
+              border: '1px solid rgba(100,180,210,0.15)',
+              borderRadius: '1rem',
+              padding: '1.5rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+              cursor: 'default',
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(100,180,210,0.18)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <h5 style={{
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                color: '#e8e8ee',
+                margin: '0 0 1.5rem 0',
+                lineHeight: 1.3,
+              }}>
+                {delegate.name}
+              </h5>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginTop: 'auto'
+              }}>
+                <span style={{
+                  fontSize: '0.95rem',
+                  color: '#9090a0',
+                }}>
+                  {delegate.role}
+                </span>
+                <span style={{
+                  fontSize: '0.95rem',
+                  color: accentSolid,
+                }}>
+                  {delegate.country}
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -165,244 +448,6 @@ const IccintSections = () => {
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
 
       <section>
-        <SectionHeading icon={Users} label="Featured Speakers" accent={accentSolid} />
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-          gap: '1.5rem',
-          marginTop: '0.5rem'
-        }}>
-          {[
-            {
-              name: 'Dr. Ayoub Regragui',
-              role: 'Researcher',
-              institution: 'Mohammed V University, Rabat',
-              country: 'Morocco',
-              photo: '/images/iccint/dr-ayoub-regragui.jpg'
-            },
-            {
-              name: 'Hicham ELKHOUAJA',
-              role: 'Researcher',
-              institution: '',
-              country: 'Morocco',
-              photo: '/images/iccint/hicham-elkhouaja.jpg'
-            },
-            {
-              name: 'Dr. Nadia Adnan',
-              role: 'Assistant Professor & Research Scientist',
-              institution: '',
-              country: 'Saudi Arabia',
-              photo: '/images/iccint/dr-nadia-adnan.jpg'
-            },
-            {
-              name: 'Osman ARAYICI',
-              role: 'Professor',
-              institution: 'Mimar Sinan University',
-              country: 'Turkey',
-              photo: '/images/iccint/osman-arayici.jpg'
-            },
-            {
-              name: 'Dr. Ruth Abiola Adimula',
-              role: 'Academic & Researcher',
-              institution: 'University of Ilorin',
-              country: 'Nigeria',
-              photo: '/images/iccint/dr-ruth-adimula.jpg'
-            },
-            {
-              name: 'Dr. Muhammad Tahir Jan',
-              role: 'Associate Professor',
-              institution: '',
-              country: 'Malaysia',
-              photo: '/images/iccint/dr-muhammad-tahir-jan.jpg'
-            },
-            {
-              name: 'Jawaher Al-Zeidi',
-              role: 'English Language Lecturer',
-              institution: '',
-              country: 'Oman',
-              photo: '/images/iccint/jawaher-al-zeidi.jpg'
-            },
-            {
-              name: 'Roksolana Trach',
-              role: 'Independent Crypto Analyst & International Financial Market Analyst',
-              institution: '',
-              country: 'USA',
-              photo: '/images/iccint/roksolana-trach.jpg'
-            },
-          ].map((speaker, idx) => (
-            <div key={idx} style={{
-              background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
-              border: '1px solid rgba(100,180,210,0.15)',
-              borderRadius: '1rem',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-              cursor: 'default',
-            }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 12px 32px rgba(100,180,210,0.18)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              {/* Photo */}
-              <div style={{
-                width: '100%',
-                aspectRatio: '1 / 1',
-                overflow: 'hidden',
-                background: 'rgba(255,255,255,0.04)',
-              }}>
-                <img
-                  src={speaker.photo}
-                  alt={speaker.name}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'top center',
-                    display: 'block',
-                  }}
-                />
-              </div>
-
-              {/* Info */}
-              <div style={{
-                padding: '1rem',
-                textAlign: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.3rem',
-                width: '100%',
-                boxSizing: 'border-box',
-              }}>
-                <h5 style={{
-                  fontSize: '1rem',
-                  fontWeight: 700,
-                  color: '#e8e8ee',
-                  margin: 0,
-                  lineHeight: 1.3,
-                }}>
-                  {speaker.name}
-                </h5>
-                <p style={{
-                  fontSize: '0.8rem',
-                  color: '#64b4d2',
-                  margin: 0,
-                  fontStyle: 'italic',
-                  lineHeight: 1.4,
-                }}>
-                  {speaker.role}
-                </p>
-                {speaker.institution && (
-                  <p style={{
-                    fontSize: '0.78rem',
-                    color: '#9090a0',
-                    margin: 0,
-                    lineHeight: 1.4,
-                  }}>
-                    {speaker.institution}
-                  </p>
-                )}
-                <div style={{
-                  marginTop: '0.4rem',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: 'rgba(100,180,210,0.08)',
-                  border: '1px solid rgba(100,180,210,0.2)',
-                  borderRadius: '999px',
-                  padding: '0.2rem 0.7rem',
-                  fontSize: '0.75rem',
-                  color: '#b0b0c0',
-                }}>
-                  <span>{speaker.country}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
-
-      <section>
-        <SectionHeading icon={User} label="International Delegates" accent={accentSolid} />
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-          gap: '1.5rem',
-          marginTop: '0.5rem'
-        }}>
-          {[
-            { name: 'Andreza Malena Guedes da Costa Silva', role: 'IPM', country: 'Brazil' },
-            { name: 'Fatimah Alneel', role: 'The University of Arizona', country: 'United States' },
-            { name: 'Marghescu Cristina-Florentina', role: 'University Politehnica of Bucharest', country: 'Romania' },
-            { name: 'Khadran Mohammed A Alsahaimi', role: 'Jamia Hamdard', country: 'Saudi Arabia' },
-            { name: 'James Abdul Malik', role: 'Academy for Cultural Diplomacy', country: 'Germany' },
-            { name: 'Dr. Jitendra Pandey, FHEA', role: 'Middle East College', country: 'Oman' },
-            { name: 'Emem Akpabio', role: 'Invited Delegate', country: 'South Africa' }
-          ].map((delegate, idx) => (
-            <div key={idx} style={{
-              background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
-              border: '1px solid rgba(100,180,210,0.15)',
-              borderRadius: '1rem',
-              padding: '1.5rem',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-              cursor: 'default',
-            }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 12px 32px rgba(100,180,210,0.18)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <h5 style={{
-                fontSize: '1.1rem',
-                fontWeight: 700,
-                color: '#e8e8ee',
-                margin: '0 0 1.5rem 0',
-                lineHeight: 1.3,
-              }}>
-                {delegate.name}
-              </h5>
-              <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                marginTop: 'auto'
-              }}>
-                <span style={{
-                  fontSize: '0.95rem',
-                  color: '#9090a0',
-                }}>
-                  {delegate.role}
-                </span>
-                <span style={{
-                  fontSize: '0.95rem',
-                  color: accentSolid,
-                }}>
-                  {delegate.country}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
-
-      <section>
         <SectionHeading icon={Star} label="Key Features" accent={accentSolid} />
         <ul style={{ 
           display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
@@ -469,6 +514,31 @@ const IccintSections = () => {
           <li>Enhance research visibility and professional networking.</li>
           <li>Explore opportunities for publication and future collaborations.</li>
         </ul>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
+
+      <section>
+        <SectionHeading icon={Users} label="Who Should Attend" accent={accentSolid} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+          {[
+            "Researchers", "Faculty Members", "Scientists", "Industry Professionals",
+            "Engineers", "Technology Leaders", "Startup Founders", "Entrepreneurs",
+            "PhD Scholars", "Postgraduate Students", "Undergraduate Students", 
+            "Government Officials", "Innovation Centers", "Research Organizations"
+          ].map((item, idx) => (
+            <div key={idx} style={{ 
+              background: 'rgba(255,255,255,0.03)', 
+              padding: '0.75rem 1rem', 
+              borderRadius: '0.5rem',
+              border: '1px solid rgba(255,255,255,0.06)',
+              fontSize: '0.9rem',
+              color: '#d2d2d2'
+            }}>
+              {item}
+            </div>
+          ))}
+        </div>
       </section>
 
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
