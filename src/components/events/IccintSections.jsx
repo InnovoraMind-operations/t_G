@@ -16,9 +16,9 @@ const IccintSections = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
       
       <section>
-        <SectionHeading icon={BookOpen} label="About ICCINT 2027" accent={accentSolid} />
+        <SectionHeading icon={BookOpen} label="About ICCINT 2026" accent={accentSolid} />
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0', marginBottom: '1rem' }}>
-          The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2027) is designed to bring together experts from academia, industry, government organizations, startups, and research institutions worldwide to discuss transformative innovations that are redefining science, engineering, and technology.
+          The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2026) is designed to bring together experts from academia, industry, government organizations, startups, and research institutions worldwide to discuss transformative innovations that are redefining science, engineering, and technology.
         </p>
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0', marginBottom: '1rem' }}>
           The conference emphasizes interdisciplinary collaboration, encouraging participants to explore intelligent systems, digital transformation, sustainable engineering solutions, and emerging computing paradigms that contribute to economic growth and societal development.
@@ -37,7 +37,7 @@ const IccintSections = () => {
           The rapid convergence of Artificial Intelligence, Internet of Things, Cloud Computing, Edge Intelligence, Robotics, Digital Twins, and advanced engineering is creating interconnected intelligent ecosystems capable of solving complex global challenges.
         </p>
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0' }}>
-          ICCINT 2027 explores how connected intelligence can enable resilient infrastructure, smart industries, sustainable development, digital healthcare, intelligent transportation, cybersecurity, and future-ready societies.
+          ICCINT 2026 explores how connected intelligence can enable resilient infrastructure, smart industries, sustainable development, digital healthcare, intelligent transportation, cybersecurity, and future-ready societies.
         </p>
       </section>
 
