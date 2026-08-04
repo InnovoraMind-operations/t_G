@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, BookOpen, Star, Calendar, Flag, Award, Eye, FileText } from 'lucide-react';
+import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText } from 'lucide-react';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -322,6 +322,78 @@ const IccintSections = () => {
                 }}>
                   <span>{speaker.country}</span>
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
+
+      <section>
+        <SectionHeading icon={User} label="International Delegates" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '0.5rem'
+        }}>
+          {[
+            { name: 'Andreza Malena Guedes da Costa Silva', role: 'IPM', country: 'Brazil' },
+            { name: 'Fatimah Alneel', role: 'The University of Arizona', country: 'United States' },
+            { name: 'Marghescu Cristina-Florentina', role: 'University Politehnica of Bucharest', country: 'Romania' },
+            { name: 'Khadran Mohammed A Alsahaimi', role: 'Jamia Hamdard', country: 'Saudi Arabia' },
+            { name: 'James Abdul Malik', role: 'Academy for Cultural Diplomacy', country: 'Germany' },
+            { name: 'Dr. Jitendra Pandey, FHEA', role: 'Middle East College', country: 'Oman' },
+            { name: 'Emem Akpabio', role: 'Invited Delegate', country: 'South Africa' }
+          ].map((delegate, idx) => (
+            <div key={idx} style={{
+              background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
+              border: '1px solid rgba(100,180,210,0.15)',
+              borderRadius: '1rem',
+              padding: '1.5rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+              cursor: 'default',
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(100,180,210,0.18)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <h5 style={{
+                fontSize: '1.1rem',
+                fontWeight: 700,
+                color: '#e8e8ee',
+                margin: '0 0 1.5rem 0',
+                lineHeight: 1.3,
+              }}>
+                {delegate.name}
+              </h5>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginTop: 'auto'
+              }}>
+                <span style={{
+                  fontSize: '0.95rem',
+                  color: '#9090a0',
+                }}>
+                  {delegate.role}
+                </span>
+                <span style={{
+                  fontSize: '0.95rem',
+                  color: accentSolid,
+                }}>
+                  {delegate.country}
+                </span>
               </div>
             </div>
           ))}
