@@ -23,7 +23,7 @@ const Home = () => {
           </h1>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight max-w-3xl">
-            Engineering the <span className="text-gradient">Future</span> of Technology
+            Engineering the <span className="text-gradient">Future</span> of Technology....
           </h2>
 
           <p className="text-xl md:text-2xl text-secondary max-w-3xl leading-relaxed">
