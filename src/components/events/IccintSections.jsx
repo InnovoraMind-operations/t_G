@@ -222,6 +222,13 @@ const IccintSections = () => {
               country: 'Oman',
               photo: '/images/iccint/jawaher-al-zeidi.jpg'
             },
+            {
+              name: 'Roksolana Trach',
+              role: 'Independent Crypto Analyst & International Financial Market Analyst',
+              institution: '',
+              country: 'USA',
+              photo: '/images/iccint/roksolana-trach.jpg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
