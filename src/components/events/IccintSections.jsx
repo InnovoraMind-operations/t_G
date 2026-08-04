@@ -166,15 +166,158 @@ const IccintSections = () => {
 
       <section>
         <SectionHeading icon={Users} label="Featured Speakers" accent={accentSolid} />
-        <div style={{ 
-          padding: '2.5rem 1.5rem', 
-          background: 'rgba(255,255,255,0.02)', 
-          border: '1px dashed rgba(255,255,255,0.15)',
-          borderRadius: '0.75rem',
-          textAlign: 'center'
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '0.5rem'
         }}>
-          <h4 style={{ fontSize: '1.2rem', fontWeight: 600, color: '#a0a0a0', letterSpacing: '0.05em' }}>TO BE ANNOUNCED</h4>
-          <p style={{ fontSize: '0.95rem', color: '#7a7a8a', marginTop: '0.5rem' }}>We are curating a lineup of incredible speakers. Stay tuned!</p>
+          {[
+            {
+              name: 'Dr. Ayoub Regragui',
+              role: 'Researcher',
+              institution: 'Mohammed V University, Rabat',
+              country: 'Morocco',
+              photo: '/images/iccint/dr-ayoub-regragui.jpg'
+            },
+            {
+              name: 'Hicham ELKHOUAJA',
+              role: 'Researcher',
+              institution: '',
+              country: 'Morocco',
+              photo: '/images/iccint/hicham-elkhouaja.jpg'
+            },
+            {
+              name: 'Dr. Nadia Adnan',
+              role: 'Assistant Professor & Research Scientist',
+              institution: '',
+              country: 'Saudi Arabia',
+              photo: '/images/iccint/dr-nadia-adnan.jpg'
+            },
+            {
+              name: 'Osman ARAYICI',
+              role: 'Professor',
+              institution: 'Mimar Sinan University',
+              country: 'Turkey',
+              photo: '/images/iccint/osman-arayici.jpg'
+            },
+            {
+              name: 'Dr. Ruth Abiola Adimula',
+              role: 'Academic & Researcher',
+              institution: 'University of Ilorin',
+              country: 'Nigeria',
+              photo: '/images/iccint/dr-ruth-adimula.jpg'
+            },
+            {
+              name: 'Dr. Muhammad Tahir Jan',
+              role: 'Associate Professor',
+              institution: '',
+              country: 'Malaysia',
+              photo: '/images/iccint/dr-muhammad-tahir-jan.jpg'
+            },
+            {
+              name: 'Jawaher Al-Zeidi',
+              role: 'English Language Lecturer',
+              institution: '',
+              country: 'Oman',
+              photo: '/images/iccint/jawaher-al-zeidi.jpg'
+            },
+          ].map((speaker, idx) => (
+            <div key={idx} style={{
+              background: 'linear-gradient(145deg, rgba(100,180,210,0.06), rgba(255,255,255,0.02))',
+              border: '1px solid rgba(100,180,210,0.15)',
+              borderRadius: '1rem',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+              cursor: 'default',
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 32px rgba(100,180,210,0.18)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              {/* Photo */}
+              <div style={{
+                width: '100%',
+                aspectRatio: '1 / 1',
+                overflow: 'hidden',
+                background: 'rgba(255,255,255,0.04)',
+              }}>
+                <img
+                  src={speaker.photo}
+                  alt={speaker.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    display: 'block',
+                  }}
+                />
+              </div>
+
+              {/* Info */}
+              <div style={{
+                padding: '1rem',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.3rem',
+                width: '100%',
+                boxSizing: 'border-box',
+              }}>
+                <h5 style={{
+                  fontSize: '1rem',
+                  fontWeight: 700,
+                  color: '#e8e8ee',
+                  margin: 0,
+                  lineHeight: 1.3,
+                }}>
+                  {speaker.name}
+                </h5>
+                <p style={{
+                  fontSize: '0.8rem',
+                  color: '#64b4d2',
+                  margin: 0,
+                  fontStyle: 'italic',
+                  lineHeight: 1.4,
+                }}>
+                  {speaker.role}
+                </p>
+                {speaker.institution && (
+                  <p style={{
+                    fontSize: '0.78rem',
+                    color: '#9090a0',
+                    margin: 0,
+                    lineHeight: 1.4,
+                  }}>
+                    {speaker.institution}
+                  </p>
+                )}
+                <div style={{
+                  marginTop: '0.4rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'rgba(100,180,210,0.08)',
+                  border: '1px solid rgba(100,180,210,0.2)',
+                  borderRadius: '999px',
+                  padding: '0.2rem 0.7rem',
+                  fontSize: '0.75rem',
+                  color: '#b0b0c0',
+                }}>
+                  <span>{speaker.country}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
