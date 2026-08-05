@@ -105,6 +105,13 @@ const IccintSections = () => {
               country: 'Morocco',
               photo: '/images/iccint/mouhssin-ait-el-mouden.jpeg'
             },
+            {
+              name: 'Dr. Sravanthi Dontu',
+              role: 'Independent Researcher, Corporate Professional',
+              institution: 'Department of Information Technology',
+              country: '',
+              photo: '/images/iccint/dr-sravanthi-dontu.jpg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
