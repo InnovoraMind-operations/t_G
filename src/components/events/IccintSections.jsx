@@ -112,6 +112,13 @@ const IccintSections = () => {
               country: '',
               photo: '/images/iccint/dr-sravanthi-dontu.jpg'
             },
+            {
+              name: 'Prof. Dr. Alvin B. Punongbayan',
+              role: 'Director, Instabright Publication & Chairman and Founder, Instabright International Guild of Researchers and Educators, Inc.',
+              institution: 'CALABARZON',
+              country: 'Philippines',
+              photo: '/images/iccint/prof-alvin-punongbayan.jpg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
