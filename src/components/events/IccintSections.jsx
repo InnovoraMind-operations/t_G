@@ -140,6 +140,20 @@ const IccintSections = () => {
               country: 'USA',
               photo: '/images/iccint/sourav-sarkar.jpg'
             },
+            {
+              name: 'Pankaj Arora',
+              role: 'Healthcare Supply Chain Leader',
+              institution: 'Leader in Healthcare Supply Chain Optimizations',
+              country: 'United States',
+              photo: '/images/iccint/pankaj-arora.jpg'
+            },
+            {
+              name: 'Mr. Hari Rowtu',
+              role: 'Independent Researcher',
+              institution: 'Founder & CEO, Futurality Inc — California',
+              country: 'United States',
+              photo: '/images/iccint/hari-rowtu.jpg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
