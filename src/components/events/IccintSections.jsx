@@ -119,6 +119,27 @@ const IccintSections = () => {
               country: 'Philippines',
               photo: '/images/iccint/prof-alvin-punongbayan.jpg'
             },
+            {
+              name: 'Emerald Abena Amponsah Baffour',
+              role: 'CEO',
+              institution: 'G-Fash Networks — CEO leading technological advancements and network solutions',
+              country: 'Ghana',
+              photo: '/images/iccint/emerald-abena-baffour.jpg'
+            },
+            {
+              name: 'Okopi Fredrick',
+              role: 'CEO',
+              institution: 'Unique UJ SERVICE LIMITED — CEO driving strategic business services',
+              country: 'Nigeria',
+              photo: '/images/iccint/okopi-fredrick.jpg'
+            },
+            {
+              name: 'Sourav Sarkar',
+              role: 'Senior Worldwide Specialist Solutions Architect',
+              institution: '',
+              country: 'USA',
+              photo: '/images/iccint/sourav-sarkar.jpg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
