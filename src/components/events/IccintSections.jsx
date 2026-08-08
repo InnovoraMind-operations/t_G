@@ -170,8 +170,8 @@ const IccintSections = () => {
             },
             {
               name: 'Fatima Ezzahra Elmansouri',
-              role: '',
-              institution: 'ENCG, Hassan II, Casablanca',
+              role: 'Ph.D researcher',
+              institution: 'ENCG Hassan II University Casablanca',
               country: 'Morocco',
               photo: '/images/iccint/fatima-ezzahra-elmansouri.png'
             },
