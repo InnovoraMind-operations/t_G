@@ -154,6 +154,20 @@ const IccintSections = () => {
               country: 'United States',
               photo: '/images/iccint/hari-rowtu.jpg'
             },
+            {
+              name: 'Dr. Rutherford Pascal',
+              role: 'Founder',
+              institution: 'Glass Walls Leadership',
+              country: 'Arizona, US',
+              photo: '/images/iccint/dr-rutherford-pascal.jpeg'
+            },
+            {
+              name: 'Hastimal Jangid',
+              role: 'Researcher',
+              institution: 'University of Missouri–Kansas City',
+              country: 'USA',
+              photo: '/images/iccint/hastimal-jangid.jpeg'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
