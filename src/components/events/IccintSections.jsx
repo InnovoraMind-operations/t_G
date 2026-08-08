@@ -168,6 +168,13 @@ const IccintSections = () => {
               country: 'USA',
               photo: '/images/iccint/hastimal-jangid.jpeg'
             },
+            {
+              name: 'Fatima Ezzahra Elmansouri',
+              role: '',
+              institution: 'ENCG, Hassan II, Casablanca',
+              country: 'Morocco',
+              photo: '/images/iccint/fatima-ezzahra-elmansouri.png'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
