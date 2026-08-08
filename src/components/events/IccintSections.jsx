@@ -175,6 +175,13 @@ const IccintSections = () => {
               country: 'Morocco',
               photo: '/images/iccint/fatima-ezzahra-elmansouri.png'
             },
+            {
+              name: 'Rasmi Ranjan Choudhury',
+              role: 'Independent Researcher, Project Management & E-Mobility Expert, IEEE Member',
+              institution: '',
+              country: 'United States',
+              photo: '/images/iccint/rasmi-ranjan-choudhury.png'
+            },
           ].map((speaker, idx) => (
             <div key={idx} style={{
               display: 'flex',
