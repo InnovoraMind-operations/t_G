@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText } from 'lucide-react';
+import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera } from 'lucide-react';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -523,6 +523,90 @@ const IccintSections = () => {
               To provide an inclusive platform that promotes scientific excellence, technological innovation, ethical research, and meaningful collaboration among academia, industry, government, and society through the advancement of connected intelligence and next-generation technologies.
             </p>
           </div>
+        </div>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
+
+      <section>
+        <SectionHeading icon={Camera} label="Conference Glimpses" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: '1.5rem',
+          marginTop: '1.5rem'
+        }}>
+          {[1, 8, 15, 4, 12, 19, 7, 14, 2, 9, 17, 5, 11, 20, 6, 16, 3, 10, 18, 13].map((imgNum, idx) => (
+            <div key={idx} style={{
+              background: 'rgba(20, 25, 35, 0.6)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(100,180,210,0.2)',
+              borderTop: '1px solid rgba(255,255,255,0.15)',
+              borderLeft: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: '0.85rem',
+              padding: '0.75rem',
+              paddingBottom: '2.5rem', // Polaroid style bottom
+              position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-10px) rotate(-1deg) scale(1.03)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(100, 180, 210, 0.25), 0 0 20px rgba(100, 180, 210, 0.1) inset';
+              e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.6)';
+              const img = e.currentTarget.querySelector('img');
+              if (img) img.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'none';
+              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
+              e.currentTarget.style.borderColor = 'rgba(100,180,210,0.2)';
+              const img = e.currentTarget.querySelector('img');
+              if (img) img.style.transform = 'none';
+            }}>
+              <div style={{
+                width: '100%',
+                aspectRatio: '4/3',
+                borderRadius: '0.4rem',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.5)'
+              }}>
+                <img 
+                  src={`/images/iccint/glimpses/glimpse-${imgNum}.png`} 
+                  alt={`Conference Glimpse ${idx + 1}`} 
+                  style={{
+                    width: '100%',
+                    height: '115%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    display: 'block',
+                    transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                  }} 
+                />
+              </div>
+              <div style={{
+                position: 'absolute',
+                bottom: '0.75rem',
+                width: '100%',
+                textAlign: 'center',
+                color: 'rgba(255,255,255,0.4)',
+                fontSize: '0.75rem',
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase'
+              }}>
+                ICCINT 2026
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
