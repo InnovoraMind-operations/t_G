@@ -15,7 +15,7 @@ const IccintSections = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-      
+
       <section>
         <SectionHeading icon={BookOpen} label="About ICCINT 2026" accent={accentSolid} />
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0', marginBottom: '1rem' }}>
@@ -60,6 +60,114 @@ const IccintSections = () => {
 
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
 
+      <section>
+        <SectionHeading icon={ShieldCheck} label="Leadership Team" accent={accentSolid} />
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+          gap: '2.5rem',
+          marginTop: '1.5rem',
+          justifyItems: 'center'
+        }}>
+          {[
+            {
+              name: 'Emerald Abena Amponsah Baffour',
+              role: 'Global Partnership & Strategy Director',
+              institution: 'G-Fash Networks',
+              country: 'Ghana',
+              photo: '/images/iccint/emerald-abena-baffour.jpg'
+            },
+          ].map((leader, idx) => (
+            <div key={idx} style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              width: '100%',
+              maxWidth: '260px'
+            }}>
+              {/* Circular Photo */}
+              <div style={{
+                width: '140px',
+                height: '140px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                background: 'rgba(255,255,255,0.04)',
+                marginBottom: '1rem',
+                border: `2px solid rgba(100, 180, 210, 0.4)`,
+                boxShadow: '0 0 20px rgba(100, 180, 210, 0.2)',
+                transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
+                cursor: 'pointer',
+              }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = accentSolid;
+                  e.currentTarget.style.boxShadow = '0 0 25px rgba(100, 180, 210, 0.5)';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(100, 180, 210, 0.2)';
+                  e.currentTarget.style.transform = 'none';
+                }}>
+                <img
+                  src={leader.photo}
+                  alt={leader.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top center',
+                    display: 'block',
+                  }}
+                />
+              </div>
+
+              {/* Info */}
+              <h5 style={{
+                fontSize: '1.05rem',
+                fontWeight: 700,
+                color: '#e8e8ee',
+                margin: '0 0 0.3rem 0',
+                lineHeight: 1.3,
+              }}>
+                {leader.name}
+              </h5>
+              <p style={{
+                fontSize: '0.85rem',
+                color: accentSolid,
+                fontWeight: 700,
+                margin: '0 0 0.3rem 0',
+                lineHeight: 1.4,
+                letterSpacing: '0.02em',
+                textTransform: 'uppercase',
+              }}>
+                {leader.role}
+              </p>
+              {leader.institution && (
+                <p style={{
+                  fontSize: '0.82rem',
+                  color: '#9090a0',
+                  margin: '0 0 0.4rem 0',
+                  lineHeight: 1.4,
+                }}>
+                  {leader.institution}
+                </p>
+              )}
+              <div style={{
+                fontSize: '0.75rem',
+                color: '#00d285',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                {leader.country}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
 
       <section>
         <SectionHeading icon={Users} label="Featured Speakers" accent={accentSolid} />
@@ -119,13 +227,6 @@ const IccintSections = () => {
               institution: 'CALABARZON',
               country: 'Philippines',
               photo: '/images/iccint/prof-alvin-punongbayan.jpg'
-            },
-            {
-              name: 'Emerald Abena Amponsah Baffour',
-              role: 'CEO',
-              institution: 'G-Fash Networks — CEO leading technological advancements and network solutions',
-              country: 'Ghana',
-              photo: '/images/iccint/emerald-abena-baffour.jpg'
             },
             {
               name: 'Okopi Fredrick',
@@ -204,14 +305,14 @@ const IccintSections = () => {
                 transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
                 cursor: 'pointer',
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = '#00d285';
-                e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 210, 133, 0.4)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'transparent';
-                e.currentTarget.style.boxShadow = 'none';
-              }}>
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = '#00d285';
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 210, 133, 0.4)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = 'transparent';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
                 <img
                   src={speaker.photo}
                   alt={speaker.name}
@@ -398,9 +499,9 @@ const IccintSections = () => {
               topics: "Smart Education, Educational Technology, Digital Business, FinTech, E-Governance, Innovation Management, Digital Economy"
             }
           ].map((track, i) => (
-            <div key={i} style={{ 
-              padding: '1.25rem', 
-              background: glow, 
+            <div key={i} style={{
+              padding: '1.25rem',
+              background: glow,
               borderLeft: `4px solid ${accentSolid}`,
               borderRadius: '0.5rem'
             }}>
@@ -415,9 +516,9 @@ const IccintSections = () => {
 
       <section>
         <SectionHeading icon={Star} label="Key Features" accent={accentSolid} />
-        <ul style={{ 
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
-          gap: '0.75rem', listStyleType: 'none', padding: 0 
+        <ul style={{
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+          gap: '0.75rem', listStyleType: 'none', padding: 0
         }}>
           {[
             "International Keynote Speakers", "Invited Expert Talks", "Technical Paper Presentations",
@@ -490,12 +591,12 @@ const IccintSections = () => {
           {[
             "Researchers", "Faculty Members", "Scientists", "Industry Professionals",
             "Engineers", "Technology Leaders", "Startup Founders", "Entrepreneurs",
-            "PhD Scholars", "Postgraduate Students", "Undergraduate Students", 
+            "PhD Scholars", "Postgraduate Students", "Undergraduate Students",
             "Government Officials", "Innovation Centers", "Research Organizations"
           ].map((item, idx) => (
-            <div key={idx} style={{ 
-              background: 'rgba(255,255,255,0.03)', 
-              padding: '0.75rem 1rem', 
+            <div key={idx} style={{
+              background: 'rgba(255,255,255,0.03)',
+              padding: '0.75rem 1rem',
               borderRadius: '0.5rem',
               border: '1px solid rgba(255,255,255,0.06)',
               fontSize: '0.9rem',
@@ -555,20 +656,20 @@ const IccintSections = () => {
               transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
               cursor: 'pointer'
             }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-10px) rotate(-1deg) scale(1.03)';
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(100, 180, 210, 0.25), 0 0 20px rgba(100, 180, 210, 0.1) inset';
-              e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.6)';
-              const img = e.currentTarget.querySelector('img');
-              if (img) img.style.transform = 'scale(1.05)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'none';
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
-              e.currentTarget.style.borderColor = 'rgba(100,180,210,0.2)';
-              const img = e.currentTarget.querySelector('img');
-              if (img) img.style.transform = 'none';
-            }}>
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-10px) rotate(-1deg) scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(100, 180, 210, 0.25), 0 0 20px rgba(100, 180, 210, 0.1) inset';
+                e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.6)';
+                const img = e.currentTarget.querySelector('img');
+                if (img) img.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'none';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
+                e.currentTarget.style.borderColor = 'rgba(100,180,210,0.2)';
+                const img = e.currentTarget.querySelector('img');
+                if (img) img.style.transform = 'none';
+              }}>
               <div style={{
                 width: '100%',
                 aspectRatio: '4/3',
@@ -577,9 +678,9 @@ const IccintSections = () => {
                 position: 'relative',
                 boxShadow: 'inset 0 0 10px rgba(0,0,0,0.5)'
               }}>
-                <img 
-                  src={`/images/iccint/glimpses/glimpse-${imgNum}.png`} 
-                  alt={`Conference Glimpse ${idx + 1}`} 
+                <img
+                  src={`/images/iccint/glimpses/glimpse-${imgNum}.png`}
+                  alt={`Conference Glimpse ${idx + 1}`}
                   style={{
                     width: '100%',
                     height: '115%',
@@ -590,7 +691,7 @@ const IccintSections = () => {
                     left: 0,
                     display: 'block',
                     transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-                  }} 
+                  }}
                 />
               </div>
               <div style={{
@@ -633,17 +734,17 @@ const IccintSections = () => {
             transition: 'transform 0.4s ease, box-shadow 0.4s ease',
             cursor: 'default'
           }}
-          onMouseEnter={e => {
-            e.currentTarget.style.transform = 'translateY(-5px)';
-            e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.7), 0 0 50px rgba(212, 175, 55, 0.25)';
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.transform = 'none';
-            e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212, 175, 55, 0.15)';
-          }}>
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.7), 0 0 50px rgba(212, 175, 55, 0.25)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'none';
+              e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212, 175, 55, 0.15)';
+            }}>
             {/* Inner Dark Matte */}
             <div style={{
-              background: '#0a0a0a', 
+              background: '#0a0a0a',
               borderRadius: '0.35rem',
               padding: '10px', // Creates a dark border between the gold frame and the image
               display: 'flex',
@@ -651,16 +752,16 @@ const IccintSections = () => {
               alignItems: 'center',
               boxShadow: 'inset 0 0 20px rgba(0,0,0,1)'
             }}>
-              <img 
-                src={awardImage} 
-                alt="Awards" 
-                style={{ 
-                  maxWidth: '100%', 
+              <img
+                src={awardImage}
+                alt="Awards"
+                style={{
+                  maxWidth: '100%',
                   maxHeight: '75vh',
                   objectFit: 'contain',
                   display: 'block',
                   borderRadius: '0.15rem' // Very slight rounding on the image itself
-                }} 
+                }}
               />
             </div>
           </div>
