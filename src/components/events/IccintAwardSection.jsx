@@ -197,47 +197,7 @@ const IccintAwardSection = () => {
             </div>
 
             {/* Single clean working full screen action button */}
-            <div style={{
-              marginTop: '1.25rem',
-              width: '100%',
-              maxWidth: '340px',
-            }}>
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(true)}
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '0.6rem',
-                  padding: '0.85rem 1.25rem',
-                  borderRadius: '0.75rem',
-                  background: 'linear-gradient(135deg, #d2aa64 0%, #b8860b 100%)',
-                  border: '1px solid #ffd54f',
-                  color: '#000000',
-                  fontSize: '0.9rem',
-                  fontWeight: 800,
-                  letterSpacing: '0.02em',
-                  cursor: 'pointer',
-                  boxShadow: '0 4px 20px rgba(210, 170, 100, 0.4)',
-                  transition: 'all 0.3s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(135deg, #f0c575 0%, #d29b15 100%)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(210, 170, 100, 0.6)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(135deg, #d2aa64 0%, #b8860b 100%)';
-                  e.currentTarget.style.transform = 'none';
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(210, 170, 100, 0.4)';
-                }}
-              >
-                <Maximize2 size={17} style={{ color: '#000', flexShrink: 0, strokeWidth: 2.5 }} />
-                <span>Click here to view award in full screen</span>
-              </button>
-            </div>
+
           </div>
 
           {/* ── Right Column: Award Details & Citation ── */}

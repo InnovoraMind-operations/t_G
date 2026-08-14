@@ -1,6 +1,5 @@
 import React from 'react';
 import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera, ShieldCheck } from 'lucide-react';
-import awardImage from '../../assets/award.jpeg';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -711,63 +710,6 @@ const IccintSections = () => {
           ))}
         </div>
       </section>
-
-      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)', margin: '3rem 0' }} />
-
-      <section>
-        <SectionHeading icon={Award} label="Awards" accent={accentSolid} />
-        <div style={{
-          marginTop: '2rem',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}>
-          {/* Outer Gold Frame */}
-          <div style={{
-            position: 'relative',
-            borderRadius: '0.5rem',
-            padding: '4px',
-            background: 'linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)', // Rich metallic gold gradient
-            boxShadow: '0 25px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212, 175, 55, 0.15)',
-            display: 'inline-flex',
-            maxWidth: '100%',
-            transition: 'transform 0.4s ease, box-shadow 0.4s ease',
-            cursor: 'default'
-          }}
-            onMouseEnter={e => {
-              e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.7), 0 0 50px rgba(212, 175, 55, 0.25)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.transform = 'none';
-              e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.6), 0 0 40px rgba(212, 175, 55, 0.15)';
-            }}>
-            {/* Inner Dark Matte */}
-            <div style={{
-              background: '#0a0a0a',
-              borderRadius: '0.35rem',
-              padding: '10px', // Creates a dark border between the gold frame and the image
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              boxShadow: 'inset 0 0 20px rgba(0,0,0,1)'
-            }}>
-              <img
-                src={awardImage}
-                alt="Awards"
-                style={{
-                  maxWidth: '100%',
-                  maxHeight: '75vh',
-                  objectFit: 'contain',
-                  display: 'block',
-                  borderRadius: '0.15rem' // Very slight rounding on the image itself
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
 
     </div>
   );
