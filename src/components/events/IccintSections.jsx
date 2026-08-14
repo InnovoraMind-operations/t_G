@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera } from 'lucide-react';
+import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera, ShieldCheck } from 'lucide-react';
 import awardImage from '../../assets/award.jpeg';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
