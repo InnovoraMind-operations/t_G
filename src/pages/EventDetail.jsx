@@ -9,6 +9,7 @@ import { eventsData } from '../data/eventsData';
 import InfratechSections from '../components/events/InfratechSections';
 import HackathonSections from '../components/events/HackathonSections';
 import IccintSections from '../components/events/IccintSections';
+import IccintAwardSection from '../components/events/IccintAwardSection';
 
 /* ─── Visual Mapping ───────────────────────────────────────── */
 const visualMap = {
@@ -235,6 +236,12 @@ const EventDetail = () => {
                 ))}
               </div>
             </section>
+
+            {/* Accent divider */}
+            <div style={{ height: '1px', background: 'linear-gradient(90deg, rgba(212,175,55,0.4), rgba(255,255,255,0.05), transparent)' }} />
+
+            {/* Award Section */}
+            <IccintAwardSection />
           </>
         ) : (
           <>
