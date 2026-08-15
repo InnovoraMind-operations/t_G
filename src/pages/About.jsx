@@ -2,8 +2,8 @@ import React from 'react';
 import { Cpu, ShieldCheck, Box, User } from 'lucide-react';
 import VJphoto from '../assets/VJ.png';
 import LMphoto from '../assets/LM.jpeg';
-
 import CFphoto from '../assets/cf.jpeg';
+import emeraldPhoto from '../assets/emerald.png';
 
 const About = () => {
   const values = [
@@ -28,6 +28,12 @@ const About = () => {
   ];
 
   const team = [
+    {
+      name: "Emerald Abena Amponsah Baffour",
+      role: "Global Partnership & Strategy Director",
+      glow: "rgba(0,240,255,0.15)",
+      image: emeraldPhoto
+    },
     {
       name: "Dr. Vilas Joshi",
       role: "Executive Director-Technology",
