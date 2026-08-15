@@ -20,6 +20,12 @@ const visualMap = {
   "evt_005": { icon: Landmark,   accent: 'rgba(180,150,210,0.85)', glow: 'rgba(180,150,210,0.18)' },
   "evt_006": { icon: Smartphone, accent: 'rgba(210,170,100,0.85)', glow: 'rgba(210,170,100,0.18)' },
   "evt_007": { icon: Atom,       accent: 'rgba(100,200,200,0.85)', glow: 'rgba(100,200,200,0.18)' },
+  "evt_008": { icon: Cloud,      accent: 'rgba(0,220,180,0.85)',   glow: 'rgba(0,220,180,0.18)' },
+  "evt_009": { icon: Globe,      accent: 'rgba(255,165,0,0.85)',   glow: 'rgba(255,165,0,0.18)' },
+  "evt_010": { icon: Code2,      accent: 'rgba(130,120,220,0.85)', glow: 'rgba(130,120,220,0.18)' },
+  "evt_011": { icon: ShieldCheck,accent: 'rgba(220,60,60,0.85)',   glow: 'rgba(220,60,60,0.18)' },
+  "evt_012": { icon: Brain,      accent: 'rgba(0,220,180,0.85)',   glow: 'rgba(0,220,180,0.18)' },
+  "evt_013": { icon: Globe,      accent: 'rgba(100,180,210,0.85)', glow: 'rgba(100,180,210,0.18)' },
 };
 
 const categoryStyle = {
