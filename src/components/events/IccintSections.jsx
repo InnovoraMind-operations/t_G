@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera, ShieldCheck } from 'lucide-react';
+import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera } from 'lucide-react';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -55,115 +55,6 @@ const IccintSections = () => {
           <li>Discuss ethical, secure, and responsible technology adoption.</li>
           <li>Explore future directions in intelligent engineering and digital transformation.</li>
         </ul>
-      </section>
-
-      <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
-
-      <section>
-        <SectionHeading icon={ShieldCheck} label="Leadership Team" accent={accentSolid} />
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-          gap: '2.5rem',
-          marginTop: '1.5rem',
-          justifyItems: 'center'
-        }}>
-          {[
-            {
-              name: 'Emerald Abena Amponsah Baffour',
-              role: 'Global Partnership & Strategy Director',
-              institution: 'G-Fash Networks',
-              country: 'Ghana',
-              photo: '/images/iccint/emerald-abena-baffour.jpg'
-            },
-          ].map((leader, idx) => (
-            <div key={idx} style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center',
-              width: '100%',
-              maxWidth: '260px'
-            }}>
-              {/* Circular Photo */}
-              <div style={{
-                width: '140px',
-                height: '140px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                background: 'rgba(255,255,255,0.04)',
-                marginBottom: '1rem',
-                border: `2px solid rgba(100, 180, 210, 0.4)`,
-                boxShadow: '0 0 20px rgba(100, 180, 210, 0.2)',
-                transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
-                cursor: 'pointer',
-              }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = accentSolid;
-                  e.currentTarget.style.boxShadow = '0 0 25px rgba(100, 180, 210, 0.5)';
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.4)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(100, 180, 210, 0.2)';
-                  e.currentTarget.style.transform = 'none';
-                }}>
-                <img
-                  src={leader.photo}
-                  alt={leader.name}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'top center',
-                    display: 'block',
-                  }}
-                />
-              </div>
-
-              {/* Info */}
-              <h5 style={{
-                fontSize: '1.05rem',
-                fontWeight: 700,
-                color: '#e8e8ee',
-                margin: '0 0 0.3rem 0',
-                lineHeight: 1.3,
-              }}>
-                {leader.name}
-              </h5>
-              <p style={{
-                fontSize: '0.85rem',
-                color: accentSolid,
-                fontWeight: 700,
-                margin: '0 0 0.3rem 0',
-                lineHeight: 1.4,
-                letterSpacing: '0.02em',
-                textTransform: 'uppercase',
-              }}>
-                {leader.role}
-              </p>
-              {leader.institution && (
-                <p style={{
-                  fontSize: '0.82rem',
-                  color: '#9090a0',
-                  margin: '0 0 0.4rem 0',
-                  lineHeight: 1.4,
-                }}>
-                  {leader.institution}
-                </p>
-              )}
-              <div style={{
-                fontSize: '0.75rem',
-                color: '#00d285',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em'
-              }}>
-                {leader.country}
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)' }} />
