@@ -6,6 +6,20 @@ const IccintAwardSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const awardImage = '/images/iccint/dr-sravanthi-dontu-award.jpg';
 
+  const featuredVideos = [
+    { id: "1IGgvVX72Poe8Zdaq7_bNwMgUlxfLrDat", name: "Emerald Abena Amponsah Baffour" },
+    { id: "13kZmUA9dZ4qnthdgibamlYk1juESOb6I", name: "Fatima Ezzahra Elmansouri" },
+    { id: "1HDn5bqRfmDhLcL-SxvfgPVYVtskSTRHY", name: "Hastimal Jangid" },
+    { id: "1JosDnf5t6A3tW2rgvn-lsKUkpfpqFbyf", name: "Mouhssin Ait El Mouden" },
+    { id: "1SpszALgIAflpveoV1zewzSOuQEKnRcwx", name: "Nadine Zeinoun" },
+    { id: "18SJq2VtuhiP4V5Ok-DHZl_ySafwpCL65", name: "Okopi Fredrick" },
+    { id: "1QfS8qXAquoUyvV8IIfjQZ6GkhYf680FB", name: "Pankaj Arora" },
+    { id: "1MB8chOVja4NPjk4nA62tVg37P5aLLeoU", name: "Rasmi Ranjan Choudhury" },
+    { id: "1455biY-MAE0xhgW0iBcFEeFZH8bl8fIy", name: "Roksolana Trach" },
+    { id: "1XXaK-wteJytANrx9LWXd4re6zHRz6_aR", name: "Sourav Sarkar" },
+    { id: "1raT9YVTX2bnsABh2EehOcabOodj7N7ec", name: "Dr. Sravanthi Dontu" }
+  ];
+
   // Handle ESC key to close modal & prevent background scroll
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -35,6 +49,7 @@ const IccintAwardSection = () => {
   ];
 
   return (
+    <>
     <section style={{ position: 'relative', width: '100%' }}>
       {/* ── Section Header ── */}
       <div style={{
@@ -517,6 +532,134 @@ const IccintAwardSection = () => {
         document.body
       )}
     </section>
+
+    {/* ── Featured Media & Highlights Section ── */}
+    <section style={{ position: 'relative', width: '100%', marginTop: '3.5rem' }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '1rem',
+        marginBottom: '1.75rem',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div style={{
+            width: '2.5rem',
+            height: '2.5rem',
+            borderRadius: '0.75rem',
+            background: 'linear-gradient(135deg, rgba(100, 180, 210, 0.2), rgba(100, 180, 210, 0.08))',
+            border: '1px solid rgba(100, 180, 210, 0.4)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 0 16px rgba(100, 180, 210, 0.15)',
+          }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64b4d2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <div>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontSize: '0.75rem',
+              fontWeight: 700,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#64b4d2',
+              marginBottom: '0.2rem',
+            }}>
+              <Sparkles size={12} /> Video Gallery
+            </div>
+            <h3 style={{
+              fontSize: '1.35rem',
+              fontWeight: 700,
+              color: '#f4f4f8',
+              letterSpacing: '0.02em',
+              margin: 0,
+            }}>
+              Featured Media & Highlights
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gap: '2.5rem 1.5rem',
+      }}>
+        {featuredVideos.map((video, index) => (
+          <div key={index} style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+          }}>
+            <div style={{
+              position: 'relative',
+              paddingTop: '56.25%', // 16:9 aspect ratio
+              background: 'rgba(15, 18, 28, 0.8)',
+              borderRadius: '0.85rem',
+              overflow: 'hidden',
+              border: '2px solid rgba(100, 180, 210, 0.3)',
+              boxShadow: '0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(100, 180, 210, 0.1)',
+              transition: 'transform 0.3s ease, border-color 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.6)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'none';
+              e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.3)';
+            }}>
+              <iframe
+                src={`https://drive.google.com/file/d/${video.id}/preview`}
+                title={`Presentation by ${video.name}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                }}
+              />
+            </div>
+            
+            {/* Speaker Name Tag */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.6rem',
+              padding: '0 0.5rem',
+            }}>
+              <div style={{
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                background: '#64b4d2',
+                boxShadow: '0 0 8px #64b4d2',
+              }} />
+              <h4 style={{
+                fontSize: '1.05rem',
+                fontWeight: 600,
+                color: '#e8e8ee',
+                margin: 0,
+                letterSpacing: '0.02em',
+              }}>
+                {video.name}
+              </h4>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    </>
   );
 };
 
