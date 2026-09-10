@@ -126,7 +126,7 @@ export const SEOManager = () => {
         if (event.id === 'evt_012') {
           title = 'Industrial Hackathon 2026 | TechryonGlobal Smart Manufacturing';
           description =
-            'TechryonGlobal Industrial Hackathon 2026: 100% free international online virtual hackathon on Industry 5.0, Smart Manufacturing, Industrial AI, and Digital Twins. Register now!';
+            'TechryonGlobal Industrial Hackathon 2026: Premier international online virtual hackathon on Industry 5.0, Smart Manufacturing, Industrial AI, and Digital Twins. Register now!';
         } else if (event.id === 'evt_013') {
           title = 'ICCINT 2026 Conference | Techryon Global Connected Intelligence';
           description =
@@ -164,7 +164,6 @@ export const SEOManager = () => {
               eventAttendanceMode: event.format.toLowerCase().includes('hybrid')
                 ? 'https://schema.org/MixedEventAttendanceMode'
                 : 'https://schema.org/OnlineEventAttendanceMode',
-              isAccessibleForFree: event.id === 'evt_012',
               location: event.format.toLowerCase().includes('virtual')
                 ? {
                     '@type': 'VirtualLocation',

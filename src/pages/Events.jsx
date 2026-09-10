@@ -186,12 +186,11 @@ const Events = () => {
                 format: 'Online Hackathon (Worldwide)',
                 duration: '24–48 Hours Online',
                 teamSize: '1–5 Members',
-                price: '100% Free / No Price ($0)',
                 theme: 'Industry 5.0, Smart Manufacturing & Industrial AI',
                 accent: 'rgba(0,220,180,0.85)',
                 glow: 'rgba(0,220,180,0.15)',
-                description: 'A premier global online industrial hackathon. Build next-generation industrial AI, IoT, digital twins, robotics, and smart manufacturing solutions to revolutionize modern industry. 100% free participation with international industry judges and keynote speakers.',
-                tags: ['#IndustrialHackathon', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#FreeRegistration', '#IoT'],
+                description: 'A premier global online industrial hackathon. Build next-generation industrial AI, IoT, digital twins, robotics, and smart manufacturing solutions to revolutionize modern industry evaluated by international industry judges and keynote speakers.',
+                tags: ['#IndustrialHackathon', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#IoT', '#DigitalTwins'],
               },
             ].map((upcoming, idx) => (
               <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />

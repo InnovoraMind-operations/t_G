@@ -246,7 +246,7 @@ const HackathonSections = () => {
   ];
 
   const faqs = [
-    { q: "Is there any registration fee or cost to participate?", a: "No! Participation in the TechryonGlobal Industrial Hackathon 2026 is 100% FREE ($0). There are absolutely no fees for students, researchers, developers, or industry professionals worldwide." },
+    { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
     { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders and professors from Siemens, Tesla, ABB, Volvo Group, Imperial College London, and University of Tokyo." },
@@ -261,7 +261,7 @@ const HackathonSections = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
 
-      {/* ── 100% FREE PARTICIPATION CALLOUT BANNER ── */}
+      {/* ── GLOBAL PARTICIPATION CALLOUT BANNER ── */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(0,220,180,0.12), rgba(0,180,220,0.04))',
         border: '1px solid rgba(0,220,180,0.3)',
@@ -289,7 +289,7 @@ const HackathonSections = () => {
                 padding: '0.2rem 0.65rem', borderRadius: '2rem',
                 background: '#00dcb4', color: '#0b1015', letterSpacing: '0.08em'
               }}>
-                100% Free Entry • No Price ($0)
+                Global Hackathon 2026
               </span>
               <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600 }}>
                 Worldwide Online Hackathon
@@ -299,7 +299,7 @@ const HackathonSections = () => {
               Global Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing
             </h3>
             <p style={{ fontSize: '0.88rem', color: '#9090a0', margin: '0.4rem 0 0', lineHeight: 1.5 }}>
-              Zero registration fee ($0). Compete virtually, collaborate with global mentors, and pitch directly to an international panel of industry leaders.
+              Compete virtually, collaborate with global mentors, and pitch directly to an international panel of industry leaders.
             </p>
           </div>
         </div>
@@ -316,7 +316,7 @@ const HackathonSections = () => {
           onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
           onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
         >
-          Register for Free <ArrowRight size={16} />
+          Register Now <ArrowRight size={16} />
         </button>
       </div>
       
@@ -328,7 +328,7 @@ const HackathonSections = () => {
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together students, developers, engineers, researchers, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this 100% free online competition challenges participants to build practical, scalable industrial solutions.
+            The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together students, developers, engineers, researchers, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this premier online competition challenges participants to build practical, scalable industrial solutions.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             The event combines an Innovation Forum featuring world-class keynote talks from companies like Siemens, ABB, GE Digital, and Tokyo University, with an intense 24-hour virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury.
@@ -336,7 +336,7 @@ const HackathonSections = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
               { label: 'Event Format', val: '100% Online / Virtual' },
-              { label: 'Registration Price', val: '$0 (Completely Free)' },
+              { label: 'Registration', val: 'Online Open' },
               { label: 'Participation', val: 'Worldwide Open' },
               { label: 'Team Size', val: '1 to 5 Members' },
             ].map((stat, i) => (
@@ -1057,7 +1057,7 @@ const HackathonSections = () => {
         </ul>
       </section>
 
-      {/* ── REGISTRATION SECTION (100% FREE / ZERO PRICE) ── */}
+      {/* ── REGISTRATION SECTION ── */}
       <section id="registration" style={{ marginTop: '2rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <div style={{
@@ -1066,13 +1066,13 @@ const HackathonSections = () => {
             color: '#00dcb4', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase',
             marginBottom: '0.75rem'
           }}>
-            Zero Registration Fee • $0 Free Entry
+            Online Registration Open • Worldwide Access
           </div>
           <h2 style={{ fontSize: '2.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
             Register for the Industrial Hackathon
           </h2>
           <p style={{ fontSize: '1rem', color: '#a0a0b0', maxWidth: '620px', margin: '0 auto' }}>
-            Join worldwide participants at zero cost. Select your role below and submit your free online registration.
+            Join worldwide participants. Select your role below and submit your online registration.
           </p>
         </div>
 
@@ -1084,13 +1084,6 @@ const HackathonSections = () => {
             borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(0,220,180,0.3)',
             display: 'flex', flexDirection: 'column', position: 'relative'
           }}>
-            <div style={{
-              position: 'absolute', top: '1rem', right: '1rem',
-              background: '#00dcb4', color: '#0b1015', fontSize: '0.7rem', fontWeight: 800,
-              padding: '0.2rem 0.6rem', borderRadius: '1rem', textTransform: 'uppercase'
-            }}>
-              100% Free ($0)
-            </div>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Rocket size={20} style={{ color: '#00dcb4' }} /> Participant / Team
             </h3>
@@ -1106,7 +1099,7 @@ const HackathonSections = () => {
                 boxShadow: '0 0 15px rgba(0,220,180,0.3)'
               }}
             >
-              Register Free as Participant
+              Register as Participant
             </button>
           </div>
 
@@ -1304,7 +1297,7 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── INTERACTIVE 100% FREE REGISTRATION MODAL ── */}
+      {/* ── INTERACTIVE REGISTRATION MODAL ── */}
       {regModalOpen && createPortal(
         <div 
           onClick={() => setRegModalOpen(false)}
@@ -1364,13 +1357,6 @@ const HackathonSections = () => {
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
                   Registration Confirmed!
                 </h3>
-                <div style={{
-                  display: 'inline-block', background: 'rgba(0,220,180,0.1)', color: '#00dcb4',
-                  padding: '0.25rem 0.85rem', borderRadius: '1rem', fontSize: '0.8rem', fontWeight: 700,
-                  marginBottom: '1rem', border: '1px solid rgba(0,220,180,0.25)'
-                }}>
-                  Fee: $0 (Free Registration)
-                </div>
                 <p style={{ fontSize: '0.92rem', color: '#a0a0b0', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                   Thank you for registering as a <strong>{formData.role}</strong> for the <strong>TechryonGlobal Industrial Hackathon 2026</strong>. A confirmation email and Discord platform invite will be dispatched to <strong>{formData.email || 'your email'}</strong>.
                 </p>
@@ -1399,14 +1385,14 @@ const HackathonSections = () => {
                     padding: '0.2rem 0.6rem', borderRadius: '1rem',
                     background: 'rgba(0,220,180,0.15)', color: '#00dcb4', border: '1px solid rgba(0,220,180,0.3)'
                   }}>
-                    100% Free • No Price ($0)
+                    Global Industrial Hackathon 2026
                   </span>
                 </div>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.3rem' }}>
                   Online Hackathon Registration
                 </h3>
                 <p style={{ fontSize: '0.86rem', color: '#9090a0', marginBottom: '1.5rem' }}>
-                  Complete this form to reserve your free virtual participation pass.
+                  Complete this form to reserve your virtual participation pass.
                 </p>
 
                 <form onSubmit={handleSubmitRegistration} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1550,7 +1536,7 @@ const HackathonSections = () => {
                   }}>
                     <CheckCircle size={18} style={{ color: '#00dcb4', flexShrink: 0 }} />
                     <span style={{ fontSize: '0.82rem', color: '#e8e8ee' }}>
-                      Participation is <strong>100% Free ($0)</strong>. No credit card or payment required.
+                      Online Virtual Hackathon. Open to global participants.
                     </span>
                   </div>
 
@@ -1563,7 +1549,7 @@ const HackathonSections = () => {
                       marginTop: '0.5rem', boxShadow: '0 0 20px rgba(0,220,180,0.3)'
                     }}
                   >
-                    Submit Free Registration
+                    Submit Registration
                   </button>
                 </form>
               </div>
