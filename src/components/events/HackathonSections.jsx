@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import { 
   Sparkles, Target, CalendarClock, Award, Users, Star, ArrowRight, 
   BrainCircuit, Globe, CheckCircle, UserCheck, FileText, BarChart, 
@@ -14,38 +13,14 @@ import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
 
-// Official Google Form Registration URL (Update with published Google Form link)
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe_hackathon_registration/viewform";
+// Official Google Form Registration URL
+const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
 
 const HackathonSections = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
-  const [regModalOpen, setRegModalOpen] = useState(false);
-  const [selectedRole, setSelectedRole] = useState('Participant');
-  const [regSubmitted, setRegSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    organization: '',
-    role: 'Participant',
-    track: 'Industry 5.0 & Smart Manufacturing',
-    teamName: '',
-    country: '',
-  });
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
-  };
-
-  const handleOpenModal = (role = 'Participant') => {
-    setSelectedRole(role);
-    setFormData(prev => ({ ...prev, role }));
-    setRegSubmitted(false);
-    setRegModalOpen(true);
-  };
-
-  const handleSubmitRegistration = (e) => {
-    e.preventDefault();
-    setRegSubmitted(true);
   };
 
   // ── Keynote Speakers ───────────────────────────────────────
@@ -306,21 +281,24 @@ const HackathonSections = () => {
             </p>
           </div>
         </div>
-        <button
-          onClick={() => handleOpenModal('Participant')}
+        <a
+          href={GOOGLE_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             background: '#00dcb4', color: '#0b1015', border: 'none',
             padding: '0.85rem 1.8rem', borderRadius: '0.85rem',
             fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
             boxShadow: '0 0 20px rgba(0,220,180,0.35)',
             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            textDecoration: 'none',
             transition: 'all 0.25s ease'
           }}
           onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
           onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
         >
-          Register Now <ArrowRight size={16} />
-        </button>
+          Register Now <ExternalLink size={16} />
+        </a>
       </div>
       
       {/* ── ABOUT EVENT ── */}
@@ -1112,17 +1090,24 @@ const HackathonSections = () => {
             <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
               Compete individually or in teams of up to 5 members. Receive mentor guidance, submit code on GitHub, and pitch to international judges.
             </p>
-            <button 
-              onClick={() => handleOpenModal('Participant')}
+            <a 
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 width: '100%', background: '#00dcb4', color: '#0b1015',
                 border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
                 fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(0,220,180,0.3)'
+                boxShadow: '0 0 15px rgba(0,220,180,0.3)',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
               }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Register as Participant
-            </button>
+              Register as Participant <ExternalLink size={15} />
+            </a>
           </div>
 
           {/* Judge */}
@@ -1137,17 +1122,24 @@ const HackathonSections = () => {
             <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
               Industrial experts, senior researchers, and professors invited to evaluate projects and mentor high-impact solutions.
             </p>
-            <button 
-              onClick={() => handleOpenModal('Judge')}
+            <a 
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 width: '100%', background: '#d2aa64', color: '#0b1015',
                 border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
                 fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(210,170,100,0.3)'
+                boxShadow: '0 0 15px rgba(210,170,100,0.3)',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
               }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Apply as Judge
-            </button>
+              Apply as Judge <ExternalLink size={15} />
+            </a>
           </div>
 
           {/* Speaker */}
@@ -1162,17 +1154,24 @@ const HackathonSections = () => {
             <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
               Deliver keynote presentations and share industry expertise in our virtual Innovation Forum sessions.
             </p>
-            <button 
-              onClick={() => handleOpenModal('Speaker')}
+            <a 
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 width: '100%', background: '#b46ed2', color: '#fff',
                 border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
                 fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(180,110,210,0.3)'
+                boxShadow: '0 0 15px rgba(180,110,210,0.3)',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
               }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Apply as Speaker
-            </button>
+              Apply as Speaker <ExternalLink size={15} />
+            </a>
           </div>
 
           {/* Partner / Sponsor */}
@@ -1187,17 +1186,24 @@ const HackathonSections = () => {
             <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
               Support developer & startup innovators by providing cloud infrastructure, datasets, or specialized challenge bounties.
             </p>
-            <button 
-              onClick={() => handleOpenModal('Partner')}
+            <a 
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 width: '100%', background: '#64b4d2', color: '#0b1015',
                 border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
                 fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-                boxShadow: '0 0 15px rgba(100,180,210,0.3)'
+                boxShadow: '0 0 15px rgba(100,180,210,0.3)',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease'
               }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              Become a Partner
-            </button>
+              Become a Partner <ExternalLink size={15} />
+            </a>
           </div>
 
         </div>
@@ -1318,279 +1324,6 @@ const HackathonSections = () => {
           </div>
         </div>
       </section>
-
-      {/* ── INTERACTIVE REGISTRATION MODAL ── */}
-      {regModalOpen && createPortal(
-        <div 
-          onClick={() => setRegModalOpen(false)}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 99999,
-            backgroundColor: 'rgba(5, 7, 12, 0.88)',
-            backdropFilter: 'blur(12px)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '1.5rem',
-            animation: 'fadeIn 0.25s ease-out',
-          }}
-        >
-          <div 
-            onClick={e => e.stopPropagation()}
-            style={{
-              background: '#0d131d',
-              border: '1px solid rgba(0,220,180,0.3)',
-              borderRadius: '1.5rem',
-              maxWidth: '560px',
-              width: '100%',
-              padding: '2.25rem',
-              position: 'relative',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(0,220,180,0.15)',
-              maxHeight: '90vh',
-              overflowY: 'auto'
-            }}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setRegModalOpen(false)}
-              style={{
-                position: 'absolute', top: '1.25rem', right: '1.25rem',
-                background: 'rgba(255,255,255,0.08)', border: 'none', borderRadius: '50%',
-                width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                cursor: 'pointer', color: '#a0a0b0', transition: 'all 0.2s'
-              }}
-              onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; }}
-              onMouseLeave={e => { e.currentTarget.style.color = '#a0a0b0'; e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; }}
-            >
-              <X size={18} />
-            </button>
-
-            {regSubmitted ? (
-              <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
-                <div style={{
-                  width: '64px', height: '64px', borderRadius: '50%',
-                  background: 'rgba(0,220,180,0.15)', border: '2px solid #00dcb4',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  margin: '0 auto 1.25rem', color: '#00dcb4'
-                }}>
-                  <Check size={32} />
-                </div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
-                  Registration Confirmed!
-                </h3>
-                <p style={{ fontSize: '0.92rem', color: '#a0a0b0', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Thank you for registering as a <strong>{formData.role}</strong> for the <strong>TechryonGlobal Industrial Hackathon 2026</strong>. A confirmation email and Discord platform invite will be dispatched to <strong>{formData.email || 'your email'}</strong>.
-                </p>
-                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.08)', marginBottom: '1.5rem', textAlign: 'left' }}>
-                  <div style={{ fontSize: '0.75rem', color: '#8a8a9a', textTransform: 'uppercase' }}>Selected Track:</div>
-                  <div style={{ fontSize: '0.92rem', color: '#e8e8ee', fontWeight: 600 }}>{formData.track}</div>
-                  <div style={{ fontSize: '0.75rem', color: '#8a8a9a', textTransform: 'uppercase', marginTop: '0.5rem' }}>Event Date:</div>
-                  <div style={{ fontSize: '0.92rem', color: '#00dcb4', fontWeight: 600 }}>27 September 2026 (Virtual / Online)</div>
-                </div>
-                <button
-                  onClick={() => setRegModalOpen(false)}
-                  style={{
-                    background: '#00dcb4', color: '#0b1015', border: 'none',
-                    padding: '0.8rem 2rem', borderRadius: '0.75rem',
-                    fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer'
-                  }}
-                >
-                  Done
-                </button>
-              </div>
-            ) : (
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
-                  <span style={{
-                    fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase',
-                    padding: '0.2rem 0.6rem', borderRadius: '1rem',
-                    background: 'rgba(0,220,180,0.15)', color: '#00dcb4', border: '1px solid rgba(0,220,180,0.3)'
-                  }}>
-                    Global Industrial Hackathon 2026
-                  </span>
-                </div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.3rem' }}>
-                  Online Hackathon Registration
-                </h3>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.5rem' }}>
-                  <p style={{ fontSize: '0.86rem', color: '#9090a0', margin: 0 }}>
-                    Complete this form or register via Google Forms.
-                  </p>
-                  <a
-                    href={GOOGLE_FORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ fontSize: '0.82rem', color: '#00dcb4', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none', fontWeight: 600 }}
-                  >
-                    Open Google Form <ExternalLink size={12} />
-                  </a>
-                </div>
-
-                <form onSubmit={handleSubmitRegistration} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                      Registering As:
-                    </label>
-                    <select
-                      value={formData.role}
-                      onChange={e => setFormData({ ...formData, role: e.target.value })}
-                      style={{
-                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none'
-                      }}
-                    >
-                      <option value="Participant" style={{ background: '#0d131d' }}>Participant / Team Member</option>
-                      <option value="Judge" style={{ background: '#0d131d' }}>Judge / Evaluator</option>
-                      <option value="Speaker" style={{ background: '#0d131d' }}>Keynote Speaker</option>
-                      <option value="Partner" style={{ background: '#0d131d' }}>Industry / Academic Partner</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Alex Morgan"
-                      value={formData.fullName}
-                      onChange={e => setFormData({ ...formData, fullName: e.target.value })}
-                      style={{
-                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="e.g. alex@university.edu"
-                      value={formData.email}
-                      onChange={e => setFormData({ ...formData, email: e.target.value })}
-                      style={{
-                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                      Institution / Organization / University *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Technical University / Tech Corp"
-                      value={formData.organization}
-                      onChange={e => setFormData({ ...formData, organization: e.target.value })}
-                      style={{
-                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
-                      }}
-                    />
-                  </div>
-
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                        Country *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="e.g. Germany, USA, India"
-                        value={formData.country}
-                        onChange={e => setFormData({ ...formData, country: e.target.value })}
-                        style={{
-                          width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                          color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                        Team Name (Optional)
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="e.g. CyberRobotics Lab"
-                        value={formData.teamName}
-                        onChange={e => setFormData({ ...formData, teamName: e.target.value })}
-                        style={{
-                          width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                          color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
-                      Primary Industrial Track of Interest
-                    </label>
-                    <select
-                      value={formData.track}
-                      onChange={e => setFormData({ ...formData, track: e.target.value })}
-                      style={{
-                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
-                        color: '#e8e8ee', fontSize: '0.86rem', outline: 'none'
-                      }}
-                    >
-                      <option value="Industry 5.0 & Human-Centric Automation" style={{ background: '#0d131d' }}>Industry 5.0 & Human-Centric Automation</option>
-                      <option value="Industrial IoT, Sensor Telemetry & Edge AI" style={{ background: '#0d131d' }}>Industrial IoT, Sensor Telemetry & Edge AI</option>
-                      <option value="Digital Twins & Predictive Maintenance (PdM)" style={{ background: '#0d131d' }}>Digital Twins & Predictive Maintenance (PdM)</option>
-                      <option value="Autonomous Mobile Robots (AMR) & Intralogistics" style={{ background: '#0d131d' }}>Autonomous Mobile Robots (AMR) & Intralogistics</option>
-                      <option value="Industrial Cybersecurity & OT/SCADA Defense" style={{ background: '#0d131d' }}>Industrial Cybersecurity & OT/SCADA Defense</option>
-                      <option value="Sustainable Manufacturing & Energy Optimization" style={{ background: '#0d131d' }}>Sustainable Manufacturing & Energy Optimization</option>
-                      <option value="Generative AI & LLMs for Industrial Engineering" style={{ background: '#0d131d' }}>Generative AI & LLMs for Industrial Engineering</option>
-                    </select>
-                  </div>
-
-                  <div style={{
-                    background: 'rgba(0,220,180,0.06)', border: '1px solid rgba(0,220,180,0.2)',
-                    padding: '0.85rem', borderRadius: '0.65rem', display: 'flex', alignItems: 'center', gap: '0.5rem',
-                    marginTop: '0.5rem'
-                  }}>
-                    <CheckCircle size={18} style={{ color: '#00dcb4', flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.82rem', color: '#e8e8ee' }}>
-                      Online Virtual Hackathon. Open to global participants.
-                    </span>
-                  </div>
-
-                  <button
-                    type="submit"
-                    style={{
-                      width: '100%', background: '#00dcb4', color: '#0b1015',
-                      border: 'none', padding: '0.9rem', borderRadius: '0.75rem',
-                      fontSize: '1rem', fontWeight: 700, cursor: 'pointer',
-                      marginTop: '0.5rem', boxShadow: '0 0 20px rgba(0,220,180,0.3)'
-                    }}
-                  >
-                    Submit Registration
-                  </button>
-                </form>
-              </div>
-            )}
-          </div>
-        </div>,
-        document.body
-      )}
-
     </div>
   );
 };
