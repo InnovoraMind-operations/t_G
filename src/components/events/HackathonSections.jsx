@@ -6,13 +6,16 @@ import {
   Calendar, Handshake, Mail, MapPin, Laptop, Rocket, Medal, Trophy,
   GraduationCap, Lightbulb, ShieldCheck, HeartPulse, Building, 
   BookOpen, Mic, Network, HelpCircle, ChevronDown, ChevronUp, Briefcase,
-  X, Cpu, Zap, Layers, Factory, Check
+  X, Cpu, Zap, Layers, Factory, Check, ExternalLink
 } from 'lucide-react';
 
 import vjPhoto from '../../assets/VJ.png';
 import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
+
+// Official Google Form Registration URL (Update with published Google Form link)
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe_hackathon_registration/viewform";
 
 const HackathonSections = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -1071,9 +1074,28 @@ const HackathonSections = () => {
           <h2 style={{ fontSize: '2.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
             Register for the Industrial Hackathon
           </h2>
-          <p style={{ fontSize: '1rem', color: '#a0a0b0', maxWidth: '620px', margin: '0 auto' }}>
-            Join worldwide participants. Select your role below and submit your online registration.
+          <p style={{ fontSize: '1rem', color: '#a0a0b0', maxWidth: '620px', margin: '0 auto 1.5rem' }}>
+            Join worldwide participants. Select your role below or submit your registration directly via our official Google Form.
           </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                background: 'rgba(0,220,180,0.15)', color: '#00dcb4',
+                border: '1px solid rgba(0,220,180,0.35)',
+                padding: '0.65rem 1.4rem', borderRadius: '0.75rem',
+                fontSize: '0.88rem', fontWeight: 700, textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#00dcb4'; e.currentTarget.style.color = '#0b1015'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(0,220,180,0.15)'; e.currentTarget.style.color = '#00dcb4'; }}
+            >
+              Official Google Form Registration <ExternalLink size={15} />
+            </a>
+          </div>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
@@ -1391,9 +1413,19 @@ const HackathonSections = () => {
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.3rem' }}>
                   Online Hackathon Registration
                 </h3>
-                <p style={{ fontSize: '0.86rem', color: '#9090a0', marginBottom: '1.5rem' }}>
-                  Complete this form to reserve your virtual participation pass.
-                </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  <p style={{ fontSize: '0.86rem', color: '#9090a0', margin: 0 }}>
+                    Complete this form or register via Google Forms.
+                  </p>
+                  <a
+                    href={GOOGLE_FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ fontSize: '0.82rem', color: '#00dcb4', display: 'inline-flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    Open Google Form <ExternalLink size={12} />
+                  </a>
+                </div>
 
                 <form onSubmit={handleSubmitRegistration} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div>
