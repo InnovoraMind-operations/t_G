@@ -424,20 +424,45 @@ export const eventsData = [
   },
   {
     "id": "evt_012",
-    "slug": "innovation-forum-hackathon-2026",
-    "title": "TechryonGlobal Innovation Forum & Global Hackathon 2026",
-    "format": "Virtual | Worldwide Participation",
-    "location": "Virtual",
-    "date": "30 August 2026",
+    "slug": "industrial-hackathon-2026",
+    "title": "TechryonGlobal Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing",
+    "format": "Online Virtual Hackathon (Worldwide)",
+    "location": "Online / Virtual (Global)",
+    "date": "27 September 2026",
     "category": "Technical Summit",
-    "tags": [],
-    "overview": "The TechryonGlobal Innovation Forum & Global Hackathon 2026 is an international virtual platform that brings together students, researchers, developers, entrepreneurs, startups, faculty members, innovators, and industry professionals from across the world. Organized by TechryonGlobal, this event aims to foster innovation, collaboration, and technological excellence by encouraging participants to develop impactful solutions using Artificial Intelligence and emerging technologies.",
+    "tags": ["#IndustrialHackathon", "#Industry5.0", "#SmartManufacturing", "#IndustrialAI", "#IoT", "#DigitalTwins", "#FreeRegistration", "#ZeroCost"],
+    "overview": "The TechryonGlobal Industrial Hackathon 2026 is an international online virtual hackathon bringing together students, developers, researchers, engineers, startups, and industrial leaders across the world. Focused on Industry 5.0, Smart Manufacturing, Industrial IoT, Digital Twins, and Autonomous Robotics, this 100% free online competition challenges participants to build practical, scalable industrial solutions evaluated by an esteemed international panel of industry judges.",
     "themes": [
-      "AI for a Smarter, Sustainable & Inclusive Future"
+      "Industry 5.0 & Smart Manufacturing: Designing human-centric automation, digital twins, and autonomous factory floors.",
+      "Industrial IoT & Edge Intelligence: Real-time telemetry, edge machine learning, and predictive equipment maintenance.",
+      "Industrial Cybersecurity & SCADA Defense: Hardening critical operational technology and manufacturing infrastructure against sophisticated cyber attacks."
     ],
-    "agenda": [],
+    "agenda": [
+      {
+        "day": "Day 1: Hackathon Kickoff & Keynote Stage",
+        "sessions": [
+          "09:00 AM - Opening Ceremony & Global Keynote: The Future of Industrial AI",
+          "10:30 AM - Industrial Challenge Tracks Briefing & Problem Statements",
+          "12:00 PM - 24-Hour Online Hacking Begins & Mentor Virtual Office Hours",
+          "04:00 PM - Keynote Panel: Digital Twins and Edge AI in Advanced Manufacturing"
+        ]
+      },
+      {
+        "day": "Day 2: Submissions, Judging & Awards",
+        "sessions": [
+          "12:00 PM - Online Project Submission Deadline (GitHub Repo & Demo Video)",
+          "01:30 PM - International Judging Panel Evaluation",
+          "04:00 PM - Top Finalist Live Virtual Pitches & Demos",
+          "06:00 PM - Global Award Ceremony & Certificate Distributions"
+        ]
+      }
+    ],
     "speakers": [],
-    "pricing": []
+    "pricing": [
+      { "tier": "Individual Participant", "price": "$0 (100% Free / No Fee)" },
+      { "tier": "Student / Developer Team", "price": "$0 (100% Free / No Fee)" },
+      { "tier": "Startup / Industry Team", "price": "$0 (100% Free / No Fee)" }
+    ]
   },
   {
     "id": "evt_013",

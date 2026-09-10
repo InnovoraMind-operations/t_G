@@ -178,19 +178,20 @@ const Events = () => {
               */
               {
                 id: 'evt_012',
-                slug: 'innovation-forum-hackathon-2026',
-                title: 'TechryonGlobal Innovation Forum & Global Hackathon 2026',
-                date: '30 August 2026',
-                dateShort: { month: 'AUG', day: '30' },
-                location: 'Virtual',
-                format: 'Virtual',
-                duration: '24 Hours',
+                slug: 'industrial-hackathon-2026',
+                title: 'TechryonGlobal Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing',
+                date: '27 September 2026',
+                dateShort: { month: 'SEP', day: '27' },
+                location: 'Online / Virtual (Global)',
+                format: 'Online Hackathon (Worldwide)',
+                duration: '24–48 Hours Online',
                 teamSize: '1–5 Members',
-                theme: 'AI for a Smarter, Sustainable & Inclusive Future',
+                price: '100% Free / No Price ($0)',
+                theme: 'Industry 5.0, Smart Manufacturing & Industrial AI',
                 accent: 'rgba(0,220,180,0.85)',
                 glow: 'rgba(0,220,180,0.15)',
-                description: 'Build innovative AI-powered solutions addressing real-world challenges in healthcare, education, sustainability, smart cities, fintech, cybersecurity, and social impact.',
-                tags: ['#AI', '#GenAI', '#Innovation', '#Hackathon', '#Global', '#Technology'],
+                description: 'A premier global online industrial hackathon. Build next-generation industrial AI, IoT, digital twins, robotics, and smart manufacturing solutions to revolutionize modern industry. 100% free participation with international industry judges and keynote speakers.',
+                tags: ['#IndustrialHackathon', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#FreeRegistration', '#IoT'],
               },
             ].map((upcoming, idx) => (
               <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />
@@ -445,6 +446,20 @@ const UpcomingEventCard = ({ event, idx, onLearnMore }) => {
               Team Size:
             </span>
             <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.teamSize}</span>
+          </div>
+        )}
+        {event.price && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: event.accent, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              Registration:
+            </span>
+            <span style={{ 
+              fontSize: '0.8rem', fontWeight: 700, color: '#00dcb4', 
+              background: 'rgba(0,220,180,0.12)', border: '1px solid rgba(0,220,180,0.3)',
+              padding: '0.15rem 0.6rem', borderRadius: '1rem' 
+            }}>
+              {event.price}
+            </span>
           </div>
         )}
         {event.theme && (

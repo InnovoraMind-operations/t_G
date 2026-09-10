@@ -46,7 +46,12 @@ const EventDetail = () => {
   const { id: slug } = useParams();
   const navigate = useNavigate();
 
-  const ev = eventsData.find(e => e.slug === slug || e.id === slug);
+  const ev = eventsData.find(e => 
+    e.slug === slug || 
+    e.id === slug || 
+    (slug === 'innovation-forum-hackathon-2026' && e.id === 'evt_012') || 
+    (slug === 'industrial-hackathon-2026' && e.id === 'evt_012')
+  );
 
   if (!ev) {
     return (
@@ -67,12 +72,6 @@ const EventDetail = () => {
   const catStyle = categoryStyle[ev.category] || categoryStyle['Technical Conference'];
   const IconComp = visual.icon;
   const accentSolid = visual.accent.replace('0.85', '1');
-
-  /* ── Set browser tab title to the event name ── */
-  useEffect(() => {
-    document.title = `${ev.title} | Techryon Global`;
-    return () => { document.title = 'Techryon Global'; };
-  }, [ev.title]);
 
   return (
     <div
@@ -140,9 +139,17 @@ const EventDetail = () => {
             <IconComp size={32} />
           </div>
           <div>
-            {ev.id === 'evt_012' && (
+            {ev.id === 'evt_012' ? (
               <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#00dcb4', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 TechryonGlobal Presents
+              </div>
+            ) : ev.id === 'evt_013' ? (
+              <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#64b4d2', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                Techryon Global Official Conference
+              </div>
+            ) : (
+              <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#d2aa64', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                Organized & Hosted by Techryon Global
               </div>
             )}
             <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: ev.id === 'evt_012' ? '0.5rem' : '1rem' }}>

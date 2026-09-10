@@ -1,5 +1,6 @@
 import React from 'react';
-import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Users, User, BookOpen, Star, Calendar, Flag, Award, Eye, FileText, Camera, ShieldCheck, Globe } from 'lucide-react';
 
 const SectionHeading = ({ icon: Icon, label, accent }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -15,10 +16,77 @@ const IccintSections = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
 
+      {/* Official Organizer & Accreditation Banner */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(100,180,210,0.12), rgba(0,240,255,0.04))',
+        border: '1px solid rgba(100,180,210,0.25)',
+        borderRadius: '1.25rem',
+        padding: '1.5rem 1.75rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '1.25rem'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', maxWidth: '650px' }}>
+          <div style={{
+            padding: '0.75rem', borderRadius: '1rem',
+            background: 'rgba(100,180,210,0.15)', border: '1px solid rgba(100,180,210,0.3)',
+            color: '#64b4d2', flexShrink: 0
+          }}>
+            <ShieldCheck size={28} />
+          </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+              <span style={{
+                fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase',
+                padding: '0.2rem 0.6rem', borderRadius: '1rem',
+                background: '#64b4d2', color: '#0b1015', letterSpacing: '0.06em'
+              }}>
+                Official Global Conference
+              </span>
+              <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600 }}>
+                Organized & Hosted by Techryon Global
+              </span>
+            </div>
+            <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>
+              Legitimate, Peer-Reviewed International Research Platform
+            </h4>
+            <p style={{ fontSize: '0.84rem', color: '#9090a0', margin: '0.35rem 0 0', lineHeight: 1.5 }}>
+              Backed by Techryon Global's International Advisory Board, adhering to rigorous peer-review and academic publication standards.
+            </p>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '0.75rem' }}>
+          <Link
+            to="/advisory-board"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+              padding: '0.6rem 1.1rem', borderRadius: '0.75rem',
+              background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)',
+              color: '#e8e8ee', fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none'
+            }}
+          >
+            Advisory Board
+          </Link>
+          <Link
+            to="/contact"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+              padding: '0.6rem 1.1rem', borderRadius: '0.75rem',
+              background: '#64b4d2', border: 'none',
+              color: '#0b1015', fontSize: '0.85rem', fontWeight: 700, textDecoration: 'none'
+            }}
+          >
+            Contact Secretariat
+          </Link>
+        </div>
+      </div>
+
       <section>
         <SectionHeading icon={BookOpen} label="About ICCINT 2026" accent={accentSolid} />
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0', marginBottom: '1rem' }}>
-          The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2026) is designed to bring together experts from academia, industry, government organizations, startups, and research institutions worldwide to discuss transformative innovations that are redefining science, engineering, and technology.
+          The International Conference on Connected Intelligence and Next-Generation Technologies (ICCINT 2026) is an official international conference organized and presented by <strong>Techryon Global</strong>. It is designed to bring together experts from academia, industry, government organizations, startups, and research institutions worldwide to discuss transformative innovations that are redefining science, engineering, and technology.
         </p>
         <p style={{ fontSize: '1rem', lineHeight: 1.85, color: '#9090a0', marginBottom: '1rem' }}>
           The conference emphasizes interdisciplinary collaboration, encouraging participants to explore intelligent systems, digital transformation, sustainable engineering solutions, and emerging computing paradigms that contribute to economic growth and societal development.

@@ -9,10 +9,12 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import AdvisoryBoard from './pages/AdvisoryBoard';
 import Layout from './components/Layout';
+import SEOManager from './components/SEOManager';
 
 function App() {
   return (
     <Layout>
+      <SEOManager />
       <Routes>
         <Route path="/"                  element={<Home />} />
         <Route path="/services"          element={<Services />} />

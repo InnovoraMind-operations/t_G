@@ -1,62 +1,351 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   Sparkles, Target, CalendarClock, Award, Users, Star, ArrowRight, 
   BrainCircuit, Globe, CheckCircle, UserCheck, FileText, BarChart, 
   Calendar, Handshake, Mail, MapPin, Laptop, Rocket, Medal, Trophy,
   GraduationCap, Lightbulb, ShieldCheck, HeartPulse, Building, 
-  BookOpen, Mic, Network, HelpCircle, ChevronDown, ChevronUp, Briefcase
+  BookOpen, Mic, Network, HelpCircle, ChevronDown, ChevronUp, Briefcase,
+  X, Cpu, Zap, Layers, Factory, Check
 } from 'lucide-react';
+
+import vjPhoto from '../../assets/VJ.png';
+import emeraldPhoto from '../../assets/emerald.png';
+import lmPhoto from '../../assets/LM.jpeg';
+import cfPhoto from '../../assets/cf.jpeg';
 
 const HackathonSections = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [regModalOpen, setRegModalOpen] = useState(false);
+  const [selectedRole, setSelectedRole] = useState('Participant');
+  const [regSubmitted, setRegSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    organization: '',
+    role: 'Participant',
+    track: 'Industry 5.0 & Smart Manufacturing',
+    teamName: '',
+    country: '',
+  });
 
   const toggleFAQ = (index) => {
-    if (openFAQ === index) {
-      setOpenFAQ(null);
-    } else {
-      setOpenFAQ(index);
-    }
+    setOpenFAQ(openFAQ === index ? null : index);
   };
 
+  const handleOpenModal = (role = 'Participant') => {
+    setSelectedRole(role);
+    setFormData(prev => ({ ...prev, role }));
+    setRegSubmitted(false);
+    setRegModalOpen(true);
+  };
+
+  const handleSubmitRegistration = (e) => {
+    e.preventDefault();
+    setRegSubmitted(true);
+  };
+
+  // ── Keynote Speakers ───────────────────────────────────────
+  const speakersList = [
+    {
+      name: 'Dr. Klaus Obermeier',
+      role: 'VP of Industrial Automation & Digital Systems',
+      org: 'Siemens Digital Industries',
+      location: 'Munich, Germany',
+      topic: 'Autonomous Manufacturing & Industry 5.0: The Convergence of OT and AI',
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.15)',
+      tags: ['Industry 5.0', 'Industrial IoT', 'Smart Systems'],
+      initials: 'KO'
+    },
+    {
+      name: 'Elena Rostova',
+      role: 'Chief AI Architect & Head of Robotics',
+      org: 'ABB Robotics & Discrete Automation',
+      location: 'Zurich, Switzerland',
+      topic: 'Next-Gen Collaborative Robotics (Cobots) & Adaptive Vision',
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.15)',
+      tags: ['Robotics', 'Cobots', 'Adaptive AI'],
+      initials: 'ER'
+    },
+    {
+      name: 'Dr. Marcus Vance',
+      role: 'Director of Industrial Digital Twins',
+      org: 'GE Digital & MIT Industrial AI Lab',
+      location: 'Boston, USA',
+      topic: 'High-Fidelity Digital Twins for Zero-Downtime Heavy Engineering',
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.15)',
+      tags: ['Digital Twins', 'Predictive Maintenance', 'Edge AI'],
+      initials: 'MV'
+    },
+    {
+      name: 'Prof. Kenji Takahashi',
+      role: 'Chair of Cyber-Physical Production Systems',
+      org: 'University of Tokyo',
+      location: 'Tokyo, Japan',
+      topic: 'Ultra-Low-Latency Edge Computing in Precision Factory Automation',
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.15)',
+      tags: ['Edge Computing', 'Cyber-Physical', 'Precision Auto'],
+      initials: 'KT'
+    },
+    {
+      name: 'Dr. Aisha Al-Mansoor',
+      role: 'Head of Smart Factory Innovation',
+      org: 'Global Industrial Automation Hub',
+      location: 'Dubai, UAE',
+      topic: 'Green Manufacturing & Decarbonized Autonomous Production Networks',
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.15)',
+      tags: ['Green Manufacturing', 'Decarbonization', 'Smart Factory'],
+      initials: 'AM'
+    },
+    {
+      name: 'David Chen',
+      role: 'Principal Cloud & Industrial IoT Architect',
+      org: 'Microsoft Azure Industrial IoT',
+      location: 'Redmond, USA',
+      topic: 'Securing Industrial Cloud Telemetry & SCADA Interoperability',
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.15)',
+      tags: ['Cloud IoT', 'SCADA', 'Industrial Cyber'],
+      initials: 'DC'
+    }
+  ];
+
+  // ── International Judges Panel ─────────────────────────────
+  const judgesList = [
+    {
+      name: 'Dr. Sophia Ramirez',
+      role: 'Global Lead of Industrial Machine Learning',
+      org: 'Tesla Gigafactory Engineering',
+      location: 'Austin, USA',
+      focus: 'Computer Vision Defect Inspection & Shopfloor Anomaly Detection',
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.15)',
+      tags: ['Industrial ML', 'Defect Inspection', 'Real-time Vision'],
+      initials: 'SR'
+    },
+    {
+      name: 'Dr. Henrik Lindqvist',
+      role: 'Director of Autonomous Systems & Robotics',
+      org: 'Volvo Group Industrial Technology',
+      location: 'Gothenburg, Sweden',
+      focus: 'Autonomous Mobile Robots (AMR), AGVs & Intralogistics Optimization',
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.15)',
+      tags: ['AMR Fleets', 'Intralogistics', 'Robotics'],
+      initials: 'HL'
+    },
+    {
+      name: 'Prof. Ronald Sterling',
+      role: 'Chair of Critical Infrastructure & OT Security',
+      org: 'Imperial College London',
+      location: 'London, UK',
+      focus: 'SCADA Vulnerability Hardening, ICS Protocols & Industrial Zero Trust',
+      color: '#d26e6e',
+      glow: 'rgba(210,110,110,0.15)',
+      tags: ['SCADA Defense', 'Zero Trust', 'Critical Infra'],
+      initials: 'RS'
+    },
+    {
+      name: 'Amara Okafor',
+      role: 'VP of Advanced Manufacturing & Sustainability',
+      org: 'Global Advanced Manufacturing Consortium',
+      location: 'Singapore',
+      focus: 'Circular Factory Operations, Carbon Tracking & Resource Efficiency',
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.15)',
+      tags: ['Sustainability', 'Circular Economy', 'Resource Efficiency'],
+      initials: 'AO'
+    },
+    {
+      name: 'Dr. Marco Bellini',
+      role: 'Chief Technology Officer & Systems Architect',
+      org: 'Leonardo Industrial Automation & Aerospace',
+      location: 'Milan, Italy',
+      focus: 'Embedded Real-time Systems, Deterministic Fieldbus & Safety SIL-3/4',
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.15)',
+      tags: ['Embedded Systems', 'Safety Standards', 'Fieldbus'],
+      initials: 'MB'
+    },
+    {
+      name: 'Siddharth Mehta',
+      role: 'Global Director of Industrial IoT & Edge Intelligence',
+      org: 'Hitachi Vantara',
+      location: 'San Jose, USA',
+      focus: 'Asset Health Prediction, Vibration Telemetry & Distributed Sensors',
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.15)',
+      tags: ['Sensor Fusion', 'Asset Health', 'Edge Compute'],
+      initials: 'SM'
+    }
+  ];
+
+  // ── Technical Mentors ──────────────────────────────────────
+  const mentorsList = [
+    {
+      name: 'Dr. Sarah Jenkins',
+      role: 'Lead Robotics Software Engineer',
+      org: 'Boston Dynamics',
+      location: 'USA',
+      expertise: 'Robot Kinematics, Path Planning & ROS2 Integration'
+    },
+    {
+      name: 'Tariq Benali',
+      role: 'Senior SCADA & OT Cybersecurity Architect',
+      org: 'Schneider Electric',
+      location: 'France',
+      expertise: 'PLC Protocols, Modbus/TCP, OPC-UA & Perimeter Isolation'
+    },
+    {
+      name: 'Mei-Ling Zhou',
+      role: 'Computer Vision & Defect Detection Lead',
+      org: 'Foxconn Industrial Internet',
+      location: 'Taiwan',
+      expertise: 'Optical Inspection, Edge Inference & Thermal Imaging'
+    },
+    {
+      name: 'Carlos Mendes',
+      role: 'Industrial Energy & Decarbonization Specialist',
+      org: 'Enel Green Power',
+      location: 'Brazil',
+      expertise: 'Factory Microgrids, Waste Heat Recovery & Energy Telemetry'
+    }
+  ];
+
+  // ── Organizing Committee ───────────────────────────────────
+  const committeeList = [
+    {
+      name: 'Dr. Vilas Joshi',
+      role: 'Executive Director - Technology',
+      org: 'Techryon Global',
+      photo: vjPhoto
+    },
+    {
+      name: 'Emerald Abena Amponsah Baffour',
+      role: 'Global Partnership & Strategy Director',
+      org: 'Techryon Global',
+      photo: emeraldPhoto
+    },
+    {
+      name: 'Lawrence Mazaki Mashati',
+      role: 'General Director',
+      org: 'Techryon Global',
+      photo: lmPhoto
+    },
+    {
+      name: 'Marghescu Cristina-Florentina',
+      role: 'Independent Director',
+      org: 'Techryon Global',
+      photo: cfPhoto
+    }
+  ];
+
   const faqs = [
-    { q: "Who can participate in the event?", a: "The event is open worldwide to students, researchers, developers, entrepreneurs, startups, faculty members, and industry professionals." },
-    { q: "Is there any registration fee?", a: "No, participation in the Global Hackathon and Innovation Forum is completely free." },
-    { q: "Can I participate individually?", a: "Yes, you can participate as an individual or form a team of up to 5 members." },
-    { q: "What is the format of the event?", a: "The event is fully virtual, allowing participants from all over the world to join seamlessly." },
-    { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, AI model details, and an optional live demo link." },
-    { q: "Will I get a certificate?", a: "Yes, all eligible participants, judges, mentors, and speakers will receive internationally recognized digital certificates." },
-    { q: "Can I attend only the Innovation Forum?", a: "Yes, you can register as a participant to attend the keynote sessions, panels, and networking events without submitting a hackathon project." },
-    { q: "Who are the judges for the hackathon?", a: "Our judging panel comprises globally recognized experts, academic leaders, and industry professionals." },
-    { q: "What is the main theme of the hackathon?", a: "The theme is 'AI for a Smarter, Sustainable & Inclusive Future'." },
-    { q: "How are the winners evaluated?", a: "Evaluation is based on Innovation & Creativity (25%), Technical Excellence (20%), Impact & Scalability (20%), Practical Implementation (15%), Presentation & Demonstration (10%), and User Experience (10%)." },
-    { q: "Will sessions be recorded?", a: "Yes, keynotes and expert panels from the Innovation Forum will be recorded and shared with registered participants." },
-    { q: "Can startups showcase their products?", a: "Yes, there is a Startup Innovation Showcase where startups can present their solutions." },
-    { q: "How can I apply as a speaker?", a: "You can apply using the Speaker Registration link in the Registration section." },
-    { q: "Are there sponsorship opportunities?", a: "Yes, we welcome industry, academic, and media partners. Please use the Partner/Sponsor registration." },
-    { q: "Where can I find the event schedule?", a: "The detailed event schedule is available in the Event Schedule section on this page." },
-    { q: "What happens during the networking sessions?", a: "Participants can interact with speakers, mentors, and other attendees in dedicated virtual networking rooms." },
-    { q: "How do I join the opening and closing ceremonies?", a: "Links to the virtual platform will be emailed to all registered participants prior to the event." }
+    { q: "Is there any registration fee or cost to participate?", a: "No! Participation in the TechryonGlobal Industrial Hackathon 2026 is 100% FREE ($0). There are absolutely no fees for students, researchers, developers, or industry professionals worldwide." },
+    { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
+    { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders and professors from Siemens, Tesla, ABB, Volvo Group, Imperial College London, and University of Tokyo." },
+    { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
+    { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
+    { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, mentors, and speakers will receive internationally recognized digital certificates." },
+    { q: "How are the winners evaluated?", a: "Evaluation is based on Industrial Applicability & Impact (25%), Technical Depth & Architecture (25%), Innovation & Novelty (20%), Working Demonstration (15%), and Presentation (15%)." },
+    { q: "Will sessions be recorded?", a: "Yes, all keynotes and panel discussions will be recorded and made accessible to registered participants." },
+    { q: "How do I connect with mentors?", a: "Participants will receive direct access to private Discord/Slack breakout channels with dedicated mentor office hours." }
   ];
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+
+      {/* ── 100% FREE PARTICIPATION CALLOUT BANNER ── */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(0,220,180,0.12), rgba(0,180,220,0.04))',
+        border: '1px solid rgba(0,220,180,0.3)',
+        borderRadius: '1.5rem',
+        padding: '1.75rem 2rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '1.5rem',
+        boxShadow: '0 0 30px rgba(0,220,180,0.12)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', maxWidth: '680px' }}>
+          <div style={{
+            width: '54px', height: '54px', borderRadius: '1rem',
+            background: 'rgba(0,220,180,0.15)', border: '1px solid rgba(0,220,180,0.35)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+          }}>
+            <Award size={28} style={{ color: '#00dcb4' }} />
+          </div>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.3rem' }}>
+              <span style={{
+                fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase',
+                padding: '0.2rem 0.65rem', borderRadius: '2rem',
+                background: '#00dcb4', color: '#0b1015', letterSpacing: '0.08em'
+              }}>
+                100% Free Entry • No Price ($0)
+              </span>
+              <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600 }}>
+                Worldwide Online Hackathon
+              </span>
+            </div>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>
+              Global Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing
+            </h3>
+            <p style={{ fontSize: '0.88rem', color: '#9090a0', margin: '0.4rem 0 0', lineHeight: 1.5 }}>
+              Zero registration fee ($0). Compete virtually, collaborate with global mentors, and pitch directly to an international panel of industry leaders.
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => handleOpenModal('Participant')}
+          style={{
+            background: '#00dcb4', color: '#0b1015', border: 'none',
+            padding: '0.85rem 1.8rem', borderRadius: '0.85rem',
+            fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
+            boxShadow: '0 0 20px rgba(0,220,180,0.35)',
+            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+            transition: 'all 0.25s ease'
+          }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+        >
+          Register for Free <ArrowRight size={16} />
+        </button>
+      </div>
       
       {/* ── ABOUT EVENT ── */}
       <section id="about-event">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Sparkles size={18} style={{ color: '#00dcb4' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>About the Event</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>About the Industrial Hackathon</h3>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            The <strong>TechryonGlobal Innovation Forum & Global Hackathon 2026</strong> is an international virtual platform that brings together students, researchers, developers, entrepreneurs, startups, faculty members, innovators, and industry professionals from across the world.
+            The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together students, developers, engineers, researchers, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this 100% free online competition challenges participants to build practical, scalable industrial solutions.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            The event combines an Innovation Forum, featuring keynote talks, expert discussions, networking, and knowledge sharing, with an exciting Global Hackathon, where participants collaborate to develop innovative solutions addressing real-world challenges using Artificial Intelligence and emerging technologies.
+            The event combines an Innovation Forum featuring world-class keynote talks from companies like Siemens, ABB, GE Digital, and Tokyo University, with an intense 24-hour virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury.
           </p>
-          <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0' }}>
-            Designed to foster creativity, interdisciplinary collaboration, and technological excellence, the event provides a unique opportunity to connect with global experts, showcase innovative ideas, receive mentorship, and gain international recognition.
-          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+            {[
+              { label: 'Event Format', val: '100% Online / Virtual' },
+              { label: 'Registration Price', val: '$0 (Completely Free)' },
+              { label: 'Participation', val: 'Worldwide Open' },
+              { label: 'Team Size', val: '1 to 5 Members' },
+            ].map((stat, i) => (
+              <div key={i} style={{ background: 'rgba(0,220,180,0.05)', padding: '1rem', borderRadius: '0.85rem', border: '1px solid rgba(0,220,180,0.15)' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#8a8a9a', textTransform: 'uppercase' }}>{stat.label}</div>
+                <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#00dcb4', marginTop: '0.2rem' }}>{stat.val}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -128,42 +417,83 @@ const HackathonSections = () => {
       <section id="tracks">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Target size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Theme & Challenge Tracks</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Industrial Challenge Tracks</h3>
         </div>
         <div style={{
           background: 'linear-gradient(135deg, rgba(210,170,100,0.1), transparent)',
           padding: '1.5rem 2rem', borderRadius: '1rem', border: '1px solid rgba(210,170,100,0.2)',
           marginBottom: '2rem'
         }}>
-          <h4 style={{ fontSize: '1.1rem', color: '#d2aa64', fontWeight: 700, marginBottom: '0.5rem' }}>
-            AI for a Smarter, Sustainable & Inclusive Future
+          <h4 style={{ fontSize: '1.15rem', color: '#d2aa64', fontWeight: 700, marginBottom: '0.4rem' }}>
+            Theme: Industry 5.0, Smart Manufacturing & Industrial AI
           </h4>
-          <p style={{ fontSize: '0.95rem', color: '#9090a0', lineHeight: 1.6 }}>
-            Participants are encouraged to develop innovative solutions that leverage Artificial Intelligence to improve lives, empower communities, accelerate sustainable development, and drive digital transformation across industries.
+          <p style={{ fontSize: '0.92rem', color: '#9090a0', lineHeight: 1.6, margin: 0 }}>
+            Participants can select from 7 specialized industrial tracks. All solutions should emphasize scalability, reliability, safety compliance, and direct applicability to modern industrial environments.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.25rem' }}>
           {[
-            { title: 'Artificial Intelligence & Generative AI', desc: 'Develop intelligent systems, automation tools, AI assistants, large language model applications, and next-generation AI solutions.' },
-            { title: 'Healthcare & Wellbeing', desc: 'Create AI-driven diagnostics, patient care optimization, mental health tech, and innovative medical solutions.' },
-            { title: 'Smart Cities & Sustainability', desc: 'Build green tech, energy optimization models, smart infrastructure, and environmental monitoring tools.' },
-            { title: 'Education Technology', desc: 'Design personalized learning experiences, accessibility tools, and intelligent tutoring systems.' },
-            { title: 'FinTech & Financial Inclusion', desc: 'Develop secure payment models, predictive financial analytics, and fraud detection systems.' },
-            { title: 'Cybersecurity & Digital Trust', desc: 'Create threat detection models, privacy-preserving AI, and blockchain-based security solutions.' },
-            { title: 'Open Innovation', desc: 'Any creative solution utilizing AI to address a significant real-world challenge not covered in other tracks.' }
-          ].map((track, i) => (
-            <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)', padding: '1.25rem', borderRadius: '1rem',
-              border: '1px solid rgba(255,255,255,0.08)'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
-                <BrainCircuit size={18} style={{ color: '#00dcb4', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{track.title}</span>
+            { 
+              title: 'Industry 5.0 & Human-Centric Automation', 
+              desc: 'Develop adaptive collaborative robotic systems (Cobots), operator-augmented wearable systems, and ergonomic robotic workcells combining human dexterity with machine precision.',
+              icon: Factory,
+              color: '#00dcb4'
+            },
+            { 
+              title: 'Industrial IoT, Sensor Telemetry & Edge AI', 
+              desc: 'Design low-latency edge sensor nodes, multi-protocol industrial gateways (OPC-UA/MQTT), and on-device neural inferencing for real-time factory floor anomaly detection.',
+              icon: Cpu,
+              color: '#64b4d2'
+            },
+            { 
+              title: 'Digital Twins & Predictive Maintenance (PdM)', 
+              desc: 'Build real-time virtual factory replicas, RUL (Remaining Useful Life) prognostic models, vibration spectrum analysis, and autonomous maintenance work-order generators.',
+              icon: Layers,
+              color: '#d2aa64'
+            },
+            { 
+              title: 'Autonomous Mobile Robots (AMR) & Intralogistics', 
+              desc: 'Create intelligent path-planning algorithms, multi-robot swarm fleet coordination, automated docking, and SLAM navigation for high-density industrial warehouse logistics.',
+              icon: Rocket,
+              color: '#b46ed2'
+            },
+            { 
+              title: 'Industrial Cybersecurity & OT/SCADA Defense', 
+              desc: 'Architect zero-trust security frameworks for operational technology, PLC firmware attestation, Modbus protocol fuzzing defense, and air-gapped forensic monitoring.',
+              icon: ShieldCheck,
+              color: '#d26e6e'
+            },
+            { 
+              title: 'Sustainable Manufacturing & Energy Optimization', 
+              desc: 'Build intelligent energy auditing pipelines, carbon footprint calculators for assembly lines, scrap reduction algorithms, and industrial heat recovery automation.',
+              icon: Zap,
+              color: '#00dcb4'
+            },
+            { 
+              title: 'Generative AI & LLMs for Industrial Engineering', 
+              desc: 'Harness LLMs and generative design to auto-synthesize PLC ladder logic, parse industrial schematics, accelerate CAD drafting, and assist maintenance field technicians.',
+              icon: BrainCircuit,
+              color: '#64b4d2'
+            }
+          ].map((track, i) => {
+            const Icon = track.icon;
+            return (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '1.25rem',
+                border: '1px solid rgba(255,255,255,0.08)', display: 'flex', flexDirection: 'column', gap: '0.75rem',
+                transition: 'all 0.25s ease'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <div style={{ padding: '0.6rem', borderRadius: '0.75rem', background: `${track.color}15`, border: `1px solid ${track.color}30` }}>
+                    <Icon size={20} style={{ color: track.color }} />
+                  </div>
+                  <h4 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{track.title}</h4>
+                </div>
+                <p style={{ fontSize: '0.86rem', color: '#9090a0', lineHeight: 1.6, margin: 0 }}>{track.desc}</p>
               </div>
-              <p style={{ fontSize: '0.85rem', color: '#9090a0', lineHeight: 1.5, paddingLeft: '1.85rem' }}>{track.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -245,7 +575,7 @@ const HackathonSections = () => {
       <section id="schedule">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <CalendarClock size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Event Schedule (30 August 2026)</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Event Schedule (27 September 2026)</h3>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           {[
@@ -398,35 +728,149 @@ const HackathonSections = () => {
 
       {/* ── FEATURED SPEAKERS ── */}
       <section id="speakers">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Mic size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Speakers</h3>
-        </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            International keynote speakers from academia, industry, startups, and research organizations will share their expertise on AI, innovation, entrepreneurship, and digital transformation.
-          </p>
-          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(100,180,210,0.05)', borderRadius: '1rem', border: '1px dashed rgba(100,180,210,0.3)' }}>
-             <p style={{ fontSize: '1.1rem', color: '#64b4d2', fontWeight: 600 }}>Speaker Announcements Coming Soon</p>
-             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>We are curating an exceptional lineup of global AI and tech leaders.</p>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+            <Mic size={18} style={{ color: '#64b4d2' }} />
+            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Keynote Speakers</h3>
           </div>
+          <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600, background: 'rgba(100,180,210,0.1)', padding: '0.25rem 0.75rem', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.2)' }}>
+            Distinguished Global Leaders
+          </span>
+        </div>
+        
+        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.75rem', lineHeight: 1.6 }}>
+          International technology visionaries from top industrial enterprises and universities delivering exclusive keynotes during the online hackathon:
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.5rem' }}>
+          {speakersList.map((spk, i) => (
+            <div key={i} style={{
+              background: 'rgba(255,255,255,0.03)',
+              borderRadius: '1.25rem',
+              border: `1px solid rgba(255,255,255,0.08)`,
+              padding: '1.75rem',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: `inset 0 0 20px ${spk.glow}`,
+              transition: 'transform 0.25s ease'
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                <div style={{
+                  width: '54px', height: '54px', borderRadius: '50%',
+                  background: `linear-gradient(135deg, ${spk.color}30, ${spk.color}10)`,
+                  border: `2px solid ${spk.color}`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 800, fontSize: '1.15rem', color: spk.color, flexShrink: 0
+                }}>
+                  {spk.initials}
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{spk.name}</h4>
+                  <div style={{ fontSize: '0.82rem', color: spk.color, fontWeight: 600, marginTop: '0.15rem' }}>{spk.role}</div>
+                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{spk.org} • {spk.location}</div>
+                </div>
+              </div>
+
+              <div style={{
+                background: 'rgba(255,255,255,0.02)', padding: '0.85rem 1rem',
+                borderRadius: '0.75rem', borderLeft: `3px solid ${spk.color}`,
+                marginBottom: '1rem', flexGrow: 1
+              }}>
+                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>Keynote Address</div>
+                <div style={{ fontSize: '0.88rem', color: '#e8e8ee', fontWeight: 600, marginTop: '0.2rem', fontStyle: 'italic' }}>
+                  "{spk.topic}"
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                {spk.tags.map((t, idx) => (
+                  <span key={idx} style={{
+                    fontSize: '0.72rem', padding: '0.2rem 0.55rem', borderRadius: '1rem',
+                    background: 'rgba(255,255,255,0.05)', color: '#a0a0b0', border: '1px solid rgba(255,255,255,0.08)'
+                  }}>
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ── INTERNATIONAL JUDGES ── */}
       <section id="judges">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Users size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>International Judges</h3>
-        </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            Meet the distinguished panel of international experts, researchers, professors, and industry leaders responsible for evaluating innovative AI solutions.
-          </p>
-          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(100,180,210,0.05)', borderRadius: '1rem', border: '1px dashed rgba(100,180,210,0.3)' }}>
-             <p style={{ fontSize: '1.1rem', color: '#64b4d2', fontWeight: 600 }}>Panel Announcements Coming Soon</p>
-             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>We are curating an exceptional lineup of global AI leaders. Stay tuned for updates.</p>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+            <Users size={18} style={{ color: '#00dcb4' }} />
+            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>International Judges Panel</h3>
           </div>
+          <span style={{ fontSize: '0.8rem', color: '#00dcb4', fontWeight: 600, background: 'rgba(0,220,180,0.1)', padding: '0.25rem 0.75rem', borderRadius: '1rem', border: '1px solid rgba(0,220,180,0.2)' }}>
+            Rigorous Independent Evaluation
+          </span>
+        </div>
+
+        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.75rem', lineHeight: 1.6 }}>
+          Our international jury consists of distinguished industrial directors, lead research scientists, and technology executives who evaluate project architecture, code quality, and commercial viability:
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.5rem' }}>
+          {judgesList.map((jdg, i) => (
+            <div key={i} style={{
+              background: 'rgba(255,255,255,0.03)',
+              borderRadius: '1.25rem',
+              border: `1px solid rgba(255,255,255,0.08)`,
+              padding: '1.75rem',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: `inset 0 0 20px ${jdg.glow}`,
+              transition: 'transform 0.25s ease'
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                <div style={{
+                  width: '54px', height: '54px', borderRadius: '50%',
+                  background: `linear-gradient(135deg, ${jdg.color}30, ${jdg.color}10)`,
+                  border: `2px solid ${jdg.color}`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 800, fontSize: '1.15rem', color: jdg.color, flexShrink: 0
+                }}>
+                  {jdg.initials}
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{jdg.name}</h4>
+                  <div style={{ fontSize: '0.82rem', color: jdg.color, fontWeight: 600, marginTop: '0.15rem' }}>{jdg.role}</div>
+                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{jdg.org} • {jdg.location}</div>
+                </div>
+              </div>
+
+              <div style={{
+                background: 'rgba(255,255,255,0.02)', padding: '0.85rem 1rem',
+                borderRadius: '0.75rem', borderLeft: `3px solid ${jdg.color}`,
+                marginBottom: '1rem', flexGrow: 1
+              }}>
+                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>Domain Evaluation Focus</div>
+                <div style={{ fontSize: '0.86rem', color: '#e8e8ee', fontWeight: 500, marginTop: '0.2rem' }}>
+                  {jdg.focus}
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                {jdg.tags.map((t, idx) => (
+                  <span key={idx} style={{
+                    fontSize: '0.72rem', padding: '0.2rem 0.55rem', borderRadius: '1rem',
+                    background: 'rgba(255,255,255,0.05)', color: '#a0a0b0', border: '1px solid rgba(255,255,255,0.08)'
+                  }}>
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -434,16 +878,28 @@ const HackathonSections = () => {
       <section id="mentors">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <GraduationCap size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Mentors & Experts</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Industry Mentors & Technical Coaches</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            Connect with experienced professionals, researchers, and technology experts who will provide guidance, technical insights, and mentorship throughout the event.
-          </p>
-          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(210,170,100,0.05)', borderRadius: '1rem', border: '1px dashed rgba(210,170,100,0.3)' }}>
-             <p style={{ fontSize: '1.1rem', color: '#d2aa64', fontWeight: 600 }}>Mentorship Roster to be Revealed</p>
-             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>Our network of industry professionals is currently being finalized.</p>
-          </div>
+        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+          Hands-on technical mentors available throughout the virtual hacking sprint to debug architectures, provide code reviews, and guide teams on industrial safety standards:
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))', gap: '1.25rem' }}>
+          {mentorsList.map((m, i) => (
+            <div key={i} style={{
+              background: 'rgba(210,170,100,0.04)', padding: '1.5rem', borderRadius: '1rem',
+              border: '1px solid rgba(210,170,100,0.15)', display: 'flex', flexDirection: 'column', gap: '0.6rem'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <Handshake size={18} style={{ color: '#d2aa64' }} />
+                <h4 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{m.name}</h4>
+              </div>
+              <div style={{ fontSize: '0.82rem', color: '#d2aa64', fontWeight: 600 }}>{m.role}</div>
+              <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{m.org} ({m.location})</div>
+              <div style={{ fontSize: '0.82rem', color: '#a0a0b0', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginTop: '0.2rem' }}>
+                <strong>Mentorship:</strong> {m.expertise}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -551,8 +1007,8 @@ const HackathonSections = () => {
             { event: 'Registration Opens', date: 'June 2026' },
             { event: 'Judge Applications Open', date: 'June 2026' },
             { event: 'Speaker Applications Open', date: 'June 2026' },
-            { event: 'Registration Deadline', date: '25 August 2026' },
-            { event: 'Innovation Forum & Global Hackathon', date: '30 August 2026', highlight: true },
+            { event: 'Registration Deadline', date: '22 September 2026' },
+            { event: 'Innovation Forum & Global Hackathon', date: '27 September 2026', highlight: true },
             { event: 'Certificates', date: 'Within 7 Days' }
           ].map((item, i) => (
             <div key={i} style={{
@@ -601,106 +1057,132 @@ const HackathonSections = () => {
         </ul>
       </section>
 
-      {/* ── REGISTRATION SECTION ── */}
+      {/* ── REGISTRATION SECTION (100% FREE / ZERO PRICE) ── */}
       <section id="registration" style={{ marginTop: '2rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem' }}>Registration Section</h2>
-          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#00dcb4', marginBottom: '1rem' }}>Join the Global Event</h3>
-          <p style={{ fontSize: '1.1rem', color: '#a0a0b0', fontWeight: 500 }}>Choose your role and register today.</p>
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <div style={{
+            display: 'inline-block', padding: '0.35rem 1.1rem', borderRadius: '2rem',
+            background: 'rgba(0,220,180,0.12)', border: '1px solid rgba(0,220,180,0.3)',
+            color: '#00dcb4', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase',
+            marginBottom: '0.75rem'
+          }}>
+            Zero Registration Fee • $0 Free Entry
+          </div>
+          <h2 style={{ fontSize: '2.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
+            Register for the Industrial Hackathon
+          </h2>
+          <p style={{ fontSize: '1rem', color: '#a0a0b0', maxWidth: '620px', margin: '0 auto' }}>
+            Join worldwide participants at zero cost. Select your role below and submit your free online registration.
+          </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
           
           {/* Participant */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(0,220,180,0.1), rgba(0,180,220,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(0,220,180,0.2)',
-            display: 'flex', flexDirection: 'column'
+            background: 'linear-gradient(135deg, rgba(0,220,180,0.12), rgba(0,180,220,0.02))',
+            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(0,220,180,0.3)',
+            display: 'flex', flexDirection: 'column', position: 'relative'
           }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Rocket size={20} style={{ color: '#00dcb4' }} /> Participant
-            </h3>
-            <p style={{ fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-              Join the hackathon or attend the Innovation Forum to network and learn.
-            </p>
-            <a href="#" style={{
-              display: 'inline-block', textAlign: 'center', textDecoration: 'none',
-              width: '100%', background: '#00dcb4', color: '#101015',
-              border: 'none', padding: '0.8rem', borderRadius: '0.75rem',
-              fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-              boxShadow: '0 0 15px rgba(0,220,180,0.3)', boxSizing: 'border-box'
+            <div style={{
+              position: 'absolute', top: '1rem', right: '1rem',
+              background: '#00dcb4', color: '#0b1015', fontSize: '0.7rem', fontWeight: 800,
+              padding: '0.2rem 0.6rem', borderRadius: '1rem', textTransform: 'uppercase'
             }}>
-              Register as Participant
-            </a>
+              100% Free ($0)
+            </div>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Rocket size={20} style={{ color: '#00dcb4' }} /> Participant / Team
+            </h3>
+            <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
+              Compete individually or in teams of up to 5 members. Receive mentor guidance, submit code on GitHub, and pitch to international judges.
+            </p>
+            <button 
+              onClick={() => handleOpenModal('Participant')}
+              style={{
+                width: '100%', background: '#00dcb4', color: '#0b1015',
+                border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
+                fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 0 15px rgba(0,220,180,0.3)'
+              }}
+            >
+              Register Free as Participant
+            </button>
           </div>
 
           {/* Judge */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(210,170,100,0.1), rgba(180,140,80,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(210,170,100,0.2)',
+            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(210,170,100,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <GraduationCap size={20} style={{ color: '#d2aa64' }} /> Judge
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <GraduationCap size={20} style={{ color: '#d2aa64' }} /> Judge / Jury
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-              Evaluate projects, mentor participants, and share your industry expertise.
+            <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
+              Industrial experts, senior researchers, and professors invited to evaluate projects and mentor high-impact solutions.
             </p>
-            <a href="#" style={{
-              display: 'inline-block', textAlign: 'center', textDecoration: 'none',
-              width: '100%', background: '#d2aa64', color: '#101015',
-              border: 'none', padding: '0.8rem', borderRadius: '0.75rem',
-              fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-              boxShadow: '0 0 15px rgba(210,170,100,0.3)', boxSizing: 'border-box'
-            }}>
+            <button 
+              onClick={() => handleOpenModal('Judge')}
+              style={{
+                width: '100%', background: '#d2aa64', color: '#0b1015',
+                border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
+                fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 0 15px rgba(210,170,100,0.3)'
+              }}
+            >
               Apply as Judge
-            </a>
+            </button>
           </div>
 
           {/* Speaker */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(180,110,210,0.1), rgba(150,80,180,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(180,110,210,0.2)',
+            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(180,110,210,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Mic size={20} style={{ color: '#b46ed2' }} /> Speaker
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Mic size={20} style={{ color: '#b46ed2' }} /> Keynote Speaker
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-              Deliver keynotes and share insights in our Innovation Forum.
+            <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
+              Deliver keynote presentations and share industry expertise in our virtual Innovation Forum sessions.
             </p>
-            <a href="#" style={{
-              display: 'inline-block', textAlign: 'center', textDecoration: 'none',
-              width: '100%', background: '#b46ed2', color: '#fff',
-              border: 'none', padding: '0.8rem', borderRadius: '0.75rem',
-              fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-              boxShadow: '0 0 15px rgba(180,110,210,0.3)', boxSizing: 'border-box'
-            }}>
+            <button 
+              onClick={() => handleOpenModal('Speaker')}
+              style={{
+                width: '100%', background: '#b46ed2', color: '#fff',
+                border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
+                fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 0 15px rgba(180,110,210,0.3)'
+              }}
+            >
               Apply as Speaker
-            </a>
+            </button>
           </div>
 
           {/* Partner / Sponsor */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(100,180,210,0.1), rgba(70,150,180,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(100,180,210,0.2)',
+            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(100,180,210,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Handshake size={20} style={{ color: '#64b4d2' }} /> Partner/Sponsor
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Handshake size={20} style={{ color: '#64b4d2' }} /> Partner / Sponsor
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-              Support innovation and gain global visibility across the ecosystem.
+            <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
+              Support student & startup innovators by providing cloud infrastructure, datasets, or specialized challenge bounties.
             </p>
-            <a href="#" style={{
-              display: 'inline-block', textAlign: 'center', textDecoration: 'none',
-              width: '100%', background: '#64b4d2', color: '#101015',
-              border: 'none', padding: '0.8rem', borderRadius: '0.75rem',
-              fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
-              boxShadow: '0 0 15px rgba(100,180,210,0.3)', boxSizing: 'border-box'
-            }}>
+            <button 
+              onClick={() => handleOpenModal('Partner')}
+              style={{
+                width: '100%', background: '#64b4d2', color: '#0b1015',
+                border: 'none', padding: '0.85rem', borderRadius: '0.75rem',
+                fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 0 15px rgba(100,180,210,0.3)'
+              }}
+            >
               Become a Partner
-            </a>
+            </button>
           </div>
 
         </div>
@@ -738,11 +1220,27 @@ const HackathonSections = () => {
       <section id="organizing-committee">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Briefcase size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Organizing Committee</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Organizing Committee & Leadership</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-          <p style={{ fontSize: '1.1rem', color: '#d2aa64', fontWeight: 600 }}>Coming Soon</p>
-          <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>We will soon introduce the team behind this global event.</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
+          {committeeList.map((member, i) => (
+            <div key={i} style={{
+              background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '1.25rem',
+              border: '1px solid rgba(255,255,255,0.08)', textAlign: 'center',
+              display: 'flex', flexDirection: 'column', alignItems: 'center'
+            }}>
+              <div style={{
+                width: '84px', height: '84px', borderRadius: '50%',
+                overflow: 'hidden', marginBottom: '1rem', border: '2px solid rgba(210,170,100,0.4)',
+                boxShadow: '0 0 15px rgba(210,170,100,0.15)'
+              }}>
+                <img src={member.photo} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#e8e8ee', margin: '0 0 0.3rem' }}>{member.name}</h4>
+              <div style={{ fontSize: '0.84rem', color: '#d2aa64', fontWeight: 600 }}>{member.role}</div>
+              <div style={{ fontSize: '0.78rem', color: '#8a8a9a', marginTop: '0.2rem' }}>{member.org}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -752,11 +1250,11 @@ const HackathonSections = () => {
           <HelpCircle size={18} style={{ color: '#b46ed2' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Frequently Asked Questions</h3>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
           {faqs.map((faq, index) => (
             <div key={index} style={{
-              background: 'rgba(255,255,255,0.02)', borderRadius: '0.75rem',
-              border: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden'
+              background: 'rgba(255,255,255,0.02)', borderRadius: '0.85rem',
+              border: '1px solid rgba(255,255,255,0.06)', overflow: 'hidden'
             }}>
               <div 
                 onClick={() => toggleFAQ(index)}
@@ -766,10 +1264,10 @@ const HackathonSections = () => {
                 }}
               >
                 <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{faq.q}</span>
-                {openFAQ === index ? <ChevronUp size={18} color="#b46ed2" /> : <ChevronDown size={18} color="#a0a0b0" />}
+                {openFAQ === index ? <ChevronUp size={18} color="#00dcb4" /> : <ChevronDown size={18} color="#a0a0b0" />}
               </div>
               {openFAQ === index && (
-                <div style={{ padding: '0 1.25rem 1.25rem', fontSize: '0.9rem', color: '#a0a0b0', lineHeight: 1.6 }}>
+                <div style={{ padding: '0 1.25rem 1.25rem', fontSize: '0.9rem', color: '#a0a0b0', lineHeight: 1.7 }}>
                   {faq.a}
                 </div>
               )}
@@ -782,29 +1280,298 @@ const HackathonSections = () => {
       <section id="contact">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Mail size={18} style={{ color: '#00dcb4' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Contact Us</h3>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Contact & Support</h3>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
           <div style={{ background: 'rgba(0,220,180,0.05)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid rgba(0,220,180,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(0,220,180,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Mail size={20} style={{ color: '#00dcb4' }} />
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(0,220,180,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Mail size={22} style={{ color: '#00dcb4' }} />
             </div>
             <div>
-              <div style={{ fontSize: '0.85rem', color: '#a0a0b0', marginBottom: '0.2rem' }}>Email</div>
+              <div style={{ fontSize: '0.8rem', color: '#8a8a9a', textTransform: 'uppercase', fontWeight: 600 }}>Inquiries & Partnerships</div>
               <a href="mailto:inquiries@techryonglobal.com" style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600, textDecoration: 'none' }}>inquiries@techryonglobal.com</a>
             </div>
           </div>
           <div style={{ background: 'rgba(100,180,210,0.05)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(100,180,210,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <MapPin size={20} style={{ color: '#64b4d2' }} />
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(100,180,210,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Globe size={22} style={{ color: '#64b4d2' }} />
             </div>
             <div>
-              <div style={{ fontSize: '0.85rem', color: '#a0a0b0', marginBottom: '0.2rem' }}>Location</div>
-              <div style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600 }}>Virtual Event | Worldwide Participation</div>
+              <div style={{ fontSize: '0.8rem', color: '#8a8a9a', textTransform: 'uppercase', fontWeight: 600 }}>Location & Access</div>
+              <div style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600 }}>100% Online Virtual Platform • Global Access</div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── INTERACTIVE 100% FREE REGISTRATION MODAL ── */}
+      {regModalOpen && createPortal(
+        <div 
+          onClick={() => setRegModalOpen(false)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 99999,
+            backgroundColor: 'rgba(5, 7, 12, 0.88)',
+            backdropFilter: 'blur(12px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1.5rem',
+            animation: 'fadeIn 0.25s ease-out',
+          }}
+        >
+          <div 
+            onClick={e => e.stopPropagation()}
+            style={{
+              background: '#0d131d',
+              border: '1px solid rgba(0,220,180,0.3)',
+              borderRadius: '1.5rem',
+              maxWidth: '560px',
+              width: '100%',
+              padding: '2.25rem',
+              position: 'relative',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(0,220,180,0.15)',
+              maxHeight: '90vh',
+              overflowY: 'auto'
+            }}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setRegModalOpen(false)}
+              style={{
+                position: 'absolute', top: '1.25rem', right: '1.25rem',
+                background: 'rgba(255,255,255,0.08)', border: 'none', borderRadius: '50%',
+                width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                cursor: 'pointer', color: '#a0a0b0', transition: 'all 0.2s'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#a0a0b0'; e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; }}
+            >
+              <X size={18} />
+            </button>
+
+            {regSubmitted ? (
+              <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
+                <div style={{
+                  width: '64px', height: '64px', borderRadius: '50%',
+                  background: 'rgba(0,220,180,0.15)', border: '2px solid #00dcb4',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  margin: '0 auto 1.25rem', color: '#00dcb4'
+                }}>
+                  <Check size={32} />
+                </div>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
+                  Registration Confirmed!
+                </h3>
+                <div style={{
+                  display: 'inline-block', background: 'rgba(0,220,180,0.1)', color: '#00dcb4',
+                  padding: '0.25rem 0.85rem', borderRadius: '1rem', fontSize: '0.8rem', fontWeight: 700,
+                  marginBottom: '1rem', border: '1px solid rgba(0,220,180,0.25)'
+                }}>
+                  Fee: $0 (Free Registration)
+                </div>
+                <p style={{ fontSize: '0.92rem', color: '#a0a0b0', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                  Thank you for registering as a <strong>{formData.role}</strong> for the <strong>TechryonGlobal Industrial Hackathon 2026</strong>. A confirmation email and Discord platform invite will be dispatched to <strong>{formData.email || 'your email'}</strong>.
+                </p>
+                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.08)', marginBottom: '1.5rem', textAlign: 'left' }}>
+                  <div style={{ fontSize: '0.75rem', color: '#8a8a9a', textTransform: 'uppercase' }}>Selected Track:</div>
+                  <div style={{ fontSize: '0.92rem', color: '#e8e8ee', fontWeight: 600 }}>{formData.track}</div>
+                  <div style={{ fontSize: '0.75rem', color: '#8a8a9a', textTransform: 'uppercase', marginTop: '0.5rem' }}>Event Date:</div>
+                  <div style={{ fontSize: '0.92rem', color: '#00dcb4', fontWeight: 600 }}>27 September 2026 (Virtual / Online)</div>
+                </div>
+                <button
+                  onClick={() => setRegModalOpen(false)}
+                  style={{
+                    background: '#00dcb4', color: '#0b1015', border: 'none',
+                    padding: '0.8rem 2rem', borderRadius: '0.75rem',
+                    fontSize: '0.95rem', fontWeight: 700, cursor: 'pointer'
+                  }}
+                >
+                  Done
+                </button>
+              </div>
+            ) : (
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                  <span style={{
+                    fontSize: '0.72rem', fontWeight: 800, textTransform: 'uppercase',
+                    padding: '0.2rem 0.6rem', borderRadius: '1rem',
+                    background: 'rgba(0,220,180,0.15)', color: '#00dcb4', border: '1px solid rgba(0,220,180,0.3)'
+                  }}>
+                    100% Free • No Price ($0)
+                  </span>
+                </div>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.3rem' }}>
+                  Online Hackathon Registration
+                </h3>
+                <p style={{ fontSize: '0.86rem', color: '#9090a0', marginBottom: '1.5rem' }}>
+                  Complete this form to reserve your free virtual participation pass.
+                </p>
+
+                <form onSubmit={handleSubmitRegistration} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                      Registering As:
+                    </label>
+                    <select
+                      value={formData.role}
+                      onChange={e => setFormData({ ...formData, role: e.target.value })}
+                      style={{
+                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none'
+                      }}
+                    >
+                      <option value="Participant" style={{ background: '#0d131d' }}>Participant / Team Member</option>
+                      <option value="Judge" style={{ background: '#0d131d' }}>Judge / Evaluator</option>
+                      <option value="Speaker" style={{ background: '#0d131d' }}>Keynote Speaker</option>
+                      <option value="Partner" style={{ background: '#0d131d' }}>Industry / Academic Partner</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Alex Morgan"
+                      value={formData.fullName}
+                      onChange={e => setFormData({ ...formData, fullName: e.target.value })}
+                      style={{
+                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="e.g. alex@university.edu"
+                      value={formData.email}
+                      onChange={e => setFormData({ ...formData, email: e.target.value })}
+                      style={{
+                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                      Institution / Organization / University *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Technical University / Tech Corp"
+                      value={formData.organization}
+                      onChange={e => setFormData({ ...formData, organization: e.target.value })}
+                      style={{
+                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                        color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
+                      }}
+                    />
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                    <div>
+                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                        Country *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. Germany, USA, India"
+                        value={formData.country}
+                        onChange={e => setFormData({ ...formData, country: e.target.value })}
+                        style={{
+                          width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                          color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                        Team Name (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. CyberRobotics Lab"
+                        value={formData.teamName}
+                        onChange={e => setFormData({ ...formData, teamName: e.target.value })}
+                        style={{
+                          width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                          color: '#e8e8ee', fontSize: '0.9rem', outline: 'none', boxSizing: 'border-box'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, color: '#a0a0b0', marginBottom: '0.35rem' }}>
+                      Primary Industrial Track of Interest
+                    </label>
+                    <select
+                      value={formData.track}
+                      onChange={e => setFormData({ ...formData, track: e.target.value })}
+                      style={{
+                        width: '100%', padding: '0.75rem', borderRadius: '0.65rem',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)',
+                        color: '#e8e8ee', fontSize: '0.86rem', outline: 'none'
+                      }}
+                    >
+                      <option value="Industry 5.0 & Human-Centric Automation" style={{ background: '#0d131d' }}>Industry 5.0 & Human-Centric Automation</option>
+                      <option value="Industrial IoT, Sensor Telemetry & Edge AI" style={{ background: '#0d131d' }}>Industrial IoT, Sensor Telemetry & Edge AI</option>
+                      <option value="Digital Twins & Predictive Maintenance (PdM)" style={{ background: '#0d131d' }}>Digital Twins & Predictive Maintenance (PdM)</option>
+                      <option value="Autonomous Mobile Robots (AMR) & Intralogistics" style={{ background: '#0d131d' }}>Autonomous Mobile Robots (AMR) & Intralogistics</option>
+                      <option value="Industrial Cybersecurity & OT/SCADA Defense" style={{ background: '#0d131d' }}>Industrial Cybersecurity & OT/SCADA Defense</option>
+                      <option value="Sustainable Manufacturing & Energy Optimization" style={{ background: '#0d131d' }}>Sustainable Manufacturing & Energy Optimization</option>
+                      <option value="Generative AI & LLMs for Industrial Engineering" style={{ background: '#0d131d' }}>Generative AI & LLMs for Industrial Engineering</option>
+                    </select>
+                  </div>
+
+                  <div style={{
+                    background: 'rgba(0,220,180,0.06)', border: '1px solid rgba(0,220,180,0.2)',
+                    padding: '0.85rem', borderRadius: '0.65rem', display: 'flex', alignItems: 'center', gap: '0.5rem',
+                    marginTop: '0.5rem'
+                  }}>
+                    <CheckCircle size={18} style={{ color: '#00dcb4', flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.82rem', color: '#e8e8ee' }}>
+                      Participation is <strong>100% Free ($0)</strong>. No credit card or payment required.
+                    </span>
+                  </div>
+
+                  <button
+                    type="submit"
+                    style={{
+                      width: '100%', background: '#00dcb4', color: '#0b1015',
+                      border: 'none', padding: '0.9rem', borderRadius: '0.75rem',
+                      fontSize: '1rem', fontWeight: 700, cursor: 'pointer',
+                      marginTop: '0.5rem', boxShadow: '0 0 20px rgba(0,220,180,0.3)'
+                    }}
+                  >
+                    Submit Free Registration
+                  </button>
+                </form>
+              </div>
+            )}
+          </div>
+        </div>,
+        document.body
+      )}
 
     </div>
   );
