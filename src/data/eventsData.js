@@ -431,7 +431,7 @@ export const eventsData = [
     "date": "27 September 2026",
     "category": "Technical Summit",
     "tags": ["#IndustrialHackathon", "#Industry5.0", "#SmartManufacturing", "#IndustrialAI", "#IoT", "#DigitalTwins"],
-    "overview": "The TechryonGlobal Industrial Hackathon 2026 is an international online virtual hackathon bringing together students, developers, researchers, engineers, startups, and industrial leaders across the world. Focused on Industry 5.0, Smart Manufacturing, Industrial IoT, Digital Twins, and Autonomous Robotics, this premier online competition challenges participants to build practical, scalable industrial solutions evaluated by an esteemed international panel of industry judges.",
+    "overview": "The TechryonGlobal Industrial Hackathon 2026 is an international online virtual hackathon bringing together developers, engineers, researchers, professors, startups, and industrial leaders across the world. Focused on Industry 5.0, Smart Manufacturing, Industrial IoT, Digital Twins, and Autonomous Robotics, this premier online competition challenges participants to build practical, scalable industrial solutions evaluated by an esteemed international panel of industry judges.",
     "themes": [
       "Industry 5.0 & Smart Manufacturing: Designing human-centric automation, digital twins, and autonomous factory floors.",
       "Industrial IoT & Edge Intelligence: Real-time telemetry, edge machine learning, and predictive equipment maintenance.",

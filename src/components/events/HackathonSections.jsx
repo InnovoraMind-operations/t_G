@@ -328,7 +328,7 @@ const HackathonSections = () => {
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together students, developers, engineers, researchers, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this premier online competition challenges participants to build practical, scalable industrial solutions.
+            The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together developers, engineers, researchers, professors, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this premier online competition challenges participants to build practical, scalable industrial solutions.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             The event combines an Innovation Forum featuring world-class keynote talks from companies like Siemens, ABB, GE Digital, and Tokyo University, with an intense 24-hour virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury.
@@ -360,7 +360,7 @@ const HackathonSections = () => {
             TechryonGlobal is a global technology and innovation platform dedicated to fostering collaboration, research, learning, and technological advancement through international conferences, hackathons, workshops, and professional networking initiatives.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            Our mission is to connect students, researchers, educators, professionals, entrepreneurs, and industry leaders worldwide to solve real-world challenges through innovation and emerging technologies.
+            Our mission is to connect developers, engineers, researchers, professors, entrepreneurs, and industry leaders worldwide to solve real-world challenges through innovation and emerging technologies.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0' }}>
             Through its global initiatives, TechryonGlobal empowers innovators by creating opportunities for collaboration, knowledge exchange, research dissemination, and technological advancement across academia, industry, startups, and government sectors.
@@ -549,10 +549,10 @@ const HackathonSections = () => {
             <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1rem' }}>The event is open to participants worldwide, including:</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.5rem' }}>
               {[
-                'Undergraduate Students', 'Postgraduate Students', 'Research Scholars', 
-                'Faculty Members', 'Developers', 'Industry Professionals', 
-                'Entrepreneurs', 'Startups', 'AI Enthusiasts', 'Product Designers', 
-                'Data Scientists', 'Innovation Communities', 'Technology Clubs', 'NGOs'
+                'Developers', 'Engineers', 'Researchers', 'Professors',
+                'Research Scholars', 'Faculty Members', 'Industry Professionals',
+                'Entrepreneurs', 'Startups', 'AI Specialists', 'Product Designers',
+                'Data Scientists', 'Innovation Communities', 'Technology Teams'
               ].map((item, i) => (
                 <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', color: '#9090a0' }}>
                   <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#00dcb4', flexShrink: 0 }} /> {item}
@@ -704,7 +704,7 @@ const HackathonSections = () => {
             'Best AI Innovation',
             'Best Sustainability Solution',
             'Best Healthcare Innovation',
-            'Best Student Team',
+            'Best Engineering Team',
             'Best International Team',
             'Best UI/UX Design',
             'People\'s Choice Project',
@@ -1163,7 +1163,7 @@ const HackathonSections = () => {
               <Handshake size={20} style={{ color: '#64b4d2' }} /> Partner / Sponsor
             </h3>
             <p style={{ fontSize: '0.88rem', color: '#9090a0', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
-              Support student & startup innovators by providing cloud infrastructure, datasets, or specialized challenge bounties.
+              Support developer & startup innovators by providing cloud infrastructure, datasets, or specialized challenge bounties.
             </p>
             <button 
               onClick={() => handleOpenModal('Partner')}
