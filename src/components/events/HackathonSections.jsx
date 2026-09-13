@@ -12,7 +12,6 @@ import vjPhoto from '../../assets/VJ.png';
 import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
-import drKanimozhiPhoto from '../../assets/dr-kanimozhi.jpg';
 import engrFortunePhoto from '../../assets/engr-fortune-onyia.jpg';
 
 // Official Google Form Registration URL
@@ -27,22 +26,6 @@ const HackathonSections = () => {
 
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
-    {
-      name: 'Dr. R. Kanimozhi',
-      role: 'Professor & Head, Department of Artificial Intelligence & Data Science',
-      org: 'A.V.C. College of Engineering',
-      location: 'Tamil Nadu, India',
-      displayTitle: 'Professor',
-      topic: 'Cybersecurity & Digital Trust',
-      bio: 'Dr. R. Kanimozhi is a Professor and Head of the Department of Artificial Intelligence and Data Science at A.V.C. College of Engineering, Tamil Nadu, India. She holds a Ph.D. in Computer Science and Engineering from Annamalai University and has extensive expertise in Artificial Intelligence, Machine Learning, Cybersecurity, Cloud and Distributed Systems, Digital Twin, IoT, Blockchain, and Human-Centric AI. She has guided three Ph.D. scholars, organized academic conferences and seminars, and received government-funded research support. Dr. Kanimozhi has published numerous high-impact research articles in reputed journals, including Scientific Reports and Concurrency and Computation: Practice and Experience. She also serves as a reviewer for leading international journals and actively contributes to advancing innovative AI-driven technologies and interdisciplinary research.',
-      orcid: '0000-0001-9199-3113',
-      photo: drKanimozhiPhoto,
-      confirmed: true,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.2)',
-      tags: ['Cybersecurity', 'Digital Trust', 'AI & Data Science', 'Digital Twin'],
-      initials: 'RK'
-    },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',

@@ -459,13 +459,6 @@ export const eventsData = [
     ],
     "speakers": [
       {
-        "name": "Dr. R. Kanimozhi",
-        "role": "Professor & Head, Department of Artificial Intelligence & Data Science, A.V.C. College of Engineering",
-        "topic": "Cybersecurity & Digital Trust",
-        "bio": "Professor and Head of AI and Data Science at A.V.C. College of Engineering, Tamil Nadu, India. Ph.D. from Annamalai University with extensive expertise in AI, Machine Learning, Cybersecurity, Cloud Systems, and Digital Twins.",
-        "orcid": "0000-0001-9199-3113"
-      },
-      {
         "name": "Engr. Fortune Chibuike Onyia (MNSE)",
         "role": "Lecturer, Civil Engineering Dept., Federal Polytechnic Oko & Entrepreneur",
         "topic": "Sustainable Technology",
