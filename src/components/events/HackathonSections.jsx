@@ -12,6 +12,8 @@ import vjPhoto from '../../assets/VJ.png';
 import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
+import drKanimozhiPhoto from '../../assets/dr-kanimozhi.jpg';
+import engrFortunePhoto from '../../assets/engr-fortune-onyia.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -23,8 +25,39 @@ const HackathonSections = () => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // ── Keynote Speakers ───────────────────────────────────────
+  // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
+    {
+      name: 'Dr. R. Kanimozhi',
+      role: 'Professor & Head, Department of Artificial Intelligence & Data Science',
+      org: 'A.V.C. College of Engineering',
+      location: 'Tamil Nadu, India',
+      displayTitle: 'Professor',
+      topic: 'Cybersecurity & Digital Trust',
+      bio: 'Dr. R. Kanimozhi is a Professor and Head of the Department of Artificial Intelligence and Data Science at A.V.C. College of Engineering, Tamil Nadu, India. She holds a Ph.D. in Computer Science and Engineering from Annamalai University and has extensive expertise in Artificial Intelligence, Machine Learning, Cybersecurity, Cloud and Distributed Systems, Digital Twin, IoT, Blockchain, and Human-Centric AI. She has guided three Ph.D. scholars, organized academic conferences and seminars, and received government-funded research support. Dr. Kanimozhi has published numerous high-impact research articles in reputed journals, including Scientific Reports and Concurrency and Computation: Practice and Experience. She also serves as a reviewer for leading international journals and actively contributes to advancing innovative AI-driven technologies and interdisciplinary research.',
+      orcid: '0000-0001-9199-3113',
+      photo: drKanimozhiPhoto,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Cybersecurity', 'Digital Trust', 'AI & Data Science', 'Digital Twin'],
+      initials: 'RK'
+    },
+    {
+      name: 'Engr. Fortune Chibuike Onyia (MNSE)',
+      role: 'Lecturer, Civil Engineering Department & Entrepreneur',
+      org: 'Federal Polytechnic Oko',
+      location: 'Anambra State, Nigeria',
+      displayTitle: 'Engr. Fortune Chibuike Onyia (MNSE)',
+      topic: 'Sustainable Technology',
+      bio: 'Engr. Fortune Chibuike Onyia (MNSE) is a Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice. He has lectured in the Civil Engineering Department of Federal Polytechnic Oko, Anambra State, since 2016. His professional interests include urban hydrology, flood management, nature-based solutions, GIS applications, and sustainable infrastructure development. He is committed to advancing engineering knowledge through teaching, research, innovation, and professional practice, while contributing meaningfully to community development and the growth of the engineering profession in Nigeria.',
+      photo: engrFortunePhoto,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['Sustainable Technology', 'Infrastructure', 'GIS Applications', 'Urban Hydrology'],
+      initials: 'FO'
+    },
     {
       name: 'Dr. Klaus Obermeier',
       role: 'VP of Industrial Automation & Digital Systems',
@@ -712,23 +745,23 @@ const HackathonSections = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
             <Mic size={18} style={{ color: '#64b4d2' }} />
-            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Keynote Speakers</h3>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Keynote & Expert Speakers</h3>
           </div>
           <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600, background: 'rgba(100,180,210,0.1)', padding: '0.25rem 0.75rem', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.2)' }}>
-            Distinguished Global Leaders
+            Distinguished Global Leaders & Academicians
           </span>
         </div>
         
         <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.75rem', lineHeight: 1.6 }}>
-          International technology visionaries from top industrial enterprises and universities delivering exclusive keynotes during the online hackathon:
+          International technology visionaries, distinguished professors, and industry leaders confirmed and delivering exclusive keynote addresses and technical sessions during the online hackathon and innovation forum:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }}>
           {speakersList.map((spk, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.03)',
               borderRadius: '1.25rem',
-              border: `1px solid rgba(255,255,255,0.08)`,
+              border: `1px solid ${spk.confirmed ? 'rgba(0,220,180,0.3)' : 'rgba(255,255,255,0.08)'}`,
               padding: '1.75rem',
               display: 'flex',
               flexDirection: 'column',
@@ -738,32 +771,80 @@ const HackathonSections = () => {
             onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                <div style={{
-                  width: '54px', height: '54px', borderRadius: '50%',
-                  background: `linear-gradient(135deg, ${spk.color}30, ${spk.color}10)`,
-                  border: `2px solid ${spk.color}`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, fontSize: '1.15rem', color: spk.color, flexShrink: 0
-                }}>
-                  {spk.initials}
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{spk.name}</h4>
-                  <div style={{ fontSize: '0.82rem', color: spk.color, fontWeight: 600, marginTop: '0.15rem' }}>{spk.role}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{spk.org} • {spk.location}</div>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1rem' }}>
+                {spk.photo ? (
+                  <div style={{
+                    width: '64px', height: '64px', borderRadius: '50%',
+                    border: `2px solid ${spk.color}`,
+                    overflow: 'hidden', flexShrink: 0,
+                    boxShadow: `0 0 16px ${spk.glow}`
+                  }}>
+                    <img src={spk.photo} alt={spk.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                ) : (
+                  <div style={{
+                    width: '54px', height: '54px', borderRadius: '50%',
+                    background: `linear-gradient(135deg, ${spk.color}30, ${spk.color}10)`,
+                    border: `2px solid ${spk.color}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 800, fontSize: '1.15rem', color: spk.color, flexShrink: 0
+                  }}>
+                    {spk.initials}
+                  </div>
+                )}
+                <div style={{ minWidth: 0, flexGrow: 1 }}>
+                  {spk.confirmed && (
+                    <div style={{ marginBottom: '0.3rem' }}>
+                      <span style={{
+                        fontSize: '0.68rem', fontWeight: 700, color: '#00dcb4',
+                        background: 'rgba(0,220,180,0.12)', border: '1px solid rgba(0,220,180,0.3)',
+                        padding: '0.15rem 0.55rem', borderRadius: '1rem',
+                        display: 'inline-flex', alignItems: 'center', gap: '0.25rem'
+                      }}>
+                        <CheckCircle size={10} /> Confirmed Speaker
+                      </span>
+                    </div>
+                  )}
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0, lineHeight: 1.3 }}>{spk.name}</h4>
+                  <div style={{ fontSize: '0.82rem', color: spk.color, fontWeight: 600, marginTop: '0.2rem' }}>{spk.role}</div>
+                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a', marginTop: '0.1rem' }}>{spk.org} • {spk.location}</div>
+                  {spk.orcid && (
+                    <div style={{ marginTop: '0.35rem' }}>
+                      <a
+                        href={`https://orcid.org/${spk.orcid}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          fontSize: '0.72rem', color: '#00dcb4', textDecoration: 'none',
+                          display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                          background: 'rgba(0,220,180,0.06)', padding: '0.15rem 0.5rem',
+                          borderRadius: '0.4rem', border: '1px solid rgba(0,220,180,0.2)',
+                          fontWeight: 600
+                        }}
+                      >
+                        <span style={{ color: '#a6ce39', fontWeight: 800 }}>iD</span> ORCID: {spk.orcid} <ExternalLink size={10} />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
 
               <div style={{
-                background: 'rgba(255,255,255,0.02)', padding: '0.85rem 1rem',
+                background: 'rgba(255,255,255,0.02)', padding: '0.9rem 1.1rem',
                 borderRadius: '0.75rem', borderLeft: `3px solid ${spk.color}`,
                 marginBottom: '1rem', flexGrow: 1
               }}>
-                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>Keynote Address</div>
-                <div style={{ fontSize: '0.88rem', color: '#e8e8ee', fontWeight: 600, marginTop: '0.2rem', fontStyle: 'italic' }}>
+                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>
+                  {spk.confirmed ? 'Confirmed Expert Session / Talk' : 'Keynote Address'}
+                </div>
+                <div style={{ fontSize: '0.92rem', color: '#e8e8ee', fontWeight: 600, marginTop: '0.25rem', fontStyle: 'italic' }}>
                   "{spk.topic}"
                 </div>
+                {spk.bio && (
+                  <p style={{ fontSize: '0.82rem', color: '#a0a0b0', lineHeight: 1.6, marginTop: '0.75rem', marginBottom: 0 }}>
+                    {spk.bio}
+                  </p>
+                )}
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
