@@ -13,6 +13,8 @@ import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
 import engrFortunePhoto from '../../assets/engr-fortune-onyia.jpg';
+import drElalimPhoto from '../../assets/dr-elalim-mohamed.jpg';
+import sulaimanPhoto from '../../assets/sulaiman-kafeero.png';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -40,6 +42,36 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.2)',
       tags: ['Sustainable Technology', 'Infrastructure', 'GIS Applications', 'Urban Hydrology'],
       initials: 'FO'
+    },
+    {
+      name: 'Dr. Elalim Eltayeb Abdurrahman Mohamed',
+      role: 'Medical Doctor, Researcher & Medical Educator',
+      org: 'Red Sea University Faculty of Medicine & ACMER',
+      location: 'Port Sudan / International',
+      displayTitle: 'Medical Doctor, Researcher & Medical Educator',
+      topic: 'AI in Healthcare: Transforming Medical Research, Education, and Evidence-Based Practice',
+      bio: 'Dr. Elalim Eltayeb Abdurrahman Mohamed is a Medical Doctor, Researcher, and Medical Educator with interests spanning clinical medicine, medical research, neuroscience, public health, and medical education. He is the Chair of the Board of the Abou-Aloum Centre for Medical Education and Research (ACMER), where he contributes to initiatives focused on strengthening research capacity, evidence-based practice, and medical education. His current interests focus on the responsible integration of Artificial Intelligence and emerging technologies into medical research, evidence synthesis, healthcare education, and clinical practice, with particular interest in their potential to improve healthcare and research capacity in resource-limited and conflict-affected settings.',
+      photo: drElalimPhoto,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['AI in Healthcare', 'Medical Research', 'Evidence-Based Practice', 'Neuroscience'],
+      initials: 'EM'
+    },
+    {
+      name: 'Sulaiman Kafeero',
+      role: 'President & CEO, Muslim Centre for Justice and Law',
+      org: 'Muslim Centre for Justice and Law (MCJL)',
+      location: 'Kampala, Uganda',
+      displayTitle: 'Development Consultant in Monitoring, Evaluation and Learning',
+      topic: 'Future of Work',
+      bio: 'Sulaiman Kafeero is a seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, project management, and research. His work focuses on social justice, violence prevention, and marginalized populations, with expertise in strategic planning, data analysis, participatory knowledge systems, and stakeholder engagement. Sulaiman has collaborated with organizations such as NUDIPU, Uganda AIDS Commission, ActionAid Uganda, and Wasafiri Consulting System Craft, contributing to national and international initiatives funded by CAFOD-UK, EU, UKAID, and others. Recognized for his mentorship and innovative approaches, Sulaiman’s work emphasizes outcome harvesting and problem-driven iterative processes to foster real-time social change.',
+      photo: sulaimanPhoto,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Future of Work', 'Monitoring & Evaluation', 'Social Development', 'Strategic Planning'],
+      initials: 'SK'
     },
     {
       name: 'Dr. Klaus Obermeier',

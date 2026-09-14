@@ -463,6 +463,18 @@ export const eventsData = [
         "role": "Lecturer, Civil Engineering Dept., Federal Polytechnic Oko & Entrepreneur",
         "topic": "Sustainable Technology",
         "bio": "Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice, specializing in sustainable technology, urban hydrology, and green infrastructure."
+      },
+      {
+        "name": "Dr. Elalim Eltayeb Abdurrahman Mohamed",
+        "role": "Medical Doctor, Researcher & Medical Educator, Red Sea University Faculty of Medicine & ACMER",
+        "topic": "AI in Healthcare: Transforming Medical Research, Education, and Evidence-Based Practice",
+        "bio": "Medical Doctor, Researcher, and Medical Educator, and Chair of the Board of Abou-Aloum Centre for Medical Education and Research (ACMER). Specialized in responsible integration of AI in healthcare, medical education, and evidence-based practice."
+      },
+      {
+        "name": "Sulaiman Kafeero",
+        "role": "President & CEO, Muslim Centre for Justice and Law | MEL Consultant",
+        "topic": "Future of Work",
+        "bio": "Seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, strategic planning, outcome harvesting, and research."
       }
     ],
     "pricing": []
