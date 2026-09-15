@@ -15,6 +15,7 @@ import cfPhoto from '../../assets/cf.jpeg';
 import engrFortunePhoto from '../../assets/engr-fortune-onyia.jpg';
 import drElalimPhoto from '../../assets/dr-elalim-mohamed.jpg';
 import sulaimanPhoto from '../../assets/sulaiman-kafeero.png';
+import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -72,6 +73,21 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.2)',
       tags: ['Future of Work', 'Monitoring & Evaluation', 'Social Development', 'Strategic Planning'],
       initials: 'SK'
+    },
+    {
+      name: 'Richard Afoakwah-Nti',
+      role: 'Founder & CEO, Rich Dream Consult | IT Expert & Entrepreneur',
+      org: 'Rich Dream Consult (RDC)',
+      location: 'Accra, Ghana',
+      displayTitle: 'Founder & CEO, Rich Dream Consult',
+      topic: 'AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future',
+      bio: 'Richard Afoakwah-Nti is a Ghanaian entrepreneur, IT expert, and business consultant, and the Founder & CEO of Rich Dream Consult (RDC), a multi-award-winning professional consultancy firm operating across IT, Business Management, and Travel Consultancy. With a strong interest in technology and innovation, he focuses on helping businesses and entrepreneurs identify opportunities, embrace digital transformation, and build sustainable, competitive ventures. Richard is also passionate about empowering young entrepreneurs to leverage emerging technologies for growth and impact, advocating for the responsible and inclusive use of AI to create opportunities in emerging markets.',
+      photo: richardPhoto,
+      confirmed: true,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.2)',
+      tags: ['AI-Powered Entrepreneurship', 'Digital Transformation', 'Emerging Tech', 'Business Innovation'],
+      initials: 'RA'
     },
     {
       name: 'Dr. Klaus Obermeier',

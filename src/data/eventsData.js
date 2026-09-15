@@ -475,6 +475,12 @@ export const eventsData = [
         "role": "President & CEO, Muslim Centre for Justice and Law | MEL Consultant",
         "topic": "Future of Work",
         "bio": "Seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, strategic planning, outcome harvesting, and research."
+      },
+      {
+        "name": "Richard Afoakwah-Nti",
+        "role": "Founder & CEO, Rich Dream Consult | IT Expert & Entrepreneur",
+        "topic": "AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future",
+        "bio": "Ghanaian entrepreneur, IT expert, and business consultant, Founder & CEO of Rich Dream Consult (RDC). Specialized in AI-driven business transformation, digital innovation, and tech entrepreneurship."
       }
     ],
     "pricing": []
