@@ -16,6 +16,7 @@ import engrFortunePhoto from '../../assets/engr-fortune-onyia.jpg';
 import drElalimPhoto from '../../assets/dr-elalim-mohamed.jpg';
 import sulaimanPhoto from '../../assets/sulaiman-kafeero.png';
 import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
+import billyTraorePhoto from '../../assets/mahamadou-billy-traore.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -38,6 +39,8 @@ const HackathonSections = () => {
       topic: 'Sustainable Technology',
       bio: 'Engr. Fortune Chibuike Onyia (MNSE) is a Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice. He has lectured in the Civil Engineering Department of Federal Polytechnic Oko, Anambra State, since 2016. His professional interests include urban hydrology, flood management, nature-based solutions, GIS applications, and sustainable infrastructure development. He is committed to advancing engineering knowledge through teaching, research, innovation, and professional practice, while contributing meaningfully to community development and the growth of the engineering profession in Nigeria.',
       photo: engrFortunePhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.15,
       confirmed: true,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.2)',
@@ -53,6 +56,8 @@ const HackathonSections = () => {
       topic: 'AI in Healthcare: Transforming Medical Research, Education, and Evidence-Based Practice',
       bio: 'Dr. Elalim Eltayeb Abdurrahman Mohamed is a Medical Doctor, Researcher, and Medical Educator with interests spanning clinical medicine, medical research, neuroscience, public health, and medical education. He is the Chair of the Board of the Abou-Aloum Centre for Medical Education and Research (ACMER), where he contributes to initiatives focused on strengthening research capacity, evidence-based practice, and medical education. His current interests focus on the responsible integration of Artificial Intelligence and emerging technologies into medical research, evidence synthesis, healthcare education, and clinical practice, with particular interest in their potential to improve healthcare and research capacity in resource-limited and conflict-affected settings.',
       photo: drElalimPhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.15,
       confirmed: true,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.2)',
@@ -68,6 +73,8 @@ const HackathonSections = () => {
       topic: 'Future of Work',
       bio: 'Sulaiman Kafeero is a seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, project management, and research. His work focuses on social justice, violence prevention, and marginalized populations, with expertise in strategic planning, data analysis, participatory knowledge systems, and stakeholder engagement. Sulaiman has collaborated with organizations such as NUDIPU, Uganda AIDS Commission, ActionAid Uganda, and Wasafiri Consulting System Craft, contributing to national and international initiatives funded by CAFOD-UK, EU, UKAID, and others. Recognized for his mentorship and innovative approaches, Sulaiman’s work emphasizes outcome harvesting and problem-driven iterative processes to foster real-time social change.',
       photo: sulaimanPhoto,
+      photoPosition: 'center 32%',
+      photoScale: 1.35,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -83,11 +90,30 @@ const HackathonSections = () => {
       topic: 'AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future',
       bio: 'Richard Afoakwah-Nti is a Ghanaian entrepreneur, IT expert, and business consultant, and the Founder & CEO of Rich Dream Consult (RDC), a multi-award-winning professional consultancy firm operating across IT, Business Management, and Travel Consultancy. With a strong interest in technology and innovation, he focuses on helping businesses and entrepreneurs identify opportunities, embrace digital transformation, and build sustainable, competitive ventures. Richard is also passionate about empowering young entrepreneurs to leverage emerging technologies for growth and impact, advocating for the responsible and inclusive use of AI to create opportunities in emerging markets.',
       photo: richardPhoto,
+      photoPosition: 'center 16%',
+      photoScale: 1.15,
       confirmed: true,
       color: '#b46ed2',
       glow: 'rgba(180,110,210,0.2)',
       tags: ['AI-Powered Entrepreneurship', 'Digital Transformation', 'Emerging Tech', 'Business Innovation'],
       initials: 'RA'
+    },
+    {
+      name: 'Mahamadou Billy TRAORÉ',
+      role: 'Business Development & Innovation Expert | Commercial Strategy Consultant',
+      org: 'MBT Global Services',
+      location: 'Bamako, Mali • West Africa',
+      displayTitle: 'Expert in Business Development, Innovation & Digital Transformation in Africa',
+      topic: 'AI, Innovation and Entrepreneurship in Africa: Turning Emerging Technologies into Inclusive Business Opportunities',
+      bio: 'Mahamadou Billy TRAORÉ is a Malian business development and innovation professional with extensive experience in commercial strategy, market development, sales management, and multinational business partnerships. Based in Mali, he is actively engaged in initiatives related to entrepreneurship, youth empowerment, innovation, and international partnerships. His work focuses on how artificial intelligence, emerging technologies, and digital transformation can help African entrepreneurs, startups, and organizations improve productivity, access new markets, and create sustainable business opportunities across African economies.',
+      photo: billyTraorePhoto,
+      photoPosition: 'center 12%',
+      photoScale: 1.4,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['AI & Innovation', 'Entrepreneurship in Africa', 'Digital Transformation', 'Commercial Strategy'],
+      initials: 'MT'
     },
     {
       name: 'Ondago Fredrick',
@@ -99,8 +125,8 @@ const HackathonSections = () => {
       bio: "Ondago Fredrick is an educator, tutor, and advanced scientific researcher based in Kenya. He currently serves as an academic tutor at Shariani Junior School, shaping foundational logical and scientific thinking in young minds, while pursuing a Master of Science in Microbiology at Pwani University specializing in microbial systems and their ecological impacts. His research focuses on the critical intersection of biological sciences and emerging digital innovations, analyzing how advanced data analytics and artificial intelligence can optimize biotechnology for a sustainable, inclusive tomorrow.",
       photo: null,
       confirmed: true,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.2)',
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
       tags: ['Biotechnology', 'Microbial Ecosystems', 'Sustainable Tech', 'AI in Biology'],
       initials: 'OF'
     },
@@ -817,23 +843,36 @@ const HackathonSections = () => {
             onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '1.2rem' }}>
                 {spk.photo ? (
                   <div style={{
-                    width: '64px', height: '64px', borderRadius: '50%',
-                    border: `2px solid ${spk.color}`,
+                    width: '96px', height: '96px', borderRadius: '50%',
+                    border: `2.5px solid ${spk.color}`,
                     overflow: 'hidden', flexShrink: 0,
-                    boxShadow: `0 0 16px ${spk.glow}`
+                    boxShadow: `0 0 20px ${spk.glow}`,
+                    background: '#0d131d'
                   }}>
-                    <img src={spk.photo} alt={spk.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img
+                      src={spk.photo}
+                      alt={spk.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: spk.photoPosition || 'center 20%',
+                        transform: spk.photoScale ? `scale(${spk.photoScale})` : 'scale(1.08)',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    />
                   </div>
                 ) : (
                   <div style={{
-                    width: '54px', height: '54px', borderRadius: '50%',
+                    width: '96px', height: '96px', borderRadius: '50%',
                     background: `linear-gradient(135deg, ${spk.color}30, ${spk.color}10)`,
-                    border: `2px solid ${spk.color}`,
+                    border: `2.5px solid ${spk.color}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 800, fontSize: '1.15rem', color: spk.color, flexShrink: 0
+                    fontWeight: 800, fontSize: '1.75rem', color: spk.color, flexShrink: 0,
+                    boxShadow: `0 0 20px ${spk.glow}`
                   }}>
                     {spk.initials}
                   </div>

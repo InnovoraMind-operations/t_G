@@ -483,6 +483,12 @@ export const eventsData = [
         "bio": "Ghanaian entrepreneur, IT expert, and business consultant, Founder & CEO of Rich Dream Consult (RDC). Specialized in AI-driven business transformation, digital innovation, and tech entrepreneurship."
       },
       {
+        "name": "Mahamadou Billy TRAORÉ",
+        "role": "Expert in Business Development, Innovation & Digital Transformation in Africa, MBT Global Services",
+        "topic": "AI, Innovation and Entrepreneurship in Africa: Turning Emerging Technologies into Inclusive Business Opportunities",
+        "bio": "Malian business development and innovation professional with extensive experience in commercial strategy, sales management, and multinational business partnerships across African markets."
+      },
+      {
         "name": "Ondago Fredrick",
         "role": "Tutor, Shariani Junior School & MSc. Microbiology Scholar, Pwani University",
         "topic": "Microbial Ecosystems & Sustainable Tech: AI-Driven Solutions in Biotechnology",
