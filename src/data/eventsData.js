@@ -481,6 +481,12 @@ export const eventsData = [
         "role": "Founder & CEO, Rich Dream Consult | IT Expert & Entrepreneur",
         "topic": "AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future",
         "bio": "Ghanaian entrepreneur, IT expert, and business consultant, Founder & CEO of Rich Dream Consult (RDC). Specialized in AI-driven business transformation, digital innovation, and tech entrepreneurship."
+      },
+      {
+        "name": "Ondago Fredrick",
+        "role": "Tutor, Shariani Junior School & MSc. Microbiology Scholar, Pwani University",
+        "topic": "Microbial Ecosystems & Sustainable Tech: AI-Driven Solutions in Biotechnology",
+        "bio": "Educator and scientific researcher in Kenya, pursuing MSc in Microbiology at Pwani University. Specializing in microbial systems, ecological preservation, and AI-driven biotechnology solutions."
       }
     ],
     "pricing": []

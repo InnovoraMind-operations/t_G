@@ -90,6 +90,21 @@ const HackathonSections = () => {
       initials: 'RA'
     },
     {
+      name: 'Ondago Fredrick',
+      role: 'Tutor & MSc. Microbiology Scholar',
+      org: 'Shariani Junior School & Pwani University',
+      location: 'Kilifi, Kenya',
+      displayTitle: 'Tutor, Shariani Junior School & MSc. Microbiology Scholar, Pwani University',
+      topic: 'Microbial Ecosystems & Sustainable Tech: AI-Driven Solutions in Biotechnology',
+      bio: "Ondago Fredrick is an educator, tutor, and advanced scientific researcher based in Kenya. He currently serves as an academic tutor at Shariani Junior School, shaping foundational logical and scientific thinking in young minds, while pursuing a Master of Science in Microbiology at Pwani University specializing in microbial systems and their ecological impacts. His research focuses on the critical intersection of biological sciences and emerging digital innovations, analyzing how advanced data analytics and artificial intelligence can optimize biotechnology for a sustainable, inclusive tomorrow.",
+      photo: null,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Biotechnology', 'Microbial Ecosystems', 'Sustainable Tech', 'AI in Biology'],
+      initials: 'OF'
+    },
+    {
       name: 'Dr. Klaus Obermeier',
       role: 'VP of Industrial Automation & Digital Systems',
       org: 'Siemens Digital Industries',
