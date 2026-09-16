@@ -484,9 +484,9 @@ export const eventsData = [
       },
       {
         "name": "Mahamadou Billy TRAORÉ",
-        "role": "Expert in Business Development, Innovation & Digital Transformation in Africa, MBT Global Services",
-        "topic": "AI, Innovation and Entrepreneurship in Africa: Turning Emerging Technologies into Inclusive Business Opportunities",
-        "bio": "Malian business development and innovation professional with extensive experience in commercial strategy, sales management, and multinational business partnerships across African markets."
+        "role": "Business Development & Innovation Expert | Business Strategy Consultant, MBT Global Services – Mali",
+        "topic": "AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities",
+        "bio": "Malian business development and innovation professional specializing in business strategy, market development, sales management, and multinational business partnerships across African markets."
       },
       {
         "name": "Ondago Fredrick",
