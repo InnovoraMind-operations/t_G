@@ -493,6 +493,12 @@ export const eventsData = [
         "role": "Tutor, Shariani Junior School & MSc. Microbiology Scholar, Pwani University",
         "topic": "Microbial Ecosystems & Sustainable Tech: AI-Driven Solutions in Biotechnology",
         "bio": "Educator and scientific researcher in Kenya, pursuing MSc in Microbiology at Pwani University. Specializing in microbial systems, ecological preservation, and AI-driven biotechnology solutions."
+      },
+      {
+        "name": "Emmanuel Etaderhi",
+        "role": "Executive Secretary, Financial Centre for Sustainability (FC4S Lagos) & SVP, FMDQ Group PLC",
+        "topic": "AI in Smart Grids: Accelerating Sustainable Energy & Clean Tech Infrastructure",
+        "bio": "Sustainable Finance Expert and Executive Secretary of the Financial Centre for Sustainability (FC4S) Lagos. Specialized in sustainable energy transition, smart grid intelligence, green bond markets, and climate infrastructure financing."
       }
     ],
     "pricing": []

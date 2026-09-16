@@ -17,6 +17,7 @@ import drElalimPhoto from '../../assets/dr-elalim-mohamed.jpg';
 import sulaimanPhoto from '../../assets/sulaiman-kafeero.png';
 import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
 import billyTraorePhoto from '../../assets/mahamadou-billy-traore.jpg';
+import emmanuelPhoto from '../../assets/emmanuel-etaderhi.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -129,6 +130,23 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.2)',
       tags: ['Biotechnology', 'Microbial Ecosystems', 'Sustainable Tech', 'AI in Biology'],
       initials: 'OF'
+    },
+    {
+      name: 'Emmanuel Etaderhi',
+      role: 'Executive Secretary, Financial Centre for Sustainability (FC4S Lagos) & SVP, FMDQ Group PLC',
+      org: 'Financial Centre for Sustainability / FMDQ Group',
+      location: 'Lagos, Nigeria',
+      displayTitle: 'Sustainable Finance Expert & Executive Secretary, FC4S Lagos',
+      topic: 'AI in Smart Grids: Accelerating Sustainable Energy & Clean Tech Infrastructure',
+      bio: 'Emmanuel Etaderhi is an accomplished Sustainable Finance Expert and the Executive Secretary of the Financial Centre for Sustainability (FC4S) Lagos, part of the United Nations-convened International Network of Financial Centres for Sustainability. Concurrently serving as Senior Vice President at FMDQ Group PLC, he has over 27 years of extensive leadership experience spanning financial services, capital markets, and the energy/power sectors. Mr. Etaderhi coordinated the Nigerian Green Bond Market Development Programme and has been a driving force in financing sustainable infrastructure and green transition initiatives. His expertise focuses on leveraging emerging technologies, artificial intelligence, and smart grids to optimize clean energy distribution, accelerate climate finance, and build resilient, sustainable power ecosystems.',
+      photo: emmanuelPhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.08,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['AI in Smart Grids', 'Sustainable Technology', 'Green Finance', 'Clean Energy'],
+      initials: 'EE'
     },
     {
       name: 'Dr. Klaus Obermeier',
