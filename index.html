@@ -126,8 +126,17 @@
   </script>
 </head>
 
-<body>
+<body style="background-color: #0a0a0f; margin: 0;">
   <div id="root">
+    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #0a0a0f;">
+      <div style="width: 42px; height: 42px; border: 3px solid rgba(0, 240, 255, 0.15); border-top-color: #00f0ff; border-radius: 50%; animation: tg-spin 0.75s linear infinite;"></div>
+    </div>
+    <style>
+      @keyframes tg-spin { to { transform: rotate(360deg); } }
+    </style>
+  </div>
+  
+  <noscript>
     <!-- Semantic Pre-Rendered Fallback for Search Engine Crawlers & Accessibility -->
     <header>
       <nav aria-label="Main Navigation">
@@ -192,7 +201,7 @@
         </section>
       </article>
     </main>
-  </div>
+  </noscript>
   
   <script type="module" src="/src/main.jsx"></script>
 </body>
