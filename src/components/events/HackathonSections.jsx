@@ -18,6 +18,7 @@ import sulaimanPhoto from '../../assets/sulaiman-kafeero.png';
 import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
 import billyTraorePhoto from '../../assets/mahamadou-billy-traore.jpg';
 import emmanuelPhoto from '../../assets/emmanuel-etaderhi.jpg';
+import maigariPhoto from '../../assets/dr-maigari-haruna-bello.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -147,6 +148,23 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.2)',
       tags: ['AI in Smart Grids', 'Sustainable Technology', 'Green Finance', 'Clean Energy'],
       initials: 'EE'
+    },
+    {
+      name: 'Dr. Maigari Haruna Bello, PhD',
+      role: 'Chief Lecturer, Dept. of Primary Education & Deputy Director, DUS',
+      org: 'Federal College of Education, Yola',
+      location: 'Adamawa State, Nigeria',
+      displayTitle: 'Dr. Maigari Haruna Bello, PhD | Chief Lecturer, Federal College of Education, Yola',
+      topic: 'Digital Transformation in Higher Education: The Role of Emerging Technologies',
+      bio: 'Dr. Maigari Haruna Bello is a Chief Lecturer in the Department of Primary Education (Nomadic Education Unit), Federal College of Education, Yola, Nigeria, with nearly two decades of experience in teacher education, curriculum development, and educational administration. He holds a PhD in Curriculum and Instruction from the University of Maroua, Cameroon, and has contributed extensively to research on nomadic education, inclusive education, educational technology, and 21st-century skills development. Dr. Bello currently serves as Deputy Director, Directorate of Undergraduate Studies (DUS), and has previously held several academic and administrative positions, including Head of Open and Distance Learning (ODL). He has facilitated professional development programmes for educators and actively participates in educational consultancy, policy development, and community-based educational initiatives aimed at improving access, quality, and equity in education.',
+      photo: maigariPhoto,
+      photoPosition: 'center 18%',
+      photoScale: 1.1,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['Digital Transformation', 'Higher Education', 'Educational Technology', 'Curriculum & AI'],
+      initials: 'MB'
     },
     {
       name: 'Dr. Klaus Obermeier',

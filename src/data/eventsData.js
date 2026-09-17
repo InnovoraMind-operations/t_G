@@ -499,6 +499,12 @@ export const eventsData = [
         "role": "Executive Secretary, Financial Centre for Sustainability (FC4S Lagos) & SVP, FMDQ Group PLC",
         "topic": "AI in Smart Grids: Accelerating Sustainable Energy & Clean Tech Infrastructure",
         "bio": "Sustainable Finance Expert and Executive Secretary of the Financial Centre for Sustainability (FC4S) Lagos. Specialized in sustainable energy transition, smart grid intelligence, green bond markets, and climate infrastructure financing."
+      },
+      {
+        "name": "Dr. Maigari Haruna Bello, PhD",
+        "role": "Chief Lecturer, Federal College of Education, Yola & Deputy Director, DUS",
+        "topic": "Digital Transformation in Higher Education: The Role of Emerging Technologies",
+        "bio": "Chief Lecturer in the Department of Primary Education (Nomadic Education Unit) at Federal College of Education, Yola, Nigeria. PhD in Curriculum and Instruction from University of Maroua, Cameroon, specializing in educational technology, nomadic education, and 21st-century curriculum innovation."
       }
     ],
     "pricing": []
