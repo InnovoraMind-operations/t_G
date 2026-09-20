@@ -465,28 +465,16 @@ export const eventsData = [
         "bio": "Distinguished global academic administrator, former Dean of Maastricht School of Management (MSM), Netherlands, and Dean at Artificial Intelligence Technologies (AIT), Canada. Renowned international expert in strategic management, entrepreneurship, and emerging business paradigms."
       },
       {
-        "name": "Dr. Saleem Abu Jaber",
-        "role": "Academic Advisor Head & Senior Lecturer, Achva Academic College",
-        "topic": "Advancing Academic Methodologies & Adaptive Learning in the Era of AI",
-        "bio": "Academic Advisor Head and Senior Lecturer at Achva Academic College, specializing in advancing contemporary academic methodologies, educational leadership, and student-centered mentorship frameworks."
-      },
-      {
-        "name": "Taleb Hammad",
-        "role": "DBA & Executive Director, EyesNY",
-        "topic": "High-Reliability Enterprise Database Administration & Scalable Healthcare Tech Systems",
-        "bio": "Experienced executive director and senior database administrator with demonstrated expertise in database administration (DBA), enterprise infrastructure, data integrity, and healthcare tech operations at EyesNY, USA."
-      },
-      {
-        "name": "Prof. Tamar Makharoblidze",
-        "role": "Professor, School of Arts and Sciences, Ilia State University",
-        "topic": "Cognitive Technologies, Linguistics & AI in Cross-Disciplinary Academic Research",
-        "bio": "Professor in the School of Arts and Sciences at Ilia State University, Georgia. Distinguished scholar specializing in linguistics, cognitive humanities, academic innovation, and the intersection of computational linguistics and AI."
-      },
-      {
         "name": "Engr. Fortune Chibuike Onyia (MNSE)",
         "role": "Lecturer, Civil Engineering Dept., Federal Polytechnic Oko & Entrepreneur",
         "topic": "Sustainable Technology",
         "bio": "Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice, specializing in sustainable technology, urban hydrology, and green infrastructure."
+      },
+      {
+        "name": "Dr. Saleem Abu Jaber",
+        "role": "Academic Advisor Head & Senior Lecturer, Achva Academic College",
+        "topic": "Advancing Academic Methodologies & Adaptive Learning in the Era of AI",
+        "bio": "Academic Advisor Head and Senior Lecturer at Achva Academic College, specializing in advancing contemporary academic methodologies, educational leadership, and student-centered mentorship frameworks."
       },
       {
         "name": "Dr. Elalim Eltayeb Abdurrahman Mohamed",
@@ -495,10 +483,22 @@ export const eventsData = [
         "bio": "Medical Doctor, Researcher, and Medical Educator, and Chair of the Board of Abou-Aloum Centre for Medical Education and Research (ACMER). Specialized in responsible integration of AI in healthcare, medical education, and evidence-based practice."
       },
       {
+        "name": "Taleb Hammad",
+        "role": "DBA & Executive Director, EyesNY",
+        "topic": "High-Reliability Enterprise Database Administration & Scalable Healthcare Tech Systems",
+        "bio": "Experienced executive director and senior database administrator with demonstrated expertise in database administration (DBA), enterprise infrastructure, data integrity, and healthcare tech operations at EyesNY, USA."
+      },
+      {
         "name": "Sulaiman Kafeero",
         "role": "President & CEO, Muslim Centre for Justice and Law | MEL Consultant",
         "topic": "Future of Work",
         "bio": "Seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, strategic planning, outcome harvesting, and research."
+      },
+      {
+        "name": "Prof. Tamar Makharoblidze",
+        "role": "Professor, School of Arts and Sciences, Ilia State University",
+        "topic": "Cognitive Technologies, Linguistics & AI in Cross-Disciplinary Academic Research",
+        "bio": "Professor in the School of Arts and Sciences at Ilia State University, Georgia. Distinguished scholar specializing in linguistics, cognitive humanities, academic innovation, and the intersection of computational linguistics and AI."
       },
       {
         "name": "Richard Afoakwah-Nti",
