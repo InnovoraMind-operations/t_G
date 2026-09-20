@@ -23,6 +23,10 @@ import profDrElNamakiPhoto from '../../assets/prof-dr-el-namaki.png';
 import drSaleemPhoto from '../../assets/dr-saleem-abu-jaber.png';
 import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
+import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
+import jacoPhoto from '../../assets/prof-jaco-visagie.png';
+import ekaPhoto from '../../assets/prof-eka-devidze.png';
+import joePerezPhoto from '../../assets/dr-joe-perez.png';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -308,6 +312,66 @@ const HackathonSections = () => {
 
   // ── International Judges Panel ─────────────────────────────
   const judgesList = [
+    {
+      name: 'Wiktoria Gromowa-Cieslik',
+      role: 'CEO, Technology Executive & Chief Metrics Officer',
+      org: 'Human-Tech Fusion (HTFusion)',
+      location: 'Poland',
+      focus: 'AI Value Metrics, Algorithm Scalability, Tech Governance & Enterprise ROI',
+      bio: 'Technology and transformation executive with a mathematical background, combining engineering and human insight to make data & AI initiatives measurable, scalable, governable, and commercially viable.',
+      photo: wiktoriaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['AI Metrics', 'Algorithm Scalability', 'AI Governance', 'Tech ROI'],
+      initials: 'WG'
+    },
+    {
+      name: 'Prof. Jaco Visagie',
+      role: 'Professor of Statistics & Risk Analysis Researcher',
+      org: 'North-West University',
+      location: 'Potchefstroom, South Africa',
+      focus: 'Statistical Modeling, Risk Analysis, Goodness-of-Fit & Quantitative Data Science',
+      bio: 'Professor of Statistics at North-West University with 17+ years of academic and research experience. Holds a PhD in Risk Analysis, specializing in statistical data science, survival analysis, and financial statistics.',
+      photo: jacoPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Data Science', 'Statistical Modeling', 'Risk Analysis', 'Financial Statistics'],
+      initials: 'JV'
+    },
+    {
+      name: 'Prof. Eka Devidze',
+      role: 'Professor & Head of Programs | National Accreditation Expert',
+      org: 'International Black Sea University & NCEQE',
+      location: 'Tbilisi, Georgia',
+      focus: 'Project Governance, Academic Quality Accreditation & Sustainable Development',
+      bio: 'Professor and Head of Programs at International Black Sea University, Accreditation Expert at the National Center for Education Quality Enhancement, and director of EU & UNDP sustainable development projects.',
+      photo: ekaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
+      initials: 'ED'
+    },
+    {
+      name: 'Dr. Joe Perez',
+      role: 'Chief Technology Officer, Keynote Speaker & Systems Specialist',
+      org: 'CogniMind / NC State University',
+      location: 'North Carolina, USA',
+      focus: 'Enterprise Data Architecture, Business Intelligence, Process Optimization & Analytics',
+      bio: 'Accomplished IT and data leader with 40+ years of experience, CTO at CogniMind, and former Senior Systems Specialist at NC DHHS. Inductee into the IIBA Hall of Fame and UN Global Network of Data Officers.',
+      photo: joePerezPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['Business Intelligence', 'Enterprise IT', 'Data Architecture', 'Process Optimization'],
+      initials: 'JP'
+    },
     {
       name: 'Dr. Sophia Ramirez',
       role: 'Global Lead of Industrial Machine Learning',
@@ -1087,19 +1151,41 @@ const HackathonSections = () => {
             onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                <div style={{
-                  width: '54px', height: '54px', borderRadius: '50%',
-                  background: `linear-gradient(135deg, ${jdg.color}30, ${jdg.color}10)`,
-                  border: `2px solid ${jdg.color}`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 800, fontSize: '1.15rem', color: jdg.color, flexShrink: 0
-                }}>
-                  {jdg.initials}
-                </div>
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{jdg.name}</h4>
+                {jdg.photo ? (
+                  <div style={{
+                    width: '60px', height: '60px', borderRadius: '50%',
+                    border: `2px solid ${jdg.color}`,
+                    overflow: 'hidden', flexShrink: 0,
+                    boxShadow: `0 0 15px ${jdg.glow}`,
+                    background: '#0d131d'
+                  }}>
+                    <img
+                      src={jdg.photo}
+                      alt={jdg.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: jdg.photoPosition || 'center 20%',
+                        transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.05)',
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div style={{
+                    width: '54px', height: '54px', borderRadius: '50%',
+                    background: `linear-gradient(135deg, ${jdg.color}30, ${jdg.color}10)`,
+                    border: `2px solid ${jdg.color}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 800, fontSize: '1.15rem', color: jdg.color, flexShrink: 0
+                  }}>
+                    {jdg.initials}
+                  </div>
+                )}
+                <div style={{ minWidth: 0, flexGrow: 1 }}>
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#e8e8ee', margin: 0, lineHeight: 1.3 }}>{jdg.name}</h4>
                   <div style={{ fontSize: '0.82rem', color: jdg.color, fontWeight: 600, marginTop: '0.15rem' }}>{jdg.role}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{jdg.org} • {jdg.location}</div>
+                  <div style={{ fontSize: '0.78rem', color: '#8a8a9a', marginTop: '0.1rem' }}>{jdg.org} • {jdg.location}</div>
                 </div>
               </div>
 
@@ -1112,6 +1198,11 @@ const HackathonSections = () => {
                 <div style={{ fontSize: '0.86rem', color: '#e8e8ee', fontWeight: 500, marginTop: '0.2rem' }}>
                   {jdg.focus}
                 </div>
+                {jdg.bio && (
+                  <p style={{ fontSize: '0.8rem', color: '#a0a0b0', lineHeight: 1.5, marginTop: '0.55rem', marginBottom: 0 }}>
+                    {jdg.bio}
+                  </p>
+                )}
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
