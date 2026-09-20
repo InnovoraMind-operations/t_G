@@ -47,8 +47,8 @@ const HackathonSections = () => {
       topic: 'Sustainable Technology',
       bio: 'Engr. Fortune Chibuike Onyia (MNSE) is a Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice. He has lectured in the Civil Engineering Department of Federal Polytechnic Oko, Anambra State, since 2016. His professional interests include urban hydrology, flood management, nature-based solutions, GIS applications, and sustainable infrastructure development. He is committed to advancing engineering knowledge through teaching, research, innovation, and professional practice, while contributing meaningfully to community development and the growth of the engineering profession in Nigeria.',
       photo: engrFortunePhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.15,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.2)',
@@ -64,8 +64,8 @@ const HackathonSections = () => {
       topic: 'Advancing Academic Methodologies & Adaptive Learning in the Era of AI',
       bio: 'Dr. Saleem Abu Jaber is an accomplished academic leader, Senior Lecturer, and Head of Academic Advisory at Achva Academic College. With deep pedagogical and research expertise, he specializes in advancing contemporary academic methodologies, educational leadership, and student-centered mentorship frameworks. His scholarly work and leadership initiatives focus on modernizing curriculum architectures, fostering inclusive educational pathways, and harnessing digital technologies and data-driven methods to elevate academic standards and institutional excellence.',
       photo: drSaleemPhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.15,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -81,8 +81,8 @@ const HackathonSections = () => {
       topic: 'AI in Healthcare: Transforming Medical Research, Education, and Evidence-Based Practice',
       bio: 'Dr. Elalim Eltayeb Abdurrahman Mohamed is a Medical Doctor, Researcher, and Medical Educator with interests spanning clinical medicine, medical research, neuroscience, public health, and medical education. He is the Chair of the Board of the Abou-Aloum Centre for Medical Education and Research (ACMER), where he contributes to initiatives focused on strengthening research capacity, evidence-based practice, and medical education. His current interests focus on the responsible integration of Artificial Intelligence and emerging technologies into medical research, evidence synthesis, healthcare education, and clinical practice, with particular interest in their potential to improve healthcare and research capacity in resource-limited and conflict-affected settings.',
       photo: drElalimPhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.15,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.2)',
@@ -98,8 +98,8 @@ const HackathonSections = () => {
       topic: 'High-Reliability Enterprise Database Administration & Scalable Healthcare Tech Systems',
       bio: 'Taleb Hammad is an experienced executive director and senior database administrator with a proven track record of architecting mission-critical data systems and leading technological operations at EyesNY in the United States. Combining executive leadership with deep technical specialization in database administration (DBA), enterprise infrastructure, data integrity, and compliance, he leads high-reliability healthcare IT implementations. His work centers on optimizing enterprise data workflows, scalable database architectures, and leveraging intelligent data management to empower modern operational excellence.',
       photo: talebPhoto,
-      photoPosition: 'center 18%',
-      photoScale: 1.15,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.2)',
@@ -115,8 +115,8 @@ const HackathonSections = () => {
       topic: 'Future of Work',
       bio: 'Sulaiman Kafeero is a seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, project management, and research. His work focuses on social justice, violence prevention, and marginalized populations, with expertise in strategic planning, data analysis, participatory knowledge systems, and stakeholder engagement. Sulaiman has collaborated with organizations such as NUDIPU, Uganda AIDS Commission, ActionAid Uganda, and Wasafiri Consulting System Craft, contributing to national and international initiatives funded by CAFOD-UK, EU, UKAID, and others. Recognized for his mentorship and innovative approaches, Sulaiman’s work emphasizes outcome harvesting and problem-driven iterative processes to foster real-time social change.',
       photo: sulaimanPhoto,
-      photoPosition: 'center 32%',
-      photoScale: 1.35,
+      photoPosition: 'center 20%',
+      photoScale: 1.02,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -133,7 +133,7 @@ const HackathonSections = () => {
       bio: 'Prof. Tamar Makharoblidze is an internationally esteemed scholar and Professor in the School of Arts and Sciences at Ilia State University, Georgia. With an extensive international research profile, she has published numerous seminal books and peer-reviewed studies specializing in linguistics, Caucasian languages, sign language studies, and cognitive humanities. Prof. Makharoblidze has led significant national and international research grants, contributing extensively to academic innovation, cross-disciplinary methodologies, and the emerging intersection of computational linguistics, cognitive sciences, and artificial intelligence.',
       photo: tamarPhoto,
       photoPosition: 'center 15%',
-      photoScale: 1.15,
+      photoScale: 1.0,
       confirmed: true,
       color: '#b46ed2',
       glow: 'rgba(180,110,210,0.2)',
@@ -149,8 +149,8 @@ const HackathonSections = () => {
       topic: 'AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future',
       bio: 'Richard Afoakwah-Nti is a Ghanaian entrepreneur, IT expert, and business consultant, and the Founder & CEO of Rich Dream Consult (RDC), a multi-award-winning professional consultancy firm operating across IT, Business Management, and Travel Consultancy. With a strong interest in technology and innovation, he focuses on helping businesses and entrepreneurs identify opportunities, embrace digital transformation, and build sustainable, competitive ventures. Richard is also passionate about empowering young entrepreneurs to leverage emerging technologies for growth and impact, advocating for the responsible and inclusive use of AI to create opportunities in emerging markets.',
       photo: richardPhoto,
-      photoPosition: 'center 16%',
-      photoScale: 1.15,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.2)',
@@ -166,8 +166,8 @@ const HackathonSections = () => {
       topic: 'AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities',
       bio: 'Mahamadou Billy TRAORÉ is a Malian professional specializing in business development and innovation, with experience in business strategy, market development, sales management and partnership development. He has worked in demanding business environments involving international and multinational companies, with a particular interest in expanding markets, developing distribution networks, acquiring customers and improving business performance. Based in Mali, he is actively engaged in initiatives related to entrepreneurship, youth empowerment, innovation and international partnerships. His professional approach combines corporate strategy, emerging technologies and working knowledge of African markets. He is particularly interested in how artificial intelligence and digital transformation can help African entrepreneurs, startups and organizations improve productivity, access new markets and create sustainable opportunities. As an expert speaker, he brings an African perspective to international exchanges on artificial intelligence, innovation, entrepreneurship and the future of work.',
       photo: billyTraorePhoto,
-      photoPosition: 'center 14%',
-      photoScale: 1.35,
+      photoPosition: 'center 15%',
+      photoScale: 1.02,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -198,8 +198,8 @@ const HackathonSections = () => {
       topic: 'AI in Smart Grids: Accelerating Sustainable Energy & Clean Tech Infrastructure',
       bio: 'Emmanuel Etaderhi is an accomplished Sustainable Finance Expert and the Executive Secretary of the Financial Centre for Sustainability (FC4S) Lagos, part of the United Nations-convened International Network of Financial Centres for Sustainability. Concurrently serving as Senior Vice President at FMDQ Group PLC, he has over 27 years of extensive leadership experience spanning financial services, capital markets, and the energy/power sectors. Mr. Etaderhi coordinated the Nigerian Green Bond Market Development Programme and has been a driving force in financing sustainable infrastructure and green transition initiatives. His expertise focuses on leveraging emerging technologies, artificial intelligence, and smart grids to optimize clean energy distribution, accelerate climate finance, and build resilient, sustainable power ecosystems.',
       photo: emmanuelPhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.08,
+      photoPosition: 'center 15%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.2)',
@@ -215,8 +215,8 @@ const HackathonSections = () => {
       topic: 'Digital Transformation in Higher Education: The Role of Emerging Technologies',
       bio: 'Dr. Maigari Haruna Bello is a Chief Lecturer in the Department of Primary Education (Nomadic Education Unit), Federal College of Education, Yola, Nigeria, with nearly two decades of experience in teacher education, curriculum development, and educational administration. He holds a PhD in Curriculum and Instruction from the University of Maroua, Cameroon, and has contributed extensively to research on nomadic education, inclusive education, educational technology, and 21st-century skills development. Dr. Bello currently serves as Deputy Director, Directorate of Undergraduate Studies (DUS), and has previously held several academic and administrative positions, including Head of Open and Distance Learning (ODL). He has facilitated professional development programmes for educators and actively participates in educational consultancy, policy development, and community-based educational initiatives aimed at improving access, quality, and equity in education.',
       photo: maigariPhoto,
-      photoPosition: 'center 18%',
-      photoScale: 1.1,
+      photoPosition: 'center 10%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#b46ed2',
       glow: 'rgba(180,110,210,0.2)',
@@ -1031,81 +1031,86 @@ const HackathonSections = () => {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = spk.color; }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'; }}
             >
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '1.25rem' }}>
-                {spk.photo ? (
-                  <div style={{
-                    width: '110px', height: '110px', borderRadius: '50%',
-                    border: `3px solid ${spk.color}`,
-                    overflow: 'hidden', flexShrink: 0,
-                    boxShadow: `0 0 24px ${spk.glow}, 0 4px 14px rgba(0,0,0,0.6)`,
-                    background: '#0d131d'
-                  }}>
-                    <img
-                      src={spk.photo}
-                      alt={spk.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: spk.photoPosition || 'center 20%',
-                        transform: spk.photoScale ? `scale(${spk.photoScale})` : 'scale(1.08)',
-                        transition: 'transform 0.3s ease'
-                      }}
-                    />
+              {/* Basic Info ABOVE Photo */}
+              <div style={{ marginBottom: '1.2rem' }}>
+                {spk.confirmed && (
+                  <div style={{ marginBottom: '0.45rem' }}>
+                    <span style={{
+                      fontSize: '0.72rem', fontWeight: 800, color: '#00dcb4',
+                      background: 'rgba(0,220,180,0.12)', border: '1.5px solid rgba(0,220,180,0.35)',
+                      padding: '0.22rem 0.7rem', borderRadius: '1rem',
+                      display: 'inline-flex', alignItems: 'center', gap: '0.35rem'
+                    }}>
+                      <CheckCircle size={11} /> Confirmed Speaker
+                    </span>
                   </div>
+                )}
+                <h4 style={{ fontSize: '1.32rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                  {spk.name}
+                </h4>
+                <div style={{ fontSize: '0.94rem', color: spk.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
+                  {spk.role}
+                </div>
+                <div style={{ fontSize: '0.86rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
+                  {spk.org} <span style={{ opacity: 0.6 }}>•</span> {spk.location}
+                </div>
+                {spk.orcid && (
+                  <div style={{ marginTop: '0.45rem' }}>
+                    <a
+                      href={`https://orcid.org/${spk.orcid}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        fontSize: '0.74rem', color: '#00dcb4', textDecoration: 'none',
+                        display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
+                        background: 'rgba(0,220,180,0.06)', padding: '0.18rem 0.55rem',
+                        borderRadius: '0.4rem', border: '1px solid rgba(0,220,180,0.25)',
+                        fontWeight: 700
+                      }}
+                    >
+                      <span style={{ color: '#a6ce39', fontWeight: 900 }}>iD</span> ORCID: {spk.orcid} <ExternalLink size={10} />
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              {/* Full Big Photo */}
+              <div style={{
+                width: '100%',
+                height: '280px',
+                borderRadius: '1.1rem',
+                border: `2.5px solid ${spk.color}`,
+                overflow: 'hidden',
+                marginBottom: '1.35rem',
+                boxShadow: `0 12px 32px rgba(0,0,0,0.65), 0 0 26px ${spk.glow}`,
+                background: '#0d131d',
+                position: 'relative'
+              }}>
+                {spk.photo ? (
+                  <img
+                    src={spk.photo}
+                    alt={spk.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: spk.photoPosition || 'center 15%',
+                      transform: spk.photoScale ? `scale(${spk.photoScale})` : 'scale(1.0)',
+                      transition: 'transform 0.4s ease'
+                    }}
+                  />
                 ) : (
                   <div style={{
-                    width: '110px', height: '110px', borderRadius: '50%',
+                    width: '100%',
+                    height: '100%',
                     background: `linear-gradient(135deg, ${spk.color}35, ${spk.color}15)`,
-                    border: `3px solid ${spk.color}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 900, fontSize: '2.1rem', color: spk.color, flexShrink: 0,
-                    boxShadow: `0 0 24px ${spk.glow}`
+                    fontWeight: 900, fontSize: '3.2rem', color: spk.color,
+                    boxShadow: `inset 0 0 24px ${spk.glow}`
                   }}>
                     {spk.initials}
                   </div>
                 )}
-                <div style={{ minWidth: 0, flexGrow: 1 }}>
-                  {spk.confirmed && (
-                    <div style={{ marginBottom: '0.35rem' }}>
-                      <span style={{
-                        fontSize: '0.72rem', fontWeight: 800, color: '#00dcb4',
-                        background: 'rgba(0,220,180,0.12)', border: '1.5px solid rgba(0,220,180,0.35)',
-                        padding: '0.2rem 0.65rem', borderRadius: '1rem',
-                        display: 'inline-flex', alignItems: 'center', gap: '0.3rem'
-                      }}>
-                        <CheckCircle size={11} /> Confirmed Speaker
-                      </span>
-                    </div>
-                  )}
-                  <h4 style={{ fontSize: '1.22rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
-                    {spk.name}
-                  </h4>
-                  <div style={{ fontSize: '0.9rem', color: spk.color, fontWeight: 800, marginTop: '0.3rem', lineHeight: 1.4 }}>
-                    {spk.role}
-                  </div>
-                  <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.25rem' }}>
-                    {spk.org} <span style={{ opacity: 0.6 }}>•</span> {spk.location}
-                  </div>
-                  {spk.orcid && (
-                    <div style={{ marginTop: '0.45rem' }}>
-                      <a
-                        href={`https://orcid.org/${spk.orcid}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          fontSize: '0.74rem', color: '#00dcb4', textDecoration: 'none',
-                          display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
-                          background: 'rgba(0,220,180,0.06)', padding: '0.18rem 0.55rem',
-                          borderRadius: '0.4rem', border: '1px solid rgba(0,220,180,0.25)',
-                          fontWeight: 700
-                        }}
-                      >
-                        <span style={{ color: '#a6ce39', fontWeight: 900 }}>iD</span> ORCID: {spk.orcid} <ExternalLink size={10} />
-                      </a>
-                    </div>
-                  )}
-                </div>
               </div>
 
               <div style={{
