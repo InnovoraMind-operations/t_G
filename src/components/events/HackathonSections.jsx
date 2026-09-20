@@ -295,19 +295,25 @@ const HackathonSections = () => {
       name: 'Emerald Abena Amponsah Baffour',
       role: 'Global Partnership & Strategy Director',
       org: 'Techryon Global',
-      photo: emeraldPhoto
+      photo: emeraldPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.05
     },
     {
       name: 'Lawrence Mazaki Mashati',
       role: 'General Director',
       org: 'Techryon Global',
-      photo: lmPhoto
+      photo: lmPhoto,
+      photoPosition: 'center 12%',
+      photoScale: 1.05
     },
     {
       name: 'Marghescu Cristina-Florentina',
       role: 'Independent Director',
       org: 'Techryon Global',
-      photo: cfPhoto
+      photo: cfPhoto,
+      photoPosition: 'center 28%',
+      photoScale: 1.2
     }
   ];
 
@@ -1335,28 +1341,102 @@ const HackathonSections = () => {
 
 
       {/* ── ORGANIZING COMMITTEE ── */}
-      <section id="organizing-committee">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Briefcase size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Organizing Committee & Leadership</h3>
+      <section id="organizing-committee" style={{ marginBottom: '4.5rem' }}>
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem',
+          paddingBottom: '1.25rem', borderBottom: '1px solid rgba(210, 170, 100, 0.25)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{
+              width: '52px', height: '52px', borderRadius: '14px',
+              background: 'rgba(210, 170, 100, 0.15)', border: '1.5px solid rgba(210, 170, 100, 0.4)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 0 25px rgba(210, 170, 100, 0.25)', flexShrink: 0
+            }}>
+              <Briefcase size={26} style={{ color: '#d2aa64' }} />
+            </div>
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+                Organizing Committee & Leadership
+              </h2>
+              <div style={{ fontSize: '0.85rem', color: '#d2aa64', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
+                Executive Steering & Global Coordination
+              </div>
+            </div>
+          </div>
+          <span style={{
+            fontSize: '0.82rem', color: '#d2aa64', fontWeight: 800,
+            background: 'rgba(210,170,100,0.12)', padding: '0.45rem 1.1rem',
+            borderRadius: '2rem', border: '1.5px solid rgba(210,170,100,0.4)',
+            letterSpacing: '0.06em', textTransform: 'uppercase',
+            boxShadow: '0 0 20px rgba(210,170,100,0.15)'
+          }}>
+            Executive Leadership
+          </span>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
+
+        <p style={{ fontSize: '1.02rem', color: '#cbd5e1', marginBottom: '2rem', lineHeight: 1.7, fontWeight: 500 }}>
+          The Techryon Global executive leadership team spearheading international partnerships, strategic growth, and cross-border innovation across all forum initiatives:
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           {committeeList.map((member, i) => (
             <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '1.25rem',
-              border: '1px solid rgba(255,255,255,0.08)', textAlign: 'center',
-              display: 'flex', flexDirection: 'column', alignItems: 'center'
-            }}>
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(210,170,100,0.03) 100%)',
+              padding: '2.5rem 1.75rem', borderRadius: '1.5rem',
+              border: '1.5px solid rgba(210,170,100,0.25)', textAlign: 'center',
+              display: 'flex', flexDirection: 'column', alignItems: 'center',
+              boxShadow: '0 12px 35px rgba(0,0,0,0.3)',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.borderColor = 'rgba(210,170,100,0.5)';
+              e.currentTarget.style.boxShadow = '0 18px 45px rgba(210,170,100,0.15)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.borderColor = 'rgba(210,170,100,0.25)';
+              e.currentTarget.style.boxShadow = '0 12px 35px rgba(0,0,0,0.3)';
+            }}
+            >
               <div style={{
-                width: '84px', height: '84px', borderRadius: '50%',
-                overflow: 'hidden', marginBottom: '1rem', border: '2px solid rgba(210,170,100,0.4)',
-                boxShadow: '0 0 15px rgba(210,170,100,0.15)'
+                width: '144px', height: '144px', borderRadius: '50%',
+                overflow: 'hidden', marginBottom: '1.5rem', border: '3.5px solid rgba(210,170,100,0.55)',
+                boxShadow: '0 0 28px rgba(210,170,100,0.28)', flexShrink: 0,
+                background: 'rgba(0,0,0,0.4)'
               }}>
-                <img src={member.photo} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img 
+                  src={member.photo} 
+                  alt={member.name} 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    objectPosition: member.photoPosition || 'center top',
+                    transform: member.photoScale ? `scale(${member.photoScale})` : 'none',
+                    transition: 'transform 0.3s ease'
+                  }} 
+                />
               </div>
-              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#e8e8ee', margin: '0 0 0.3rem' }}>{member.name}</h4>
-              <div style={{ fontSize: '0.84rem', color: '#d2aa64', fontWeight: 600 }}>{member.role}</div>
-              <div style={{ fontSize: '0.78rem', color: '#8a8a9a', marginTop: '0.2rem' }}>{member.org}</div>
+              <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: '0 0 0.5rem', lineHeight: 1.35 }}>
+                {member.name}
+              </h4>
+              <div style={{ fontSize: '0.96rem', color: '#d2aa64', fontWeight: 700, lineHeight: 1.45, marginBottom: '0.85rem' }}>
+                {member.role}
+              </div>
+              <div style={{ marginTop: 'auto' }}>
+                <span style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+                  fontSize: '0.84rem', fontWeight: 700, color: '#e8e8ee',
+                  background: 'rgba(210,170,100,0.1)', padding: '0.4rem 1rem',
+                  borderRadius: '2rem', border: '1px solid rgba(210,170,100,0.25)',
+                  letterSpacing: '0.02em'
+                }}>
+                  <Building size={14} style={{ color: '#d2aa64' }} /> {member.org}
+                </span>
+              </div>
             </div>
           ))}
         </div>
