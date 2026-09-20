@@ -19,6 +19,10 @@ import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
 import billyTraorePhoto from '../../assets/mahamadou-billy-traore.jpg';
 import emmanuelPhoto from '../../assets/emmanuel-etaderhi.jpg';
 import maigariPhoto from '../../assets/dr-maigari-haruna-bello.jpg';
+import profDrElNamakiPhoto from '../../assets/prof-dr-el-namaki.png';
+import drSaleemPhoto from '../../assets/dr-saleem-abu-jaber.png';
+import talebPhoto from '../../assets/taleb-hammad.jpg';
+import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -32,6 +36,74 @@ const HackathonSections = () => {
 
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
+    {
+      name: 'Prof. Dr. M.S.S. El Namaki',
+      role: 'Dean, Artificial Intelligence Technologies (AIT) & Retired Dean, MSM',
+      org: 'AIT Canada / Maastricht School of Management',
+      location: 'Canada / Netherlands',
+      displayTitle: 'Retired Dean, Maastricht School of Management, Netherlands • Dean, Artificial Intelligence technologies (AIT), Canada',
+      topic: 'Strategic AI Leadership & the Global Paradigm Shift in Higher Education and Management',
+      bio: 'Prof. Dr. M.S.S. El Namaki is a globally recognized academic administrator, management scholar, and strategic thinker. He served as the longstanding Dean and Director of the Maastricht School of Management (MSM) in the Netherlands and currently serves as Dean at Artificial Intelligence Technologies (AIT) in Canada. With decades of international academic leadership, executive consulting, and scholarly research, Dr. El Namaki has advised universities, global corporations, and international development agencies on strategic management, entrepreneurship, and the systemic integration of artificial intelligence into executive decision-making and modern business education.',
+      photo: profDrElNamakiPhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Strategic AI', 'Executive Leadership', 'Higher Education', 'Global Management'],
+      initials: 'MN'
+    },
+    {
+      name: 'Dr. Saleem Abu Jaber',
+      role: 'Academic Advisor Head & Senior Lecturer',
+      org: 'Achva Academic College',
+      location: 'Israel',
+      displayTitle: 'Academic Advisor Head & Senior Lecturer, Achva Academic College',
+      topic: 'Advancing Academic Methodologies & Adaptive Learning in the Era of AI',
+      bio: 'Dr. Saleem Abu Jaber is an accomplished academic leader, Senior Lecturer, and Head of Academic Advisory at Achva Academic College. With deep pedagogical and research expertise, he specializes in advancing contemporary academic methodologies, educational leadership, and student-centered mentorship frameworks. His scholarly work and leadership initiatives focus on modernizing curriculum architectures, fostering inclusive educational pathways, and harnessing digital technologies and data-driven methods to elevate academic standards and institutional excellence.',
+      photo: drSaleemPhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['Academic Methodologies', 'Higher Education', 'Educational Leadership', 'Mentorship'],
+      initials: 'SJ'
+    },
+    {
+      name: 'Taleb Hammad',
+      role: 'DBA & Executive Director',
+      org: 'EyesNY',
+      location: 'USA',
+      displayTitle: 'DBA & Executive Director, EyesNY',
+      topic: 'High-Reliability Enterprise Database Administration & Scalable Healthcare Tech Systems',
+      bio: 'Taleb Hammad is an experienced executive director and senior database administrator with a proven track record of architecting mission-critical data systems and leading technological operations at EyesNY in the United States. Combining executive leadership with deep technical specialization in database administration (DBA), enterprise infrastructure, data integrity, and compliance, he leads high-reliability healthcare IT implementations. His work centers on optimizing enterprise data workflows, scalable database architectures, and leveraging intelligent data management to empower modern operational excellence.',
+      photo: talebPhoto,
+      photoPosition: 'center 18%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Database Administration', 'Executive Leadership', 'Enterprise Systems', 'Data Reliability'],
+      initials: 'TH'
+    },
+    {
+      name: 'Prof. Tamar Makharoblidze',
+      role: 'Professor, School of Arts and Sciences',
+      org: 'Ilia State University',
+      location: 'Tbilisi, Georgia',
+      displayTitle: 'Professor, School of Arts & Sciences, Ilia State University',
+      topic: 'Cognitive Technologies, Linguistics & AI in Cross-Disciplinary Academic Research',
+      bio: 'Prof. Tamar Makharoblidze is an internationally esteemed scholar and Professor in the School of Arts and Sciences at Ilia State University, Georgia. With an extensive international research profile, she has published numerous seminal books and peer-reviewed studies specializing in linguistics, Caucasian languages, sign language studies, and cognitive humanities. Prof. Makharoblidze has led significant national and international research grants, contributing extensively to academic innovation, cross-disciplinary methodologies, and the emerging intersection of computational linguistics, cognitive sciences, and artificial intelligence.',
+      photo: tamarPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.2)',
+      tags: ['Academic Research', 'Higher Education', 'Cognitive Sciences', 'Linguistics & AI'],
+      initials: 'TM'
+    },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',
