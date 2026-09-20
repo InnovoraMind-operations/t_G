@@ -24,6 +24,9 @@ import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
 import ekaPhoto from '../../assets/prof-eka-devidze.png';
 import prathapPhoto from '../../assets/prathap-raghavan.jpg';
+import drNikolaPhoto from '../../assets/dr-nikola-ilic.jpg';
+import carolinaPhoto from '../../assets/carolina-barandiaran.png';
+import roksolanaPhoto from '../../assets/roksolana-trach.png';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -37,6 +40,57 @@ const HackathonSections = () => {
 
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
+    {
+      name: 'MA Carolina Beatriz Barandiaran',
+      role: 'Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher',
+      org: 'Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)',
+      location: 'Buenos Aires, Argentina',
+      displayTitle: 'Professor, UNICEN • Senior IEEE Member',
+      topic: 'AI Automation, Scalable Microservices & Resilient Cloud Architectures in Modern Healthcare & Finance',
+      bio: 'MA Carolina Beatriz Barandiaran is a Professor at the College of Humanities, UNICEN, Argentina, a Senior IEEE Member, and an award-winning AI researcher with 18+ years of global technology leadership. Recipient of the AAAS Excellent Researcher Award and the 2024 Global Recognition Award, she has authored "AI and Microservices" (Apress) and architected patented AI solutions used by 50,000+ global users. She has led major transformations and cloud architectures for global enterprises including LTIMindtree, Bank of America, Infosys, and TCS.',
+      photo: carolinaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['AI Automation', 'Microservices', 'Cloud Platforms', 'Enterprise AI', 'Distributed Systems'],
+      initials: 'CB'
+    },
+    {
+      name: 'Dr. Nikola Ilić',
+      role: 'Assistant Professor, Faculty of Law',
+      org: 'University of Belgrade',
+      location: 'Belgrade, Serbia',
+      displayTitle: 'Assistant Professor, University of Belgrade Faculty of Law',
+      topic: 'AI Governance, Constitutional Law & Legal Frameworks for Emerging Technologies (SDG 9)',
+      bio: 'Dr. Nikola Ilić is an Assistant Professor at the University of Belgrade Faculty of Law, Serbia. His academic and research expertise spans constitutional law, legal research & policy, human rights & governance, comparative law, and public law. Aligned with UN Sustainable Development Goal 9 (SDG 9), his work explores the regulatory frameworks, legal accountability, and public policy imperatives surrounding artificial intelligence, digital systems, and emerging technologies.',
+      photo: drNikolaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['AI Governance', 'Constitutional Law', 'Legal Policy', 'SDG 9', 'Tech Regulation'],
+      initials: 'NI'
+    },
+    {
+      name: 'Roksolana Trach',
+      role: 'Independent Crypto Analyst & International Financial Market Analyst',
+      org: 'Global Crypto & Financial Markets Research',
+      location: 'USA',
+      displayTitle: 'Independent Crypto Analyst & International Financial Market Analyst',
+      topic: 'New Ideas Become Safe Systems: Blockchain Innovation, Digital Assets & Financial Market Resilience',
+      bio: 'Roksolana Trach is a prominent Independent Crypto Analyst and International Financial Market Analyst based in the United States. Specializing in cryptocurrency market intelligence, decentralized finance (DeFi), Web3 innovations, and macroeconomic indicators, she provides critical strategic insights into digital asset ecosystems. Her research and keynote focus, "New Ideas Become Safe Systems," emphasizes risk mitigation, market forecasting, and building secure, scalable financial technology frameworks.',
+      photo: roksolanaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.15,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Cryptocurrency', 'Blockchain', 'Web3 & DeFi', 'Financial Markets', 'Risk Assessment'],
+      initials: 'RT'
+    },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',
@@ -308,6 +362,51 @@ const HackathonSections = () => {
       initials: 'PR'
     },
     {
+      name: 'MA Carolina Beatriz Barandiaran',
+      role: 'Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher',
+      org: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+      location: 'Argentina',
+      focus: 'AI Automation Architecture, Microservices, Cloud Modernization & Evaluation',
+      bio: 'Award-winning AI researcher, Senior IEEE Member, author of "AI and Microservices", and former enterprise transformation leader for Bank of America, Infosys, and TCS evaluating scalable automated systems.',
+      photo: carolinaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['AI Architecture', 'Microservices', 'Cloud Modernization', 'IEEE Standards'],
+      initials: 'CB'
+    },
+    {
+      name: 'Dr. Nikola Ilić',
+      role: 'Assistant Professor, Faculty of Law',
+      org: 'University of Belgrade',
+      location: 'Serbia',
+      focus: 'Legal Governance, AI Compliance, Regulatory Frameworks & Ethics (SDG 9)',
+      bio: 'Assistant Professor at University of Belgrade Faculty of Law, advising on constitutional law, AI regulation, digital ethics, and institutional policy alignment with UN SDG 9.',
+      photo: drNikolaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Legal Governance', 'AI Ethics', 'Regulatory Compliance', 'SDG 9'],
+      initials: 'NI'
+    },
+    {
+      name: 'Roksolana Trach',
+      role: 'Independent Crypto & Financial Market Analyst',
+      org: 'Financial Markets Intelligence',
+      location: 'USA',
+      focus: 'Blockchain Systems, Cryptocurrency Economics, DeFi Security & Market Risk',
+      bio: 'Independent financial market and cryptocurrency analyst focused on evaluating blockchain architectures, digital asset security, Web3 risk mitigation, and commercial financial viability.',
+      photo: roksolanaPhoto,
+      photoPosition: 'center 15%',
+      photoScale: 1.1,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['Blockchain Defense', 'Crypto Economics', 'Web3', 'Risk Assessment'],
+      initials: 'RT'
+    },
+    {
       name: 'Prof. Eka Devidze',
       role: 'Professor & Head of Programs | National Accreditation Expert',
       org: 'International Black Sea University & NCEQE',
@@ -317,8 +416,8 @@ const HackathonSections = () => {
       photo: ekaPhoto,
       photoPosition: 'center 15%',
       photoScale: 1.1,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.18)',
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
       initials: 'ED'
     },
@@ -934,44 +1033,210 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── FEATURED SPEAKERS ── */}
-      <section id="speakers">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-            <Mic size={18} style={{ color: '#64b4d2' }} />
-            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Keynote & Expert Speakers</h3>
+      {/* ── INTERNATIONAL JUDGES PANEL ── */}
+      <section id="judges" style={{ marginBottom: '4.5rem' }}>
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem',
+          paddingBottom: '1.25rem', borderBottom: '1px solid rgba(0, 220, 180, 0.25)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{
+              width: '52px', height: '52px', borderRadius: '14px',
+              background: 'rgba(0, 220, 180, 0.15)', border: '1.5px solid rgba(0, 220, 180, 0.4)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 0 25px rgba(0, 220, 180, 0.25)', flexShrink: 0
+            }}>
+              <Users size={26} style={{ color: '#00dcb4' }} />
+            </div>
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+                International Judges Panel
+              </h2>
+              <div style={{ fontSize: '0.85rem', color: '#00dcb4', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
+                Official Evaluation & Grand Jury Committee
+              </div>
+            </div>
           </div>
-          <span style={{ fontSize: '0.8rem', color: '#64b4d2', fontWeight: 600, background: 'rgba(100,180,210,0.1)', padding: '0.25rem 0.75rem', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.2)' }}>
-            Distinguished Global Leaders & Academicians
+          <span style={{
+            fontSize: '0.82rem', color: '#00dcb4', fontWeight: 800,
+            background: 'rgba(0,220,180,0.12)', padding: '0.45rem 1.1rem',
+            borderRadius: '2rem', border: '1.5px solid rgba(0,220,180,0.4)',
+            letterSpacing: '0.06em', textTransform: 'uppercase',
+            boxShadow: '0 0 20px rgba(0,220,180,0.2)'
+          }}>
+            ★ Rigorous Independent Evaluation
+          </span>
+        </div>
+
+        <p style={{ fontSize: '1.02rem', color: '#cbd5e1', marginBottom: '2rem', lineHeight: 1.7, fontWeight: 500 }}>
+          Our distinguished international jury brings together premier industrial directors, lead research scientists, university professors, and technology executives who conduct comprehensive technical, architectural, and commercial evaluations:
+        </p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
+          {judgesList.map((jdg, i) => (
+            <div key={i} style={{
+              background: 'rgba(255,255,255,0.035)',
+              borderRadius: '1.4rem',
+              border: `1.5px solid ${jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'}`,
+              padding: '1.85rem',
+              display: 'flex',
+              flexDirection: 'column',
+              boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${jdg.glow}`,
+              transition: 'all 0.25s ease'
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = jdg.color; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'; }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                {jdg.photo ? (
+                  <div style={{
+                    width: '96px', height: '96px', borderRadius: '50%',
+                    border: `3px solid ${jdg.color}`,
+                    overflow: 'hidden', flexShrink: 0,
+                    boxShadow: `0 0 24px ${jdg.glow}, 0 4px 14px rgba(0,0,0,0.6)`,
+                    background: '#0d131d'
+                  }}>
+                    <img
+                      src={jdg.photo}
+                      alt={jdg.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: jdg.photoPosition || 'center 20%',
+                        transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.08)',
+                        transition: 'transform 0.3s ease'
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div style={{
+                    width: '96px', height: '96px', borderRadius: '50%',
+                    background: `linear-gradient(135deg, ${jdg.color}35, ${jdg.color}15)`,
+                    border: `3px solid ${jdg.color}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: '1.85rem', color: jdg.color, flexShrink: 0,
+                    boxShadow: `0 0 24px ${jdg.glow}`
+                  }}>
+                    {jdg.initials}
+                  </div>
+                )}
+                <div style={{ minWidth: 0, flexGrow: 1 }}>
+                  <div style={{
+                    fontSize: '0.7rem', fontWeight: 800, color: jdg.color,
+                    letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.25rem'
+                  }}>
+                    Distinguished Judge
+                  </div>
+                  <h4 style={{ fontSize: '1.22rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                    {jdg.name}
+                  </h4>
+                  <div style={{ fontSize: '0.9rem', color: jdg.color, fontWeight: 800, marginTop: '0.3rem', lineHeight: 1.4 }}>
+                    {jdg.role}
+                  </div>
+                  <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.25rem' }}>
+                    {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
+                  </div>
+                </div>
+              </div>
+
+              <div style={{
+                background: 'rgba(255,255,255,0.03)', padding: '1rem 1.15rem',
+                borderRadius: '0.85rem', borderLeft: `3.5px solid ${jdg.color}`,
+                marginBottom: '1.25rem', flexGrow: 1
+              }}>
+                <div style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: '#94a3b8', fontWeight: 800, letterSpacing: '0.06em' }}>
+                  Domain Evaluation Focus
+                </div>
+                <div style={{ fontSize: '0.94rem', color: '#f8fafc', fontWeight: 700, marginTop: '0.3rem', lineHeight: 1.45 }}>
+                  {jdg.focus}
+                </div>
+                {jdg.bio && (
+                  <p style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.6, marginTop: '0.65rem', marginBottom: 0, fontWeight: 500 }}>
+                    {jdg.bio}
+                  </p>
+                )}
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+                {jdg.tags.map((t, idx) => (
+                  <span key={idx} style={{
+                    fontSize: '0.74rem', padding: '0.25rem 0.65rem', borderRadius: '1rem',
+                    background: 'rgba(255,255,255,0.06)', color: '#cbd5e1',
+                    border: '1px solid rgba(255,255,255,0.1)', fontWeight: 700
+                  }}>
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── FEATURED KEYNOTE & EXPERT SPEAKERS ── */}
+      <section id="speakers" style={{ marginBottom: '4.5rem' }}>
+        <div style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem',
+          paddingBottom: '1.25rem', borderBottom: '1px solid rgba(100, 180, 210, 0.25)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{
+              width: '52px', height: '52px', borderRadius: '14px',
+              background: 'rgba(100, 180, 210, 0.15)', border: '1.5px solid rgba(100, 180, 210, 0.4)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: '0 0 25px rgba(100, 180, 210, 0.25)', flexShrink: 0
+            }}>
+              <Mic size={26} style={{ color: '#64b4d2' }} />
+            </div>
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+                Featured Keynote & Expert Speakers
+              </h2>
+              <div style={{ fontSize: '0.85rem', color: '#64b4d2', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
+                Distinguished Global Leaders & Academicians
+              </div>
+            </div>
+          </div>
+          <span style={{
+            fontSize: '0.82rem', color: '#64b4d2', fontWeight: 800,
+            background: 'rgba(100,180,210,0.12)', padding: '0.45rem 1.1rem',
+            borderRadius: '2rem', border: '1.5px solid rgba(100,180,210,0.4)',
+            letterSpacing: '0.06em', textTransform: 'uppercase',
+            boxShadow: '0 0 20px rgba(100,180,210,0.2)'
+          }}>
+            ★ Global Technical Summits
           </span>
         </div>
         
-        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.75rem', lineHeight: 1.6 }}>
+        <p style={{ fontSize: '1.02rem', color: '#cbd5e1', marginBottom: '2rem', lineHeight: 1.7, fontWeight: 500 }}>
           International technology visionaries, distinguished professors, and industry leaders confirmed and delivering exclusive keynote addresses and technical sessions during the online hackathon and innovation forum:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
           {speakersList.map((spk, i) => (
             <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)',
-              borderRadius: '1.25rem',
-              border: `1px solid ${spk.confirmed ? 'rgba(0,220,180,0.3)' : 'rgba(255,255,255,0.08)'}`,
-              padding: '1.75rem',
+              background: 'rgba(255,255,255,0.035)',
+              borderRadius: '1.4rem',
+              border: `1.5px solid ${spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'}`,
+              padding: '1.85rem',
               display: 'flex',
               flexDirection: 'column',
-              boxShadow: `inset 0 0 20px ${spk.glow}`,
-              transition: 'transform 0.25s ease'
+              boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${spk.glow}`,
+              transition: 'all 0.25s ease'
             }}
-            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
-            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = spk.color; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'; }}
             >
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '1.2rem' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '1.25rem' }}>
                 {spk.photo ? (
                   <div style={{
-                    width: '96px', height: '96px', borderRadius: '50%',
-                    border: `2.5px solid ${spk.color}`,
+                    width: '110px', height: '110px', borderRadius: '50%',
+                    border: `3px solid ${spk.color}`,
                     overflow: 'hidden', flexShrink: 0,
-                    boxShadow: `0 0 20px ${spk.glow}`,
+                    boxShadow: `0 0 24px ${spk.glow}, 0 4px 14px rgba(0,0,0,0.6)`,
                     background: '#0d131d'
                   }}>
                     <img
@@ -989,47 +1254,53 @@ const HackathonSections = () => {
                   </div>
                 ) : (
                   <div style={{
-                    width: '96px', height: '96px', borderRadius: '50%',
-                    background: `linear-gradient(135deg, ${spk.color}30, ${spk.color}10)`,
-                    border: `2.5px solid ${spk.color}`,
+                    width: '110px', height: '110px', borderRadius: '50%',
+                    background: `linear-gradient(135deg, ${spk.color}35, ${spk.color}15)`,
+                    border: `3px solid ${spk.color}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 800, fontSize: '1.75rem', color: spk.color, flexShrink: 0,
-                    boxShadow: `0 0 20px ${spk.glow}`
+                    fontWeight: 900, fontSize: '2.1rem', color: spk.color, flexShrink: 0,
+                    boxShadow: `0 0 24px ${spk.glow}`
                   }}>
                     {spk.initials}
                   </div>
                 )}
                 <div style={{ minWidth: 0, flexGrow: 1 }}>
                   {spk.confirmed && (
-                    <div style={{ marginBottom: '0.3rem' }}>
+                    <div style={{ marginBottom: '0.35rem' }}>
                       <span style={{
-                        fontSize: '0.68rem', fontWeight: 700, color: '#00dcb4',
-                        background: 'rgba(0,220,180,0.12)', border: '1px solid rgba(0,220,180,0.3)',
-                        padding: '0.15rem 0.55rem', borderRadius: '1rem',
-                        display: 'inline-flex', alignItems: 'center', gap: '0.25rem'
+                        fontSize: '0.72rem', fontWeight: 800, color: '#00dcb4',
+                        background: 'rgba(0,220,180,0.12)', border: '1.5px solid rgba(0,220,180,0.35)',
+                        padding: '0.2rem 0.65rem', borderRadius: '1rem',
+                        display: 'inline-flex', alignItems: 'center', gap: '0.3rem'
                       }}>
-                        <CheckCircle size={10} /> Confirmed Speaker
+                        <CheckCircle size={11} /> Confirmed Speaker
                       </span>
                     </div>
                   )}
-                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#e8e8ee', margin: 0, lineHeight: 1.3 }}>{spk.name}</h4>
-                  <div style={{ fontSize: '0.82rem', color: spk.color, fontWeight: 600, marginTop: '0.2rem' }}>{spk.role}</div>
-                  <div style={{ fontSize: '0.8rem', color: '#8a8a9a', marginTop: '0.1rem' }}>{spk.org} • {spk.location}</div>
+                  <h4 style={{ fontSize: '1.22rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                    {spk.name}
+                  </h4>
+                  <div style={{ fontSize: '0.9rem', color: spk.color, fontWeight: 800, marginTop: '0.3rem', lineHeight: 1.4 }}>
+                    {spk.role}
+                  </div>
+                  <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.25rem' }}>
+                    {spk.org} <span style={{ opacity: 0.6 }}>•</span> {spk.location}
+                  </div>
                   {spk.orcid && (
-                    <div style={{ marginTop: '0.35rem' }}>
+                    <div style={{ marginTop: '0.45rem' }}>
                       <a
                         href={`https://orcid.org/${spk.orcid}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
-                          fontSize: '0.72rem', color: '#00dcb4', textDecoration: 'none',
+                          fontSize: '0.74rem', color: '#00dcb4', textDecoration: 'none',
                           display: 'inline-flex', alignItems: 'center', gap: '0.3rem',
-                          background: 'rgba(0,220,180,0.06)', padding: '0.15rem 0.5rem',
-                          borderRadius: '0.4rem', border: '1px solid rgba(0,220,180,0.2)',
-                          fontWeight: 600
+                          background: 'rgba(0,220,180,0.06)', padding: '0.18rem 0.55rem',
+                          borderRadius: '0.4rem', border: '1px solid rgba(0,220,180,0.25)',
+                          fontWeight: 700
                         }}
                       >
-                        <span style={{ color: '#a6ce39', fontWeight: 800 }}>iD</span> ORCID: {spk.orcid} <ExternalLink size={10} />
+                        <span style={{ color: '#a6ce39', fontWeight: 900 }}>iD</span> ORCID: {spk.orcid} <ExternalLink size={10} />
                       </a>
                     </div>
                   )}
@@ -1037,129 +1308,29 @@ const HackathonSections = () => {
               </div>
 
               <div style={{
-                background: 'rgba(255,255,255,0.02)', padding: '0.9rem 1.1rem',
-                borderRadius: '0.75rem', borderLeft: `3px solid ${spk.color}`,
-                marginBottom: '1rem', flexGrow: 1
+                background: 'rgba(255,255,255,0.03)', padding: '1rem 1.15rem',
+                borderRadius: '0.85rem', borderLeft: `3.5px solid ${spk.color}`,
+                marginBottom: '1.25rem', flexGrow: 1
               }}>
-                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>
+                <div style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: '#94a3b8', fontWeight: 800, letterSpacing: '0.06em' }}>
                   {spk.confirmed ? 'Confirmed Expert Session / Talk' : 'Keynote Address'}
                 </div>
-                <div style={{ fontSize: '0.92rem', color: '#e8e8ee', fontWeight: 600, marginTop: '0.25rem', fontStyle: 'italic' }}>
+                <div style={{ fontSize: '0.98rem', color: '#ffffff', fontWeight: 700, marginTop: '0.3rem', fontStyle: 'italic', lineHeight: 1.4 }}>
                   "{spk.topic}"
                 </div>
                 {spk.bio && (
-                  <p style={{ fontSize: '0.82rem', color: '#a0a0b0', lineHeight: 1.6, marginTop: '0.75rem', marginBottom: 0 }}>
+                  <p style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.6, marginTop: '0.75rem', marginBottom: 0, fontWeight: 500 }}>
                     {spk.bio}
                   </p>
                 )}
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
                 {spk.tags.map((t, idx) => (
                   <span key={idx} style={{
-                    fontSize: '0.72rem', padding: '0.2rem 0.55rem', borderRadius: '1rem',
-                    background: 'rgba(255,255,255,0.05)', color: '#a0a0b0', border: '1px solid rgba(255,255,255,0.08)'
-                  }}>
-                    #{t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── INTERNATIONAL JUDGES ── */}
-      <section id="judges">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-            <Users size={18} style={{ color: '#00dcb4' }} />
-            <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>International Judges Panel</h3>
-          </div>
-          <span style={{ fontSize: '0.8rem', color: '#00dcb4', fontWeight: 600, background: 'rgba(0,220,180,0.1)', padding: '0.25rem 0.75rem', borderRadius: '1rem', border: '1px solid rgba(0,220,180,0.2)' }}>
-            Rigorous Independent Evaluation
-          </span>
-        </div>
-
-        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.75rem', lineHeight: 1.6 }}>
-          Our international jury consists of distinguished industrial directors, lead research scientists, and technology executives who evaluate project architecture, code quality, and commercial viability:
-        </p>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.5rem' }}>
-          {judgesList.map((jdg, i) => (
-            <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)',
-              borderRadius: '1.25rem',
-              border: `1px solid rgba(255,255,255,0.08)`,
-              padding: '1.75rem',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: `inset 0 0 20px ${jdg.glow}`,
-              transition: 'transform 0.25s ease'
-            }}
-            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'}
-            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                {jdg.photo ? (
-                  <div style={{
-                    width: '60px', height: '60px', borderRadius: '50%',
-                    border: `2px solid ${jdg.color}`,
-                    overflow: 'hidden', flexShrink: 0,
-                    boxShadow: `0 0 15px ${jdg.glow}`,
-                    background: '#0d131d'
-                  }}>
-                    <img
-                      src={jdg.photo}
-                      alt={jdg.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: jdg.photoPosition || 'center 20%',
-                        transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.05)',
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <div style={{
-                    width: '54px', height: '54px', borderRadius: '50%',
-                    background: `linear-gradient(135deg, ${jdg.color}30, ${jdg.color}10)`,
-                    border: `2px solid ${jdg.color}`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 800, fontSize: '1.15rem', color: jdg.color, flexShrink: 0
-                  }}>
-                    {jdg.initials}
-                  </div>
-                )}
-                <div style={{ minWidth: 0, flexGrow: 1 }}>
-                  <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#e8e8ee', margin: 0, lineHeight: 1.3 }}>{jdg.name}</h4>
-                  <div style={{ fontSize: '0.82rem', color: jdg.color, fontWeight: 600, marginTop: '0.15rem' }}>{jdg.role}</div>
-                  <div style={{ fontSize: '0.78rem', color: '#8a8a9a', marginTop: '0.1rem' }}>{jdg.org} • {jdg.location}</div>
-                </div>
-              </div>
-
-              <div style={{
-                background: 'rgba(255,255,255,0.02)', padding: '0.85rem 1rem',
-                borderRadius: '0.75rem', borderLeft: `3px solid ${jdg.color}`,
-                marginBottom: '1rem', flexGrow: 1
-              }}>
-                <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', color: '#8a8a9a', fontWeight: 700, letterSpacing: '0.05em' }}>Domain Evaluation Focus</div>
-                <div style={{ fontSize: '0.86rem', color: '#e8e8ee', fontWeight: 500, marginTop: '0.2rem' }}>
-                  {jdg.focus}
-                </div>
-                {jdg.bio && (
-                  <p style={{ fontSize: '0.8rem', color: '#a0a0b0', lineHeight: 1.5, marginTop: '0.55rem', marginBottom: 0 }}>
-                    {jdg.bio}
-                  </p>
-                )}
-              </div>
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
-                {jdg.tags.map((t, idx) => (
-                  <span key={idx} style={{
-                    fontSize: '0.72rem', padding: '0.2rem 0.55rem', borderRadius: '1rem',
-                    background: 'rgba(255,255,255,0.05)', color: '#a0a0b0', border: '1px solid rgba(255,255,255,0.08)'
+                    fontSize: '0.74rem', padding: '0.25rem 0.65rem', borderRadius: '1rem',
+                    background: 'rgba(255,255,255,0.06)', color: '#cbd5e1',
+                    border: '1px solid rgba(255,255,255,0.1)', fontWeight: 700
                   }}>
                     #{t}
                   </span>
