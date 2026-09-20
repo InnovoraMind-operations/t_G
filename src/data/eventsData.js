@@ -459,12 +459,6 @@ export const eventsData = [
     ],
     "speakers": [
       {
-        "name": "Prof. Dr. M.S.S. El Namaki",
-        "role": "Dean, Artificial Intelligence Technologies (AIT) & Retired Dean, MSM",
-        "topic": "Strategic AI Leadership & the Global Paradigm Shift in Higher Education and Management",
-        "bio": "Distinguished global academic administrator, former Dean of Maastricht School of Management (MSM), Netherlands, and Dean at Artificial Intelligence Technologies (AIT), Canada. Renowned international expert in strategic management, entrepreneurship, and emerging business paradigms."
-      },
-      {
         "name": "Engr. Fortune Chibuike Onyia (MNSE)",
         "role": "Lecturer, Civil Engineering Dept., Federal Polytechnic Oko & Entrepreneur",
         "topic": "Sustainable Technology",

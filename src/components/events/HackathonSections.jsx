@@ -19,14 +19,11 @@ import richardPhoto from '../../assets/richard-afoakwah-nti.jpg';
 import billyTraorePhoto from '../../assets/mahamadou-billy-traore.jpg';
 import emmanuelPhoto from '../../assets/emmanuel-etaderhi.jpg';
 import maigariPhoto from '../../assets/dr-maigari-haruna-bello.jpg';
-import profDrElNamakiPhoto from '../../assets/prof-dr-el-namaki.png';
 import drSaleemPhoto from '../../assets/dr-saleem-abu-jaber.png';
 import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
-import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
-import jacoPhoto from '../../assets/prof-jaco-visagie.png';
 import ekaPhoto from '../../assets/prof-eka-devidze.png';
-import joePerezPhoto from '../../assets/dr-joe-perez.png';
+import prathapPhoto from '../../assets/prathap-raghavan.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -40,23 +37,6 @@ const HackathonSections = () => {
 
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
-    {
-      name: 'Prof. Dr. M.S.S. El Namaki',
-      role: 'Dean, Artificial Intelligence Technologies (AIT) & Retired Dean, MSM',
-      org: 'AIT Canada / Maastricht School of Management',
-      location: 'Canada / Netherlands',
-      displayTitle: 'Retired Dean, Maastricht School of Management, Netherlands • Dean, Artificial Intelligence technologies (AIT), Canada',
-      topic: 'Strategic AI Leadership & the Global Paradigm Shift in Higher Education and Management',
-      bio: 'Prof. Dr. M.S.S. El Namaki is a globally recognized academic administrator, management scholar, and strategic thinker. He served as the longstanding Dean and Director of the Maastricht School of Management (MSM) in the Netherlands and currently serves as Dean at Artificial Intelligence Technologies (AIT) in Canada. With decades of international academic leadership, executive consulting, and scholarly research, Dr. El Namaki has advised universities, global corporations, and international development agencies on strategic management, entrepreneurship, and the systemic integration of artificial intelligence into executive decision-making and modern business education.',
-      photo: profDrElNamakiPhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.15,
-      confirmed: true,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.2)',
-      tags: ['Strategic AI', 'Executive Leadership', 'Higher Education', 'Global Management'],
-      initials: 'MN'
-    },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',
@@ -313,34 +293,19 @@ const HackathonSections = () => {
   // ── International Judges Panel ─────────────────────────────
   const judgesList = [
     {
-      name: 'Wiktoria Gromowa-Cieslik',
-      role: 'CEO, Technology Executive & Chief Metrics Officer',
-      org: 'Human-Tech Fusion (HTFusion)',
-      location: 'Poland',
-      focus: 'AI Value Metrics, Algorithm Scalability, Tech Governance & Enterprise ROI',
-      bio: 'Technology and transformation executive with a mathematical background, combining engineering and human insight to make data & AI initiatives measurable, scalable, governable, and commercially viable.',
-      photo: wiktoriaPhoto,
+      name: 'Prathap Raghavan',
+      role: 'Product Management (GenAI & Automation)',
+      org: 'Santander',
+      location: 'USA',
+      focus: 'GenAI Product Strategy, Intelligent Automation & Enterprise Financial Systems',
+      bio: 'Accomplished product management leader in GenAI & Automation at Santander, USA, specializing in delivering enterprise-grade AI innovations, intelligent workflow automation, and scalable financial technology solutions.',
+      photo: prathapPhoto,
       photoPosition: 'center 15%',
       photoScale: 1.1,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.18)',
-      tags: ['AI Metrics', 'Algorithm Scalability', 'AI Governance', 'Tech ROI'],
-      initials: 'WG'
-    },
-    {
-      name: 'Prof. Jaco Visagie',
-      role: 'Professor of Statistics & Risk Analysis Researcher',
-      org: 'North-West University',
-      location: 'Potchefstroom, South Africa',
-      focus: 'Statistical Modeling, Risk Analysis, Goodness-of-Fit & Quantitative Data Science',
-      bio: 'Professor of Statistics at North-West University with 17+ years of academic and research experience. Holds a PhD in Risk Analysis, specializing in statistical data science, survival analysis, and financial statistics.',
-      photo: jacoPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.18)',
-      tags: ['Data Science', 'Statistical Modeling', 'Risk Analysis', 'Financial Statistics'],
-      initials: 'JV'
+      tags: ['GenAI', 'Intelligent Automation', 'Product Management', 'FinTech'],
+      initials: 'PR'
     },
     {
       name: 'Prof. Eka Devidze',
@@ -356,21 +321,6 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.18)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
       initials: 'ED'
-    },
-    {
-      name: 'Dr. Joe Perez',
-      role: 'Chief Technology Officer, Keynote Speaker & Systems Specialist',
-      org: 'CogniMind / NC State University',
-      location: 'North Carolina, USA',
-      focus: 'Enterprise Data Architecture, Business Intelligence, Process Optimization & Analytics',
-      bio: 'Accomplished IT and data leader with 40+ years of experience, CTO at CogniMind, and former Senior Systems Specialist at NC DHHS. Inductee into the IIBA Hall of Fame and UN Global Network of Data Officers.',
-      photo: joePerezPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
-      color: '#b46ed2',
-      glow: 'rgba(180,110,210,0.18)',
-      tags: ['Business Intelligence', 'Enterprise IT', 'Data Architecture', 'Process Optimization'],
-      initials: 'JP'
     },
     {
       name: 'Dr. Sophia Ramirez',
