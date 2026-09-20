@@ -24,7 +24,6 @@ import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
 import ekaPhoto from '../../assets/prof-eka-devidze.png';
 import prathapPhoto from '../../assets/prathap-raghavan.jpg';
-import drNikolaPhoto from '../../assets/dr-nikola-ilic.jpg';
 import carolinaPhoto from '../../assets/carolina-barandiaran.png';
 import roksolanaPhoto from '../../assets/roksolana-trach.png';
 
@@ -56,23 +55,6 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ['AI Automation', 'Microservices', 'Cloud Platforms', 'Enterprise AI', 'Distributed Systems'],
       initials: 'CB'
-    },
-    {
-      name: 'Dr. Nikola Ilić',
-      role: 'Assistant Professor, Faculty of Law',
-      org: 'University of Belgrade',
-      location: 'Belgrade, Serbia',
-      displayTitle: 'Assistant Professor, University of Belgrade Faculty of Law',
-      topic: 'AI Governance, Constitutional Law & Legal Frameworks for Emerging Technologies (SDG 9)',
-      bio: 'Dr. Nikola Ilić is an Assistant Professor at the University of Belgrade Faculty of Law, Serbia. His academic and research expertise spans constitutional law, legal research & policy, human rights & governance, comparative law, and public law. Aligned with UN Sustainable Development Goal 9 (SDG 9), his work explores the regulatory frameworks, legal accountability, and public policy imperatives surrounding artificial intelligence, digital systems, and emerging technologies.',
-      photo: drNikolaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.15,
-      confirmed: true,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.2)',
-      tags: ['AI Governance', 'Constitutional Law', 'Legal Policy', 'SDG 9', 'Tech Regulation'],
-      initials: 'NI'
     },
     {
       name: 'Roksolana Trach',
@@ -275,72 +257,6 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.2)',
       tags: ['Digital Transformation', 'Higher Education', 'Educational Technology', 'Curriculum & AI'],
       initials: 'MB'
-    },
-    {
-      name: 'Dr. Klaus Obermeier',
-      role: 'VP of Industrial Automation & Digital Systems',
-      org: 'Siemens Digital Industries',
-      location: 'Munich, Germany',
-      topic: 'Autonomous Manufacturing & Industry 5.0: The Convergence of OT and AI',
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.15)',
-      tags: ['Industry 5.0', 'Industrial IoT', 'Smart Systems'],
-      initials: 'KO'
-    },
-    {
-      name: 'Elena Rostova',
-      role: 'Chief AI Architect & Head of Robotics',
-      org: 'ABB Robotics & Discrete Automation',
-      location: 'Zurich, Switzerland',
-      topic: 'Next-Gen Collaborative Robotics (Cobots) & Adaptive Vision',
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.15)',
-      tags: ['Robotics', 'Cobots', 'Adaptive AI'],
-      initials: 'ER'
-    },
-    {
-      name: 'Dr. Marcus Vance',
-      role: 'Director of Industrial Digital Twins',
-      org: 'GE Digital & MIT Industrial AI Lab',
-      location: 'Boston, USA',
-      topic: 'High-Fidelity Digital Twins for Zero-Downtime Heavy Engineering',
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.15)',
-      tags: ['Digital Twins', 'Predictive Maintenance', 'Edge AI'],
-      initials: 'MV'
-    },
-    {
-      name: 'Prof. Kenji Takahashi',
-      role: 'Chair of Cyber-Physical Production Systems',
-      org: 'University of Tokyo',
-      location: 'Tokyo, Japan',
-      topic: 'Ultra-Low-Latency Edge Computing in Precision Factory Automation',
-      color: '#b46ed2',
-      glow: 'rgba(180,110,210,0.15)',
-      tags: ['Edge Computing', 'Cyber-Physical', 'Precision Auto'],
-      initials: 'KT'
-    },
-    {
-      name: 'Dr. Aisha Al-Mansoor',
-      role: 'Head of Smart Factory Innovation',
-      org: 'Global Industrial Automation Hub',
-      location: 'Dubai, UAE',
-      topic: 'Green Manufacturing & Decarbonized Autonomous Production Networks',
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.15)',
-      tags: ['Green Manufacturing', 'Decarbonization', 'Smart Factory'],
-      initials: 'AM'
-    },
-    {
-      name: 'David Chen',
-      role: 'Principal Cloud & Industrial IoT Architect',
-      org: 'Microsoft Azure Industrial IoT',
-      location: 'Redmond, USA',
-      topic: 'Securing Industrial Cloud Telemetry & SCADA Interoperability',
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.15)',
-      tags: ['Cloud IoT', 'SCADA', 'Industrial Cyber'],
-      initials: 'DC'
     }
   ];
 
@@ -377,21 +293,6 @@ const HackathonSections = () => {
       initials: 'CB'
     },
     {
-      name: 'Dr. Nikola Ilić',
-      role: 'Assistant Professor, Faculty of Law',
-      org: 'University of Belgrade',
-      location: 'Serbia',
-      focus: 'Legal Governance, AI Compliance, Regulatory Frameworks & Ethics (SDG 9)',
-      bio: 'Assistant Professor at University of Belgrade Faculty of Law, advising on constitutional law, AI regulation, digital ethics, and institutional policy alignment with UN SDG 9.',
-      photo: drNikolaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.18)',
-      tags: ['Legal Governance', 'AI Ethics', 'Regulatory Compliance', 'SDG 9'],
-      initials: 'NI'
-    },
-    {
       name: 'Roksolana Trach',
       role: 'Independent Crypto & Financial Market Analyst',
       org: 'Financial Markets Intelligence',
@@ -420,72 +321,6 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
       initials: 'ED'
-    },
-    {
-      name: 'Dr. Sophia Ramirez',
-      role: 'Global Lead of Industrial Machine Learning',
-      org: 'Tesla Gigafactory Engineering',
-      location: 'Austin, USA',
-      focus: 'Computer Vision Defect Inspection & Shopfloor Anomaly Detection',
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.15)',
-      tags: ['Industrial ML', 'Defect Inspection', 'Real-time Vision'],
-      initials: 'SR'
-    },
-    {
-      name: 'Dr. Henrik Lindqvist',
-      role: 'Director of Autonomous Systems & Robotics',
-      org: 'Volvo Group Industrial Technology',
-      location: 'Gothenburg, Sweden',
-      focus: 'Autonomous Mobile Robots (AMR), AGVs & Intralogistics Optimization',
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.15)',
-      tags: ['AMR Fleets', 'Intralogistics', 'Robotics'],
-      initials: 'HL'
-    },
-    {
-      name: 'Prof. Ronald Sterling',
-      role: 'Chair of Critical Infrastructure & OT Security',
-      org: 'Imperial College London',
-      location: 'London, UK',
-      focus: 'SCADA Vulnerability Hardening, ICS Protocols & Industrial Zero Trust',
-      color: '#d26e6e',
-      glow: 'rgba(210,110,110,0.15)',
-      tags: ['SCADA Defense', 'Zero Trust', 'Critical Infra'],
-      initials: 'RS'
-    },
-    {
-      name: 'Amara Okafor',
-      role: 'VP of Advanced Manufacturing & Sustainability',
-      org: 'Global Advanced Manufacturing Consortium',
-      location: 'Singapore',
-      focus: 'Circular Factory Operations, Carbon Tracking & Resource Efficiency',
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.15)',
-      tags: ['Sustainability', 'Circular Economy', 'Resource Efficiency'],
-      initials: 'AO'
-    },
-    {
-      name: 'Dr. Marco Bellini',
-      role: 'Chief Technology Officer & Systems Architect',
-      org: 'Leonardo Industrial Automation & Aerospace',
-      location: 'Milan, Italy',
-      focus: 'Embedded Real-time Systems, Deterministic Fieldbus & Safety SIL-3/4',
-      color: '#b46ed2',
-      glow: 'rgba(180,110,210,0.15)',
-      tags: ['Embedded Systems', 'Safety Standards', 'Fieldbus'],
-      initials: 'MB'
-    },
-    {
-      name: 'Siddharth Mehta',
-      role: 'Global Director of Industrial IoT & Edge Intelligence',
-      org: 'Hitachi Vantara',
-      location: 'San Jose, USA',
-      focus: 'Asset Health Prediction, Vibration Telemetry & Distributed Sensors',
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.15)',
-      tags: ['Sensor Fusion', 'Asset Health', 'Edge Compute'],
-      initials: 'SM'
     }
   ];
 

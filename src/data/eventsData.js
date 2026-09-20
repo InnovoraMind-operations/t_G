@@ -465,12 +465,6 @@ export const eventsData = [
         "bio": "Professor at UNICEN, Argentina, Senior IEEE Member, and award-winning AI researcher with 18+ years of global technology leadership. Author of 'AI and Microservices' (Apress) and former enterprise transformation architect for Bank of America, Infosys, and TCS."
       },
       {
-        "name": "Dr. Nikola Ilić",
-        "role": "Assistant Professor, Faculty of Law, University of Belgrade",
-        "topic": "AI Governance, Constitutional Law & Legal Frameworks for Emerging Technologies (SDG 9)",
-        "bio": "Assistant Professor at University of Belgrade Faculty of Law, Serbia. Scholar in constitutional law, legal policy, digital rights, and regulatory frameworks governing AI and emerging technologies aligned with UN SDG 9."
-      },
-      {
         "name": "Roksolana Trach",
         "role": "Independent Crypto Analyst & International Financial Market Analyst",
         "topic": "New Ideas Become Safe Systems: Blockchain Innovation, Digital Assets & Financial Market Resilience",
