@@ -47,7 +47,7 @@ const HackathonSections = () => {
       topic: 'Sustainable Technology',
       bio: 'Engr. Fortune Chibuike Onyia (MNSE) is a Civil Engineer, lecturer, researcher, and entrepreneur with extensive experience in engineering education and practice. He has lectured in the Civil Engineering Department of Federal Polytechnic Oko, Anambra State, since 2016. His professional interests include urban hydrology, flood management, nature-based solutions, GIS applications, and sustainable infrastructure development. He is committed to advancing engineering knowledge through teaching, research, innovation, and professional practice, while contributing meaningfully to community development and the growth of the engineering profession in Nigeria.',
       photo: engrFortunePhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#64b4d2',
@@ -64,7 +64,7 @@ const HackathonSections = () => {
       topic: 'Advancing Academic Methodologies & Adaptive Learning in the Era of AI',
       bio: 'Dr. Saleem Abu Jaber is an accomplished academic leader, Senior Lecturer, and Head of Academic Advisory at Achva Academic College. With deep pedagogical and research expertise, he specializes in advancing contemporary academic methodologies, educational leadership, and student-centered mentorship frameworks. His scholarly work and leadership initiatives focus on modernizing curriculum architectures, fostering inclusive educational pathways, and harnessing digital technologies and data-driven methods to elevate academic standards and institutional excellence.',
       photo: drSaleemPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#d2aa64',
@@ -81,7 +81,7 @@ const HackathonSections = () => {
       topic: 'AI in Healthcare: Transforming Medical Research, Education, and Evidence-Based Practice',
       bio: 'Dr. Elalim Eltayeb Abdurrahman Mohamed is a Medical Doctor, Researcher, and Medical Educator with interests spanning clinical medicine, medical research, neuroscience, public health, and medical education. He is the Chair of the Board of the Abou-Aloum Centre for Medical Education and Research (ACMER), where he contributes to initiatives focused on strengthening research capacity, evidence-based practice, and medical education. His current interests focus on the responsible integration of Artificial Intelligence and emerging technologies into medical research, evidence synthesis, healthcare education, and clinical practice, with particular interest in their potential to improve healthcare and research capacity in resource-limited and conflict-affected settings.',
       photo: drElalimPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
@@ -98,7 +98,7 @@ const HackathonSections = () => {
       topic: 'High-Reliability Enterprise Database Administration & Scalable Healthcare Tech Systems',
       bio: 'Taleb Hammad is an experienced executive director and senior database administrator with a proven track record of architecting mission-critical data systems and leading technological operations at EyesNY in the United States. Combining executive leadership with deep technical specialization in database administration (DBA), enterprise infrastructure, data integrity, and compliance, he leads high-reliability healthcare IT implementations. His work centers on optimizing enterprise data workflows, scalable database architectures, and leveraging intelligent data management to empower modern operational excellence.',
       photo: talebPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#64b4d2',
@@ -115,8 +115,8 @@ const HackathonSections = () => {
       topic: 'Future of Work',
       bio: 'Sulaiman Kafeero is a seasoned Monitoring, Evaluation, and Learning Specialist and CEO at Muslim Centre for Justice and Law (MCJL), with over 20 years of experience in social development, project management, and research. His work focuses on social justice, violence prevention, and marginalized populations, with expertise in strategic planning, data analysis, participatory knowledge systems, and stakeholder engagement. Sulaiman has collaborated with organizations such as NUDIPU, Uganda AIDS Commission, ActionAid Uganda, and Wasafiri Consulting System Craft, contributing to national and international initiatives funded by CAFOD-UK, EU, UKAID, and others. Recognized for his mentorship and innovative approaches, Sulaiman’s work emphasizes outcome harvesting and problem-driven iterative processes to foster real-time social change.',
       photo: sulaimanPhoto,
-      photoPosition: 'center 20%',
-      photoScale: 1.02,
+      photoPosition: 'center 12%',
+      photoScale: 1.12,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -132,7 +132,7 @@ const HackathonSections = () => {
       topic: 'Cognitive Technologies, Linguistics & AI in Cross-Disciplinary Academic Research',
       bio: 'Prof. Tamar Makharoblidze is an internationally esteemed scholar and Professor in the School of Arts and Sciences at Ilia State University, Georgia. With an extensive international research profile, she has published numerous seminal books and peer-reviewed studies specializing in linguistics, Caucasian languages, sign language studies, and cognitive humanities. Prof. Makharoblidze has led significant national and international research grants, contributing extensively to academic innovation, cross-disciplinary methodologies, and the emerging intersection of computational linguistics, cognitive sciences, and artificial intelligence.',
       photo: tamarPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center 6%',
       photoScale: 1.0,
       confirmed: true,
       color: '#b46ed2',
@@ -149,7 +149,7 @@ const HackathonSections = () => {
       topic: 'AI-Powered Entrepreneurship: Transforming Businesses for a Smarter and More Inclusive Future',
       bio: 'Richard Afoakwah-Nti is a Ghanaian entrepreneur, IT expert, and business consultant, and the Founder & CEO of Rich Dream Consult (RDC), a multi-award-winning professional consultancy firm operating across IT, Business Management, and Travel Consultancy. With a strong interest in technology and innovation, he focuses on helping businesses and entrepreneurs identify opportunities, embrace digital transformation, and build sustainable, competitive ventures. Richard is also passionate about empowering young entrepreneurs to leverage emerging technologies for growth and impact, advocating for the responsible and inclusive use of AI to create opportunities in emerging markets.',
       photo: richardPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
@@ -166,8 +166,8 @@ const HackathonSections = () => {
       topic: 'AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities',
       bio: 'Mahamadou Billy TRAORÉ is a Malian professional specializing in business development and innovation, with experience in business strategy, market development, sales management and partnership development. He has worked in demanding business environments involving international and multinational companies, with a particular interest in expanding markets, developing distribution networks, acquiring customers and improving business performance. Based in Mali, he is actively engaged in initiatives related to entrepreneurship, youth empowerment, innovation and international partnerships. His professional approach combines corporate strategy, emerging technologies and working knowledge of African markets. He is particularly interested in how artificial intelligence and digital transformation can help African entrepreneurs, startups and organizations improve productivity, access new markets and create sustainable opportunities. As an expert speaker, he brings an African perspective to international exchanges on artificial intelligence, innovation, entrepreneurship and the future of work.',
       photo: billyTraorePhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.02,
+      photoPosition: 'center 6%',
+      photoScale: 1.0,
       confirmed: true,
       color: '#d2aa64',
       glow: 'rgba(210,170,100,0.2)',
@@ -198,7 +198,7 @@ const HackathonSections = () => {
       topic: 'AI in Smart Grids: Accelerating Sustainable Energy & Clean Tech Infrastructure',
       bio: 'Emmanuel Etaderhi is an accomplished Sustainable Finance Expert and the Executive Secretary of the Financial Centre for Sustainability (FC4S) Lagos, part of the United Nations-convened International Network of Financial Centres for Sustainability. Concurrently serving as Senior Vice President at FMDQ Group PLC, he has over 27 years of extensive leadership experience spanning financial services, capital markets, and the energy/power sectors. Mr. Etaderhi coordinated the Nigerian Green Bond Market Development Programme and has been a driving force in financing sustainable infrastructure and green transition initiatives. His expertise focuses on leveraging emerging technologies, artificial intelligence, and smart grids to optimize clean energy distribution, accelerate climate finance, and build resilient, sustainable power ecosystems.',
       photo: emmanuelPhoto,
-      photoPosition: 'center 15%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#00dcb4',
@@ -215,7 +215,7 @@ const HackathonSections = () => {
       topic: 'Digital Transformation in Higher Education: The Role of Emerging Technologies',
       bio: 'Dr. Maigari Haruna Bello is a Chief Lecturer in the Department of Primary Education (Nomadic Education Unit), Federal College of Education, Yola, Nigeria, with nearly two decades of experience in teacher education, curriculum development, and educational administration. He holds a PhD in Curriculum and Instruction from the University of Maroua, Cameroon, and has contributed extensively to research on nomadic education, inclusive education, educational technology, and 21st-century skills development. Dr. Bello currently serves as Deputy Director, Directorate of Undergraduate Studies (DUS), and has previously held several academic and administrative positions, including Head of Open and Distance Learning (ODL). He has facilitated professional development programmes for educators and actively participates in educational consultancy, policy development, and community-based educational initiatives aimed at improving access, quality, and equity in education.',
       photo: maigariPhoto,
-      photoPosition: 'center 10%',
+      photoPosition: 'center top',
       photoScale: 1.0,
       confirmed: true,
       color: '#b46ed2',
@@ -235,8 +235,8 @@ const HackathonSections = () => {
       focus: 'GenAI Product Strategy, Intelligent Automation & Enterprise Financial Systems',
       bio: 'Accomplished product management leader in GenAI & Automation at Santander, USA, specializing in delivering enterprise-grade AI innovations, intelligent workflow automation, and scalable financial technology solutions.',
       photo: prathapPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
+      photoPosition: 'center top',
+      photoScale: 1.0,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.18)',
       tags: ['GenAI', 'Intelligent Automation', 'Product Management', 'FinTech'],
@@ -250,8 +250,8 @@ const HackathonSections = () => {
       focus: 'AI Automation Architecture, Microservices, Cloud Modernization & Evaluation',
       bio: 'Award-winning AI researcher, Senior IEEE Member, author of "AI and Microservices", and former enterprise transformation leader for Bank of America, Infosys, and TCS evaluating scalable automated systems.',
       photo: carolinaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
+      photoPosition: 'center 20%',
+      photoScale: 1.0,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.18)',
       tags: ['AI Architecture', 'Microservices', 'Cloud Modernization', 'IEEE Standards'],
@@ -265,8 +265,8 @@ const HackathonSections = () => {
       focus: 'Blockchain Systems, Cryptocurrency Economics, DeFi Security & Market Risk',
       bio: 'Independent financial market and cryptocurrency analyst focused on evaluating blockchain architectures, digital asset security, Web3 risk mitigation, and commercial financial viability.',
       photo: roksolanaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
+      photoPosition: 'center top',
+      photoScale: 1.0,
       color: '#b46ed2',
       glow: 'rgba(180,110,210,0.18)',
       tags: ['Blockchain Defense', 'Crypto Economics', 'Web3', 'Risk Assessment'],
@@ -280,8 +280,8 @@ const HackathonSections = () => {
       focus: 'Project Governance, Academic Quality Accreditation & Sustainable Development',
       bio: 'Professor and Head of Programs at International Black Sea University, Accreditation Expert at the National Center for Education Quality Enhancement, and director of EU & UNDP sustainable development projects.',
       photo: ekaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.1,
+      photoPosition: 'center top',
+      photoScale: 1.0,
       color: '#00dcb4',
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
@@ -296,24 +296,24 @@ const HackathonSections = () => {
       role: 'Global Partnership & Strategy Director',
       org: 'Techryon Global',
       photo: emeraldPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.05
+      photoPosition: 'center 12%',
+      photoScale: 1.0
     },
     {
       name: 'Lawrence Mazaki Mashati',
       role: 'General Director',
       org: 'Techryon Global',
       photo: lmPhoto,
-      photoPosition: 'center 12%',
-      photoScale: 1.05
+      photoPosition: 'center 10%',
+      photoScale: 1.0
     },
     {
       name: 'Marghescu Cristina-Florentina',
       role: 'Independent Director',
       org: 'Techryon Global',
       photo: cfPhoto,
-      photoPosition: 'center 28%',
-      photoScale: 1.2
+      photoPosition: 'center 35%',
+      photoScale: 1.35
     }
   ];
 
@@ -337,7 +337,7 @@ const HackathonSections = () => {
         background: 'linear-gradient(135deg, rgba(0,220,180,0.12), rgba(0,180,220,0.04))',
         border: '1px solid rgba(0,220,180,0.3)',
         borderRadius: '1.5rem',
-        padding: '1.75rem 2rem',
+        padding: 'clamp(1.25rem, 3vw, 1.75rem) clamp(1rem, 3vw, 2rem)',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
@@ -366,7 +366,7 @@ const HackathonSections = () => {
                 Worldwide Online Hackathon
               </span>
             </div>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>
+            <h3 style={{ fontSize: 'clamp(1.05rem, 3vw, 1.25rem)', fontWeight: 700, color: '#e8e8ee', margin: 0, lineHeight: 1.35 }}>
               Global Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing
             </h3>
             <p style={{ fontSize: '0.88rem', color: '#9090a0', margin: '0.4rem 0 0', lineHeight: 1.5 }}>
@@ -400,14 +400,14 @@ const HackathonSections = () => {
           <Sparkles size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>About the Industrial Hackathon</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international virtual event bringing together developers, engineers, researchers, professors, and startups from across the world. Focused on <strong>Industry 5.0, Smart Manufacturing, Industrial AI, Digital Twins, Robotics, and OT Cybersecurity</strong>, this premier online competition challenges participants to build practical, scalable industrial solutions.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             The event combines an Innovation Forum featuring world-class keynote talks from companies like Siemens, ABB, GE Digital, and Tokyo University, with an intense 24-hour virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 140px), 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             {[
               { label: 'Event Format', val: '100% Online / Virtual' },
               { label: 'Registration', val: 'Online Open' },
@@ -429,7 +429,7 @@ const HackathonSections = () => {
           <Globe size={18} style={{ color: '#64b4d2' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>About TechryonGlobal</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             TechryonGlobal is a global technology and innovation platform dedicated to fostering collaboration, research, learning, and technological advancement through international conferences, hackathons, workshops, and professional networking initiatives.
           </p>
@@ -448,11 +448,11 @@ const HackathonSections = () => {
           <Lightbulb size={18} style={{ color: '#b46ed2' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Innovation Forum</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
             The Innovation Forum serves as an international platform where participants engage with global experts, researchers, entrepreneurs, and industry leaders through insightful discussions on emerging technologies, innovation ecosystems, digital transformation, entrepreneurship, artificial intelligence, sustainability, and future technologies.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 240px), 1fr))', gap: '1rem' }}>
             {[
               'Keynote Sessions',
               'Expert Talks',
@@ -480,7 +480,7 @@ const HackathonSections = () => {
           <Laptop size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Global Hackathon</h3>
         </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0' }}>
             The Global Hackathon challenges participants to transform innovative ideas into practical solutions by leveraging Artificial Intelligence and emerging technologies. Participants will collaborate individually or in teams to solve real-world problems while receiving guidance from mentors and evaluation from an international panel of judges.
           </p>
@@ -495,7 +495,7 @@ const HackathonSections = () => {
         </div>
         <div style={{
           background: 'linear-gradient(135deg, rgba(210,170,100,0.1), transparent)',
-          padding: '1.5rem 2rem', borderRadius: '1rem', border: '1px solid rgba(210,170,100,0.2)',
+          padding: 'clamp(1.25rem, 3.5vw, 1.5rem) clamp(1rem, 3.5vw, 2rem)', borderRadius: '1rem', border: '1px solid rgba(210,170,100,0.2)',
           marginBottom: '2rem'
         }}>
           <h4 style={{ fontSize: '1.15rem', color: '#d2aa64', fontWeight: 700, marginBottom: '0.4rem' }}>
@@ -506,7 +506,7 @@ const HackathonSections = () => {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.25rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '1.25rem' }}>
           {[
             { 
               title: 'Industry 5.0 & Human-Centric Automation', 
@@ -577,7 +577,7 @@ const HackathonSections = () => {
           <CheckCircle size={18} style={{ color: '#64b4d2' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Event Highlights</h3>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))', gap: '1.25rem' }}>
           {[
             { title: 'Global Innovation Forum', desc: 'Interact with global experts through keynote sessions, panel discussions, and networking opportunities.', icon: Lightbulb, glow: 'rgba(180,110,210,0.1)', color: '#b46ed2' },
             { title: 'Global Hackathon', desc: 'Develop innovative AI-powered solutions addressing real-world challenges.', icon: Laptop, glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
@@ -617,8 +617,8 @@ const HackathonSections = () => {
           <UserCheck size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Eligibility & Team Size</h3>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
-          <div style={{ background: 'rgba(255,255,255,0.02)', padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem' }}>
+          <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 1.5rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
             <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Eligible Participants</h4>
             <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1rem' }}>The event is open to participants worldwide, including:</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.5rem' }}>
@@ -634,7 +634,7 @@ const HackathonSections = () => {
               ))}
             </ul>
           </div>
-          <div style={{ background: 'linear-gradient(135deg, rgba(210,170,100,0.1), rgba(180,140,80,0.02))', padding: '1.5rem', borderRadius: '1.5rem', border: '1px solid rgba(210,170,100,0.2)' }}>
+          <div style={{ background: 'linear-gradient(135deg, rgba(210,170,100,0.1), rgba(180,140,80,0.02))', padding: 'clamp(1.25rem, 3.5vw, 1.5rem)', borderRadius: '1.5rem', border: '1px solid rgba(210,170,100,0.2)' }}>
             <h4 style={{ fontSize: '1.05rem', color: '#d2aa64', fontWeight: 700, marginBottom: '1rem' }}>Team Size</h4>
             <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>1–5</div>
             <div style={{ fontSize: '1.1rem', color: '#a0a0b0', fontWeight: 600, marginBottom: '1rem' }}>Members per team</div>
@@ -657,7 +657,7 @@ const HackathonSections = () => {
         </p>
 
         <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Certificates Available</h4>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 240px), 1fr))', gap: '1rem', marginBottom: '2.5rem' }}>
           {[
             { title: 'Participation Certificate', icon: Award, glow: 'rgba(0,220,180,0.1)', color: '#00dcb4' },
             { title: 'Winner Certificate', icon: Trophy, glow: 'rgba(250,204,21,0.1)', color: '#facc15' },
@@ -681,7 +681,7 @@ const HackathonSections = () => {
         </div>
 
         <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Special Recognitions</h4>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))', gap: '1rem' }}>
           {[
             'Best AI Innovation',
             'Best Sustainability Solution',
@@ -725,7 +725,7 @@ const HackathonSections = () => {
               <Users size={26} style={{ color: '#00dcb4' }} />
             </div>
             <div>
-              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+              <h2 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
                 International Judges Panel
               </h2>
               <div style={{ fontSize: '0.85rem', color: '#00dcb4', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
@@ -748,13 +748,13 @@ const HackathonSections = () => {
           Our distinguished international jury brings together premier industrial directors, lead research scientists, university professors, and technology executives who conduct comprehensive technical, architectural, and commercial evaluations:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
           {judgesList.map((jdg, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.035)',
               borderRadius: '1.4rem',
               border: `1.5px solid ${jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'}`,
-              padding: '1.85rem',
+              padding: 'clamp(1.25rem, 3.5vw, 1.85rem)',
               display: 'flex',
               flexDirection: 'column',
               boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${jdg.glow}`,
@@ -788,7 +788,7 @@ const HackathonSections = () => {
               {/* Full Big Photo */}
               <div style={{
                 width: '100%',
-                height: '280px',
+                height: 'clamp(230px, 58vw, 300px)',
                 borderRadius: '1.1rem',
                 border: `2.5px solid ${jdg.color}`,
                 overflow: 'hidden',
@@ -805,8 +805,8 @@ const HackathonSections = () => {
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: jdg.photoPosition || 'center 20%',
-                      transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.05)',
+                      objectPosition: jdg.photoPosition || 'center top',
+                      transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'none',
                       transition: 'transform 0.4s ease'
                     }}
                   />
@@ -874,7 +874,7 @@ const HackathonSections = () => {
               <Mic size={26} style={{ color: '#64b4d2' }} />
             </div>
             <div>
-              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+              <h2 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
                 Featured Keynote & Expert Speakers
               </h2>
               <div style={{ fontSize: '0.85rem', color: '#64b4d2', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
@@ -897,13 +897,13 @@ const HackathonSections = () => {
           International technology visionaries, distinguished professors, and industry leaders confirmed and delivering exclusive keynote addresses and technical sessions during the online hackathon and innovation forum:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '1.75rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
           {speakersList.map((spk, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.035)',
               borderRadius: '1.4rem',
               border: `1.5px solid ${spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'}`,
-              padding: '1.85rem',
+              padding: 'clamp(1.25rem, 3.5vw, 1.85rem)',
               display: 'flex',
               flexDirection: 'column',
               boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${spk.glow}`,
@@ -958,7 +958,7 @@ const HackathonSections = () => {
               {/* Full Big Photo */}
               <div style={{
                 width: '100%',
-                height: '280px',
+                height: 'clamp(230px, 58vw, 300px)',
                 borderRadius: '1.1rem',
                 border: `2.5px solid ${spk.color}`,
                 overflow: 'hidden',
@@ -975,8 +975,8 @@ const HackathonSections = () => {
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: spk.photoPosition || 'center 15%',
-                      transform: spk.photoScale ? `scale(${spk.photoScale})` : 'scale(1.0)',
+                      objectPosition: spk.photoPosition || 'center top',
+                      transform: spk.photoScale ? `scale(${spk.photoScale})` : 'none',
                       transition: 'transform 0.4s ease'
                     }}
                   />
@@ -1061,7 +1061,7 @@ const HackathonSections = () => {
           <Star size={18} style={{ color: '#d2aa64' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Get Involved</h3>
         </div>
-        <div style={{ background: 'linear-gradient(135deg, rgba(210,170,100,0.05), transparent)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(210,170,100,0.15)' }}>
+        <div style={{ background: 'linear-gradient(135deg, rgba(210,170,100,0.05), transparent)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(210,170,100,0.15)' }}>
           <p style={{ fontSize: '0.95rem', color: '#e8e8ee', marginBottom: '1.5rem', lineHeight: 1.6 }}>
             TechryonGlobal invites experienced professionals, researchers, faculty members, and industry experts to join us as judges, speakers, or partners.
           </p>
@@ -1140,7 +1140,7 @@ const HackathonSections = () => {
           <Star size={18} style={{ color: '#d2aa64' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Why Participate?</h3>
         </div>
-        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1rem' }}>
+        <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap: '1rem' }}>
           {[
             'Showcase your innovation on a global platform',
             'Gain recognition from international experts',
@@ -1178,7 +1178,7 @@ const HackathonSections = () => {
           }}>
             Online Registration Open • Worldwide Access
           </div>
-          <h2 style={{ fontSize: '2.4rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.4rem)', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.5rem', lineHeight: 1.25 }}>
             Register for the Industrial Hackathon
           </h2>
           <p style={{ fontSize: '1rem', color: '#a0a0b0', maxWidth: '620px', margin: '0 auto 1.5rem' }}>
@@ -1205,12 +1205,12 @@ const HackathonSections = () => {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1.5rem' }}>
           
           {/* Participant */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(0,220,180,0.12), rgba(0,180,220,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(0,220,180,0.3)',
+            borderRadius: '1.5rem', padding: 'clamp(1.25rem, 3.5vw, 2rem)', border: '1px solid rgba(0,220,180,0.3)',
             display: 'flex', flexDirection: 'column', position: 'relative'
           }}>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -1242,7 +1242,7 @@ const HackathonSections = () => {
           {/* Judge */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(210,170,100,0.1), rgba(180,140,80,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(210,170,100,0.25)',
+            borderRadius: '1.5rem', padding: 'clamp(1.25rem, 3.5vw, 2rem)', border: '1px solid rgba(210,170,100,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -1274,7 +1274,7 @@ const HackathonSections = () => {
           {/* Speaker */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(180,110,210,0.1), rgba(150,80,180,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(180,110,210,0.25)',
+            borderRadius: '1.5rem', padding: 'clamp(1.25rem, 3.5vw, 2rem)', border: '1px solid rgba(180,110,210,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -1306,7 +1306,7 @@ const HackathonSections = () => {
           {/* Partner / Sponsor */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(100,180,210,0.1), rgba(70,150,180,0.02))',
-            borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(100,180,210,0.25)',
+            borderRadius: '1.5rem', padding: 'clamp(1.25rem, 3.5vw, 2rem)', border: '1px solid rgba(100,180,210,0.25)',
             display: 'flex', flexDirection: 'column'
           }}>
             <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#e8e8ee', marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -1357,7 +1357,7 @@ const HackathonSections = () => {
               <Briefcase size={26} style={{ color: '#d2aa64' }} />
             </div>
             <div>
-              <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
+              <h2 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 800, letterSpacing: '0.02em', color: '#ffffff', margin: 0, lineHeight: 1.2 }}>
                 Organizing Committee & Leadership
               </h2>
               <div style={{ fontSize: '0.85rem', color: '#d2aa64', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
@@ -1380,11 +1380,11 @@ const HackathonSections = () => {
           The Techryon Global executive leadership team spearheading international partnerships, strategic growth, and cross-border innovation across all forum initiatives:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem' }}>
           {committeeList.map((member, i) => (
             <div key={i} style={{
               background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(210,170,100,0.03) 100%)',
-              padding: '2.5rem 1.75rem', borderRadius: '1.5rem',
+              padding: 'clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem)', borderRadius: '1.5rem',
               border: '1.5px solid rgba(210,170,100,0.25)', textAlign: 'center',
               display: 'flex', flexDirection: 'column', alignItems: 'center',
               boxShadow: '0 12px 35px rgba(0,0,0,0.3)',
@@ -1402,8 +1402,8 @@ const HackathonSections = () => {
             }}
             >
               <div style={{
-                width: '144px', height: '144px', borderRadius: '50%',
-                overflow: 'hidden', marginBottom: '1.5rem', border: '3.5px solid rgba(210,170,100,0.55)',
+                width: 'clamp(110px, 30vw, 144px)', height: 'clamp(110px, 30vw, 144px)', borderRadius: '50%',
+                overflow: 'hidden', marginBottom: '1.25rem', border: '3.5px solid rgba(210,170,100,0.55)',
                 boxShadow: '0 0 28px rgba(210,170,100,0.28)', flexShrink: 0,
                 background: 'rgba(0,0,0,0.4)'
               }}>
@@ -1480,23 +1480,23 @@ const HackathonSections = () => {
           <Mail size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Contact & Support</h3>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
-          <div style={{ background: 'rgba(0,220,180,0.05)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid rgba(0,220,180,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(0,220,180,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '1rem' }}>
+          <div style={{ background: 'rgba(0,220,180,0.05)', padding: 'clamp(1rem, 3vw, 1.5rem)', borderRadius: '1rem', border: '1px solid rgba(0,220,180,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(0,220,180,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <Mail size={22} style={{ color: '#00dcb4' }} />
             </div>
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: '0.8rem', color: '#8a8a9a', textTransform: 'uppercase', fontWeight: 600 }}>Inquiries & Partnerships</div>
-              <a href="mailto:inquiries@techryonglobal.com" style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600, textDecoration: 'none' }}>inquiries@techryonglobal.com</a>
+              <a href="mailto:inquiries@techryonglobal.com" style={{ fontSize: 'clamp(0.85rem, 3vw, 1rem)', color: '#e8e8ee', fontWeight: 600, textDecoration: 'none', wordBreak: 'break-all' }}>inquiries@techryonglobal.com</a>
             </div>
           </div>
-          <div style={{ background: 'rgba(100,180,210,0.05)', padding: '1.5rem', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(100,180,210,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: 'rgba(100,180,210,0.05)', padding: 'clamp(1rem, 3vw, 1.5rem)', borderRadius: '1rem', border: '1px solid rgba(100,180,210,0.15)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(100,180,210,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
               <Globe size={22} style={{ color: '#64b4d2' }} />
             </div>
-            <div>
+            <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: '0.8rem', color: '#8a8a9a', textTransform: 'uppercase', fontWeight: 600 }}>Location & Access</div>
-              <div style={{ fontSize: '1rem', color: '#e8e8ee', fontWeight: 600 }}>100% Online Virtual Platform • Global Access</div>
+              <div style={{ fontSize: 'clamp(0.85rem, 3vw, 1rem)', color: '#e8e8ee', fontWeight: 600 }}>100% Online Virtual Platform • Global Access</div>
             </div>
           </div>
         </div>

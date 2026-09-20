@@ -76,12 +76,12 @@ const EventDetail = () => {
   return (
     <div
       className="animate-fade-in"
-      style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #1e1d22 0%, #19181d 100%)' }}
+      style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #1e1d22 0%, #19181d 100%)', overflowX: 'hidden' }}
     >
       {/* ── Sticky header bar ── */}
       <div style={{
         position: 'sticky', top: 0, zIndex: 50,
-        padding: '1.25rem 2.5rem',
+        padding: '1rem clamp(1rem, 4vw, 2.5rem)',
         background: 'rgba(28,27,32,0.92)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
@@ -125,9 +125,10 @@ const EventDetail = () => {
       {/* ── Hero section ── */}
       <div style={{
         maxWidth: '900px', margin: '0 auto',
-        padding: '4rem 2.5rem 2rem',
+        padding: 'clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2.5rem) 2rem',
+        boxSizing: 'border-box'
       }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
           <div style={{
             display: 'inline-flex', padding: '1.1rem',
             background: visual.glow,
@@ -138,7 +139,7 @@ const EventDetail = () => {
           }}>
             <IconComp size={32} />
           </div>
-          <div>
+          <div style={{ flex: '1 1 280px', minWidth: 0 }}>
             {ev.id === 'evt_012' ? (
               <div style={{ fontSize: '0.9rem', fontWeight: 700, color: '#00dcb4', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 TechryonGlobal Presents
@@ -152,11 +153,11 @@ const EventDetail = () => {
                 Organized & Hosted by Techryon Global
               </div>
             )}
-            <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: ev.id === 'evt_012' ? '0.5rem' : '1rem' }}>
+            <h1 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', fontWeight: 800, color: '#e8e8ee', lineHeight: 1.3, marginBottom: ev.id === 'evt_012' ? '0.5rem' : '1rem' }}>
               {ev.title}
             </h1>
             {ev.id === 'evt_012' && (
-              <div style={{ fontSize: '1.2rem', fontWeight: 600, color: '#00dcb4', marginBottom: '1.5rem' }}>
+              <div style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', fontWeight: 600, color: '#00dcb4', marginBottom: '1.5rem' }}>
                 Innovate. Collaborate. Transform the Future.
               </div>
             )}
@@ -181,7 +182,7 @@ const EventDetail = () => {
       </div>
 
       {/* ── Main Content ── */}
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 2.5rem 6rem', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 clamp(1rem, 4vw, 2.5rem) 6rem', display: 'flex', flexDirection: 'column', gap: '3rem', width: '100%', boxSizing: 'border-box' }}>
 
         {/* ── INFRATECH WORLD 2026 custom sections ── */}
         {ev.id === 'evt_008' ? (
