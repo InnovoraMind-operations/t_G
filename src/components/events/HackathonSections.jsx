@@ -21,7 +21,7 @@ import maigariPhoto from '../../assets/dr-maigari-haruna-bello.jpg';
 import drSaleemPhoto from '../../assets/dr-saleem-abu-jaber.png';
 import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
-import ekaPhoto from '../../assets/prof-eka-devidze.png';
+import ekaPhoto from '../../assets/prof-eka-devidze.jpg';
 import prathapPhoto from '../../assets/prathap-raghavan.jpg';
 import carolinaPhoto from '../../assets/carolina-barandiaran.png';
 import roksolanaPhoto from '../../assets/roksolana-trach.png';
@@ -788,7 +788,7 @@ const HackathonSections = () => {
               {/* Full Big Photo */}
               <div style={{
                 width: '100%',
-                height: 'clamp(230px, 58vw, 300px)',
+                height: 'clamp(290px, 75vw, 380px)',
                 borderRadius: '1.1rem',
                 border: `2.5px solid ${jdg.color}`,
                 overflow: 'hidden',
@@ -958,7 +958,7 @@ const HackathonSections = () => {
               {/* Full Big Photo */}
               <div style={{
                 width: '100%',
-                height: 'clamp(230px, 58vw, 300px)',
+                height: 'clamp(270px, 68vw, 350px)',
                 borderRadius: '1.1rem',
                 border: `2.5px solid ${spk.color}`,
                 overflow: 'hidden',
