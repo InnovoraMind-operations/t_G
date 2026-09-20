@@ -182,7 +182,6 @@ const Events = () => {
                 title: 'TechryonGlobal Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing',
                 date: '27 September 2026',
                 dateShort: { month: 'SEP', day: '27' },
-                location: 'Online / Virtual (Global)',
                 format: 'Online Hackathon (Worldwide)',
                 duration: '24–48 Hours Online',
                 teamSize: '1–5 Members',

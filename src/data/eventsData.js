@@ -427,7 +427,7 @@ export const eventsData = [
     "slug": "industrial-hackathon-2026",
     "title": "TechryonGlobal Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing",
     "format": "Online Virtual Hackathon (Worldwide)",
-    "location": "Online / Virtual (Global)",
+    "location": "",
     "date": "27 September 2026",
     "category": "Technical Summit",
     "tags": ["#IndustrialHackathon", "#Industry5.0", "#SmartManufacturing", "#IndustrialAI", "#IoT", "#DigitalTwins"],

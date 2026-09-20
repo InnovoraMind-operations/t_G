@@ -8,7 +8,6 @@ import {
   X, Cpu, Zap, Layers, Factory, Check, ExternalLink
 } from 'lucide-react';
 
-import vjPhoto from '../../assets/VJ.png';
 import emeraldPhoto from '../../assets/emerald.png';
 import lmPhoto from '../../assets/LM.jpeg';
 import cfPhoto from '../../assets/cf.jpeg';
@@ -358,12 +357,6 @@ const HackathonSections = () => {
 
   // ── Organizing Committee ───────────────────────────────────
   const committeeList = [
-    {
-      name: 'Dr. Vilas Joshi',
-      role: 'Executive Director - Technology',
-      org: 'Techryon Global',
-      photo: vjPhoto
-    },
     {
       name: 'Emerald Abena Amponsah Baffour',
       role: 'Global Partnership & Strategy Director',
@@ -923,57 +916,64 @@ const HackathonSections = () => {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = jdg.color; }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'; }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
+              {/* Basic Info ABOVE Photo */}
+              <div style={{ marginBottom: '1.2rem' }}>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                  fontSize: '0.72rem', fontWeight: 800, color: jdg.color,
+                  letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.45rem',
+                  background: `${jdg.color}15`, padding: '0.22rem 0.7rem',
+                  borderRadius: '1rem', border: `1px solid ${jdg.color}35`
+                }}>
+                  ★ Distinguished Judge
+                </div>
+                <h4 style={{ fontSize: '1.32rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                  {jdg.name}
+                </h4>
+                <div style={{ fontSize: '0.94rem', color: jdg.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
+                  {jdg.role}
+                </div>
+                <div style={{ fontSize: '0.86rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
+                  {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
+                </div>
+              </div>
+
+              {/* Full Big Photo */}
+              <div style={{
+                width: '100%',
+                height: '280px',
+                borderRadius: '1.1rem',
+                border: `2.5px solid ${jdg.color}`,
+                overflow: 'hidden',
+                marginBottom: '1.35rem',
+                boxShadow: `0 12px 32px rgba(0,0,0,0.65), 0 0 26px ${jdg.glow}`,
+                background: '#0d131d',
+                position: 'relative'
+              }}>
                 {jdg.photo ? (
-                  <div style={{
-                    width: '96px', height: '96px', borderRadius: '50%',
-                    border: `3px solid ${jdg.color}`,
-                    overflow: 'hidden', flexShrink: 0,
-                    boxShadow: `0 0 24px ${jdg.glow}, 0 4px 14px rgba(0,0,0,0.6)`,
-                    background: '#0d131d'
-                  }}>
-                    <img
-                      src={jdg.photo}
-                      alt={jdg.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: jdg.photoPosition || 'center 20%',
-                        transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.08)',
-                        transition: 'transform 0.3s ease'
-                      }}
-                    />
-                  </div>
+                  <img
+                    src={jdg.photo}
+                    alt={jdg.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: jdg.photoPosition || 'center 20%',
+                      transform: jdg.photoScale ? `scale(${jdg.photoScale})` : 'scale(1.05)',
+                      transition: 'transform 0.4s ease'
+                    }}
+                  />
                 ) : (
                   <div style={{
-                    width: '96px', height: '96px', borderRadius: '50%',
+                    width: '100%',
+                    height: '100%',
                     background: `linear-gradient(135deg, ${jdg.color}35, ${jdg.color}15)`,
-                    border: `3px solid ${jdg.color}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 900, fontSize: '1.85rem', color: jdg.color, flexShrink: 0,
-                    boxShadow: `0 0 24px ${jdg.glow}`
+                    fontWeight: 900, fontSize: '3rem', color: jdg.color
                   }}>
                     {jdg.initials}
                   </div>
                 )}
-                <div style={{ minWidth: 0, flexGrow: 1 }}>
-                  <div style={{
-                    fontSize: '0.7rem', fontWeight: 800, color: jdg.color,
-                    letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.25rem'
-                  }}>
-                    Distinguished Judge
-                  </div>
-                  <h4 style={{ fontSize: '1.22rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
-                    {jdg.name}
-                  </h4>
-                  <div style={{ fontSize: '0.9rem', color: jdg.color, fontWeight: 800, marginTop: '0.3rem', lineHeight: 1.4 }}>
-                    {jdg.role}
-                  </div>
-                  <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.25rem' }}>
-                    {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
-                  </div>
-                </div>
               </div>
 
               <div style={{
