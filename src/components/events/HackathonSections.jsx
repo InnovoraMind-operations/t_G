@@ -39,40 +39,6 @@ const HackathonSections = () => {
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
     {
-      name: 'MA Carolina Beatriz Barandiaran',
-      role: 'Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher',
-      org: 'Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)',
-      location: 'Buenos Aires, Argentina',
-      displayTitle: 'Professor, UNICEN • Senior IEEE Member',
-      topic: 'AI Automation, Scalable Microservices & Resilient Cloud Architectures in Modern Healthcare & Finance',
-      bio: 'MA Carolina Beatriz Barandiaran is a Professor at the College of Humanities, UNICEN, Argentina, a Senior IEEE Member, and an award-winning AI researcher with 18+ years of global technology leadership. Recipient of the AAAS Excellent Researcher Award and the 2024 Global Recognition Award, she has authored "AI and Microservices" (Apress) and architected patented AI solutions used by 50,000+ global users. She has led major transformations and cloud architectures for global enterprises including LTIMindtree, Bank of America, Infosys, and TCS.',
-      photo: carolinaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.15,
-      confirmed: true,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.2)',
-      tags: ['AI Automation', 'Microservices', 'Cloud Platforms', 'Enterprise AI', 'Distributed Systems'],
-      initials: 'CB'
-    },
-    {
-      name: 'Roksolana Trach',
-      role: 'Independent Crypto Analyst & International Financial Market Analyst',
-      org: 'Global Crypto & Financial Markets Research',
-      location: 'USA',
-      displayTitle: 'Independent Crypto Analyst & International Financial Market Analyst',
-      topic: 'New Ideas Become Safe Systems: Blockchain Innovation, Digital Assets & Financial Market Resilience',
-      bio: 'Roksolana Trach is a prominent Independent Crypto Analyst and International Financial Market Analyst based in the United States. Specializing in cryptocurrency market intelligence, decentralized finance (DeFi), Web3 innovations, and macroeconomic indicators, she provides critical strategic insights into digital asset ecosystems. Her research and keynote focus, "New Ideas Become Safe Systems," emphasizes risk mitigation, market forecasting, and building secure, scalable financial technology frameworks.',
-      photo: roksolanaPhoto,
-      photoPosition: 'center 15%',
-      photoScale: 1.15,
-      confirmed: true,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.2)',
-      tags: ['Cryptocurrency', 'Blockchain', 'Web3 & DeFi', 'Financial Markets', 'Risk Assessment'],
-      initials: 'RT'
-    },
-    {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',
       org: 'Federal Polytechnic Oko',

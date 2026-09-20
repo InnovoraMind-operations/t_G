@@ -459,18 +459,6 @@ export const eventsData = [
     ],
     "speakers": [
       {
-        "name": "MA Carolina Beatriz Barandiaran",
-        "role": "Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher",
-        "topic": "AI Automation, Scalable Microservices & Resilient Cloud Architectures in Modern Healthcare & Finance",
-        "bio": "Professor at UNICEN, Argentina, Senior IEEE Member, and award-winning AI researcher with 18+ years of global technology leadership. Author of 'AI and Microservices' (Apress) and former enterprise transformation architect for Bank of America, Infosys, and TCS."
-      },
-      {
-        "name": "Roksolana Trach",
-        "role": "Independent Crypto Analyst & International Financial Market Analyst",
-        "topic": "New Ideas Become Safe Systems: Blockchain Innovation, Digital Assets & Financial Market Resilience",
-        "bio": "Independent Crypto Analyst and International Financial Market Analyst based in the USA. Specialist in cryptocurrency intelligence, Web3 technologies, DeFi architectures, and macroeconomic market resilience."
-      },
-      {
         "name": "Engr. Fortune Chibuike Onyia (MNSE)",
         "role": "Lecturer, Civil Engineering Dept., Federal Polytechnic Oko & Entrepreneur",
         "topic": "Sustainable Technology",
