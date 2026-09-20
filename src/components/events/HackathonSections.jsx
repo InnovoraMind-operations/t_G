@@ -289,38 +289,6 @@ const HackathonSections = () => {
     }
   ];
 
-  // ── Technical Mentors ──────────────────────────────────────
-  const mentorsList = [
-    {
-      name: 'Dr. Sarah Jenkins',
-      role: 'Lead Robotics Software Engineer',
-      org: 'Boston Dynamics',
-      location: 'USA',
-      expertise: 'Robot Kinematics, Path Planning & ROS2 Integration'
-    },
-    {
-      name: 'Tariq Benali',
-      role: 'Senior SCADA & OT Cybersecurity Architect',
-      org: 'Schneider Electric',
-      location: 'France',
-      expertise: 'PLC Protocols, Modbus/TCP, OPC-UA & Perimeter Isolation'
-    },
-    {
-      name: 'Mei-Ling Zhou',
-      role: 'Computer Vision & Defect Detection Lead',
-      org: 'Foxconn Industrial Internet',
-      location: 'Taiwan',
-      expertise: 'Optical Inspection, Edge Inference & Thermal Imaging'
-    },
-    {
-      name: 'Carlos Mendes',
-      role: 'Industrial Energy & Decarbonization Specialist',
-      org: 'Enel Green Power',
-      location: 'Brazil',
-      expertise: 'Factory Microgrids, Waste Heat Recovery & Energy Telemetry'
-    }
-  ];
-
   // ── Organizing Committee ───────────────────────────────────
   const committeeList = [
     {
@@ -347,13 +315,12 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders and professors from Siemens, Tesla, ABB, Volvo Group, Imperial College London, and University of Tokyo." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from Santander, UNICEN, IBSU, and international crypto & financial intelligence institutions." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
-    { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, mentors, and speakers will receive internationally recognized digital certificates." },
-    { q: "How are the winners evaluated?", a: "Evaluation is based on Industrial Applicability & Impact (25%), Technical Depth & Architecture (25%), Innovation & Novelty (20%), Working Demonstration (15%), and Presentation (15%)." },
-    { q: "Will sessions be recorded?", a: "Yes, all keynotes and panel discussions will be recorded and made accessible to registered participants." },
-    { q: "How do I connect with mentors?", a: "Participants will receive direct access to private Discord/Slack breakout channels with dedicated mentor office hours." }
+    { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
+    { q: "How are the winners evaluated?", a: "Evaluation is based on Industrial Applicability & Impact, Technical Depth & Architecture, Innovation & Novelty, Working Demonstration, and Presentation." },
+    { q: "Will sessions be recorded?", a: "Yes, all keynotes and panel discussions will be recorded and made accessible to registered participants." }
   ];
 
   return (
@@ -672,98 +639,6 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── SCHEDULE ── */}
-      <section id="schedule">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <CalendarClock size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Event Schedule (27 September 2026)</h3>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {[
-            { name: 'Opening Ceremony', time: 'TBA' },
-            { name: 'Innovation Forum', time: 'TBA' },
-            { name: 'Keynote Session', time: 'TBA' },
-            { name: 'Expert Panel', time: 'TBA' },
-            { name: 'Networking Session', time: 'TBA' },
-            { name: 'Hackathon Launch', time: 'TBA' },
-            { name: 'Mentoring', time: 'TBA' },
-            { name: 'Project Submission', time: 'TBA' },
-            { name: 'Final Presentation', time: 'TBA' },
-            { name: 'Closing Ceremony', time: 'TBA' },
-            { name: 'Winner Announcement', time: 'TBA' }
-          ].map((event, i) => (
-            <div key={i} style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              background: 'rgba(255,255,255,0.02)', padding: '1.25rem', borderRadius: '1rem',
-              borderLeft: '4px solid #64b4d2', borderTop: '1px solid rgba(255,255,255,0.05)',
-              borderRight: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)'
-            }}>
-              <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#e8e8ee' }}>{event.name}</h4>
-              <span style={{ fontSize: '0.9rem', color: '#a0a0b0', fontWeight: 600 }}>{event.time}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── SUBMISSION REQUIREMENTS ── */}
-      <section id="submission-requirements">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <FileText size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Submission Requirements</h3>
-        </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem' }}>Each team must submit the following deliverables:</p>
-          <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
-            {[
-              'Project Presentation (PPT or PDF)',
-              'Source Code Repository Link',
-              'GitHub Repository',
-              'Installation Guide',
-              'README File',
-              'Project Documentation',
-              'Project Demonstration Video (Maximum 5 Minutes)',
-              'AI Model Details (if applicable)',
-              'Dataset Source (if applicable)',
-              'Optional Live Demo Link'
-            ].map((item, i) => (
-              <li key={i} style={{
-                display: 'flex', alignItems: 'flex-start', gap: '0.75rem',
-                background: 'rgba(210,170,100,0.05)', padding: '1rem', borderRadius: '0.75rem', border: '1px solid rgba(210,170,100,0.1)'
-              }}>
-                <CheckCircle size={16} style={{ color: '#d2aa64', marginTop: '2px', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.95rem', color: '#e8e8ee', lineHeight: 1.5 }}>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* ── EVALUATION CRITERIA ── */}
-      <section id="evaluation">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <BarChart size={18} style={{ color: '#00dcb4' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Evaluation Criteria</h3>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {[
-            { name: 'Innovation & Creativity', weight: '25%' },
-            { name: 'Technical Excellence', weight: '20%' },
-            { name: 'Impact & Scalability', weight: '20%' },
-            { name: 'Practical Implementation', weight: '15%' },
-            { name: 'Presentation & Demonstration', weight: '10%' },
-            { name: 'User Experience', weight: '10%' }
-          ].map((criteria, i) => (
-            <div key={i} style={{
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-              background: 'rgba(255,255,255,0.02)', padding: '1rem 1.5rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.05)'
-            }}>
-              <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#e8e8ee' }}>{criteria.name}</span>
-              <span style={{ fontSize: '1rem', fontWeight: 700, color: '#00dcb4', background: 'rgba(0,220,180,0.1)', padding: '0.2rem 0.8rem', borderRadius: '2rem' }}>{criteria.weight}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── AWARDS, RECOGNITION & CERTIFICATES ── */}
       <section id="awards">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
@@ -772,7 +647,7 @@ const HackathonSections = () => {
         </div>
         
         <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem' }}>
-          All eligible participants, judges, mentors, and organizing committee members will receive digital certificates issued by TechryonGlobal.
+          All eligible participants, judges, and organizing committee members will receive digital certificates issued by TechryonGlobal.
         </p>
 
         <h4 style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 700, marginBottom: '1rem' }}>Certificates Available</h4>
@@ -1147,51 +1022,7 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── MENTORS & EXPERTS ── */}
-      <section id="mentors">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <GraduationCap size={18} style={{ color: '#d2aa64' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Industry Mentors & Technical Coaches</h3>
-        </div>
-        <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-          Hands-on technical mentors available throughout the virtual hacking sprint to debug architectures, provide code reviews, and guide teams on industrial safety standards:
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))', gap: '1.25rem' }}>
-          {mentorsList.map((m, i) => (
-            <div key={i} style={{
-              background: 'rgba(210,170,100,0.04)', padding: '1.5rem', borderRadius: '1rem',
-              border: '1px solid rgba(210,170,100,0.15)', display: 'flex', flexDirection: 'column', gap: '0.6rem'
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Handshake size={18} style={{ color: '#d2aa64' }} />
-                <h4 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#e8e8ee', margin: 0 }}>{m.name}</h4>
-              </div>
-              <div style={{ fontSize: '0.82rem', color: '#d2aa64', fontWeight: 600 }}>{m.role}</div>
-              <div style={{ fontSize: '0.8rem', color: '#8a8a9a' }}>{m.org} ({m.location})</div>
-              <div style={{ fontSize: '0.82rem', color: '#a0a0b0', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginTop: '0.2rem' }}>
-                <strong>Mentorship:</strong> {m.expertise}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* ── FEATURED INNOVATORS ── */}
-      <section id="featured-innovators">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Rocket size={18} style={{ color: '#00dcb4' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Featured Innovators</h3>
-        </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            Discover outstanding teams, innovators, startups, researchers, and developers participating in the TechryonGlobal Innovation Forum & Global Hackathon 2026.
-          </p>
-          <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(0,220,180,0.05)', borderRadius: '1rem', border: '1px dashed rgba(0,220,180,0.3)' }}>
-             <p style={{ fontSize: '1.1rem', color: '#00dcb4', fontWeight: 600 }}>Innovators Showcase Launching Soon</p>
-             <p style={{ fontSize: '0.9rem', color: '#a0a0b0', marginTop: '0.5rem' }}>Exciting teams and startups will be featured here as registrations progress.</p>
-          </div>
-        </div>
-      </section>
 
       {/* ── INNOVATION FORUM TOPICS ── */}
       <section id="forum-topics">
@@ -1226,7 +1057,7 @@ const HackathonSections = () => {
         </div>
         <div style={{ background: 'linear-gradient(135deg, rgba(210,170,100,0.05), transparent)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(210,170,100,0.15)' }}>
           <p style={{ fontSize: '0.95rem', color: '#e8e8ee', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-            TechryonGlobal invites experienced professionals, researchers, faculty members, and industry experts to join us as judges, mentors, speakers, or partners.
+            TechryonGlobal invites experienced professionals, researchers, faculty members, and industry experts to join us as judges, speakers, or partners.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
             <a href="#" style={{
@@ -1263,7 +1094,7 @@ const HackathonSections = () => {
               fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer',
               transition: 'all 0.2s',
             }}>
-              Become a Sponsor
+              Join as Volunteer
             </a>
           </div>
         </div>
@@ -1280,7 +1111,7 @@ const HackathonSections = () => {
             { event: 'Registration Opens', date: 'June 2026' },
             { event: 'Judge Applications Open', date: 'June 2026' },
             { event: 'Speaker Applications Open', date: 'June 2026' },
-            { event: 'Registration Deadline', date: '22 September 2026' },
+            { event: 'Registration Deadline', date: '25 September 2026' },
             { event: 'Innovation Forum & Global Hackathon', date: '27 September 2026', highlight: true },
             { event: 'Certificates', date: 'Within 7 Days' }
           ].map((item, i) => (
@@ -1501,33 +1332,7 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── PARTNERS & COLLABORATORS ── */}
-      <section id="partners">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Building size={18} style={{ color: '#64b4d2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Partners & Collaborators</h3>
-        </div>
-        <div style={{ background: 'rgba(255,255,255,0.02)', padding: '2rem', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <p style={{ fontSize: '0.95rem', color: '#a0a0b0', marginBottom: '1.5rem', textAlign: 'center' }}>
-            We collaborate with industry leaders and communities worldwide. Opportunities exist for:
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
-            {[
-              'Academic Partners', 'Industry Partners', 'Research Organizations', 
-              'Innovation Partners', 'Media Partners', 'Technology Partners', 
-              'Startup Partners', 'Community Partners'
-            ].map((p, i) => (
-              <span key={i} style={{
-                background: 'rgba(100,180,210,0.05)', color: '#64b4d2',
-                border: '1px solid rgba(100,180,210,0.2)', padding: '0.5rem 1rem',
-                borderRadius: '0.5rem', fontSize: '0.85rem', fontWeight: 600
-              }}>
-                {p}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ── ORGANIZING COMMITTEE ── */}
       <section id="organizing-committee">
