@@ -24,6 +24,9 @@ import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
 import ekaPhoto from '../../assets/prof-eka-devidze.jpg';
 import carolinaPhoto from '../../assets/carolina-barandiaran.png';
 import roksolanaPhoto from '../../assets/roksolana-trach.png';
+import osmanPhoto from '../../assets/osman-arayici.jpg';
+import bullPhoto from '../../assets/prof-alexander-bull.jpg';
+import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -206,6 +209,57 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.2)',
       tags: ['Digital Transformation', 'Higher Education', 'Educational Technology', 'Curriculum & AI'],
       initials: 'MB'
+    },
+    {
+      name: 'Osman ARAYICI',
+      role: 'Professor, Department of Interior Architecture | Head of Scientific Committee, Modoko Academy',
+      org: 'Mimar Sinan Fine Arts University & Modoko Academy',
+      location: 'Turkey',
+      displayTitle: 'Professor, Department of Interior Architecture, Mimar Sinan Fine Arts University',
+      topic: 'The Ontology of Space and Design Paradigms in the Age of Autonomous Systems',
+      bio: 'Prof. Osman Arayici is a Professor in the Department of Interior Architecture at Mimar Sinan Fine Arts University and Head of the Scientific Committee at Modoko Academy in Turkey. His research and academic leadership focus on spatial perception, design philosophy, zero-waste architectural systems, semantics of design, and the built environment. He explores the transformative intersection of architecture, artificial intelligence, and emerging technologies to pioneer sustainable spaces, innovative environments, and human-centric design for an intelligent tomorrow.',
+      photo: osmanPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Spatial Design', 'Design Philosophy', 'Zero-Waste Architecture', 'Autonomous Systems'],
+      initials: 'OA'
+    },
+    {
+      name: 'Prof. Dr. Alexander Bull',
+      role: 'Professor & Researcher in Business Strategy & Applied Management',
+      org: 'DGUV University of Applied Sciences',
+      location: 'Germany',
+      displayTitle: 'Professor, DGUV University of Applied Sciences',
+      topic: 'Business Strategy, Applied Management Research & Enterprise Innovation',
+      bio: 'Prof. Dr. Alexander Bull is an esteemed professor and researcher at DGUV University of Applied Sciences in Germany. He specializes in business strategy, organizational management, applied management research, and enterprise innovation. His scholarly work and industry advisory focus on developing resilient strategic frameworks, agile corporate structures, and technology-enabled organizational development.',
+      photo: bullPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Business Strategy', 'Organizational Management', 'Applied Research', 'Enterprise Innovation'],
+      initials: 'AB'
+    },
+    {
+      name: 'Dr. Marek Wasiluk',
+      role: 'Founder & CEO of Clinmark, Clinical Research & Quality Assurance Expert | GxP Auditor & ICH GCP Specialist',
+      org: 'Clinmark',
+      location: 'Poland',
+      displayTitle: 'Founder & CEO of Clinmark | Clinical Research & QA Expert',
+      topic: 'AI in Medical Science: Between Excitement and Caution',
+      bio: 'Dr. Marek Wasiluk is the Founder and CEO of Clinmark in Poland, and an internationally recognized clinical research and quality assurance expert, GxP auditor, and ICH GCP specialist. With extensive leadership in global clinical trial management, risk-based auditing, and Quality Management Systems (QMS), he prepares medical and pharmaceutical organizations for FDA and EMA inspection readiness. His session addresses the transformative yet cautious adoption of AI applications in medical science, clinical systems, and trial integrity.',
+      photo: wasilukPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['AI in Medical Science', 'Clinical Research', 'Quality Assurance', 'GxP & Regulatory Compliance'],
+      initials: 'MW'
     }
   ];
 

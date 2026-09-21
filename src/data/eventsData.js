@@ -517,6 +517,24 @@ export const eventsData = [
         "role": "Chief Lecturer, Federal College of Education, Yola & Deputy Director, DUS",
         "topic": "Digital Transformation in Higher Education: The Role of Emerging Technologies",
         "bio": "Chief Lecturer in the Department of Primary Education (Nomadic Education Unit) at Federal College of Education, Yola, Nigeria. PhD in Curriculum and Instruction from University of Maroua, Cameroon, specializing in educational technology, nomadic education, and 21st-century curriculum innovation."
+      },
+      {
+        "name": "Osman ARAYICI",
+        "role": "Professor, Department of Interior Architecture | Head of Scientific Committee, Modoko Academy",
+        "topic": "The Ontology of Space and Design Paradigms in the Age of Autonomous Systems",
+        "bio": "Professor at Mimar Sinan Fine Arts University and Head of the Scientific Committee at Modoko Academy in Turkey. Specialist in interior architecture, spatial perception, zero-waste design, and AI-enabled built environments."
+      },
+      {
+        "name": "Prof. Dr. Alexander Bull",
+        "role": "Professor & Researcher in Business Strategy & Applied Management, DGUV University of Applied Sciences",
+        "topic": "Business Strategy, Applied Management Research & Enterprise Innovation",
+        "bio": "Professor and management researcher at DGUV University of Applied Sciences in Germany. Specializing in strategic management, applied organizational research, and enterprise innovation."
+      },
+      {
+        "name": "Dr. Marek Wasiluk",
+        "role": "Founder & CEO of Clinmark, Clinical Research & Quality Assurance Expert | GxP Auditor & ICH GCP Specialist",
+        "topic": "AI in Medical Science: Between Excitement and Caution",
+        "bio": "Founder and CEO of Clinmark, Poland. International clinical trial expert, GxP auditor, and ICH GCP specialist focusing on quality assurance, regulatory readiness, and the responsible adoption of AI in healthcare."
       }
     ],
     "pricing": []
