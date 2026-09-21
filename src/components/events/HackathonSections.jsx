@@ -485,7 +485,7 @@ const HackathonSections = () => {
               Global Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing
             </h3>
             <p style={{ fontSize: '0.88rem', color: '#9090a0', margin: '0.4rem 0 0', lineHeight: 1.5 }}>
-              A structured 24-hour virtual engineering challenge with published evaluation criteria, mentor guidance, and independent technical jury review.
+              A structured virtual engineering challenge with published evaluation criteria, mentor guidance, and independent technical jury review.
             </p>
           </div>
         </div>
@@ -520,7 +520,7 @@ const HackathonSections = () => {
             The <strong>TechryonGlobal Industrial Hackathon 2026</strong> is an international technical innovation programme focused on practical applications of <strong>Artificial Intelligence, Industry 5.0, Smart Manufacturing, Digital Twins, Robotics, and OT Cybersecurity</strong>. The competition brings together developers, engineers, researchers, faculty scholars, and technology startups worldwide to develop defensible, production-relevant industrial solutions.
           </p>
           <p style={{ fontSize: '1rem', lineHeight: 1.8, color: '#a0a0b0', marginBottom: '1.5rem' }}>
-            The event combines an Innovation Forum featuring technical keynote addresses delivered by confirmed international academicians and researchers with an intensive 24-hour virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury against published evaluation rubrics.
+            The event combines an Innovation Forum featuring technical keynote addresses delivered by confirmed international academicians and researchers with an intensive virtual hackathon where participants receive expert technical mentorship and evaluation from an international jury against published evaluation rubrics.
           </p>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 140px), 1fr))', gap: '1rem', marginBottom: '2rem' }}>
@@ -1389,7 +1389,7 @@ const HackathonSections = () => {
           </h4>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '1rem' }}>
             {[
-              { title: 'Public or Private GitHub Repo', desc: 'Well-structured source code with clear commit history matching the 24-hour sprint window.' },
+              { title: 'Public or Private GitHub Repo', desc: 'Well-structured source code with clear commit history matching the hackathon sprint window.' },
               { title: 'README & Setup Guide', desc: 'Step-by-step instructions enabling judges to replicate the build, run tests, and verify dependencies.' },
               { title: 'System Architecture Diagram', desc: 'Visual diagram depicting data flow, protocol choices (MQTT, OPC-UA, REST), and model integration.' },
               { title: '5-Minute Video Demonstration', desc: 'Walkthrough demonstrating working software/hardware telemetry, edge inference, or simulation.' }
@@ -1483,12 +1483,12 @@ const HackathonSections = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Clock size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>
-            Online Virtual Hackathon Schedule (27–28 September 2026)
+            Online Virtual Hackathon Schedule (27 September 2026)
           </h3>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <div style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6 }}>
-            Designed for seamless worldwide virtual participation. Synchronized live milestones stream on the event portal, while coding runs continuously online. Timings are displayed across <strong style={{ color: '#00dcb4' }}>IST (Indian Standard Time)</strong>, <strong style={{ color: '#64b4d2' }}>UTC (Coordinated Universal Time)</strong>, and <strong style={{ color: '#d2aa64' }}>Central (US Central Daylight Time)</strong>:
+            Designed for seamless worldwide virtual participation. Synchronized live milestones stream on the event portal, while development and evaluation run continuously online. Timings are displayed across <strong style={{ color: '#00dcb4' }}>IST (Indian Standard Time)</strong>, <strong style={{ color: '#64b4d2' }}>UTC (Coordinated Universal Time)</strong>, and <strong style={{ color: '#d2aa64' }}>Central (US Central Daylight Time)</strong>:
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             {[
@@ -1497,50 +1497,52 @@ const HackathonSections = () => {
                 timeUtc: '11:30 UTC', 
                 timeCentral: '06:30 AM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Virtual Kickoff & Industrial Track Briefing', 
-                desc: 'Opening live stream, welcome remarks, release of challenge problem statements, evaluation rubric walkthrough, and GitHub repository template access.', 
+                title: 'Virtual Opening & Industrial Track Briefing', 
+                desc: 'Opening live stream, welcome address from the organizing committee, release of industrial problem statements, challenge guidelines, and rubric walkthrough.', 
                 highlight: true 
               },
               { 
-                timeIst: '06:00 PM IST', 
-                timeUtc: '12:30 UTC', 
-                timeCentral: '07:30 AM CDT', 
+                timeIst: '05:45 PM IST', 
+                timeUtc: '12:15 UTC', 
+                timeCentral: '07:15 AM CDT', 
                 dateLabel: '27 Sep',
-                title: '24-Hour Online Hacking Sprint Commences', 
-                desc: 'Official hackathon timer starts globally. Teams initialize repositories, establish system architectures, and virtual mentor desk channels open for technical guidance.' 
-              },
-              { 
-                timeIst: '09:00 PM IST', 
-                timeUtc: '15:30 UTC', 
-                timeCentral: '10:30 AM CDT', 
-                dateLabel: '27 Sep',
-                title: 'Innovation Forum Keynote Broadcast', 
-                desc: 'Streaming keynote addresses by confirmed academicians on Smart Manufacturing, Clinical AI Systems, Sustainable Spaces, and Enterprise Strategy.' 
-              },
-              { 
-                timeIst: '01:00 AM IST (+1)', 
-                timeUtc: '19:30 UTC', 
-                timeCentral: '02:30 PM CDT', 
-                dateLabel: '28 Sep (Night)',
-                title: 'Mid-Sprint Architecture Checkpoint & Mentor Q&A', 
-                desc: 'Optional asynchronous progress review, prototype sanity checks, telemetry endpoint debugging, and live mentor office hours.' 
-              },
-              { 
-                timeIst: '05:00 PM IST (+1)', 
-                timeUtc: '11:30 UTC (+1)', 
-                timeCentral: '06:30 AM CDT (+1)', 
-                dateLabel: '28 Sep',
-                title: 'Code Freeze & Final Submission Deadline', 
-                desc: 'Strict 24-hour sprint cutoff. Mandatory submission of public GitHub repo link, README setup guide, architecture diagram, and 5-minute video demonstration.', 
+                title: 'Keynote Stage & Academic Panel Discussion', 
+                desc: 'Distinguished panel speakers and academic keynote broadcast on Industry 5.0, Smart Manufacturing, Clinical AI Systems, and Sustainable Architecture.', 
                 highlight: true 
               },
               { 
-                timeIst: '07:30 PM IST (+1)', 
-                timeUtc: '14:00 UTC (+1)', 
-                timeCentral: '09:00 AM CDT (+1)', 
-                dateLabel: '28 Sep',
-                title: 'Grand Virtual Finale & Award Announcements', 
-                desc: 'Live broadcast of jury deliberations, top finalist prototype showcase, announcement of category winners, and valedictory address.', 
+                timeIst: '06:45 PM IST', 
+                timeUtc: '13:15 UTC', 
+                timeCentral: '08:15 AM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Core Development Sprint & Technical Mentorship Sync', 
+                desc: 'Teams collaborate on architecture, code, and telemetry pipelines. Virtual mentor desk breakout channels open for technical guidance and query resolution.' 
+              },
+              { 
+                timeIst: '09:45 PM IST', 
+                timeUtc: '16:15 UTC', 
+                timeCentral: '11:15 AM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Code Freeze & Final Project Submission', 
+                desc: 'Sprint submission deadline. Mandatory upload of GitHub repository links, architecture documentation, README guides, and project demonstration materials.', 
+                highlight: true 
+              },
+              { 
+                timeIst: '10:15 PM IST', 
+                timeUtc: '16:45 UTC', 
+                timeCentral: '11:45 AM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Finalist Live Presentations & Prototype Demonstrations', 
+                desc: 'Shortlisted teams present solution pitches and conduct live prototype demonstrations before the international technical jury panel and global audience.', 
+                highlight: true 
+              },
+              { 
+                timeIst: '11:30 PM IST', 
+                timeUtc: '18:00 UTC', 
+                timeCentral: '01:00 PM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Jury Evaluation Review & Grand Award Ceremony', 
+                desc: 'Announcement of category award winners, presentation of verified certificates of honor (CertID), jury feedback summary, and valedictory closing.', 
                 highlight: true 
               }
             ].map((sched, idx) => (

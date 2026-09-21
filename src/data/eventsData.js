@@ -439,19 +439,14 @@ export const eventsData = [
     ],
     "agenda": [
       {
-        "day": "Day 1 (27 Sep): Hackathon Kickoff & Keynote Broadcast",
+        "day": "27 September 2026: Live Virtual Schedule",
         "sessions": [
-          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Virtual Kickoff & Industrial Track Briefing",
-          "06:00 PM IST (12:30 UTC / 07:30 AM CDT) - 24-Hour Online Hacking Sprint Commences & Mentor Desk Opens",
-          "09:00 PM IST (15:30 UTC / 10:30 AM CDT) - Innovation Forum Keynote Broadcast"
-        ]
-      },
-      {
-        "day": "Day 2 (28 Sep): Sprint Completion, Evaluation & Awards",
-        "sessions": [
-          "01:00 AM IST (19:30 UTC / 02:30 PM CDT) - Mid-Sprint Architecture Checkpoint & Mentor Q&A",
-          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Code Freeze & Final Submission Deadline (GitHub + Video)",
-          "07:30 PM IST (14:00 UTC / 09:00 AM CDT) - Grand Virtual Finale & Global Award Announcements"
+          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Virtual Opening & Industrial Track Briefing",
+          "05:45 PM IST (12:15 UTC / 07:15 AM CDT) - Keynote Stage & Academic Panel Discussion",
+          "06:45 PM IST (13:15 UTC / 08:15 AM CDT) - Core Development Sprint & Technical Mentorship Sync",
+          "09:45 PM IST (16:15 UTC / 11:15 AM CDT) - Code Freeze & Final Project Submission Deadline",
+          "10:15 PM IST (16:45 UTC / 11:45 AM CDT) - Finalist Live Presentations & Prototype Demonstrations",
+          "11:30 PM IST (18:00 UTC / 01:00 PM CDT) - Jury Evaluation Review & Grand Award Ceremony"
         ]
       }
     ],
