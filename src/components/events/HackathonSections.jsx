@@ -27,6 +27,9 @@ import roksolanaPhoto from '../../assets/roksolana-trach.png';
 import osmanPhoto from '../../assets/osman-arayici.jpg';
 import bullPhoto from '../../assets/prof-alexander-bull.jpg';
 import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
+import souravPhoto from '../../assets/sourav-saha.jpg';
+import dishantPhoto from '../../assets/dishant-banga.jpg';
+import venkataPhoto from '../../assets/venkata-phanindra-gollapalli.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -309,6 +312,51 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
       initials: 'ED'
+    },
+    {
+      name: 'Sourav Saha',
+      role: 'Assistant Vice President & Senior Software Engineer',
+      org: 'U.S. Bank',
+      location: 'United States',
+      focus: 'Enterprise AI, Agentic AI, Responsible AI, Knowledge Graphs & Cloud Architecture',
+      bio: 'Assistant Vice President and Senior Software Engineer at U.S. Bank with 20+ years of experience in enterprise software engineering, data platforms, cloud-native systems, and applied AI. IEEE Senior Member and ACM SIGCSE TS 2027 Program Committee member.',
+      photo: souravPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Enterprise AI', 'Agentic AI', 'Harness Engineering', 'Responsible AI', 'Knowledge Graphs', 'Cloud-Native', 'Kubernetes'],
+      initials: 'SS'
+    },
+    {
+      name: 'Dishant Banga',
+      role: 'Sr. CRM Data Analyst',
+      org: 'Fox Corporation',
+      location: 'United States',
+      focus: 'Data Analytics, Data Science, Machine Learning & Statistical Modeling',
+      bio: 'Experienced data professional with 9+ years across data science and analytics — applying statistical modeling and machine learning for enterprise predictive solutions, data mining, and senior executive strategic decisions.',
+      photo: dishantPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Data Analytics', 'Data Science', 'Machine Learning', 'Statistical Modeling', 'Predictive AI'],
+      initials: 'DB'
+    },
+    {
+      name: 'Venkata Phanindra Gollapalli',
+      role: 'Principal Technical Engineer',
+      org: 'Oracle',
+      location: 'United States',
+      focus: 'SCM, Enterprise ERP Systems, Cloud Architecture & Industrial AI Systems',
+      bio: 'Principal Technical Engineer at Oracle specializing in Supply Chain Management (SCM), ERP systems, enterprise cloud architectures, and integrating artificial intelligence into mission-critical corporate platforms.',
+      photo: venkataPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['SCM Systems', 'ERP Enterprise', 'Cloud Platforms', 'Applied AI', 'Oracle Cloud'],
+      initials: 'VG'
     }
   ];
 
@@ -344,7 +392,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from UNICEN, IBSU, and international crypto & financial intelligence institutions." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and technology executives from U.S. Bank, Oracle, Fox Corporation, UNICEN, IBSU, and leading international institutions." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
     { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
