@@ -31,6 +31,7 @@ import mehwishPhoto from '../../assets/dr-mehwish-rashid.png';
 import nadiaPhoto from '../../assets/dr-nadia-adnan.jpg';
 import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
 import ayoubPhoto from '../../assets/dr-ayoub-regragui.jpg';
+import fatimahPhoto from '../../assets/fatimah-alneel.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -94,6 +95,23 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.2)',
       tags: ['AI in Medical Science', 'Clinical Research', 'Quality Assurance', 'GxP & Regulatory Compliance'],
       initials: 'MW'
+    },
+    {
+      name: 'Fatimah Alneel',
+      role: 'PhD Higher Education | Educational Development Specialist',
+      org: 'The University of Arizona',
+      location: 'Saudi Arabia',
+      displayTitle: 'PhD in Higher Education, The University of Arizona',
+      topic: 'Educational Development, Higher Education Innovation & Academic Leadership',
+      bio: 'Fatimah Alneel is a higher education professional and PhD scholar in Higher Education at The University of Arizona. Committed to educational development, institutional transformation, and curriculum innovation, she focuses on advancing educational leadership and academic excellence in Saudi Arabia and internationally.',
+      photo: fatimahPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Higher Education', 'Educational Development', 'Academic Leadership', 'University of Arizona'],
+      initials: 'FA'
     },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
@@ -872,15 +890,16 @@ const HackathonSections = () => {
                 </div>
               </div>
 
-              {/* Card Photo (Bit smaller for 3-in-a-row fit) */}
+              {/* Card Portrait Photo Frame */}
               <div style={{
                 width: '100%',
-                height: 'clamp(200px, 45vw, 240px)',
-                borderRadius: '1rem',
+                maxWidth: '280px',
+                aspectRatio: '3 / 4',
+                margin: '0 auto 1.25rem',
+                borderRadius: '1.1rem',
                 border: `2.5px solid ${jdg.color}`,
                 overflow: 'hidden',
-                marginBottom: '1.15rem',
-                boxShadow: `0 10px 28px rgba(0,0,0,0.6), 0 0 20px ${jdg.glow}`,
+                boxShadow: `0 12px 30px rgba(0,0,0,0.6), 0 0 22px ${jdg.glow}`,
                 background: '#0d131d',
                 position: 'relative'
               }}>
@@ -1042,15 +1061,16 @@ const HackathonSections = () => {
                 )}
               </div>
 
-              {/* Card Photo (Bit smaller for 3-in-a-row fit) */}
+              {/* Card Portrait Photo Frame */}
               <div style={{
                 width: '100%',
-                height: 'clamp(200px, 45vw, 240px)',
-                borderRadius: '1rem',
+                maxWidth: '280px',
+                aspectRatio: '3 / 4',
+                margin: '0 auto 1.25rem',
+                borderRadius: '1.1rem',
                 border: `2.5px solid ${spk.color}`,
                 overflow: 'hidden',
-                marginBottom: '1.15rem',
-                boxShadow: `0 10px 28px rgba(0,0,0,0.6), 0 0 20px ${spk.glow}`,
+                boxShadow: `0 12px 30px rgba(0,0,0,0.6), 0 0 22px ${spk.glow}`,
                 background: '#0d131d',
                 position: 'relative'
               }}>
