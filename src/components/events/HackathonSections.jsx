@@ -22,7 +22,6 @@ import drSaleemPhoto from '../../assets/dr-saleem-abu-jaber.png';
 import talebPhoto from '../../assets/taleb-hammad.jpg';
 import tamarPhoto from '../../assets/prof-tamar-makharoblidze.jpg';
 import ekaPhoto from '../../assets/prof-eka-devidze.jpg';
-import prathapPhoto from '../../assets/prathap-raghavan.jpg';
 import carolinaPhoto from '../../assets/carolina-barandiaran.png';
 import roksolanaPhoto from '../../assets/roksolana-trach.png';
 
@@ -175,21 +174,6 @@ const HackathonSections = () => {
       initials: 'MT'
     },
     {
-      name: 'Ondago Fredrick',
-      role: 'Tutor & MSc. Microbiology Scholar',
-      org: 'Shariani Junior School & Pwani University',
-      location: 'Kilifi, Kenya',
-      displayTitle: 'Tutor, Shariani Junior School & MSc. Microbiology Scholar, Pwani University',
-      topic: 'Microbial Ecosystems & Sustainable Tech: AI-Driven Solutions in Biotechnology',
-      bio: "Ondago Fredrick is an educator, tutor, and advanced scientific researcher based in Kenya. He currently serves as an academic tutor at Shariani Junior School, shaping foundational logical and scientific thinking in young minds, while pursuing a Master of Science in Microbiology at Pwani University specializing in microbial systems and their ecological impacts. His research focuses on the critical intersection of biological sciences and emerging digital innovations, analyzing how advanced data analytics and artificial intelligence can optimize biotechnology for a sustainable, inclusive tomorrow.",
-      photo: null,
-      confirmed: true,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.2)',
-      tags: ['Biotechnology', 'Microbial Ecosystems', 'Sustainable Tech', 'AI in Biology'],
-      initials: 'OF'
-    },
-    {
       name: 'Emmanuel Etaderhi',
       role: 'Executive Secretary, Financial Centre for Sustainability (FC4S Lagos) & SVP, FMDQ Group PLC',
       org: 'Financial Centre for Sustainability / FMDQ Group',
@@ -227,21 +211,6 @@ const HackathonSections = () => {
 
   // ── International Judges Panel ─────────────────────────────
   const judgesList = [
-    {
-      name: 'Prathap Raghavan',
-      role: 'Product Management (GenAI & Automation)',
-      org: 'Santander',
-      location: 'USA',
-      focus: 'GenAI Product Strategy, Intelligent Automation & Enterprise Financial Systems',
-      bio: 'Accomplished product management leader in GenAI & Automation at Santander, USA, specializing in delivering enterprise-grade AI innovations, intelligent workflow automation, and scalable financial technology solutions.',
-      photo: prathapPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.18)',
-      tags: ['GenAI', 'Intelligent Automation', 'Product Management', 'FinTech'],
-      initials: 'PR'
-    },
     {
       name: 'MA Carolina Beatriz Barandiaran',
       role: 'Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher',
@@ -321,7 +290,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from Santander, UNICEN, IBSU, and international crypto & financial intelligence institutions." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from UNICEN, IBSU, and international crypto & financial intelligence institutions." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
     { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
