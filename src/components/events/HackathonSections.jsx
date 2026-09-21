@@ -28,6 +28,9 @@ import osmanPhoto from '../../assets/osman-arayici.jpg';
 import bullPhoto from '../../assets/prof-alexander-bull.jpg';
 import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
 import venkataPhoto from '../../assets/venkata-phanindra-gollapalli.jpg';
+import nadiaPhoto from '../../assets/dr-nadia-adnan.jpg';
+import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
+import ayoubPhoto from '../../assets/dr-ayoub-regragui.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -325,6 +328,51 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.18)',
       tags: ['SCM Systems', 'ERP Enterprise', 'Cloud Platforms', 'Applied AI', 'Oracle Cloud'],
       initials: 'VG'
+    },
+    {
+      name: 'Dr. Nadia Adnan',
+      role: "Assistant Professor & Research Scientist | Stanford World's Top 2% Scientist",
+      org: 'Prince Mohammad Bin Fahd University',
+      location: 'Saudi Arabia',
+      focus: 'Management & Marketing, Sustainable Business Models, Technology Adoption & Empirical Modeling',
+      bio: "Ranked among Stanford University's World's Top 2% Scientists, Dr. Nadia Adnan is an Assistant Professor and Research Scientist in the Department of Management and Marketing at Prince Mohammad Bin Fahd University (PMU), specializing in sustainable technology adoption, quantitative empirical modeling, and enterprise innovation.",
+      photo: nadiaPhoto,
+      photoPosition: '68% 25%',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ["Stanford Top 2% Scientist", 'Management & Marketing', 'Sustainable Business', 'Empirical Modeling', 'Technology Adoption'],
+      initials: 'NA'
+    },
+    {
+      name: 'Mouhssin Ait El Mouden',
+      role: 'Academic Researcher',
+      org: 'Faculty of Letters, Ibn Tofail University, Kenitra',
+      location: 'Morocco',
+      focus: 'Academic Research, Humanities & Digital Societal Impact, Interdisciplinary Innovation',
+      bio: 'Academic researcher at the Faculty of Letters, Ibn Tofail University, Kenitra, Morocco. His work focuses on scholarly research methodologies, socio-technological transformation, and interdisciplinary evaluations linking human-centered perspectives with emerging innovation.',
+      photo: mouhssinPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Academic Research', 'Digital Humanities', 'Socio-Technical Systems', 'Research Methodology'],
+      initials: 'MM'
+    },
+    {
+      name: 'Dr. Ayoub Regragui',
+      role: 'Doctor & Academic Researcher',
+      org: 'Mohammed V University, Rabat',
+      location: 'Morocco',
+      focus: 'Higher Education Research, Applied Science & Innovation Systems',
+      bio: 'Doctor and academic researcher at Mohammed V University in Rabat, Morocco. He brings extensive expertise in rigorous academic methodology, research quality evaluation, higher education frameworks, and emerging technological applications.',
+      photo: ayoubPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['Mohammed V University', 'Higher Education', 'Research Innovation', 'Academic Quality'],
+      initials: 'AR'
     }
   ];
 
@@ -360,7 +408,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and technology executives from Oracle, UNICEN, IBSU, and leading international institutions." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from Oracle, Prince Mohammad Bin Fahd University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
     { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
