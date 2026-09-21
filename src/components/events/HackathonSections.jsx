@@ -27,8 +27,6 @@ import roksolanaPhoto from '../../assets/roksolana-trach.png';
 import osmanPhoto from '../../assets/osman-arayici.jpg';
 import bullPhoto from '../../assets/prof-alexander-bull.jpg';
 import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
-import souravPhoto from '../../assets/sourav-saha.jpg';
-import dishantPhoto from '../../assets/dishant-banga.jpg';
 import venkataPhoto from '../../assets/venkata-phanindra-gollapalli.jpg';
 
 // Official Google Form Registration URL
@@ -43,6 +41,57 @@ const HackathonSections = () => {
 
   // ── Keynote & Expert Speakers ───────────────────────────────
   const speakersList = [
+    {
+      name: 'Osman ARAYICI',
+      role: 'Professor, Department of Interior Architecture | Head of Scientific Committee, Modoko Academy',
+      org: 'Mimar Sinan Fine Arts University & Modoko Academy',
+      location: 'Turkey',
+      displayTitle: 'Professor, Department of Interior Architecture, Mimar Sinan Fine Arts University',
+      topic: 'The Ontology of Space and Design Paradigms in the Age of Autonomous Systems',
+      bio: 'Prof. Osman Arayici is a Professor in the Department of Interior Architecture at Mimar Sinan Fine Arts University and Head of the Scientific Committee at Modoko Academy in Turkey. His research and academic leadership focus on spatial perception, design philosophy, zero-waste architectural systems, semantics of design, and the built environment. He explores the transformative intersection of architecture, artificial intelligence, and emerging technologies to pioneer sustainable spaces, innovative environments, and human-centric design for an intelligent tomorrow.',
+      photo: osmanPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Spatial Design', 'Design Philosophy', 'Zero-Waste Architecture', 'Autonomous Systems'],
+      initials: 'OA'
+    },
+    {
+      name: 'Prof. Dr. Alexander Bull',
+      role: 'Professor & Researcher in Business Strategy & Applied Management',
+      org: 'DGUV University of Applied Sciences',
+      location: 'Germany',
+      displayTitle: 'Professor, DGUV University of Applied Sciences',
+      topic: 'Business Strategy, Applied Management Research & Enterprise Innovation',
+      bio: 'Prof. Dr. Alexander Bull is an esteemed professor and researcher at DGUV University of Applied Sciences in Germany. He specializes in business strategy, organizational management, applied management research, and enterprise innovation. His scholarly work and industry advisory focus on developing resilient strategic frameworks, agile corporate structures, and technology-enabled organizational development.',
+      photo: bullPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Business Strategy', 'Organizational Management', 'Applied Research', 'Enterprise Innovation'],
+      initials: 'AB'
+    },
+    {
+      name: 'Dr. Marek Wasiluk',
+      role: 'Founder & CEO of Clinmark, Clinical Research & Quality Assurance Expert | GxP Auditor & ICH GCP Specialist',
+      org: 'Clinmark',
+      location: 'Poland',
+      displayTitle: 'Founder & CEO of Clinmark | Clinical Research & QA Expert',
+      topic: 'AI in Medical Science: Between Excitement and Caution',
+      bio: 'Dr. Marek Wasiluk is the Founder and CEO of Clinmark in Poland, and an internationally recognized clinical research and quality assurance expert, GxP auditor, and ICH GCP specialist. With extensive leadership in global clinical trial management, risk-based auditing, and Quality Management Systems (QMS), he prepares medical and pharmaceutical organizations for FDA and EMA inspection readiness. His session addresses the transformative yet cautious adoption of AI applications in medical science, clinical systems, and trial integrity.',
+      photo: wasilukPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['AI in Medical Science', 'Clinical Research', 'Quality Assurance', 'GxP & Regulatory Compliance'],
+      initials: 'MW'
+    },
     {
       name: 'Engr. Fortune Chibuike Onyia (MNSE)',
       role: 'Lecturer, Civil Engineering Department & Entrepreneur',
@@ -212,57 +261,6 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.2)',
       tags: ['Digital Transformation', 'Higher Education', 'Educational Technology', 'Curriculum & AI'],
       initials: 'MB'
-    },
-    {
-      name: 'Osman ARAYICI',
-      role: 'Professor, Department of Interior Architecture | Head of Scientific Committee, Modoko Academy',
-      org: 'Mimar Sinan Fine Arts University & Modoko Academy',
-      location: 'Turkey',
-      displayTitle: 'Professor, Department of Interior Architecture, Mimar Sinan Fine Arts University',
-      topic: 'The Ontology of Space and Design Paradigms in the Age of Autonomous Systems',
-      bio: 'Prof. Osman Arayici is a Professor in the Department of Interior Architecture at Mimar Sinan Fine Arts University and Head of the Scientific Committee at Modoko Academy in Turkey. His research and academic leadership focus on spatial perception, design philosophy, zero-waste architectural systems, semantics of design, and the built environment. He explores the transformative intersection of architecture, artificial intelligence, and emerging technologies to pioneer sustainable spaces, innovative environments, and human-centric design for an intelligent tomorrow.',
-      photo: osmanPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      confirmed: true,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.2)',
-      tags: ['Spatial Design', 'Design Philosophy', 'Zero-Waste Architecture', 'Autonomous Systems'],
-      initials: 'OA'
-    },
-    {
-      name: 'Prof. Dr. Alexander Bull',
-      role: 'Professor & Researcher in Business Strategy & Applied Management',
-      org: 'DGUV University of Applied Sciences',
-      location: 'Germany',
-      displayTitle: 'Professor, DGUV University of Applied Sciences',
-      topic: 'Business Strategy, Applied Management Research & Enterprise Innovation',
-      bio: 'Prof. Dr. Alexander Bull is an esteemed professor and researcher at DGUV University of Applied Sciences in Germany. He specializes in business strategy, organizational management, applied management research, and enterprise innovation. His scholarly work and industry advisory focus on developing resilient strategic frameworks, agile corporate structures, and technology-enabled organizational development.',
-      photo: bullPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      confirmed: true,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.2)',
-      tags: ['Business Strategy', 'Organizational Management', 'Applied Research', 'Enterprise Innovation'],
-      initials: 'AB'
-    },
-    {
-      name: 'Dr. Marek Wasiluk',
-      role: 'Founder & CEO of Clinmark, Clinical Research & Quality Assurance Expert | GxP Auditor & ICH GCP Specialist',
-      org: 'Clinmark',
-      location: 'Poland',
-      displayTitle: 'Founder & CEO of Clinmark | Clinical Research & QA Expert',
-      topic: 'AI in Medical Science: Between Excitement and Caution',
-      bio: 'Dr. Marek Wasiluk is the Founder and CEO of Clinmark in Poland, and an internationally recognized clinical research and quality assurance expert, GxP auditor, and ICH GCP specialist. With extensive leadership in global clinical trial management, risk-based auditing, and Quality Management Systems (QMS), he prepares medical and pharmaceutical organizations for FDA and EMA inspection readiness. His session addresses the transformative yet cautious adoption of AI applications in medical science, clinical systems, and trial integrity.',
-      photo: wasilukPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      confirmed: true,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.2)',
-      tags: ['AI in Medical Science', 'Clinical Research', 'Quality Assurance', 'GxP & Regulatory Compliance'],
-      initials: 'MW'
     }
   ];
 
@@ -314,36 +312,6 @@ const HackathonSections = () => {
       initials: 'ED'
     },
     {
-      name: 'Sourav Saha',
-      role: 'Assistant Vice President & Senior Software Engineer',
-      org: 'U.S. Bank',
-      location: 'United States',
-      focus: 'Enterprise AI, Agentic AI, Responsible AI, Knowledge Graphs & Cloud Architecture',
-      bio: 'Assistant Vice President and Senior Software Engineer at U.S. Bank with 20+ years of experience in enterprise software engineering, data platforms, cloud-native systems, and applied AI. IEEE Senior Member and ACM SIGCSE TS 2027 Program Committee member.',
-      photo: souravPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.18)',
-      tags: ['Enterprise AI', 'Agentic AI', 'Harness Engineering', 'Responsible AI', 'Knowledge Graphs', 'Cloud-Native', 'Kubernetes'],
-      initials: 'SS'
-    },
-    {
-      name: 'Dishant Banga',
-      role: 'Sr. CRM Data Analyst',
-      org: 'Fox Corporation',
-      location: 'United States',
-      focus: 'Data Analytics, Data Science, Machine Learning & Statistical Modeling',
-      bio: 'Experienced data professional with 9+ years across data science and analytics — applying statistical modeling and machine learning for enterprise predictive solutions, data mining, and senior executive strategic decisions.',
-      photo: dishantPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.18)',
-      tags: ['Data Analytics', 'Data Science', 'Machine Learning', 'Statistical Modeling', 'Predictive AI'],
-      initials: 'DB'
-    },
-    {
       name: 'Venkata Phanindra Gollapalli',
       role: 'Principal Technical Engineer',
       org: 'Oracle',
@@ -392,7 +360,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and technology executives from U.S. Bank, Oracle, Fox Corporation, UNICEN, IBSU, and leading international institutions." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and technology executives from Oracle, UNICEN, IBSU, and leading international institutions." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
     { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
