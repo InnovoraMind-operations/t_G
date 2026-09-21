@@ -1478,50 +1478,115 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── DETAILED EVENT SCHEDULE ── */}
+      {/* ── ONLINE VIRTUAL HACKATHON SCHEDULE ── */}
       <section id="schedule" style={{ marginBottom: '4.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Clock size={18} style={{ color: '#00dcb4' }} />
           <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>
-            Detailed 24-Hour Event Schedule (27 September 2026)
+            Online Virtual Hackathon Schedule (27–28 September 2026)
           </h3>
         </div>
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div style={{ marginBottom: '1.25rem', fontSize: '0.88rem', color: '#9090a0' }}>
-            All sessions take place virtually on the official event portal. Dual time references are provided in UTC and IST (Indian Standard Time):
+          <div style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6 }}>
+            Designed for seamless worldwide virtual participation. Synchronized live milestones stream on the event portal, while coding runs continuously online. Timings are displayed across <strong style={{ color: '#00dcb4' }}>IST (Indian Standard Time)</strong>, <strong style={{ color: '#64b4d2' }}>UTC (Coordinated Universal Time)</strong>, and <strong style={{ color: '#d2aa64' }}>Central (US Central Daylight Time)</strong>:
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             {[
-              { timeUtc: '09:00 UTC', timeIst: '14:30 IST', title: 'Opening Plenary & Welcome Address', desc: 'Welcome remarks from the organizing committee, review of hackathon guidelines, and keynote remarks on Industry 5.0.', highlight: true },
-              { timeUtc: '10:00 UTC', timeIst: '15:30 IST', title: 'Industrial Challenge Track Briefings', desc: 'Release of detailed problem statements, evaluation rubrics, datasets, and repository submission guidelines.' },
-              { timeUtc: '10:30 UTC', timeIst: '16:00 IST', title: 'Hacking Sprint Commences & Team Onboarding', desc: 'Official kickoff of the 24-hour sprint. Teams initialize repositories, architecture diagrams, and development tasks.' },
-              { timeUtc: '14:00 UTC', timeIst: '19:30 IST', title: 'Technical Mentorship Sync #1', desc: 'Virtual breakout consultations with assigned industry mentors for architecture validation and design feedback.' },
-              { timeUtc: '18:00 UTC', timeIst: '23:30 IST', title: 'Keynote & Innovation Forum Panel', desc: 'Featured keynote sessions by confirmed academicians addressing sustainable spaces, clinical AI, and business innovation.' },
-              { timeUtc: '22:00 UTC', timeIst: '03:30 IST', title: 'Midpoint Health Check & Mentor Sync #2', desc: 'Optional mentor checkpoints for debugging edge deployments, pipeline anomalies, and system integration.' },
-              { timeUtc: '04:00 UTC (+1)', timeIst: '09:30 IST (+1)', title: 'Development Freeze & Finalization', desc: 'Teams conclude code writing, finalize documentation in README files, and record a 5-minute video demonstration.' },
-              { timeUtc: '06:00 UTC (+1)', timeIst: '11:30 IST (+1)', title: 'Final Submission Deadline (Strict Cutoff)', desc: 'Official closure of repository submissions. Verification of deliverables by the technical secretariat.' },
-              { timeUtc: '07:00 UTC (+1)', timeIst: '12:30 IST (+1)', title: 'Jury Deliberation & Track-Wise Evaluation', desc: 'Technical jury members conduct rubric-based code assessments and deliberate on category excellence awards.' },
-              { timeUtc: '09:00 UTC (+1)', timeIst: '14:30 IST (+1)', title: 'Valedictory Session & Award Announcements', desc: 'Announcement of award recipients, presentation of jury insights, and formal closing of the hackathon.', highlight: true }
+              { 
+                timeIst: '05:00 PM IST', 
+                timeUtc: '11:30 UTC', 
+                timeCentral: '06:30 AM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Virtual Kickoff & Industrial Track Briefing', 
+                desc: 'Opening live stream, welcome remarks, release of challenge problem statements, evaluation rubric walkthrough, and GitHub repository template access.', 
+                highlight: true 
+              },
+              { 
+                timeIst: '06:00 PM IST', 
+                timeUtc: '12:30 UTC', 
+                timeCentral: '07:30 AM CDT', 
+                dateLabel: '27 Sep',
+                title: '24-Hour Online Hacking Sprint Commences', 
+                desc: 'Official hackathon timer starts globally. Teams initialize repositories, establish system architectures, and virtual mentor desk channels open for technical guidance.' 
+              },
+              { 
+                timeIst: '09:00 PM IST', 
+                timeUtc: '15:30 UTC', 
+                timeCentral: '10:30 AM CDT', 
+                dateLabel: '27 Sep',
+                title: 'Innovation Forum Keynote Broadcast', 
+                desc: 'Streaming keynote addresses by confirmed academicians on Smart Manufacturing, Clinical AI Systems, Sustainable Spaces, and Enterprise Strategy.' 
+              },
+              { 
+                timeIst: '01:00 AM IST (+1)', 
+                timeUtc: '19:30 UTC', 
+                timeCentral: '02:30 PM CDT', 
+                dateLabel: '28 Sep (Night)',
+                title: 'Mid-Sprint Architecture Checkpoint & Mentor Q&A', 
+                desc: 'Optional asynchronous progress review, prototype sanity checks, telemetry endpoint debugging, and live mentor office hours.' 
+              },
+              { 
+                timeIst: '05:00 PM IST (+1)', 
+                timeUtc: '11:30 UTC (+1)', 
+                timeCentral: '06:30 AM CDT (+1)', 
+                dateLabel: '28 Sep',
+                title: 'Code Freeze & Final Submission Deadline', 
+                desc: 'Strict 24-hour sprint cutoff. Mandatory submission of public GitHub repo link, README setup guide, architecture diagram, and 5-minute video demonstration.', 
+                highlight: true 
+              },
+              { 
+                timeIst: '07:30 PM IST (+1)', 
+                timeUtc: '14:00 UTC (+1)', 
+                timeCentral: '09:00 AM CDT (+1)', 
+                dateLabel: '28 Sep',
+                title: 'Grand Virtual Finale & Award Announcements', 
+                desc: 'Live broadcast of jury deliberations, top finalist prototype showcase, announcement of category winners, and valedictory address.', 
+                highlight: true 
+              }
             ].map((sched, idx) => (
               <div key={idx} style={{
                 background: sched.highlight ? 'rgba(0,220,180,0.06)' : 'rgba(255,255,255,0.02)',
-                border: `1px solid ${sched.highlight ? 'rgba(0,220,180,0.25)' : 'rgba(255,255,255,0.05)'}`,
-                borderRadius: '0.85rem', padding: '1rem 1.25rem',
-                display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem'
+                border: `1px solid ${sched.highlight ? 'rgba(0,220,180,0.28)' : 'rgba(255,255,255,0.06)'}`,
+                borderRadius: '1rem', padding: '1.1rem 1.35rem',
+                display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.25rem'
               }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', minWidth: '220px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', minWidth: '260px', flex: 1 }}>
+                  {/* Triple-Timezone Badge */}
                   <div style={{
-                    background: sched.highlight ? 'rgba(0,220,180,0.15)' : 'rgba(255,255,255,0.05)',
-                    padding: '0.35rem 0.65rem', borderRadius: '0.5rem',
-                    fontSize: '0.78rem', fontWeight: 800, color: sched.highlight ? '#00dcb4' : '#cbd5e1',
-                    textAlign: 'center', minWidth: '95px'
+                    background: sched.highlight ? 'rgba(0,220,180,0.12)' : 'rgba(0,0,0,0.35)',
+                    border: `1px solid ${sched.highlight ? 'rgba(0,220,180,0.35)' : 'rgba(255,255,255,0.08)'}`,
+                    padding: '0.65rem 0.95rem', borderRadius: '0.85rem',
+                    minWidth: '190px', display: 'flex', flexDirection: 'column', gap: '0.3rem',
+                    flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
                   }}>
-                    <div>{sched.timeUtc}</div>
-                    <div style={{ fontSize: '0.7rem', color: '#9090a0', fontWeight: 600 }}>{sched.timeIst}</div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.07)', paddingBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '0.68rem', color: '#00dcb4', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em' }}>IST (India)</span>
+                      <span style={{ fontSize: '0.86rem', color: '#ffffff', fontWeight: 800 }}>{sched.timeIst}</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.66rem', color: '#64b4d2', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>UTC</span>
+                      <span style={{ fontSize: '0.78rem', color: '#cbd5e1', fontWeight: 600 }}>{sched.timeUtc}</span>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.66rem', color: '#d2aa64', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Central (US)</span>
+                      <span style={{ fontSize: '0.78rem', color: '#cbd5e1', fontWeight: 600 }}>{sched.timeCentral}</span>
+                    </div>
                   </div>
-                  <div>
-                    <h4 style={{ fontSize: '0.98rem', fontWeight: 700, color: '#ffffff', margin: '0 0 0.25rem' }}>{sched.title}</h4>
-                    <p style={{ fontSize: '0.84rem', color: '#9090a0', margin: 0, lineHeight: 1.5 }}>{sched.desc}</p>
+
+                  {/* Milestone Details */}
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.3rem', flexWrap: 'wrap' }}>
+                      <span style={{
+                        fontSize: '0.7rem', fontWeight: 800, padding: '0.15rem 0.55rem', borderRadius: '1rem',
+                        background: sched.highlight ? 'rgba(0,220,180,0.2)' : 'rgba(255,255,255,0.06)',
+                        color: sched.highlight ? '#00dcb4' : '#9090a0',
+                        textTransform: 'uppercase', letterSpacing: '0.06em'
+                      }}>
+                        {sched.dateLabel}
+                      </span>
+                      <h4 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#ffffff', margin: 0 }}>{sched.title}</h4>
+                    </div>
+                    <p style={{ fontSize: '0.86rem', color: '#9090a0', margin: 0, lineHeight: 1.55 }}>{sched.desc}</p>
                   </div>
                 </div>
               </div>

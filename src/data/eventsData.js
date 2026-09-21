@@ -439,21 +439,19 @@ export const eventsData = [
     ],
     "agenda": [
       {
-        "day": "Day 1: Hackathon Kickoff & Keynote Stage",
+        "day": "Day 1 (27 Sep): Hackathon Kickoff & Keynote Broadcast",
         "sessions": [
-          "09:00 AM - Opening Ceremony & Global Keynote: The Future of Industrial AI",
-          "10:30 AM - Industrial Challenge Tracks Briefing & Problem Statements",
-          "12:00 PM - 24-Hour Online Hacking Begins & Mentor Virtual Office Hours",
-          "04:00 PM - Keynote Panel: Digital Twins and Edge AI in Advanced Manufacturing"
+          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Virtual Kickoff & Industrial Track Briefing",
+          "06:00 PM IST (12:30 UTC / 07:30 AM CDT) - 24-Hour Online Hacking Sprint Commences & Mentor Desk Opens",
+          "09:00 PM IST (15:30 UTC / 10:30 AM CDT) - Innovation Forum Keynote Broadcast"
         ]
       },
       {
-        "day": "Day 2: Submissions, Judging & Awards",
+        "day": "Day 2 (28 Sep): Sprint Completion, Evaluation & Awards",
         "sessions": [
-          "12:00 PM - Online Project Submission Deadline (GitHub Repo & Demo Video)",
-          "01:30 PM - International Judging Panel Evaluation",
-          "04:00 PM - Top Finalist Live Virtual Pitches & Demos",
-          "06:00 PM - Global Award Ceremony & Certificate Distributions"
+          "01:00 AM IST (19:30 UTC / 02:30 PM CDT) - Mid-Sprint Architecture Checkpoint & Mentor Q&A",
+          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Code Freeze & Final Submission Deadline (GitHub + Video)",
+          "07:30 PM IST (14:00 UTC / 09:00 AM CDT) - Grand Virtual Finale & Global Award Announcements"
         ]
       }
     ],
