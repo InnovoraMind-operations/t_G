@@ -27,7 +27,7 @@ import roksolanaPhoto from '../../assets/roksolana-trach.png';
 import osmanPhoto from '../../assets/osman-arayici.jpg';
 import bullPhoto from '../../assets/prof-alexander-bull.jpg';
 import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
-import venkataPhoto from '../../assets/venkata-phanindra-gollapalli.jpg';
+import mehwishPhoto from '../../assets/dr-mehwish-rashid.png';
 import nadiaPhoto from '../../assets/dr-nadia-adnan.jpg';
 import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
 import ayoubPhoto from '../../assets/dr-ayoub-regragui.jpg';
@@ -315,19 +315,19 @@ const HackathonSections = () => {
       initials: 'ED'
     },
     {
-      name: 'Venkata Phanindra Gollapalli',
-      role: 'Principal Technical Engineer',
-      org: 'Oracle',
+      name: 'Dr. Mehwish Rashid',
+      role: 'Doctor of Health Science (DHSc)',
+      org: 'Keiser University',
       location: 'United States',
-      focus: 'SCM, Enterprise ERP Systems, Cloud Architecture & Industrial AI Systems',
-      bio: 'Principal Technical Engineer at Oracle specializing in Supply Chain Management (SCM), ERP systems, enterprise cloud architectures, and integrating artificial intelligence into mission-critical corporate platforms.',
-      photo: venkataPhoto,
+      focus: 'Health Sciences, Clinical Systems, Healthcare Innovation & Medical Technologies',
+      bio: 'Dr. Mehwish (Mishy) Rashid holds a Doctor of Health Science (DHSc) from Keiser University, USA. She specializes in health sciences leadership, healthcare innovation, clinical technology evaluation, and health systems optimization.',
+      photo: mehwishPhoto,
       photoPosition: 'center top',
       photoScale: 1.0,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.18)',
-      tags: ['SCM Systems', 'ERP Enterprise', 'Cloud Platforms', 'Applied AI', 'Oracle Cloud'],
-      initials: 'VG'
+      tags: ['Health Science', 'Healthcare Innovation', 'Clinical Technologies', 'Medical Systems', 'Public Health'],
+      initials: 'MR'
     },
     {
       name: 'Dr. Nadia Adnan',
@@ -408,7 +408,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from Oracle, Prince Mohammad Bin Fahd University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU." },
+    { q: "Who are the judges for the hackathon?", a: "Our international judging panel comprises esteemed industry leaders, researchers, and professors from Keiser University, Prince Mohammad Bin Fahd University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, demo video (max 5 mins), and optional live deployed demonstration link." },
     { q: "Will I get a verified certificate?", a: "Yes, all verified participants, finalists, judges, and speakers will receive internationally recognized digital certificates." },
