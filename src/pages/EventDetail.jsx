@@ -124,7 +124,7 @@ const EventDetail = () => {
 
       {/* ── Hero section ── */}
       <div style={{
-        maxWidth: '900px', margin: '0 auto',
+        maxWidth: ev.id === 'evt_012' ? '1320px' : '900px', margin: '0 auto',
         padding: 'clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2.5rem) 2rem',
         boxSizing: 'border-box'
       }}>
@@ -182,7 +182,7 @@ const EventDetail = () => {
       </div>
 
       {/* ── Main Content ── */}
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 clamp(1rem, 4vw, 2.5rem) 6rem', display: 'flex', flexDirection: 'column', gap: '3rem', width: '100%', boxSizing: 'border-box' }}>
+      <div style={{ maxWidth: ev.id === 'evt_012' ? '1320px' : '900px', margin: '0 auto', padding: '0 clamp(1rem, 4vw, 2.5rem) 6rem', display: 'flex', flexDirection: 'column', gap: '3rem', width: '100%', boxSizing: 'border-box' }}>
 
         {/* ── INFRATECH WORLD 2026 custom sections ── */}
         {ev.id === 'evt_008' ? (

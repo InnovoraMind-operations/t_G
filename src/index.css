@@ -462,3 +462,22 @@ button {
 .light-theme .service-card::before {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), transparent);
 }
+
+/* Event 3-Column Responsive Grid */
+.event-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .event-grid-3col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-grid-3col {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

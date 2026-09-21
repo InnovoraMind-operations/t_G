@@ -835,13 +835,13 @@ const HackathonSections = () => {
           Our distinguished international jury brings together premier industrial directors, lead research scientists, university professors, and technology executives who conduct comprehensive technical, architectural, and commercial evaluations:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
+        <div className="event-grid-3col">
           {judgesList.map((jdg, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.035)',
               borderRadius: '1.4rem',
               border: `1.5px solid ${jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'}`,
-              padding: 'clamp(1.25rem, 3.5vw, 1.85rem)',
+              padding: 'clamp(1.1rem, 2.2vw, 1.45rem)',
               display: 'flex',
               flexDirection: 'column',
               boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${jdg.glow}`,
@@ -851,7 +851,7 @@ const HackathonSections = () => {
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'; }}
             >
               {/* Basic Info ABOVE Photo */}
-              <div style={{ marginBottom: '1.2rem' }}>
+              <div style={{ marginBottom: '1.1rem' }}>
                 <div style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
                   fontSize: '0.72rem', fontWeight: 800, color: jdg.color,
@@ -861,26 +861,26 @@ const HackathonSections = () => {
                 }}>
                   ★ Distinguished Judge
                 </div>
-                <h4 style={{ fontSize: '1.32rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
                   {jdg.name}
                 </h4>
-                <div style={{ fontSize: '0.94rem', color: jdg.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
+                <div style={{ fontSize: '0.92rem', color: jdg.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
                   {jdg.role}
                 </div>
-                <div style={{ fontSize: '0.86rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
+                <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
                   {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
                 </div>
               </div>
 
-              {/* Full Big Photo */}
+              {/* Card Photo (Bit smaller for 3-in-a-row fit) */}
               <div style={{
                 width: '100%',
-                height: 'clamp(290px, 75vw, 380px)',
-                borderRadius: '1.1rem',
+                height: 'clamp(200px, 45vw, 240px)',
+                borderRadius: '1rem',
                 border: `2.5px solid ${jdg.color}`,
                 overflow: 'hidden',
-                marginBottom: '1.35rem',
-                boxShadow: `0 12px 32px rgba(0,0,0,0.65), 0 0 26px ${jdg.glow}`,
+                marginBottom: '1.15rem',
+                boxShadow: `0 10px 28px rgba(0,0,0,0.6), 0 0 20px ${jdg.glow}`,
                 background: '#0d131d',
                 position: 'relative'
               }}>
@@ -984,13 +984,13 @@ const HackathonSections = () => {
           International technology visionaries, distinguished professors, and industry leaders confirmed and delivering exclusive keynote addresses and technical sessions during the online hackathon and innovation forum:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
+        <div className="event-grid-3col">
           {speakersList.map((spk, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.035)',
               borderRadius: '1.4rem',
               border: `1.5px solid ${spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'}`,
-              padding: 'clamp(1.25rem, 3.5vw, 1.85rem)',
+              padding: 'clamp(1.1rem, 2.2vw, 1.45rem)',
               display: 'flex',
               flexDirection: 'column',
               boxShadow: `0 10px 30px rgba(0,0,0,0.45), inset 0 0 24px ${spk.glow}`,
@@ -1000,7 +1000,7 @@ const HackathonSections = () => {
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'; }}
             >
               {/* Basic Info ABOVE Photo */}
-              <div style={{ marginBottom: '1.2rem' }}>
+              <div style={{ marginBottom: '1.1rem' }}>
                 {spk.confirmed && (
                   <div style={{ marginBottom: '0.45rem' }}>
                     <span style={{
@@ -1013,13 +1013,13 @@ const HackathonSections = () => {
                     </span>
                   </div>
                 )}
-                <h4 style={{ fontSize: '1.32rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
                   {spk.name}
                 </h4>
-                <div style={{ fontSize: '0.94rem', color: spk.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
+                <div style={{ fontSize: '0.92rem', color: spk.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
                   {spk.role}
                 </div>
-                <div style={{ fontSize: '0.86rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
+                <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
                   {spk.org} <span style={{ opacity: 0.6 }}>•</span> {spk.location}
                 </div>
                 {spk.orcid && (
@@ -1042,15 +1042,15 @@ const HackathonSections = () => {
                 )}
               </div>
 
-              {/* Full Big Photo */}
+              {/* Card Photo (Bit smaller for 3-in-a-row fit) */}
               <div style={{
                 width: '100%',
-                height: 'clamp(270px, 68vw, 350px)',
-                borderRadius: '1.1rem',
+                height: 'clamp(200px, 45vw, 240px)',
+                borderRadius: '1rem',
                 border: `2.5px solid ${spk.color}`,
                 overflow: 'hidden',
-                marginBottom: '1.35rem',
-                boxShadow: `0 12px 32px rgba(0,0,0,0.65), 0 0 26px ${spk.glow}`,
+                marginBottom: '1.15rem',
+                boxShadow: `0 10px 28px rgba(0,0,0,0.6), 0 0 20px ${spk.glow}`,
                 background: '#0d131d',
                 position: 'relative'
               }}>
@@ -1467,7 +1467,7 @@ const HackathonSections = () => {
           The Techryon Global executive leadership team spearheading international partnerships, strategic growth, and cross-border innovation across all forum initiatives:
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem' }}>
+        <div className="event-grid-3col">
           {committeeList.map((member, i) => (
             <div key={i} style={{
               background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(210,170,100,0.03) 100%)',
