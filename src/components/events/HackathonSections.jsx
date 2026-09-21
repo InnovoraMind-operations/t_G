@@ -1519,30 +1519,21 @@ const HackathonSections = () => {
                 desc: 'Teams collaborate on architecture, code, and telemetry pipelines. Virtual mentor desk breakout channels open for technical guidance and query resolution.' 
               },
               { 
-                timeIst: '09:45 PM IST', 
-                timeUtc: '16:15 UTC', 
-                timeCentral: '11:15 AM CDT', 
+                timeIst: '10:00 PM IST', 
+                timeUtc: '16:30 UTC', 
+                timeCentral: '11:30 AM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Code Freeze & Final Project Submission', 
-                desc: 'Sprint submission deadline. Mandatory upload of GitHub repository links, architecture documentation, README guides, and project demonstration materials.', 
+                title: 'Project Presentations & Prototype Demonstrations', 
+                desc: 'Participating teams present their project solutions, architecture walkthroughs, and live working prototype demonstrations to mentors, reviewers, and peers.', 
                 highlight: true 
               },
               { 
-                timeIst: '10:15 PM IST', 
-                timeUtc: '16:45 UTC', 
-                timeCentral: '11:45 AM CDT', 
+                timeIst: '11:45 PM IST', 
+                timeUtc: '18:15 UTC', 
+                timeCentral: '01:15 PM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Finalist Live Presentations & Prototype Demonstrations', 
-                desc: 'Shortlisted teams present solution pitches and conduct live prototype demonstrations before the international technical jury panel and global audience.', 
-                highlight: true 
-              },
-              { 
-                timeIst: '11:30 PM IST', 
-                timeUtc: '18:00 UTC', 
-                timeCentral: '01:00 PM CDT', 
-                dateLabel: '27 Sep',
-                title: 'Jury Evaluation Review & Grand Award Ceremony', 
-                desc: 'Announcement of category award winners, presentation of verified certificates of honor (CertID), jury feedback summary, and valedictory closing.', 
+                title: 'Final Submission Deadline & Virtual Closing Session', 
+                desc: 'Mandatory submission cutoff for GitHub repository links, documentation, and demo recordings. Official closing remarks and briefing on the post-hackathon evaluation phase.', 
                 highlight: true 
               }
             ].map((sched, idx) => (
@@ -1593,6 +1584,28 @@ const HackathonSections = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Post-Hackathon Evaluation & Awards Notice */}
+          <div style={{
+            marginTop: '1.25rem',
+            background: 'rgba(0,220,180,0.05)',
+            border: '1px solid rgba(0,220,180,0.25)',
+            borderRadius: '1rem',
+            padding: '1.2rem 1.4rem',
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '1rem'
+          }}>
+            <Award size={24} style={{ color: '#00dcb4', flexShrink: 0, marginTop: '0.15rem' }} />
+            <div>
+              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#00dcb4', margin: '0 0 0.35rem' }}>
+                Post-Hackathon Jury Rubric Evaluation & Award Declaration
+              </h4>
+              <p style={{ fontSize: '0.88rem', color: '#cbd5e1', margin: 0, lineHeight: 1.65 }}>
+                To maintain academic rigor and ensure comprehensive evaluation, all submitted repositories, system architectures, and demonstration videos are independently assessed by the international technical jury council after the hackathon against published rubrics. Category award recipients and official Verified Certificates (CertID) will be officially declared on the TechryonGlobal portal following formal jury deliberation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
