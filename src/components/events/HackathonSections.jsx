@@ -938,32 +938,10 @@ const HackathonSections = () => {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = jdg.color; }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = jdg.photo ? `${jdg.color}55` : 'rgba(255,255,255,0.1)'; }}
             >
-              {/* Basic Info ABOVE Photo */}
-              <div style={{ marginBottom: '1.1rem' }}>
-                <div style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
-                  fontSize: '0.72rem', fontWeight: 800, color: jdg.color,
-                  letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.45rem',
-                  background: `${jdg.color}15`, padding: '0.22rem 0.7rem',
-                  borderRadius: '1rem', border: `1px solid ${jdg.color}35`
-                }}>
-                  ★ Technical Jury Member
-                </div>
-                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
-                  {jdg.name}
-                </h4>
-                <div style={{ fontSize: '0.92rem', color: jdg.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
-                  {jdg.role}
-                </div>
-                <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
-                  {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
-                </div>
-              </div>
-
-              {/* Card Portrait Photo Frame */}
+              {/* Standardized Portrait Photo Frame at TOP */}
               <div style={{
                 width: '100%',
-                maxWidth: '280px',
+                maxWidth: '240px',
                 aspectRatio: '3 / 4',
                 margin: '0 auto 1.25rem',
                 borderRadius: '1.1rem',
@@ -971,7 +949,8 @@ const HackathonSections = () => {
                 overflow: 'hidden',
                 boxShadow: `0 12px 30px rgba(0,0,0,0.6), 0 0 22px ${jdg.glow}`,
                 background: '#0d131d',
-                position: 'relative'
+                position: 'relative',
+                flexShrink: 0
               }}>
                 {jdg.photo ? (
                   <img
@@ -999,6 +978,32 @@ const HackathonSections = () => {
                 )}
               </div>
 
+              {/* Badge */}
+              <div style={{ marginBottom: '0.65rem' }}>
+                <div style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                  fontSize: '0.72rem', fontWeight: 800, color: jdg.color,
+                  letterSpacing: '0.08em', textTransform: 'uppercase',
+                  background: `${jdg.color}15`, padding: '0.22rem 0.7rem',
+                  borderRadius: '1rem', border: `1px solid ${jdg.color}35`
+                }}>
+                  ★ Technical Jury Member
+                </div>
+              </div>
+
+              {/* Basic Info: Name, Role, Org & Location */}
+              <div style={{ marginBottom: '0.9rem' }}>
+                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
+                  {jdg.name}
+                </h4>
+                <div style={{ fontSize: '0.92rem', color: jdg.color, fontWeight: 800, marginTop: '0.35rem', lineHeight: 1.4 }}>
+                  {jdg.role}
+                </div>
+                <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
+                  {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
+                </div>
+              </div>
+
               {/* Assigned Jury Evaluation Track */}
               <div style={{
                 background: `${jdg.color}14`,
@@ -1021,6 +1026,7 @@ const HackathonSections = () => {
                 </div>
               </div>
 
+              {/* Domain Evaluation Focus & Bio */}
               <div style={{
                 background: 'rgba(255,255,255,0.03)', padding: '1rem 1.15rem',
                 borderRadius: '0.85rem', borderLeft: `3.5px solid ${jdg.color}`,
@@ -1039,7 +1045,8 @@ const HackathonSections = () => {
                 )}
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+              {/* Tags */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginTop: 'auto' }}>
                 {jdg.tags.map((t, idx) => (
                   <span key={idx} style={{
                     fontSize: '0.74rem', padding: '0.25rem 0.65rem', borderRadius: '1rem',
@@ -1173,20 +1180,61 @@ const HackathonSections = () => {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = spk.color; }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = spk.confirmed ? `${spk.color}55` : 'rgba(255,255,255,0.08)'; }}
             >
-              {/* Basic Info ABOVE Photo */}
-              <div style={{ marginBottom: '1.1rem' }}>
-                {spk.confirmed && (
-                  <div style={{ marginBottom: '0.45rem' }}>
-                    <span style={{
-                      fontSize: '0.72rem', fontWeight: 800, color: '#00dcb4',
-                      background: 'rgba(0,220,180,0.12)', border: '1.5px solid rgba(0,220,180,0.35)',
-                      padding: '0.22rem 0.7rem', borderRadius: '1rem',
-                      display: 'inline-flex', alignItems: 'center', gap: '0.35rem'
-                    }}>
-                      <CheckCircle size={11} /> Confirmed Speaker
-                    </span>
+              {/* Standardized Portrait Photo Frame at TOP */}
+              <div style={{
+                width: '100%',
+                maxWidth: '240px',
+                aspectRatio: '3 / 4',
+                margin: '0 auto 1.25rem',
+                borderRadius: '1.1rem',
+                border: `2.5px solid ${spk.color}`,
+                overflow: 'hidden',
+                boxShadow: `0 12px 30px rgba(0,0,0,0.6), 0 0 22px ${spk.glow}`,
+                background: '#0d131d',
+                position: 'relative',
+                flexShrink: 0
+              }}>
+                {spk.photo ? (
+                  <img
+                    src={spk.photo}
+                    alt={spk.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: spk.photoPosition || 'center top',
+                      transform: spk.photoScale ? `scale(${spk.photoScale})` : 'none',
+                      transition: 'transform 0.4s ease'
+                    }}
+                  />
+                ) : (
+                  <div style={{
+                    width: '100%',
+                    height: '100%',
+                    background: `linear-gradient(135deg, ${spk.color}35, ${spk.color}15)`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: '3.2rem', color: spk.color,
+                    boxShadow: `inset 0 0 24px ${spk.glow}`
+                  }}>
+                    {spk.initials}
                   </div>
                 )}
+              </div>
+
+              {/* Badge */}
+              <div style={{ marginBottom: '0.65rem' }}>
+                <span style={{
+                  fontSize: '0.72rem', fontWeight: 800, color: spk.color,
+                  background: `${spk.color}15`, border: `1.5px solid ${spk.color}35`,
+                  padding: '0.22rem 0.7rem', borderRadius: '1rem',
+                  display: 'inline-flex', alignItems: 'center', gap: '0.35rem'
+                }}>
+                  <CheckCircle size={11} /> {spk.confirmed ? 'Confirmed Keynote Speaker' : 'Keynote Speaker'}
+                </span>
+              </div>
+
+              {/* Basic Info: Name, Role, Org & Location */}
+              <div style={{ marginBottom: '0.9rem' }}>
                 <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0, lineHeight: 1.3 }}>
                   {spk.name}
                 </h4>
@@ -1216,65 +1264,46 @@ const HackathonSections = () => {
                 )}
               </div>
 
-              {/* Card Portrait Photo Frame */}
+              {/* Keynote Session & Topic */}
               <div style={{
-                width: '100%',
-                maxWidth: '280px',
-                aspectRatio: '3 / 4',
-                margin: '0 auto 1.25rem',
-                borderRadius: '1.1rem',
-                border: `2.5px solid ${spk.color}`,
-                overflow: 'hidden',
-                boxShadow: `0 12px 30px rgba(0,0,0,0.6), 0 0 22px ${spk.glow}`,
-                background: '#0d131d',
-                position: 'relative'
+                background: `${spk.color}14`,
+                border: `1px solid ${spk.color}45`,
+                borderRadius: '0.75rem',
+                padding: '0.65rem 0.85rem',
+                marginBottom: '1rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.6rem'
               }}>
-                {spk.photo ? (
-                  <img
-                    src={spk.photo}
-                    alt={spk.name}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: spk.photoPosition || 'center top',
-                      transform: spk.photoScale ? `scale(${spk.photoScale})` : 'none',
-                      transition: 'transform 0.4s ease'
-                    }}
-                  />
-                ) : (
-                  <div style={{
-                    width: '100%',
-                    height: '100%',
-                    background: `linear-gradient(135deg, ${spk.color}35, ${spk.color}15)`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontWeight: 900, fontSize: '3.2rem', color: spk.color,
-                    boxShadow: `inset 0 0 24px ${spk.glow}`
-                  }}>
-                    {spk.initials}
+                <Mic size={16} style={{ color: spk.color, flexShrink: 0 }} />
+                <div>
+                  <div style={{ fontSize: '0.68rem', textTransform: 'uppercase', color: spk.color, fontWeight: 800, letterSpacing: '0.07em' }}>
+                    {spk.confirmed ? 'Confirmed Keynote Session' : 'Keynote Address'}
                   </div>
-                )}
+                  <div style={{ fontSize: '0.86rem', color: '#ffffff', fontWeight: 700, marginTop: '0.15rem', lineHeight: 1.35, fontStyle: 'italic' }}>
+                    "{spk.topic}"
+                  </div>
+                </div>
               </div>
 
+              {/* Professional Biography & Expertise */}
               <div style={{
                 background: 'rgba(255,255,255,0.03)', padding: '1rem 1.15rem',
                 borderRadius: '0.85rem', borderLeft: `3.5px solid ${spk.color}`,
                 marginBottom: '1.25rem', flexGrow: 1
               }}>
                 <div style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: '#94a3b8', fontWeight: 800, letterSpacing: '0.06em' }}>
-                  {spk.confirmed ? 'Confirmed Expert Session / Talk' : 'Keynote Address'}
-                </div>
-                <div style={{ fontSize: '0.98rem', color: '#ffffff', fontWeight: 700, marginTop: '0.3rem', fontStyle: 'italic', lineHeight: 1.4 }}>
-                  "{spk.topic}"
+                  Professional Biography & Expertise
                 </div>
                 {spk.bio && (
-                  <p style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.6, marginTop: '0.75rem', marginBottom: 0, fontWeight: 500 }}>
+                  <p style={{ fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.6, marginTop: '0.45rem', marginBottom: 0, fontWeight: 500 }}>
                     {spk.bio}
                   </p>
                 )}
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
+              {/* Tags */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginTop: 'auto' }}>
                 {spk.tags.map((t, idx) => (
                   <span key={idx} style={{
                     fontSize: '0.74rem', padding: '0.25rem 0.65rem', borderRadius: '1rem',
