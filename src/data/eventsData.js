@@ -527,6 +527,18 @@ export const eventsData = [
         "role": "Founder & CEO of Clinmark, Clinical Research & Quality Assurance Expert | GxP Auditor & ICH GCP Specialist",
         "topic": "AI in Medical Science: Between Excitement and Caution",
         "bio": "Founder and CEO of Clinmark, Poland. International clinical trial expert, GxP auditor, and ICH GCP specialist focusing on quality assurance, regulatory readiness, and the responsible adoption of AI in healthcare."
+      },
+      {
+        "name": "Fatimah Alneel",
+        "role": "PhD Higher Education | Educational Development Specialist, The University of Arizona",
+        "topic": "Educational Development, Higher Education Innovation & Academic Leadership",
+        "bio": "Higher education professional and PhD scholar in Higher Education at The University of Arizona, committed to educational development and institutional transformation."
+      },
+      {
+        "name": "Girma Birhanu Nurie",
+        "role": "Field Epidemiologist, Addis Ababa City Administration Health Office",
+        "topic": "Reimagining Global Health Through Innovation: From Data to Impact",
+        "bio": "Field epidemiologist and public-health researcher working with Addis Ababa City Administration in Ethiopia. Founder of GBN Field Epidemiology Collective and patent-pending GBN EpiNova, dedicated to advancing global health security, disease surveillance, and epidemic intelligence."
       }
     ],
     "pricing": []

@@ -33,6 +33,7 @@ import nadiaPhoto from '../../assets/dr-nadia-adnan.jpg';
 import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
 import ayoubPhoto from '../../assets/dr-ayoub-regragui.jpg';
 import fatimahPhoto from '../../assets/fatimah-alneel.jpg';
+import girmaPhoto from '../../assets/girma-birhanu-nurie.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -283,6 +284,23 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.2)',
       tags: ['Digital Transformation', 'Higher Education', 'Educational Technology', 'Curriculum & AI'],
       initials: 'MB'
+    },
+    {
+      name: 'Girma Birhanu Nurie',
+      role: 'Field Epidemiologist',
+      org: 'Addis Ababa City Administration Health Office',
+      location: 'Ethiopia',
+      displayTitle: 'Field Epidemiologist, Addis Ababa City Administration Health Office',
+      topic: 'Reimagining Global Health Through Innovation: From Data to Impact',
+      bio: 'Mr. Girma Birhanu Nurie is a public-health specialist and epidemiology researcher working with Addis Ababa City Administration in Ethiopia, dedicated to advancing global health security through innovation. With extensive experience in disease surveillance, outbreak response, and health-systems strengthening, he has contributed to major public-health initiatives across government, clinical, and international sectors. His work focuses on integrating data, technology, and community-level intelligence to improve early detection of epidemics and strengthen health-system resilience. He is the founder of the GBN Field Epidemiology Collective and patent-pending GBN EpiNova, developing digital tools that empower frontline health workers and policymakers with real-time insights. Girma holds a Master of Public Health (MPH) from Addis Ababa University.',
+      photo: girmaPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Field Epidemiology', 'Global Health Security', 'Disease Surveillance', 'Digital Health', 'Epidemic Intelligence'],
+      initials: 'GN'
     }
   ];
 
