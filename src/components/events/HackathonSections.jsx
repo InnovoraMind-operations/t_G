@@ -34,6 +34,8 @@ import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
 import ayoubPhoto from '../../assets/dr-ayoub-regragui.jpg';
 import fatimahPhoto from '../../assets/fatimah-alneel.jpg';
 import girmaPhoto from '../../assets/girma-birhanu-nurie.jpg';
+import piyushPhoto from '../../assets/piyush-shukla.jpg';
+import sriHarshaPhoto from '../../assets/sri-harsha-pushkala.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -387,6 +389,22 @@ const HackathonSections = () => {
       initials: 'NA'
     },
     {
+      name: 'Piyush Shukla',
+      role: 'Technology & Engineering Leader',
+      org: 'Enterprise Engineering & Cloud Leadership',
+      location: 'USA',
+      evaluationTrack: 'Enterprise Engineering, Cloud Infrastructure & Scalable Systems',
+      focus: 'Enterprise Cloud Architecture, Distributed Systems Engineering, Scalable Infrastructure & Technical Leadership',
+      bio: 'Technology and engineering leader based in the United States with extensive background in enterprise engineering, high-performance cloud architectures, scalable systems, and technical program leadership.',
+      photo: piyushPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Enterprise Engineering', 'Cloud Leadership', 'Scalable Systems', 'Cloud Architecture'],
+      initials: 'PS'
+    },
+    {
       name: 'Mouhssin Ait El Mouden',
       role: 'Academic Researcher',
       org: 'Faculty of Letters, Ibn Tofail University, Kenitra',
@@ -417,6 +435,22 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.18)',
       tags: ['Mohammed V University', 'Higher Education', 'Research Innovation', 'Academic Quality'],
       initials: 'AR'
+    },
+    {
+      name: 'Sri Harsha Anand Pushkala',
+      role: 'BCS Fellow, Senior IEEE Member & Advisory Board Member – TheIAForum',
+      org: 'Atlanticus',
+      location: 'Atlanta, Georgia, USA',
+      evaluationTrack: 'AI Anomaly Detection, Financial Systems & Machine Learning Governance',
+      focus: 'Fraud Strategy, Graph Neural Networks, Financial AI, Cybersecurity & System Integrity',
+      bio: 'BCS Fellow, Senior IEEE Member, and Advisory Board Member at TheIAForum. Based at Atlanticus in Atlanta, Georgia, he specializes in large-scale AI anomaly detection, machine learning governance, cybersecurity, and resilient financial technology systems.',
+      photo: sriHarshaPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Atlanticus', 'BCS Fellow', 'Senior IEEE', 'AI Anomaly Detection', 'TheIAForum'],
+      initials: 'SP'
     }
   ];
 
@@ -452,7 +486,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, professors, and technical specialists from Prince Mohammad Bin Fahd University, Keiser University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU, each assigned to specific evaluation tracks." },
+    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, engineering leaders, professors, and technical specialists from Atlanticus, Prince Mohammad Bin Fahd University, Keiser University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU, each assigned to specific evaluation tracks." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, and a 5-minute video demonstration." },
     { q: "Who owns the intellectual property (IP) of our hackathon project?", a: "Participants retain 100% ownership of all original intellectual property, source code, models, and architectures created during the event. TechryonGlobal does not claim any ownership of your project." },
