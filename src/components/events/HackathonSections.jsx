@@ -49,6 +49,7 @@ import veeramaniPhoto from '../../assets/veeramani-sampathkumar.jpg';
 import shubhPhoto from '../../assets/shubh-chandra-roy.jpg';
 import mayankPhoto from '../../assets/mayank-atreya.jpg';
 import muliatiPhoto from '../../assets/dr-muliati-sedek.jpg';
+import dinaPhoto from '../../assets/dr-dina-alkhodary.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -340,7 +341,7 @@ const HackathonSections = () => {
       org: 'North-West University',
       location: 'South Africa',
       displayTitle: 'Professor of Statistics, North-West University',
-      topic: 'Statistical Modeling, Computational Statistics & Predictive Analytics in Industry',
+      topic: 'Testing Intelligence: A Statistical Framework for Evaluating AI Agents',
       bio: 'Prof. Jaco Visagie is a Professor of Statistics at North-West University in South Africa. He specializes in statistical modeling, computational data methods, empirical distributions, and applied predictive analytics across complex scientific and industrial systems.',
       photo: jacoPhoto,
       photoPosition: 'center top',
@@ -435,6 +436,23 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ["Stanford Top 2% Scientist", 'Management & Marketing', 'Sustainable Business', 'Empirical Modeling', 'Technology Adoption'],
       initials: 'NA'
+    },
+    {
+      name: 'Dr. Dina Alkhodary',
+      role: 'Associate Professor of Business Administration',
+      org: 'Middle East University',
+      location: 'Jordan',
+      displayTitle: 'Associate Professor of Business Administration, Middle East University',
+      topic: 'Leadership in the Age of AI',
+      bio: 'Dr. Dina Alkhodary is an Associate Professor of Business Administration at Middle East University, Jordan. Her expertise includes strategic management, leadership, human resource management, organizational development, and business etiquette. She is an experienced trainer, consultant, researcher, and keynote speaker with extensive academic and professional engagement.',
+      photo: dinaPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Leadership in AI', 'Business Administration', 'Strategic Management', 'Middle East University'],
+      initials: 'DA'
     }
   ];
 

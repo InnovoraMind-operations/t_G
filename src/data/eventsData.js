@@ -549,7 +549,7 @@ export const eventsData = [
       {
         "name": "Prof. Jaco Visagie",
         "role": "Professor of Statistics, North-West University",
-        "topic": "Statistical Modeling, Computational Statistics & Predictive Analytics in Industry",
+        "topic": "Testing Intelligence: A Statistical Framework for Evaluating AI Agents",
         "bio": "Professor of Statistics at North-West University in South Africa, specializing in statistical modeling, computational data methods, empirical distributions, and applied predictive analytics."
       },
       {
@@ -581,6 +581,12 @@ export const eventsData = [
         "role": "Assistant Professor & Research Scientist | Stanford World's Top 2% Scientist, Prince Mohammad Bin Fahd University",
         "topic": "Sustainable Technology Adoption, Quantitative Modeling & Enterprise Strategy",
         "bio": "Ranked among Stanford University's World's Top 2% Scientists, Assistant Professor and Research Scientist in the Department of Management and Marketing at Prince Mohammad Bin Fahd University (PMU), specializing in sustainable technology adoption and enterprise innovation."
+      },
+      {
+        "name": "Dr. Dina Alkhodary",
+        "role": "Associate Professor of Business Administration, Middle East University",
+        "topic": "Leadership in the Age of AI",
+        "bio": "Associate Professor of Business Administration at Middle East University, Jordan, specializing in strategic management, leadership, human resource management, organizational development, and business etiquette."
       }
     ],
     "pricing": []
