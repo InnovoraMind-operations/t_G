@@ -42,6 +42,13 @@ import laliPhoto from '../../assets/lali-mikeladze.jpg';
 import jacoPhoto from '../../assets/jaco-visagie.jpg';
 import rehabPhoto from '../../assets/prof-rehab-hegazy.jpg';
 import nachiketPhoto from '../../assets/nachiket-joshi.jpg';
+import nileshPhoto from '../../assets/nilesh-charankar.jpg';
+import parikshitPhoto from '../../assets/parikshit-sahagal.jpg';
+import ponsankarPhoto from '../../assets/ponsankar-shanmugam.jpg';
+import veeramaniPhoto from '../../assets/veeramani-sampathkumar.jpg';
+import shubhPhoto from '../../assets/shubh-chandra-roy.jpg';
+import mayankPhoto from '../../assets/mayank-atreya.jpg';
+import muliatiPhoto from '../../assets/dr-muliati-sedek.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -560,6 +567,118 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Caucasus International University', 'Tourism Program', 'Business Administration', 'Sustainable MICE'],
       initials: 'LM'
+    },
+    {
+      name: 'Nilesh Charankar',
+      role: 'AI Technology Leader & Independent Researcher',
+      org: 'AI Technology & Independent Research',
+      location: 'USA',
+      evaluationTrack: 'Artificial Intelligence, Deep Learning & Applied AI Architecture',
+      focus: 'Applied AI Research, Machine Learning Models, Neural Systems & Strategic AI Architecture',
+      bio: 'AI technology leader and independent researcher in the United States, specializing in machine learning algorithms, applied artificial intelligence, neural systems engineering, and advanced AI architectures.',
+      photo: nileshPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['AI Technology Leader', 'Independent Researcher', 'Machine Learning', 'AI Architecture'],
+      initials: 'NC'
+    },
+    {
+      name: 'Parikshit Sahagal',
+      role: 'Technical Project Manager',
+      org: 'CoStar Group Inc',
+      location: 'USA',
+      evaluationTrack: 'Technical Project Management, Agile Delivery & Enterprise Platforms',
+      focus: 'Technical Project Leadership, Large-Scale Software Delivery, Cloud Systems & Operational Agility',
+      bio: 'Technical Project Manager at CoStar Group Inc in the United States, with deep expertise in managing complex technical programs, scalable cloud platforms, agile engineering delivery, and cross-functional technology initiatives.',
+      photo: parikshitPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['CoStar Group', 'Technical Project Management', 'Agile Delivery', 'Enterprise Platforms'],
+      initials: 'PS'
+    },
+    {
+      name: 'Ponsankar Shanmugam S',
+      role: 'Distributed & AI Systems Specialist',
+      org: 'Distributed & AI Systems Engineering',
+      location: 'USA',
+      evaluationTrack: 'Distributed Systems Architecture, High-Throughput Computing & AI Infrastructure',
+      focus: 'Distributed Computing, Cloud-Native Systems, AI Infrastructure & High-Concurrency Systems',
+      bio: 'Specialist in distributed and AI systems based in the United States, focusing on high-throughput data processing, resilient distributed architectures, scalable AI backends, and fault-tolerant cloud platforms.',
+      photo: ponsankarPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Distributed Systems', 'AI Infrastructure', 'High-Throughput Computing', 'Cloud Systems'],
+      initials: 'PS'
+    },
+    {
+      name: 'Veeramani Sampathkumar',
+      role: 'Fintech Technology Leader',
+      org: 'Financial Technology & Enterprise Systems',
+      location: 'USA',
+      evaluationTrack: 'Fintech Engineering, Transaction Systems & Financial Security Architecture',
+      focus: 'Financial Technology, High-Reliability Payment Architectures, Scalable Banking Systems & Regulatory Security',
+      bio: 'Fintech technology leader based in the United States with extensive background in building resilient, secure financial engineering platforms, high-volume transactional architectures, and modern cloud fintech solutions.',
+      photo: veeramaniPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Fintech Leader', 'Payment Architectures', 'Financial Security', 'Enterprise Systems'],
+      initials: 'VS'
+    },
+    {
+      name: 'Shubh Chandra Roy',
+      role: 'Technology & Engineering Leader',
+      org: 'Enterprise Engineering & Cloud Systems',
+      location: 'USA',
+      evaluationTrack: 'Enterprise Cloud Engineering, Scalable Infrastructure & Systems Architecture',
+      focus: 'Technical Program Leadership, Cloud-Native Architecture, Scalable Engineering & Modern DevOps',
+      bio: 'Technology and engineering leader in the United States, bringing proven leadership in architecting mission-critical enterprise systems, cloud transformations, scalable engineering frameworks, and organizational technology governance.',
+      photo: shubhPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Technology Leader', 'Engineering Leadership', 'Enterprise Cloud', 'Systems Architecture'],
+      initials: 'SR'
+    },
+    {
+      name: 'Mayank Atreya',
+      role: 'Technology & Engineering Leader',
+      org: 'Enterprise Architecture & Multi-Cloud Systems',
+      location: 'USA',
+      evaluationTrack: 'Enterprise Architecture, AI/ML-Driven Modernization & Multi-Cloud Architecture',
+      focus: 'Enterprise Architecture, AI/ML Modernization, Multi-Cloud Strategy & Scalable Platforms',
+      bio: 'Technology and engineering leader in the United States specializing in enterprise architecture, AI/ML-driven legacy modernization, and high-resilience multi-cloud infrastructure architectures.',
+      photo: mayankPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Enterprise Architecture', 'AI/ML Modernization', 'Multi-Cloud', 'Cloud Strategy'],
+      initials: 'MA'
+    },
+    {
+      name: 'Assoc. Prof. Dr. Muliati Hj. Sedek',
+      role: 'Deputy Director (Scholarship Excellence), CAES',
+      org: 'Universiti Teknikal Malaysia Melaka (UTeM)',
+      location: 'Malaysia',
+      evaluationTrack: 'Educational Technology, Academic Quality & Digital Scholarship Governance',
+      focus: 'Higher Education Research, Scholarship Excellence, Educational Technology & Academic Quality Evaluation',
+      bio: 'Associate Professor and Deputy Director of Scholarship Excellence at the Centre for Academic Excellence and Scholarship (CAES), Universiti Teknikal Malaysia Melaka (UTeM). She specializes in educational innovation, academic quality frameworks, and higher education technology integration.',
+      photo: muliatiPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['UTeM Malaysia', 'Scholarship Excellence', 'Educational Technology', 'Academic Quality'],
+      initials: 'MS'
     }
   ];
 
@@ -595,7 +714,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, engineering leaders, professors, and technical specialists from Atlanticus, Prince Mohammad Bin Fahd University, Keiser University, Mohammed V University, Ibn Tofail University, UNICEN, and IBSU, each assigned to specific evaluation tracks." },
+    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, engineering leaders, and professors from CoStar Group, Atlanticus, UTeM Malaysia, The University of Georgia, Caucasus International University, Mohammed V University, Ibn Tofail University, and UNICEN, each assigned to specific evaluation tracks." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, and a 5-minute video demonstration." },
     { q: "Who owns the intellectual property (IP) of our hackathon project?", a: "Participants retain 100% ownership of all original intellectual property, source code, models, and architectures created during the event. TechryonGlobal does not claim any ownership of your project." },
