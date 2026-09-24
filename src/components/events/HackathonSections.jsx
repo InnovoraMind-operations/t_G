@@ -36,6 +36,9 @@ import fatimahPhoto from '../../assets/fatimah-alneel.jpg';
 import girmaPhoto from '../../assets/girma-birhanu-nurie.jpg';
 import piyushPhoto from '../../assets/piyush-shukla.jpg';
 import sriHarshaPhoto from '../../assets/sri-harsha-pushkala.jpg';
+import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
+import ninoPhoto from '../../assets/nino-devidze.jpg';
+import laliPhoto from '../../assets/lali-mikeladze.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -303,6 +306,23 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ['Field Epidemiology', 'Global Health Security', 'Disease Surveillance', 'Digital Health', 'Epidemic Intelligence'],
       initials: 'GN'
+    },
+    {
+      name: 'Wiktoria Gromowa-Cieślik',
+      role: 'CEO, Technology Executive, Chief Metrics Officer',
+      org: 'Human-Tech Fusion (HTFusion)',
+      location: 'Poland',
+      displayTitle: 'CEO, Technology Executive & Chief Metrics Officer, Human-Tech Fusion (HTFusion)',
+      topic: 'Human-Tech Fusion: Harmonizing Advanced Systems, Metrics & Organizational Dynamics',
+      bio: 'Wiktoria Gromowa-Cieślik is a CEO, Technology Executive, and Chief Metrics Officer at Human-Tech Fusion (HTFusion) in Poland. Her work focuses on aligning advanced technology ecosystems with human-centered operations, strategic metrics, and enterprise innovation.',
+      photo: wiktoriaPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['Human-Tech Fusion', 'Chief Metrics Officer', 'Technology Executive', 'Enterprise Innovation'],
+      initials: 'WG'
     }
   ];
 
@@ -451,6 +471,38 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.18)',
       tags: ['Atlanticus', 'BCS Fellow', 'Senior IEEE', 'AI Anomaly Detection', 'TheIAForum'],
       initials: 'SP'
+    },
+    {
+      name: 'Nino Devidze',
+      role: 'Tourism Educator & Program Manager',
+      org: 'The University of Georgia',
+      location: 'Georgia',
+      evaluationTrack: 'Hospitality Tech, Quality Assurance & Educational Programs',
+      focus: 'Tourism Business Development, Hospitality Management, Quality Assurance & Educational Technology',
+      bio: 'Tourism educator and program manager at The University of Georgia, specializing in quality assurance, tourism business development, and the integration of modern educational and technological frameworks.',
+      photo: ninoPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['The University of Georgia', 'Tourism Education', 'Program Management', 'Quality Assurance'],
+      initials: 'ND'
+    },
+    {
+      name: 'Lali Mikeladze',
+      role: 'Head of the BA Program in Tourism',
+      org: 'Caucasus International University',
+      location: 'Georgia',
+      evaluationTrack: 'Sustainable Tourism Management, Business Administration & Project Governance',
+      focus: 'Sustainable Tourism, Business Administration, MICE Management & Applied Education',
+      bio: 'Head of the Bachelor Educational Program in Tourism and Associate Professor at Caucasus International University (CIU), Georgia. Specializing in sustainable tourism management, business administration, and academic project leadership.',
+      photo: laliPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Caucasus International University', 'Tourism Program', 'Business Administration', 'Sustainable MICE'],
+      initials: 'LM'
     }
   ];
 

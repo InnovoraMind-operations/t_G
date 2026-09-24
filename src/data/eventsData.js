@@ -539,6 +539,12 @@ export const eventsData = [
         "role": "Field Epidemiologist, Addis Ababa City Administration Health Office",
         "topic": "Reimagining Global Health Through Innovation: From Data to Impact",
         "bio": "Field epidemiologist and public-health researcher working with Addis Ababa City Administration in Ethiopia. Founder of GBN Field Epidemiology Collective and patent-pending GBN EpiNova, dedicated to advancing global health security, disease surveillance, and epidemic intelligence."
+      },
+      {
+        "name": "Wiktoria Gromowa-Cieślik",
+        "role": "CEO, Technology Executive & Chief Metrics Officer, Human-Tech Fusion (HTFusion)",
+        "topic": "Human-Tech Fusion: Harmonizing Advanced Systems, Metrics & Organizational Dynamics",
+        "bio": "CEO, Technology Executive, and Chief Metrics Officer at Human-Tech Fusion (HTFusion) in Poland, specializing in aligning advanced technology ecosystems with human-centered operations, strategic metrics, and enterprise innovation."
       }
     ],
     "pricing": []
