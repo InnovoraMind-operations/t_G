@@ -39,6 +39,7 @@ import sriHarshaPhoto from '../../assets/sri-harsha-pushkala.jpg';
 import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
 import ninoPhoto from '../../assets/nino-devidze.jpg';
 import laliPhoto from '../../assets/lali-mikeladze.jpg';
+import jacoPhoto from '../../assets/jaco-visagie.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -323,6 +324,23 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.2)',
       tags: ['Human-Tech Fusion', 'Chief Metrics Officer', 'Technology Executive', 'Enterprise Innovation'],
       initials: 'WG'
+    },
+    {
+      name: 'Jaco Visagie',
+      role: 'Professor of Statistics',
+      org: 'North-West University',
+      location: 'South Africa',
+      displayTitle: 'Professor of Statistics, North-West University',
+      topic: 'Statistical Modeling, Computational Statistics & Predictive Analytics in Industry',
+      bio: 'Prof. Jaco Visagie is a Professor of Statistics at North-West University in South Africa. He specializes in statistical modeling, computational data methods, empirical distributions, and applied predictive analytics across complex scientific and industrial systems.',
+      photo: jacoPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Statistics', 'Statistical Modeling', 'Predictive Analytics', 'North-West University'],
+      initials: 'JV'
     }
   ];
 

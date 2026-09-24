@@ -545,6 +545,12 @@ export const eventsData = [
         "role": "CEO, Technology Executive & Chief Metrics Officer, Human-Tech Fusion (HTFusion)",
         "topic": "Human-Tech Fusion: Harmonizing Advanced Systems, Metrics & Organizational Dynamics",
         "bio": "CEO, Technology Executive, and Chief Metrics Officer at Human-Tech Fusion (HTFusion) in Poland, specializing in aligning advanced technology ecosystems with human-centered operations, strategic metrics, and enterprise innovation."
+      },
+      {
+        "name": "Prof. Jaco Visagie",
+        "role": "Professor of Statistics, North-West University",
+        "topic": "Statistical Modeling, Computational Statistics & Predictive Analytics in Industry",
+        "bio": "Professor of Statistics at North-West University in South Africa, specializing in statistical modeling, computational data methods, empirical distributions, and applied predictive analytics."
       }
     ],
     "pricing": []
