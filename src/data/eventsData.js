@@ -551,6 +551,18 @@ export const eventsData = [
         "role": "Professor of Statistics, North-West University",
         "topic": "Statistical Modeling, Computational Statistics & Predictive Analytics in Industry",
         "bio": "Professor of Statistics at North-West University in South Africa, specializing in statistical modeling, computational data methods, empirical distributions, and applied predictive analytics."
+      },
+      {
+        "name": "Prof. Rehab Hegazy, PhD",
+        "role": "Professor of Pharmacology & Secretary-General, NRC Egypt",
+        "topic": "Pharmacological Innovation, Clinical Methodologies & Biomedical Research",
+        "bio": "Professor of Pharmacology and Secretary-General at the Medical Research and Clinical Studies Institute, National Research Centre (NRC) in Egypt, specializing in pharmacological research, clinical trial methodologies, and translational medicine."
+      },
+      {
+        "name": "Nachiket Joshi",
+        "role": "AI Researcher, Published Author & Senior Software Engineer",
+        "topic": "From APIs to Autonomous Systems: Engineering Agentic AI in Production",
+        "bio": "AI researcher, published author, international keynote speaker, and Senior Software Engineer with over 13 years of experience designing and building enterprise-scale software systems, distributed platforms, and intelligent cloud solutions, focusing on Agentic AI, LLMs, and cloud-native architectures."
       }
     ],
     "pricing": []

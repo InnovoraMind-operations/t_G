@@ -40,6 +40,8 @@ import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
 import ninoPhoto from '../../assets/nino-devidze.jpg';
 import laliPhoto from '../../assets/lali-mikeladze.jpg';
 import jacoPhoto from '../../assets/jaco-visagie.jpg';
+import rehabPhoto from '../../assets/prof-rehab-hegazy.jpg';
+import nachiketPhoto from '../../assets/nachiket-joshi.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -341,6 +343,40 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ['Statistics', 'Statistical Modeling', 'Predictive Analytics', 'North-West University'],
       initials: 'JV'
+    },
+    {
+      name: 'Prof. Rehab Hegazy, PhD',
+      role: 'Professor of Pharmacology & Secretary-General',
+      org: 'Medical Research and Clinical Studies Institute, National Research Centre (NRC)',
+      location: 'Egypt',
+      displayTitle: 'Professor of Pharmacology & Secretary-General, NRC Egypt',
+      topic: 'Pharmacological Innovation, Clinical Methodologies & Biomedical Research',
+      bio: 'Prof. Rehab Hegazy, PhD, is a Professor of Pharmacology and Secretary-General at the Medical Research and Clinical Studies Institute, National Research Centre (NRC) in Egypt. She specializes in pharmacological research, clinical trial methodologies, translational medicine, and advancing healthcare sciences.',
+      photo: rehabPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Pharmacology', 'National Research Centre', 'Clinical Studies', 'Medical Research'],
+      initials: 'RH'
+    },
+    {
+      name: 'Nachiket Joshi',
+      role: 'AI Researcher, Published Author & Senior Software Engineer',
+      org: 'Snapsheet Inc | IEEE Senior Member',
+      location: 'USA',
+      displayTitle: 'AI Researcher, Author & Senior Software Engineer',
+      topic: 'From APIs to Autonomous Systems: Engineering Agentic AI in Production',
+      bio: 'Nachiket Joshi is an AI researcher, published author, international keynote speaker, and Senior Software Engineer with over 13 years of experience designing and building enterprise-scale software systems, distributed platforms, and intelligent cloud solutions. His work bridges industry and applied research, with a focus on Agentic AI, Large Language Models (LLMs), distributed systems, cloud-native architectures, and enterprise software engineering.',
+      photo: nachiketPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Agentic AI', 'Autonomous Systems', 'LLMs', 'Distributed Systems', 'Cloud-Native'],
+      initials: 'NJ'
     }
   ];
 
