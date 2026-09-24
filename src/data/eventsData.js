@@ -563,6 +563,24 @@ export const eventsData = [
         "role": "AI Researcher, Published Author & Senior Software Engineer",
         "topic": "From APIs to Autonomous Systems: Engineering Agentic AI in Production",
         "bio": "AI researcher, published author, international keynote speaker, and Senior Software Engineer with over 13 years of experience designing and building enterprise-scale software systems, distributed platforms, and intelligent cloud solutions, focusing on Agentic AI, LLMs, and cloud-native architectures."
+      },
+      {
+        "name": "Prof. Eka Devidze",
+        "role": "Professor & Head of Programs, International Black Sea University & NCEQE",
+        "topic": "Project Governance, Academic Standards & Sustainable Development",
+        "bio": "Professor and Head of Programs at International Black Sea University, Accreditation Expert at the National Center for Education Quality Enhancement (NCEQE), and director of EU & UNDP sustainable development projects."
+      },
+      {
+        "name": "Dr. Mehwish Rashid",
+        "role": "Doctor of Health Science (DHSc), Keiser University",
+        "topic": "Healthcare Systems, Health Science Technology & Clinical Innovation",
+        "bio": "Doctor of Health Science (DHSc) from Keiser University, USA, specializing in health sciences leadership, healthcare innovation, clinical technology evaluation, and health systems optimization."
+      },
+      {
+        "name": "Dr. Nadia Adnan",
+        "role": "Assistant Professor & Research Scientist | Stanford World's Top 2% Scientist, Prince Mohammad Bin Fahd University",
+        "topic": "Sustainable Technology Adoption, Quantitative Modeling & Enterprise Strategy",
+        "bio": "Ranked among Stanford University's World's Top 2% Scientists, Assistant Professor and Research Scientist in the Department of Management and Marketing at Prince Mohammad Bin Fahd University (PMU), specializing in sustainable technology adoption and enterprise innovation."
       }
     ],
     "pricing": []
