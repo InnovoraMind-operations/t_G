@@ -521,6 +521,22 @@ const HackathonSections = () => {
       initials: 'NC'
     },
     {
+      name: 'Prof. Dr. Alexander Bull',
+      role: 'Professor & Researcher in Business Strategy & Applied Management',
+      org: 'DGUV University of Applied Sciences',
+      location: 'Germany',
+      evaluationTrack: 'Business Strategy, Applied Management Research & Enterprise Innovation',
+      focus: 'Business Strategy, Organizational Management, Applied Research & Enterprise Innovation',
+      bio: 'Prof. Dr. Alexander Bull is an esteemed professor and researcher at DGUV University of Applied Sciences in Germany, specializing in business strategy, organizational management, and technology-enabled development.',
+      photo: bullPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Business Strategy', 'Organizational Management', 'Applied Research', 'Enterprise Innovation'],
+      initials: 'AB'
+    },
+    {
       name: 'Parikshit Sahagal',
       role: 'Technical Project Manager',
       org: 'CoStar Group Inc',
@@ -534,22 +550,6 @@ const HackathonSections = () => {
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.18)',
       tags: ['CoStar Group', 'Technical Project Management', 'Agile Delivery', 'Enterprise Platforms'],
-      initials: 'PS'
-    },
-    {
-      name: 'Ponsankar Shanmugam S',
-      role: 'Distributed & AI Systems Specialist',
-      org: 'Distributed & AI Systems Engineering',
-      location: 'USA',
-      evaluationTrack: 'Distributed Systems Architecture, High-Throughput Computing & AI Infrastructure',
-      focus: 'Distributed Computing, Cloud-Native Systems, AI Infrastructure & High-Concurrency Systems',
-      bio: 'Specialist in distributed and AI systems based in the United States, focusing on high-throughput data processing, resilient distributed architectures, scalable AI backends, and fault-tolerant cloud platforms.',
-      photo: ponsankarPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#00dcb4',
-      glow: 'rgba(0,220,180,0.18)',
-      tags: ['Distributed Systems', 'AI Infrastructure', 'High-Throughput Computing', 'Cloud Systems'],
       initials: 'PS'
     },
     {
@@ -633,20 +633,20 @@ const HackathonSections = () => {
       initials: 'RC'
     },
     {
-      name: 'Prof. Dr. Alexander Bull',
-      role: 'Professor & Researcher in Business Strategy & Applied Management',
-      org: 'DGUV University of Applied Sciences',
-      location: 'Germany',
-      evaluationTrack: 'Business Strategy, Applied Management Research & Enterprise Innovation',
-      focus: 'Business Strategy, Organizational Management, Applied Research & Enterprise Innovation',
-      bio: 'Prof. Dr. Alexander Bull is an esteemed professor and researcher at DGUV University of Applied Sciences in Germany, specializing in business strategy, organizational management, and technology-enabled development.',
-      photo: bullPhoto,
+      name: 'Ponsankar Shanmugam S',
+      role: 'Distributed & AI Systems Specialist',
+      org: 'Distributed & AI Systems Engineering',
+      location: 'USA',
+      evaluationTrack: 'Distributed Systems Architecture, High-Throughput Computing & AI Infrastructure',
+      focus: 'Distributed Computing, Cloud-Native Systems, AI Infrastructure & High-Concurrency Systems',
+      bio: 'Specialist in distributed and AI systems based in the United States, focusing on high-throughput data processing, resilient distributed architectures, scalable AI backends, and fault-tolerant cloud platforms.',
+      photo: ponsankarPhoto,
       photoPosition: 'center top',
       photoScale: 1.0,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.18)',
-      tags: ['Business Strategy', 'Organizational Management', 'Applied Research', 'Enterprise Innovation'],
-      initials: 'AB'
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Distributed Systems', 'AI Infrastructure', 'High-Throughput Computing', 'Cloud Systems'],
+      initials: 'PS'
     },
     {
       name: 'Dr. Marek Wasiluk',
