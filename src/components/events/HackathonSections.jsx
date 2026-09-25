@@ -388,6 +388,22 @@ const HackathonSections = () => {
       initials: 'PS'
     },
     {
+      name: 'Shubh Chandra Roy',
+      role: 'Technology & Engineering Leader',
+      org: 'Enterprise Engineering & Cloud Systems',
+      location: 'USA',
+      evaluationTrack: 'Enterprise Cloud Engineering, Scalable Infrastructure & Systems Architecture',
+      focus: 'Technical Program Leadership, Cloud-Native Architecture, Scalable Engineering & Modern DevOps',
+      bio: 'Technology and engineering leader in the United States, bringing proven leadership in architecting mission-critical enterprise systems, cloud transformations, scalable engineering frameworks, and organizational technology governance.',
+      photo: shubhPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Technology Leader', 'Engineering Leadership', 'Enterprise Cloud', 'Systems Architecture'],
+      initials: 'SR'
+    },
+    {
       name: 'Mouhssin Ait El Mouden',
       role: 'Academic Researcher',
       org: 'Faculty of Letters, Ibn Tofail University, Kenitra',
@@ -530,22 +546,6 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.18)',
       tags: ['Fintech Leader', 'Payment Architectures', 'Financial Security', 'Enterprise Systems'],
       initials: 'VS'
-    },
-    {
-      name: 'Shubh Chandra Roy',
-      role: 'Technology & Engineering Leader',
-      org: 'Enterprise Engineering & Cloud Systems',
-      location: 'USA',
-      evaluationTrack: 'Enterprise Cloud Engineering, Scalable Infrastructure & Systems Architecture',
-      focus: 'Technical Program Leadership, Cloud-Native Architecture, Scalable Engineering & Modern DevOps',
-      bio: 'Technology and engineering leader in the United States, bringing proven leadership in architecting mission-critical enterprise systems, cloud transformations, scalable engineering frameworks, and organizational technology governance.',
-      photo: shubhPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.18)',
-      tags: ['Technology Leader', 'Engineering Leadership', 'Enterprise Cloud', 'Systems Architecture'],
-      initials: 'SR'
     },
     {
       name: 'Mayank Atreya',
