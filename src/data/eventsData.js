@@ -529,6 +529,12 @@ export const eventsData = [
         "bio": "Professor and Head of Programs at International Black Sea University, Accreditation Expert at the National Center for Education Quality Enhancement (NCEQE), and director of EU & UNDP sustainable development projects."
       },
       {
+        "name": "Arjun Kulshreshtha",
+        "role": "Senior Manager B2B Product Strategy & Operations, ShipMonk",
+        "topic": "AI-Driven Supply Chains and Intelligent Logistics: Transforming Operations Through Data, Automation, and Digital Strategy",
+        "bio": "Senior Manager of B2B Product Strategy and Operations at ShipMonk, where he drives strategic initiatives across logistics and fulfillment operations. Formerly leading operations and strategy at Amazon, where he designed a delivery station model adopted as a global network standard, with cross-industry experience across e-commerce, consumer goods, and energy sectors."
+      },
+      {
         "name": "Dr. Mehwish Rashid",
         "role": "Doctor of Health Science (DHSc), Keiser University",
         "topic": "Healthcare Systems, Health Science Technology & Clinical Innovation",

@@ -50,6 +50,10 @@ import shubhPhoto from '../../assets/shubh-chandra-roy.jpg';
 import mayankPhoto from '../../assets/mayank-atreya.jpg';
 import muliatiPhoto from '../../assets/dr-muliati-sedek.jpg';
 import dinaPhoto from '../../assets/dr-dina-alkhodary.jpg';
+import amberPhoto from '../../assets/amber-rastogi.jpg';
+import prathapPhoto from '../../assets/prathap-raghavan.jpg';
+import rasmiPhoto from '../../assets/rasmi-ranjan-choudhury.jpg';
+import arjunPhoto from '../../assets/arjun-kulshreshtha.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -283,6 +287,23 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ['Project Governance', 'Quality Accreditation', 'Sustainable Development', 'Higher Education'],
       initials: 'ED'
+    },
+    {
+      name: 'Arjun Kulshreshtha',
+      role: 'Senior Manager B2B Product Strategy & Operations',
+      org: 'ShipMonk',
+      location: 'USA',
+      displayTitle: 'Senior Manager B2B Product Strategy & Operations, ShipMonk',
+      topic: 'AI-Driven Supply Chains and Intelligent Logistics: Transforming Operations Through Data, Automation, and Digital Strategy',
+      bio: "Arjun Kulshreshtha is Senior Manager of B2B Product Strategy and Operations at ShipMonk, where he drives strategic initiatives across the company's logistics and fulfillment operations. His work sits at the intersection of technology, operations, and business strategy, focusing on how intelligent systems and data-driven decision-making can transform enterprise operations at scale. Prior to ShipMonk, Arjun held operations and strategy roles at Amazon, where he designed a delivery station model that was later adopted as a global standard across the company's network. His career also spans consulting engagements with Nestlé Purina and operational leadership at Hindustan Petroleum Corporation Limited (HPCL), giving him cross-industry experience spanning e-commerce, consumer goods, and energy sectors. Across these roles, his initiatives have delivered documented multi-million dollar savings through process redesign, analytics-driven optimization, and organizational transformation. Arjun holds an MBA from the Olin Business School at Washington University in St. Louis and a B.S. from Allahabad University, both on merit scholarship.",
+      photo: arjunPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Supply Chain AI', 'Intelligent Logistics', 'Operations Strategy', 'Enterprise Architecture', 'Automation'],
+      initials: 'AK'
     },
     {
       name: 'Dr. Mehwish Rashid',
@@ -596,6 +617,22 @@ const HackathonSections = () => {
       initials: 'OA'
     },
     {
+      name: 'Rasmi Ranjan Choudhury',
+      role: 'Independent Researcher, Project Management & E-Mobility Expert | IEEE Member',
+      org: 'Project Management & E-Mobility Research',
+      location: 'USA',
+      evaluationTrack: 'E-Mobility Systems, Technical Project Management & Smart Transportation',
+      focus: 'Electric Mobility Infrastructure, Technical Project Governance, Sustainable Transport & Applied Research',
+      bio: 'Independent researcher, project management professional, and e-mobility expert in the United States. An active IEEE Member, he brings specialized expertise in electric mobility infrastructure, technical project governance, sustainable transportation ecosystems, and innovative engineering delivery.',
+      photo: rasmiPhoto,
+      photoPosition: 'center 20%',
+      photoScale: 1.05,
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.18)',
+      tags: ['E-Mobility', 'Project Management', 'IEEE Member', 'Smart Transportation'],
+      initials: 'RC'
+    },
+    {
       name: 'Prof. Dr. Alexander Bull',
       role: 'Professor & Researcher in Business Strategy & Applied Management',
       org: 'DGUV University of Applied Sciences',
@@ -644,6 +681,22 @@ const HackathonSections = () => {
       initials: 'FA'
     },
     {
+      name: 'Mr. Prathap Raghavan',
+      role: 'Director – Product Management (GenAI & Automation)',
+      org: 'Santander',
+      location: 'USA',
+      evaluationTrack: 'GenAI Product Architecture, Intelligent Automation & Enterprise Financial Systems',
+      focus: 'GenAI Strategy, Enterprise Intelligent Automation, Product Governance & Scalable Financial Technology',
+      bio: 'Director of Product Management in GenAI & Automation at Santander in the United States, bringing accomplished leadership in designing and deploying enterprise-scale generative AI products, intelligent workflow automation, and resilient financial technology solutions.',
+      photo: prathapPhoto,
+      photoPosition: 'center 38%',
+      photoScale: 1.18,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.18)',
+      tags: ['Santander', 'Product Management', 'GenAI', 'Intelligent Automation'],
+      initials: 'PR'
+    },
+    {
       name: 'Dr. Saleem Abu Jaber',
       role: 'Academic Advisor Head & Senior Lecturer',
       org: 'Achva Academic College',
@@ -690,6 +743,22 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.18)',
       tags: ['Academic Research', 'Higher Education', 'Cognitive Sciences', 'Linguistics & AI'],
       initials: 'TM'
+    },
+    {
+      name: 'Mr. Amber Rastogi',
+      role: 'Distributed Systems & Cloud Computing Expert',
+      org: 'Distributed Systems & Cloud Architecture',
+      location: 'USA',
+      evaluationTrack: 'Distributed Systems Architecture, Cloud Computing & Scalable Infrastructure',
+      focus: 'Distributed Systems Design, Cloud-Native Infrastructure, High-Throughput Computing & Scalable Systems',
+      bio: 'Distributed systems and cloud computing expert based in the United States, bringing proven technical leadership in architecting resilient distributed architectures, scalable cloud-native platforms, high-throughput infrastructure, and modern enterprise backend systems.',
+      photo: amberPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.18)',
+      tags: ['Distributed Systems', 'Cloud Computing', 'Cloud Architecture', 'Scalable Systems'],
+      initials: 'AR'
     }
   ];
 
@@ -725,7 +794,7 @@ const HackathonSections = () => {
     { q: "How can I participate in the hackathon?", a: "The TechryonGlobal Industrial Hackathon 2026 is open to participants worldwide. Simply register through the online portal and choose whether you are competing as an individual or in a team." },
     { q: "What is the format of the event?", a: "The event is 100% online and virtual, allowing participants from all over the world to build, collaborate, and pitch seamlessly." },
     { q: "Can I participate individually or do I need a team?", a: "You can participate as an individual or form a team of up to 5 members." },
-    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, engineering leaders, and professors from CoStar Group, Atlanticus, UTeM Malaysia, The University of Georgia, Caucasus International University, Mohammed V University, Ibn Tofail University, and UNICEN, each assigned to specific evaluation tracks." },
+    { q: "Who are the judges for the hackathon?", a: "Our international technical jury comprises esteemed researchers, engineering leaders, and professors from CoStar Group, Atlanticus, Santander, ShipMonk, UTeM Malaysia, The University of Georgia, Caucasus International University, Mohammed V University, Ibn Tofail University, and UNICEN, each assigned to specific evaluation tracks." },
     { q: "What is the main theme of the hackathon?", a: "The theme is 'Industry 5.0, Smart Manufacturing & Industrial AI', covering robotics, digital twins, IoT, and OT cybersecurity." },
     { q: "How do I submit my hackathon project?", a: "You must submit a GitHub repository, installation guide, README, architecture diagrams, and a 5-minute video demonstration." },
     { q: "Who owns the intellectual property (IP) of our hackathon project?", a: "Participants retain 100% ownership of all original intellectual property, source code, models, and architectures created during the event. TechryonGlobal does not claim any ownership of your project." },
