@@ -54,6 +54,7 @@ import amberPhoto from '../../assets/amber-rastogi.jpg';
 import prathapPhoto from '../../assets/prathap-raghavan.jpg';
 import rasmiPhoto from '../../assets/rasmi-ranjan-choudhury.jpg';
 import arjunPhoto from '../../assets/arjun-kulshreshtha.jpg';
+import suhanaPhoto from '../../assets/dr-noor-suhana.jpg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -136,21 +137,21 @@ const HackathonSections = () => {
       initials: 'RA'
     },
     {
-      name: 'Mahamadou Billy TRAORÉ',
-      role: 'Business Development & Innovation Expert | Business Strategy Consultant',
-      org: 'MBT Global Services – Mali',
-      location: 'Bamako, Mali • West Africa',
-      displayTitle: 'Expert in Business Development, Innovation & Digital Transformation in Africa',
-      topic: 'AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities',
-      bio: 'Mahamadou Billy TRAORÉ is a Malian professional specializing in business development and innovation, with experience in business strategy, market development, sales management and partnership development. He has worked in demanding business environments involving international and multinational companies, with a particular interest in expanding markets, developing distribution networks, acquiring customers and improving business performance. Based in Mali, he is actively engaged in initiatives related to entrepreneurship, youth empowerment, innovation and international partnerships. His professional approach combines corporate strategy, emerging technologies and working knowledge of African markets. He is particularly interested in how artificial intelligence and digital transformation can help African entrepreneurs, startups and organizations improve productivity, access new markets and create sustainable opportunities. As an expert speaker, he brings an African perspective to international exchanges on artificial intelligence, innovation, entrepreneurship and the future of work.',
-      photo: billyTraorePhoto,
-      photoPosition: 'center 6%',
+      name: 'Assoc. Prof. Ts. Dr. Noor Suhana Binti Sulaiman',
+      role: 'Dean, Research & Postgraduate Management (JPPS)',
+      org: 'University College TATI (UC TATI)',
+      location: 'Malaysia',
+      displayTitle: 'Dean, Research & Postgraduate Management (JPPS), UC TATI',
+      topic: 'Inside the Threat: Detecting Cyber Attacks Through Machine Learning Classification',
+      bio: 'Associate Professor Ts. Dr. Noor Suhana Sulaiman is the Dean of the Department of Research and Graduate Management and a Senior Lecturer at University College TATI (UC TATI), Malaysia. She holds a PhD in Computer Science and has over 15 years of experience in teaching, research, innovation, and academic leadership. Her expertise spans cybersecurity, artificial intelligence, computer networks, IoT security, and information security. She holds several academic and professional appointments, including Head of the CyNet Special Interest Group, Associate Editor-in-Chief of the International Journal of Computer & Communication Technology (IJCCT), and Professional Assessment Panel Member of the Malaysia Board of Technologists (MBOT). An accomplished researcher, she has led funded research projects under FRGS, STG, and Matching Grant schemes, contributed to innovative research in cybersecurity and AI, and received multiple national and international innovation awards. She is also actively involved in postgraduate supervision, academic development, and technological innovation.',
+      photo: suhanaPhoto,
+      photoPosition: 'center 15%',
       photoScale: 1.0,
       confirmed: true,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.2)',
-      tags: ['AI & Innovation', 'Entrepreneurship in Africa', 'Digital Transformation', 'Economic Opportunities'],
-      initials: 'MT'
+      color: '#b46ed2',
+      glow: 'rgba(180,110,210,0.2)',
+      tags: ['Cybersecurity', 'Machine Learning', 'UC TATI', 'IoT Security', 'Threat Detection'],
+      initials: 'NS'
     },
     {
       name: 'Emmanuel Etaderhi',
@@ -355,6 +356,23 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.2)',
       tags: ['Leadership in AI', 'Business Administration', 'Strategic Management', 'Middle East University'],
       initials: 'DA'
+    },
+    {
+      name: 'Mahamadou Billy TRAORÉ',
+      role: 'Business Development & Innovation Expert | Business Strategy Consultant',
+      org: 'MBT Global Services – Mali',
+      location: 'Bamako, Mali • West Africa',
+      displayTitle: 'Expert in Business Development, Innovation & Digital Transformation in Africa',
+      topic: 'AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities',
+      bio: 'Mahamadou Billy TRAORÉ is a Malian professional specializing in business development and innovation, with experience in business strategy, market development, sales management and partnership development. He has worked in demanding business environments involving international and multinational companies, with a particular interest in expanding markets, developing distribution networks, acquiring customers and improving business performance. Based in Mali, he is actively engaged in initiatives related to entrepreneurship, youth empowerment, innovation and international partnerships. His professional approach combines corporate strategy, emerging technologies and working knowledge of African markets. He is particularly interested in how artificial intelligence and digital transformation can help African entrepreneurs, startups and organizations improve productivity, access new markets and create sustainable opportunities. As an expert speaker, he brings an African perspective to international exchanges on artificial intelligence, innovation, entrepreneurship and the future of work.',
+      photo: billyTraorePhoto,
+      photoPosition: 'center 6%',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.2)',
+      tags: ['AI & Innovation', 'Entrepreneurship in Africa', 'Digital Transformation', 'Economic Opportunities'],
+      initials: 'MT'
     }
   ];
 

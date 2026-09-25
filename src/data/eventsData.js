@@ -475,10 +475,10 @@ export const eventsData = [
         "bio": "Ghanaian entrepreneur, IT expert, and business consultant, Founder & CEO of Rich Dream Consult (RDC). Specialized in AI-driven business transformation, digital innovation, and tech entrepreneurship."
       },
       {
-        "name": "Mahamadou Billy TRAORÉ",
-        "role": "Business Development & Innovation Expert | Business Strategy Consultant, MBT Global Services – Mali",
-        "topic": "AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities",
-        "bio": "Malian business development and innovation professional specializing in business strategy, market development, sales management, and multinational business partnerships across African markets."
+        "name": "Assoc. Prof. Ts. Dr. Noor Suhana Binti Sulaiman",
+        "role": "Dean, Research & Postgraduate Management (JPPS), University College TATI (UC TATI)",
+        "topic": "Inside the Threat: Detecting Cyber Attacks Through Machine Learning Classification",
+        "bio": "Dean of Research & Graduate Management and Senior Lecturer at University College TATI (UC TATI), Malaysia. Specialist in cybersecurity, machine learning classification, IoT security, and threat detection with over 15 years of academic and research leadership."
       },
       {
         "name": "Emmanuel Etaderhi",
@@ -551,6 +551,12 @@ export const eventsData = [
         "role": "Associate Professor of Business Administration, Middle East University",
         "topic": "Leadership in the Age of AI",
         "bio": "Associate Professor of Business Administration at Middle East University, Jordan, specializing in strategic management, leadership, human resource management, organizational development, and business etiquette."
+      },
+      {
+        "name": "Mahamadou Billy TRAORÉ",
+        "role": "Business Development & Innovation Expert | Business Strategy Consultant, MBT Global Services – Mali",
+        "topic": "AI, Innovation and Entrepreneurship in Africa: Transforming Emerging Technologies into Inclusive Economic Opportunities",
+        "bio": "Malian business development and innovation professional specializing in business strategy, market development, sales management, and multinational business partnerships across African markets."
       }
     ],
     "pricing": []
