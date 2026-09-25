@@ -27,7 +27,6 @@ import carolinaPhoto from '../../assets/carolina-barandiaran.png';
 import roksolanaPhoto from '../../assets/roksolana-trach.png';
 import osmanPhoto from '../../assets/osman-arayici.jpg';
 import bullPhoto from '../../assets/prof-alexander-bull.jpg';
-import wasilukPhoto from '../../assets/dr-marek-wasiluk.jpg';
 import mehwishPhoto from '../../assets/dr-mehwish-rashid.png';
 import nadiaPhoto from '../../assets/dr-nadia-adnan.jpg';
 import mouhssinPhoto from '../../assets/mouhssin-ait-el-mouden.jpg';
@@ -665,22 +664,6 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Distributed Systems', 'AI Infrastructure', 'High-Throughput Computing', 'Cloud Systems'],
       initials: 'PS'
-    },
-    {
-      name: 'Dr. Marek Wasiluk',
-      role: 'Founder & CEO of Clinmark | Clinical Research & QA Expert | GxP Auditor',
-      org: 'Clinmark',
-      location: 'Poland',
-      evaluationTrack: 'Clinical Research Systems, Quality Assurance, GxP Audit & Medical AI Compliance',
-      focus: 'AI in Medical Science, Clinical Research, Quality Assurance, GxP & Regulatory Compliance',
-      bio: 'Dr. Marek Wasiluk is the Founder and CEO of Clinmark in Poland, and an internationally recognized clinical research and quality assurance expert, GxP auditor, and ICH GCP specialist.',
-      photo: wasilukPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.18)',
-      tags: ['AI in Medical Science', 'Clinical Research', 'Quality Assurance', 'GxP & Regulatory Compliance'],
-      initials: 'MW'
     },
     {
       name: 'Fatimah Alneel',
@@ -1889,59 +1872,53 @@ const HackathonSections = () => {
       <section id="schedule" style={{ marginBottom: '4.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
           <Clock size={18} style={{ color: '#00dcb4' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee', margin: 0 }}>
             Online Virtual Hackathon Schedule (27 September 2026)
           </h3>
         </div>
+
         <div style={{ background: 'rgba(255,255,255,0.02)', padding: 'clamp(1.25rem, 3.5vw, 2rem)', borderRadius: '1.5rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           <div style={{ marginBottom: '1.5rem', fontSize: '0.9rem', color: '#9090a0', lineHeight: 1.6 }}>
             Designed for seamless worldwide virtual participation. Synchronized live milestones stream on the event portal, while development and evaluation run continuously online. Timings are displayed across <strong style={{ color: '#00dcb4' }}>IST (Indian Standard Time)</strong>, <strong style={{ color: '#64b4d2' }}>UTC (Coordinated Universal Time)</strong>, and <strong style={{ color: '#d2aa64' }}>Central (US Central Daylight Time)</strong>:
           </div>
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             {[
               { 
-                timeIst: '05:00 PM IST', 
-                timeUtc: '11:30 UTC', 
-                timeCentral: '06:30 AM CDT', 
+                timeIst: '04:00 PM – 04:15 PM IST', 
+                timeUtc: '10:30 – 10:45 UTC', 
+                timeCentral: '05:30 – 05:45 AM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Virtual Opening & Industrial Track Briefing', 
-                desc: 'Opening live stream, welcome address from the organizing committee, release of industrial problem statements, challenge guidelines, and rubric walkthrough.', 
+                title: 'Phase 1: Opening & Welcome Address', 
+                desc: 'Fast-track welcome address, event introduction, overview of objectives, and inaugural remarks by organizers.', 
                 highlight: true 
               },
               { 
-                timeIst: '05:45 PM IST', 
-                timeUtc: '12:15 UTC', 
-                timeCentral: '07:15 AM CDT', 
+                timeIst: '04:15 PM – 10:00 PM IST', 
+                timeUtc: '10:45 – 16:30 UTC', 
+                timeCentral: '05:45 – 11:30 AM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Keynote Stage & Academic Panel Discussion', 
-                desc: 'Distinguished panel speakers and academic keynote broadcast on Industry 5.0, Smart Manufacturing, Clinical AI Systems, and Sustainable Architecture.', 
+                title: 'Phase 2: Expert Keynotes, Technical Discussions & Idea Presentations', 
+                desc: 'Comprehensive technical sessions including domain keynotes by industry experts, technical talks, in-depth technical discussions, and core idea/conceptual framework presentations.', 
                 highlight: true 
               },
               { 
-                timeIst: '06:45 PM IST', 
-                timeUtc: '13:15 UTC', 
-                timeCentral: '08:15 AM CDT', 
+                timeIst: '10:00 PM – 10:40 PM IST', 
+                timeUtc: '16:30 – 17:10 UTC', 
+                timeCentral: '11:30 AM – 12:10 PM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Core Development Sprint & Technical Mentorship Sync', 
-                desc: 'Teams collaborate on architecture, code, and telemetry pipelines. Virtual mentor desk breakout channels open for technical guidance and query resolution.' 
+                title: 'Phase 3: Closing Remarks & Summary of Key Takeaways', 
+                desc: 'Concluding remarks, synthesis of technical discussions, presentation of key outcomes, and closing insights from domain chairs.', 
+                highlight: false 
               },
               { 
-                timeIst: '10:00 PM IST', 
-                timeUtc: '16:30 UTC', 
-                timeCentral: '11:30 AM CDT', 
+                timeIst: '10:40 PM – 11:00 PM IST', 
+                timeUtc: '17:10 – 17:30 UTC', 
+                timeCentral: '12:10 – 12:30 PM CDT', 
                 dateLabel: '27 Sep',
-                title: 'Project Presentations & Prototype Demonstrations', 
-                desc: 'Participating teams present their project solutions, architecture walkthroughs, and live working prototype demonstrations to mentors, reviewers, and peers.', 
-                highlight: true 
-              },
-              { 
-                timeIst: '11:45 PM IST', 
-                timeUtc: '18:15 UTC', 
-                timeCentral: '01:15 PM CDT', 
-                dateLabel: '27 Sep',
-                title: 'Final Submission Deadline & Virtual Closing Session', 
-                desc: 'Mandatory submission cutoff for GitHub repository links, documentation, and demo recordings. Official closing remarks and briefing on the post-hackathon evaluation phase.', 
-                highlight: true 
+                title: 'Phase 4: Vote of Thanks & Post-Event Announcements', 
+                desc: 'Formal vote of thanks to all experts and organizers, distribution of session certificates info, and post-event roadmap briefing.', 
+                highlight: false 
               }
             ].map((sched, idx) => (
               <div key={idx} style={{
@@ -1955,21 +1932,21 @@ const HackathonSections = () => {
                   <div style={{
                     background: sched.highlight ? 'rgba(0,220,180,0.12)' : 'rgba(0,0,0,0.35)',
                     border: `1px solid ${sched.highlight ? 'rgba(0,220,180,0.35)' : 'rgba(255,255,255,0.08)'}`,
-                    padding: '0.65rem 0.95rem', borderRadius: '0.85rem',
-                    minWidth: '190px', display: 'flex', flexDirection: 'column', gap: '0.3rem',
+                    padding: '0.7rem 0.95rem', borderRadius: '0.85rem',
+                    minWidth: '235px', display: 'flex', flexDirection: 'column', gap: '0.35rem',
                     flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
                   }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.07)', paddingBottom: '0.25rem' }}>
-                      <span style={{ fontSize: '0.68rem', color: '#00dcb4', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em' }}>IST (India)</span>
-                      <span style={{ fontSize: '0.86rem', color: '#ffffff', fontWeight: 800 }}>{sched.timeIst}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.07)', paddingBottom: '0.25rem', gap: '0.5rem' }}>
+                      <span style={{ fontSize: '0.66rem', color: '#00dcb4', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', whiteSpace: 'nowrap' }}>Time Zone (IST)</span>
+                      <span style={{ fontSize: '0.82rem', color: '#ffffff', fontWeight: 800, whiteSpace: 'nowrap' }}>{sched.timeIst}</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontSize: '0.66rem', color: '#64b4d2', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>UTC</span>
-                      <span style={{ fontSize: '0.78rem', color: '#cbd5e1', fontWeight: 600 }}>{sched.timeUtc}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+                      <span style={{ fontSize: '0.64rem', color: '#64b4d2', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>Time Zone (UTC)</span>
+                      <span style={{ fontSize: '0.76rem', color: '#cbd5e1', fontWeight: 600, whiteSpace: 'nowrap' }}>{sched.timeUtc}</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontSize: '0.66rem', color: '#d2aa64', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Central (US)</span>
-                      <span style={{ fontSize: '0.78rem', color: '#cbd5e1', fontWeight: 600 }}>{sched.timeCentral}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+                      <span style={{ fontSize: '0.64rem', color: '#d2aa64', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>Time Zone (CDT)</span>
+                      <span style={{ fontSize: '0.76rem', color: '#cbd5e1', fontWeight: 600, whiteSpace: 'nowrap' }}>{sched.timeCentral}</span>
                     </div>
                   </div>
 

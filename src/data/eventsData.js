@@ -441,11 +441,10 @@ export const eventsData = [
       {
         "day": "27 September 2026: Live Virtual Schedule",
         "sessions": [
-          "05:00 PM IST (11:30 UTC / 06:30 AM CDT) - Virtual Opening & Industrial Track Briefing",
-          "05:45 PM IST (12:15 UTC / 07:15 AM CDT) - Keynote Stage & Academic Panel Discussion",
-          "06:45 PM IST (13:15 UTC / 08:15 AM CDT) - Core Development Sprint & Technical Mentorship Sync",
-          "10:00 PM IST (16:30 UTC / 11:30 AM CDT) - Project Presentations & Prototype Demonstrations",
-          "11:45 PM IST (18:15 UTC / 01:15 PM CDT) - Final Submission Deadline & Virtual Closing Session"
+          "04:00 PM – 04:15 PM IST (10:30 – 10:45 UTC / 05:30 – 05:45 AM CDT) - Phase 1: Opening & Welcome Address",
+          "04:15 PM – 10:00 PM IST (10:45 – 16:30 UTC / 05:45 – 11:30 AM CDT) - Phase 2: Expert Keynotes, Technical Discussions & Idea Presentations",
+          "10:00 PM – 10:40 PM IST (16:30 – 17:10 UTC / 11:30 AM – 12:10 PM CDT) - Phase 3: Closing Remarks & Summary of Key Takeaways",
+          "10:40 PM – 11:00 PM IST (17:10 – 17:30 UTC / 12:10 – 12:30 PM CDT) - Phase 4: Vote of Thanks & Post-Event Announcements"
         ]
       }
     ],
