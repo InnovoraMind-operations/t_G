@@ -416,22 +416,6 @@ const HackathonSections = () => {
   // ── International Judges Panel ─────────────────────────────
   const judgesList = [
     {
-      name: 'Mrugendra Madalagi',
-      role: 'Solution Architect',
-      org: 'JPMC',
-      location: 'USA',
-      evaluationTrack: 'Cloud Architecture, Microservices, Enterprise Solutions & AI-Assisted Development',
-      focus: 'Java Architecture, Microservices, Cloud Native (AWS), Event-Driven Systems & Cloud Modernization',
-      bio: 'Mrugendra Madalagi is a seasoned Java Architect with over 20 years of experience in designing and delivering large-scale enterprise applications across banking, capital markets, telecom, supply chain, and compliance domains. He specializes in Java/J2EE, microservices architecture, cloud-native solutions on AWS, event-driven systems, and API design. Mrugendra has led complex transformations from legacy and mainframe systems to modern cloud-based platforms, leveraging technologies such as Spring Boot, Kafka, Flink, Docker, Kubernetes, and Angular. Currently working as a Java Architect with JPMC (Dallas, USA), he is deeply involved in cloud modernization, AI-assisted development, CI/CD automation, and scalable enterprise solutions. He holds a B.E. in Computer Science and is a Sun Certified Java Professional.',
-      photo: mrugendraPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#64b4d2',
-      glow: 'rgba(100,180,210,0.18)',
-      tags: ['Solution Architect', 'Java/J2EE', 'Cloud Native', 'Microservices'],
-      initials: 'MM'
-    },
-    {
       name: 'MA Carolina Beatriz Barandiaran',
       role: 'Professor, UNICEN | Senior IEEE Member & Award-Winning AI Researcher',
       org: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
@@ -830,6 +814,22 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.2)',
       tags: ['Cybersecurity', 'Information Security', 'Risk Management'],
       initials: 'NS'
+    },
+    {
+      name: 'Mrugendra Madalagi',
+      role: 'Solution Architect',
+      org: 'JPMC',
+      location: 'USA',
+      evaluationTrack: 'Cloud Architecture, Microservices, Enterprise Solutions & AI-Assisted Development',
+      focus: 'Java Architecture, Microservices, Cloud Native (AWS), Event-Driven Systems & Cloud Modernization',
+      bio: 'Mrugendra Madalagi is a seasoned Java Architect with over 20 years of experience in designing and delivering large-scale enterprise applications across banking, capital markets, telecom, supply chain, and compliance domains. He specializes in Java/J2EE, microservices architecture, cloud-native solutions on AWS, event-driven systems, and API design. Mrugendra has led complex transformations from legacy and mainframe systems to modern cloud-based platforms, leveraging technologies such as Spring Boot, Kafka, Flink, Docker, Kubernetes, and Angular. Currently working as a Java Architect with JPMC (Dallas, USA), he is deeply involved in cloud modernization, AI-assisted development, CI/CD automation, and scalable enterprise solutions. He holds a B.E. in Computer Science and is a Sun Certified Java Professional.',
+      photo: mrugendraPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Solution Architect', 'Java/J2EE', 'Cloud Native', 'Microservices'],
+      initials: 'MM'
     }
   ];
 
