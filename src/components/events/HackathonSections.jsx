@@ -54,6 +54,7 @@ import prathapPhoto from '../../assets/prathap-raghavan.jpg';
 import rasmiPhoto from '../../assets/rasmi-ranjan-choudhury.jpg';
 import arjunPhoto from '../../assets/arjun-kulshreshtha.jpg';
 import suhanaPhoto from '../../assets/dr-noor-suhana.jpg';
+import ganeshPhoto from '../../assets/ganesh-harke.jpeg';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -372,6 +373,23 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.2)',
       tags: ['AI & Innovation', 'Entrepreneurship in Africa', 'Digital Transformation', 'Economic Opportunities'],
       initials: 'MT'
+    },
+    {
+      name: 'Ganesh Harke',
+      role: 'VP of Technology',
+      org: '',
+      location: 'USA',
+      displayTitle: 'VP of Technology',
+      topic: 'AI Governance, Financial Engineering & Scalable Systems',
+      bio: 'Ganesh Harke is a technology executive with over 18 years of experience driving transformation across financial services and technology through AI, scalable systems, and innovation. He is an IEEE Senior Member and holds a Master of Science degree in Financial Engineering.\n\nHis professional expertise spans AI governance, financial engineering, scalable technology systems, financial services technology, and innovation. Through his extensive experience in technology and financial services, he brings a strong perspective on applying advanced technologies to complex, large-scale systems while considering governance, scalability, and responsible innovation.',
+      photo: ganeshPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['AI Governance', 'Financial Engineering', 'Scalable Systems', 'Financial Technology', 'Innovation'],
+      initials: 'GH'
     }
   ];
 
@@ -1348,7 +1366,7 @@ const HackathonSections = () => {
                   background: `${jdg.color}15`, padding: '0.22rem 0.7rem',
                   borderRadius: '1rem', border: `1px solid ${jdg.color}35`
                 }}>
-                  ★ Technical Jury Member
+                  ★ {jdg.badge || 'Technical Jury Member'}
                 </div>
               </div>
 
@@ -1361,7 +1379,7 @@ const HackathonSections = () => {
                   {jdg.role}
                 </div>
                 <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
-                  {jdg.org} <span style={{ opacity: 0.6 }}>•</span> {jdg.location}
+                  {[jdg.org, jdg.location].filter(Boolean).join(' • ')}
                 </div>
               </div>
 
@@ -1379,7 +1397,7 @@ const HackathonSections = () => {
                 <Scale size={16} style={{ color: jdg.color, flexShrink: 0 }} />
                 <div>
                   <div style={{ fontSize: '0.68rem', textTransform: 'uppercase', color: jdg.color, fontWeight: 800, letterSpacing: '0.07em' }}>
-                    Assigned Evaluation Track
+                    {jdg.sessionLabel || 'Assigned Evaluation Track'}
                   </div>
                   <div style={{ fontSize: '0.84rem', color: '#ffffff', fontWeight: 700, marginTop: '0.15rem', lineHeight: 1.35 }}>
                     {jdg.evaluationTrack}
@@ -1603,7 +1621,7 @@ const HackathonSections = () => {
                   {spk.role}
                 </div>
                 <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginTop: '0.3rem' }}>
-                  {spk.org} <span style={{ opacity: 0.6 }}>•</span> {spk.location}
+                  {[spk.org, spk.location].filter(Boolean).join(' • ')}
                 </div>
                 {spk.orcid && (
                   <div style={{ marginTop: '0.45rem' }}>
