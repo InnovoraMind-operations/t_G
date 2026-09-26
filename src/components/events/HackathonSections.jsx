@@ -38,6 +38,7 @@ import sriHarshaPhoto from '../../assets/sri-harsha-pushkala.jpg';
 import wiktoriaPhoto from '../../assets/wiktoria-gromowa-cieslik.jpg';
 import ninoPhoto from '../../assets/nino-devidze.jpg';
 import laliPhoto from '../../assets/lali-mikeladze.jpg';
+import nandanSharmaPhoto from '../../assets/nandan-sharma.png';
 import jacoPhoto from '../../assets/jaco-visagie.jpg';
 import rehabPhoto from '../../assets/prof-rehab-hegazy.jpg';
 import nachiketPhoto from '../../assets/nachiket-joshi.jpg';
@@ -796,6 +797,22 @@ const HackathonSections = () => {
       glow: 'rgba(100,180,210,0.18)',
       tags: ['Civil Engineering', 'Project Management', 'Sustainable Infrastructure', 'Regulatory Harmonization'],
       initials: 'JU'
+    },
+    {
+      name: 'Nandan Sharma',
+      role: 'Information Security Leader',
+      org: 'BC Public Service',
+      location: 'Canada',
+      evaluationTrack: 'Cybersecurity, Information Security & Risk Management',
+      focus: 'Information Security, Threat Analysis & Systems Integrity',
+      bio: 'Information Security Leader at BC Public Service, Canada, specializing in cybersecurity, risk management, and systems integrity for large-scale enterprise environments.',
+      photo: nandanSharmaPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#00dcb4',
+      glow: 'rgba(0,220,180,0.2)',
+      tags: ['Cybersecurity', 'Information Security', 'Risk Management'],
+      initials: 'NS'
     }
   ];
 
