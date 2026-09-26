@@ -390,6 +390,23 @@ const HackathonSections = () => {
       glow: 'rgba(210,170,100,0.2)',
       tags: ['AI Governance', 'Financial Engineering', 'Scalable Systems', 'Financial Technology', 'Innovation'],
       initials: 'GH'
+    },
+    {
+      name: 'Mouhssin Ait El Mouden',
+      role: 'Academic Researcher',
+      org: 'Faculty of Letters, Ibn Tofail University, Kenitra',
+      location: 'Morocco',
+      displayTitle: 'Academic Researcher',
+      topic: 'Human-Centric Technology, Socio-Technical Systems & Interdisciplinary Evaluation',
+      bio: 'Academic researcher at the Faculty of Letters, Ibn Tofail University, Kenitra, Morocco. His work focuses on scholarly research methodologies, socio-technological transformation, and interdisciplinary evaluations linking human-centered perspectives with emerging innovation.',
+      photo: mouhssinPhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      confirmed: true,
+      color: '#d2aa64',
+      glow: 'rgba(210,170,100,0.2)',
+      tags: ['Academic Research', 'Digital Humanities', 'Socio-Technical Systems', 'Research Methodology'],
+      initials: 'MM'
     }
   ];
 
@@ -650,22 +667,6 @@ const HackathonSections = () => {
       glow: 'rgba(180,110,210,0.18)',
       tags: ['Enterprise Architecture', 'AI/ML Modernization', 'Multi-Cloud', 'Cloud Strategy'],
       initials: 'MA'
-    },
-    {
-      name: 'Mouhssin Ait El Mouden',
-      role: 'Academic Researcher',
-      org: 'Faculty of Letters, Ibn Tofail University, Kenitra',
-      location: 'Morocco',
-      evaluationTrack: 'Human-Centric Technology, Socio-Technical Systems & Interdisciplinary Evaluation',
-      focus: 'Academic Research, Humanities & Digital Societal Impact, Interdisciplinary Innovation',
-      bio: 'Academic researcher at the Faculty of Letters, Ibn Tofail University, Kenitra, Morocco. His work focuses on scholarly research methodologies, socio-technological transformation, and interdisciplinary evaluations linking human-centered perspectives with emerging innovation.',
-      photo: mouhssinPhoto,
-      photoPosition: 'center top',
-      photoScale: 1.0,
-      color: '#d2aa64',
-      glow: 'rgba(210,170,100,0.18)',
-      tags: ['Academic Research', 'Digital Humanities', 'Socio-Technical Systems', 'Research Methodology'],
-      initials: 'MM'
     },
     {
       name: 'Rasmi Ranjan Choudhury',
