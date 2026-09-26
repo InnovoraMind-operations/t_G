@@ -55,6 +55,7 @@ import rasmiPhoto from '../../assets/rasmi-ranjan-choudhury.jpg';
 import arjunPhoto from '../../assets/arjun-kulshreshtha.jpg';
 import suhanaPhoto from '../../assets/dr-noor-suhana.jpg';
 import ganeshPhoto from '../../assets/ganesh-harke.jpeg';
+import josephinePhoto from '../../assets/josephine-uwineza.png';
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -779,6 +780,22 @@ const HackathonSections = () => {
       glow: 'rgba(0,220,180,0.18)',
       tags: ['Distributed Systems', 'Cloud Computing', 'Cloud Architecture', 'Scalable Systems'],
       initials: 'AR'
+    },
+    {
+      name: 'Josephine Uwineza',
+      role: 'Civil Engineer | Infrastructure Project Management Professional',
+      org: 'Multinational Transport Infrastructure & Sustainable Development',
+      location: 'Rwanda',
+      evaluationTrack: 'Smart Infrastructure, Sustainable Transportation & Digital Interoperability',
+      focus: 'Infrastructure Project Management, Regulatory Harmonization, Technical Interoperability, Sustainable Transportation & Multinational Infrastructure Systems',
+      bio: 'Josephine Uwineza is a Civil Engineer and Infrastructure Project Management Professional with experience in multinational transport infrastructure and project coordination. Her professional interests include regulatory harmonization, institutional coordination, technical interoperability and sustainable infrastructure development. Her ongoing MSc research examines regulatory harmonization in multinational projects, using the Dar es Salaam–Isaka–Kigali/Keza–Musongati Railway Project as a case study. Her expertise provides a practical perspective on the development of smarter, digitally connected and sustainable cross-border infrastructure systems.',
+      photo: josephinePhoto,
+      photoPosition: 'center top',
+      photoScale: 1.0,
+      color: '#64b4d2',
+      glow: 'rgba(100,180,210,0.18)',
+      tags: ['Civil Engineering', 'Project Management', 'Sustainable Infrastructure', 'Regulatory Harmonization'],
+      initials: 'JU'
     }
   ];
 
