@@ -81,6 +81,22 @@ const hackathonGlimpses = [
   glimpse11, glimpse12, glimpse13, glimpse14, glimpse15
 ];
 
+const hackathonVideos = [
+  "1suqOybvPlY2mAWcgxvEZB6m5ogSK6q_Q",
+  "1yLw2SLOo4hzYf6zPr2S_lH1173xqEeWb",
+  "1piuKqn9cDgLSbzRxt8C-SH7Kn8RtxTES",
+  "1eSJsRvGOIhD-kX7mB5kLtNbxWus79ASy",
+  "1-TQo_cuoiKVldGn-Lu3CEGGVacF6NlQQ",
+  "1rBRanHHfl3JiGY7rXcVS06stPXoNJfld",
+  "1nhpqJ9hQRrXbrdjXnqnyQJeJ9hhbV-4L",
+  "1GZExkyCmXHBa9wJkhu5zK90R-GS1Lx_k",
+  "1zODpAzXDJ8K07le3skLoPxB568TCu2c0",
+  "1FouzqQHGlGZ3y1Ls-cFoHqfYGkzH3730",
+  "1USuLqvxQfRCTd25Gn-xH6JhAnbRcCgLB"
+];
+
+
+
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
 
@@ -2571,6 +2587,61 @@ const HackathonSections = () => {
                 letterSpacing: '0.05em'
               }}>
                 TECHRYON GLOBAL
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── HACKATHON VIDEO GLIMPSES ── */}
+      <section id="video-glimpses" style={{ marginTop: '3rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
+          <Camera size={18} style={{ color: '#00dcb4' }} />
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Hackathon Video Glimpses</h3>
+        </div>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '1.5rem'
+        }}>
+          {hackathonVideos.map((driveId, idx) => (
+            <div key={idx} style={{
+              background: 'rgba(20, 25, 35, 0.6)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(100,180,210,0.2)',
+              borderTop: '1px solid rgba(255,255,255,0.15)',
+              borderLeft: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: '0.85rem',
+              padding: '0.75rem',
+              position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+            }}>
+              <div style={{
+                width: '100%',
+                aspectRatio: '16/9',
+                borderRadius: '0.4rem',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.5)'
+              }}>
+                <iframe
+                  src={`https://drive.google.com/file/d/${driveId}/preview`}
+                  allow="autoplay"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    display: 'block'
+                  }}
+                />
               </div>
             </div>
           ))}
