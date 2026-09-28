@@ -2587,58 +2587,6 @@ const HackathonSections = () => {
         <h4 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#d2aa64', marginBottom: '1rem', marginTop: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           Industrial Hackathon
         </h4>
-
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '1.5rem',
-        }}>
-          {[
-            "omZ-zgdqfZs", "3vpZu0ercgU", "baVJ9DeruIk", "gKQJkUzswbM", 
-            "JJi6AOoUeyo", "1v6Af8sets4", "7VjSKwS64kA", "FkSpe5RM2do", 
-            "gEqJ5aFtkys", "tXHblHSdSPM", "UJCkucoEiI4"
-          ].map((videoId, idx) => (
-            <div key={idx} style={{
-              background: 'rgba(20, 25, 35, 0.6)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '0.85rem',
-              padding: '0.75rem',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.borderColor = 'rgba(180,110,210,0.4)';
-              e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 12px 40px rgba(180,110,210,0.15)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
-              e.currentTarget.style.transform = 'none';
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
-            }}
-            >
-              <div style={{
-                width: '100%',
-                aspectRatio: '16/9',
-                borderRadius: '0.4rem',
-                overflow: 'hidden',
-                background: '#000'
-              }}>
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src={`https://www.youtube.com/embed/${videoId}`} 
-                  title={`Digital Proceeding Video ${idx + 1}`} 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                  style={{ display: 'block' }}
-                ></iframe>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* ── FREQUENTLY ASKED QUESTIONS ── */}
