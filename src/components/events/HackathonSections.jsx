@@ -6,7 +6,7 @@ import {
   GraduationCap, Lightbulb, ShieldCheck, HeartPulse, Building, 
   BookOpen, Mic, Network, HelpCircle, ChevronDown, ChevronUp, Briefcase,
   X, Cpu, Zap, Layers, Factory, Check, ExternalLink,
-  Clock, Scale, ShieldAlert, Phone, Info, Shield, CheckSquare, FileCheck
+  Clock, Scale, ShieldAlert, Phone, Info, Shield, CheckSquare, FileCheck, Camera
 } from 'lucide-react';
 
 import emeraldPhoto from '../../assets/emerald.png';
@@ -58,6 +58,28 @@ import suhanaPhoto from '../../assets/dr-noor-suhana.jpg';
 import ganeshPhoto from '../../assets/ganesh-harke.jpeg';
 import josephinePhoto from '../../assets/josephine-uwineza.png';
 import mrugendraPhoto from '../../assets/mrugendra-madalagi.png';
+
+import glimpse1 from '../../assets/Screenshot 2026-09-27 162339.png';
+import glimpse2 from '../../assets/Screenshot 2026-09-27 162417.png';
+import glimpse3 from '../../assets/Screenshot 2026-09-27 164546.png';
+import glimpse4 from '../../assets/Screenshot 2026-09-27 164554.png';
+import glimpse5 from '../../assets/Screenshot 2026-09-27 165025.png';
+import glimpse6 from '../../assets/Screenshot 2026-09-27 165125.png';
+import glimpse7 from '../../assets/Screenshot 2026-09-27 173248.png';
+import glimpse8 from '../../assets/Screenshot 2026-09-27 175444.png';
+import glimpse9 from '../../assets/Screenshot 2026-09-27 181154.png';
+import glimpse10 from '../../assets/Screenshot 2026-09-27 181207.png';
+import glimpse11 from '../../assets/Screenshot 2026-09-27 185133.png';
+import glimpse12 from '../../assets/Screenshot 2026-09-27 191114.png';
+import glimpse13 from '../../assets/Screenshot 2026-09-27 200404.png';
+import glimpse14 from '../../assets/Screenshot 2026-09-27 202044.png';
+import glimpse15 from '../../assets/Screenshot 2026-09-27 202345.png';
+
+const hackathonGlimpses = [
+  glimpse1, glimpse2, glimpse3, glimpse4, glimpse5,
+  glimpse6, glimpse7, glimpse8, glimpse9, glimpse10,
+  glimpse11, glimpse12, glimpse13, glimpse14, glimpse15
+];
 
 // Official Google Form Registration URL
 const GOOGLE_FORM_URL = "https://forms.gle/eYiK9RcDKcwm5Fvt5";
@@ -817,18 +839,18 @@ const HackathonSections = () => {
     },
     {
       name: 'Mrugendra Madalagi',
-      role: 'Solution Architect',
+      role: 'Technical Architect',
       org: 'JPMC',
       location: 'USA',
       evaluationTrack: 'Cloud Architecture, Microservices, Enterprise Solutions & AI-Assisted Development',
       focus: 'Java Architecture, Microservices, Cloud Native (AWS), Event-Driven Systems & Cloud Modernization',
-      bio: 'Mrugendra Madalagi is a seasoned Java Architect with over 20 years of experience in designing and delivering large-scale enterprise applications across banking, capital markets, telecom, supply chain, and compliance domains. He specializes in Java/J2EE, microservices architecture, cloud-native solutions on AWS, event-driven systems, and API design. Mrugendra has led complex transformations from legacy and mainframe systems to modern cloud-based platforms, leveraging technologies such as Spring Boot, Kafka, Flink, Docker, Kubernetes, and Angular. Currently working as a Java Architect with JPMC (Dallas, USA), he is deeply involved in cloud modernization, AI-assisted development, CI/CD automation, and scalable enterprise solutions. He holds a B.E. in Computer Science and is a Sun Certified Java Professional.',
+      bio: 'Skilled Technical Architect in modern software design.',
       photo: mrugendraPhoto,
       photoPosition: 'center top',
       photoScale: 1.0,
       color: '#64b4d2',
       glow: 'rgba(100,180,210,0.18)',
-      tags: ['Solution Architect', 'Java/J2EE', 'Cloud Native', 'Microservices'],
+      tags: ['Technical Architect', 'Java/J2EE', 'Cloud Native', 'Microservices'],
       initials: 'MM'
     }
   ];
@@ -2464,6 +2486,155 @@ const HackathonSections = () => {
                 }}>
                   <Building size={14} style={{ color: '#d2aa64' }} /> {member.org}
                 </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── HACKATHON GLIMPSES ── */}
+      <section id="glimpses">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
+          <Camera size={18} style={{ color: '#00dcb4' }} />
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Hackathon Glimpses</h3>
+        </div>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '1.5rem'
+        }}>
+          {hackathonGlimpses.map((imgSrc, idx) => (
+            <div key={idx} style={{
+              background: 'rgba(20, 25, 35, 0.6)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(100,180,210,0.2)',
+              borderTop: '1px solid rgba(255,255,255,0.15)',
+              borderLeft: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: '0.85rem',
+              padding: '0.75rem',
+              paddingBottom: '2.5rem', // Polaroid style bottom
+              position: 'relative',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              cursor: 'pointer'
+            }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-10px) rotate(-1deg) scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(100, 180, 210, 0.25), 0 0 20px rgba(100, 180, 210, 0.1) inset';
+                e.currentTarget.style.borderColor = 'rgba(100, 180, 210, 0.6)';
+                const img = e.currentTarget.querySelector('img');
+                if (img) img.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'none';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
+                e.currentTarget.style.borderColor = 'rgba(100,180,210,0.2)';
+                const img = e.currentTarget.querySelector('img');
+                if (img) img.style.transform = 'none';
+              }}>
+              <div style={{
+                width: '100%',
+                aspectRatio: '4/3',
+                borderRadius: '0.4rem',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.5)'
+              }}>
+                <img
+                  src={imgSrc}
+                  alt={`Hackathon Glimpse ${idx + 1}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    display: 'block',
+                    transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                  }}
+                />
+              </div>
+              <div style={{
+                position: 'absolute',
+                bottom: '0.75rem',
+                width: '100%',
+                textAlign: 'center',
+                color: 'rgba(255,255,255,0.4)',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+                letterSpacing: '0.05em'
+              }}>
+                TECHRYON GLOBAL
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── DIGITAL PROCEEDING ── */}
+      <section id="digital-proceeding">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
+          <Globe size={18} style={{ color: '#b46ed2' }} />
+          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Digital Proceeding</h3>
+        </div>
+        
+        <h4 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#d2aa64', marginBottom: '1rem', marginTop: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          Industrial Hackathon
+        </h4>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '1.5rem',
+        }}>
+          {[
+            "omZ-zgdqfZs", "3vpZu0ercgU", "baVJ9DeruIk", "gKQJkUzswbM", 
+            "JJi6AOoUeyo", "1v6Af8sets4", "7VjSKwS64kA", "FkSpe5RM2do", 
+            "gEqJ5aFtkys", "tXHblHSdSPM", "UJCkucoEiI4"
+          ].map((videoId, idx) => (
+            <div key={idx} style={{
+              background: 'rgba(20, 25, 35, 0.6)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '0.85rem',
+              padding: '0.75rem',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.borderColor = 'rgba(180,110,210,0.4)';
+              e.currentTarget.style.transform = 'translateY(-3px)';
+              e.currentTarget.style.boxShadow = '0 12px 40px rgba(180,110,210,0.15)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+              e.currentTarget.style.transform = 'none';
+              e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.4)';
+            }}
+            >
+              <div style={{
+                width: '100%',
+                aspectRatio: '16/9',
+                borderRadius: '0.4rem',
+                overflow: 'hidden',
+                background: '#000'
+              }}>
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src={`https://www.youtube.com/embed/${videoId}`} 
+                  title={`Digital Proceeding Video ${idx + 1}`} 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                  style={{ display: 'block' }}
+                ></iframe>
               </div>
             </div>
           ))}
