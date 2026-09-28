@@ -76,7 +76,7 @@ import glimpse14 from '../../assets/Screenshot 2026-09-27 202044.png';
 import glimpse15 from '../../assets/Screenshot 2026-09-27 202345.png';
 
 const hackathonGlimpses = [
-  glimpse1, glimpse2, glimpse3, glimpse4, glimpse5,
+  glimpse1, glimpse2, glimpse4, glimpse5,
   glimpse6, glimpse7, glimpse8, glimpse9, glimpse10,
   glimpse11, glimpse12, glimpse13, glimpse14, glimpse15
 ];
