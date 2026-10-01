@@ -578,19 +578,19 @@ export const eventsData = [
   {
     "id": "evt_014",
     "slug": "industrial-hackathon-nov-2026",
-    "title": "TechryonGlobal Industrial Hackathon 2026: Autonomous Systems, Smart Manufacturing & Industrial AI",
+    "title": "TechryonGlobal Industrial Hackathon 2026: Physical AI, Humanoid Robotics & Agentic Manufacturing",
     "format": "Online Virtual Hackathon (Worldwide)",
     "location": "Virtual (Worldwide)",
     "date": "27 November 2026",
     "registrationDeadline": "25 November 2026",
     "category": "Technical Summit",
-    "tags": ["#IndustrialHackathon", "#AutonomousSystems", "#Industry5.0", "#SmartManufacturing", "#IndustrialAI", "#DigitalTwins"],
-    "overview": "The TechryonGlobal Industrial Hackathon 2026 (Winter Edition) is an elite global virtual technical innovation competition. Convening developers, research scholars, robotics engineers, and enterprise architects worldwide, the competition focuses on Autonomous Factory Automation, Cyber-Physical Systems, Predictive Zero-Downtime Maintenance, and Industrial IoT. Teams build verified production-ready prototypes evaluated by an international academic and industrial jury against structured technical rubrics.",
+    "tags": ["#PhysicalAI", "#HumanoidRobotics", "#AgenticAI", "#Industry5.0", "#DigitalTwins", "#SmartManufacturing"],
+    "overview": "The TechryonGlobal Industrial Hackathon 2026 (Winter Edition) is an elite global virtual technical innovation competition. Convening developers, research scholars, robotics engineers, and enterprise architects worldwide, the competition focuses on Physical AI, Humanoid Robotics in Manufacturing, Agentic AI Systems, and Generative Digital Twins. Teams build verified production-ready prototypes evaluated by an international academic and industrial jury against structured technical rubrics.",
     "themes": [
-      "Autonomous Factory Automation & Cyber-Physical Systems: High-precision cobot workflows, PLC integration, and autonomous assembly line robotics.",
-      "Industrial AI & Edge Predictive Maintenance: On-device vibration and acoustic telemetry, thermal anomaly detection, and zero-downtime manufacturing.",
-      "Digital Twins & Resilient Supply Chain Optimization: Low-latency 3D simulation mirrors, dynamic warehouse logistics, and predictive energy modeling.",
-      "Operational Technology (OT) Cybersecurity & SCADA Resilience: Zero-trust micro-segmentation, air-gapped industrial defense, and cryptographic device attestation."
+      "Physical AI & Humanoid Robotics in Manufacturing: Embodied AI models, vision-language-action (VLA) architectures, and bipedal/cobot precision manipulation.",
+      "Agentic Industrial AI & Autonomous Edge Controllers: Autonomous multi-agent coordination, edge reasoning models, and self-healing assembly line pipelines.",
+      "Generative Digital Twins & Spatial Intelligence: NVIDIA Omniverse/sim-to-real transfer, synthetic industrial data generation, and real-time 3D telemetry.",
+      "Operational Technology (OT) Cybersecurity & Zero-Trust SCADA: Hardening autonomous robotics infrastructure, air-gapped security, and cryptographic device attestation."
     ],
     "agenda": [
       {

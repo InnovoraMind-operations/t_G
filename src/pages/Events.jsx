@@ -39,19 +39,18 @@ const Events = () => {
     {
       id: 'evt_014',
       slug: 'industrial-hackathon-nov-2026',
-      title: 'TechryonGlobal Industrial Hackathon 2026: Autonomous Systems, Smart Manufacturing & Industrial AI',
+      title: 'TechryonGlobal Industrial Hackathon 2026: Physical AI, Humanoid Robotics & Agentic Manufacturing',
       date: '27 November 2026',
       dateShort: { month: 'NOV', day: '27' },
       deadline: '25 November 2026',
       format: 'Online Virtual Hackathon (Worldwide)',
       duration: '24 Hours Online',
       teamSize: '1–5 Members',
-      price: '100% Free / Open Global Access',
-      theme: 'Autonomous Systems, Edge AI, Digital Twins & Smart Factory Automation',
+      theme: 'Physical AI, Humanoid Robotics, Agentic AI Systems & Industrial Digital Twins',
       accent: 'rgba(0,240,255,0.85)',
       glow: 'rgba(0,240,255,0.18)',
-      description: 'A premier top-class international virtual industrial hackathon. Build next-generation autonomous manufacturing, cyber-physical robotics, predictive edge intelligence, and resilient digital twin solutions evaluated by an international academic and industrial jury.',
-      tags: ['#IndustrialHackathon', '#AutonomousSystems', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#DigitalTwins'],
+      description: 'A premier global industrial hackathon uniting international innovators. Build next-generation Physical AI architectures, humanoid robotics manipulation models, multi-agent autonomous factory workflows, and real-time digital twins evaluated by international industry judges and academic leaders.',
+      tags: ['#PhysicalAI', '#HumanoidRobotics', '#AgenticAI', '#Industry5.0', '#DigitalTwins', '#SmartManufacturing'],
     },
   ];
   const pastEvents = [
