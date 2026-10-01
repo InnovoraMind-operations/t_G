@@ -21,6 +21,7 @@ const visualMap = {
   "evt_011": { icon: ShieldCheck, accent: 'rgba(220,60,60,0.85)', glow: 'rgba(220,60,60,0.18)' },
   "evt_012": { icon: Brain, accent: 'rgba(0,220,180,0.85)', glow: 'rgba(0,220,180,0.18)' },
   "evt_013": { icon: Globe, accent: 'rgba(100,180,210,0.85)', glow: 'rgba(100,180,210,0.18)' },
+  "evt_014": { icon: Brain, accent: 'rgba(0,240,255,0.85)', glow: 'rgba(0,240,255,0.18)' },
 };
 
 const categoryStyle = {
@@ -34,11 +35,29 @@ const Events = () => {
   const navigate = useNavigate();
 
   const filters = ['All', 'Technical Summit', 'Technical Conference'];
-  const upcomingEvents = [];
+  const upcomingEvents = [
+    {
+      id: 'evt_014',
+      slug: 'industrial-hackathon-nov-2026',
+      title: 'TechryonGlobal Industrial Hackathon 2026: Autonomous Systems, Smart Manufacturing & Industrial AI',
+      date: '27 November 2026',
+      dateShort: { month: 'NOV', day: '27' },
+      deadline: '25 November 2026',
+      format: 'Online Virtual Hackathon (Worldwide)',
+      duration: '24 Hours Online',
+      teamSize: '1–5 Members',
+      price: '100% Free / Open Global Access',
+      theme: 'Autonomous Systems, Edge AI, Digital Twins & Smart Factory Automation',
+      accent: 'rgba(0,240,255,0.85)',
+      glow: 'rgba(0,240,255,0.18)',
+      description: 'A premier top-class international virtual industrial hackathon. Build next-generation autonomous manufacturing, cyber-physical robotics, predictive edge intelligence, and resilient digital twin solutions evaluated by an international academic and industrial jury.',
+      tags: ['#IndustrialHackathon', '#AutonomousSystems', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#DigitalTwins'],
+    },
+  ];
   const pastEvents = [
     eventsData.find(e => e.id === 'evt_012'),
     eventsData.find(e => e.id === 'evt_013'),
-    ...eventsData.filter(e => e.id !== 'evt_012' && e.id !== 'evt_013'),
+    ...eventsData.filter(e => e.id !== 'evt_012' && e.id !== 'evt_013' && e.id !== 'evt_014'),
   ].filter(Boolean);
   const filtered = activeFilter === 'All' ? pastEvents : pastEvents.filter(e => e.category === activeFilter);
 
@@ -370,6 +389,20 @@ const UpcomingEventCard = ({ event, idx, onLearnMore }) => {
           <CalendarDays size={14} style={{ color: event.accent, flexShrink: 0 }} />
           <span style={{ fontSize: '0.83rem', color: '#b0a090' }}>{event.date}</span>
         </div>
+        {event.deadline && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '0.74rem', fontWeight: 700, color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              Registration Deadline:
+            </span>
+            <span style={{ 
+              fontSize: '0.78rem', fontWeight: 700, color: '#fbbf24', 
+              background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.3)',
+              padding: '0.15rem 0.6rem', borderRadius: '1rem' 
+            }}>
+              {event.deadline}
+            </span>
+          </div>
+        )}
         {event.location && event.location !== event.format && !(event.location === 'Virtual' && event.format.includes('Virtual')) && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <MapPin size={14} style={{ color: event.accent, flexShrink: 0 }} />

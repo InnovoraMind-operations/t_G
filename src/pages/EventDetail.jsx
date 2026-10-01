@@ -26,6 +26,7 @@ const visualMap = {
   "evt_011": { icon: ShieldCheck,accent: 'rgba(220,60,60,0.85)',   glow: 'rgba(220,60,60,0.18)' },
   "evt_012": { icon: Brain,      accent: 'rgba(0,220,180,0.85)',   glow: 'rgba(0,220,180,0.18)' },
   "evt_013": { icon: Globe,      accent: 'rgba(100,180,210,0.85)', glow: 'rgba(100,180,210,0.18)' },
+  "evt_014": { icon: Brain,      accent: 'rgba(0,240,255,0.85)',   glow: 'rgba(0,240,255,0.18)' },
 };
 
 const categoryStyle = {

@@ -574,5 +574,41 @@ export const eventsData = [
     "agenda": [],
     "speakers": [],
     "pricing": []
+  },
+  {
+    "id": "evt_014",
+    "slug": "industrial-hackathon-nov-2026",
+    "title": "TechryonGlobal Industrial Hackathon 2026: Autonomous Systems, Smart Manufacturing & Industrial AI",
+    "format": "Online Virtual Hackathon (Worldwide)",
+    "location": "Virtual (Worldwide)",
+    "date": "27 November 2026",
+    "registrationDeadline": "25 November 2026",
+    "category": "Technical Summit",
+    "tags": ["#IndustrialHackathon", "#AutonomousSystems", "#Industry5.0", "#SmartManufacturing", "#IndustrialAI", "#DigitalTwins"],
+    "overview": "The TechryonGlobal Industrial Hackathon 2026 (Winter Edition) is an elite global virtual technical innovation competition. Convening developers, research scholars, robotics engineers, and enterprise architects worldwide, the competition focuses on Autonomous Factory Automation, Cyber-Physical Systems, Predictive Zero-Downtime Maintenance, and Industrial IoT. Teams build verified production-ready prototypes evaluated by an international academic and industrial jury against structured technical rubrics.",
+    "themes": [
+      "Autonomous Factory Automation & Cyber-Physical Systems: High-precision cobot workflows, PLC integration, and autonomous assembly line robotics.",
+      "Industrial AI & Edge Predictive Maintenance: On-device vibration and acoustic telemetry, thermal anomaly detection, and zero-downtime manufacturing.",
+      "Digital Twins & Resilient Supply Chain Optimization: Low-latency 3D simulation mirrors, dynamic warehouse logistics, and predictive energy modeling.",
+      "Operational Technology (OT) Cybersecurity & SCADA Resilience: Zero-trust micro-segmentation, air-gapped industrial defense, and cryptographic device attestation."
+    ],
+    "agenda": [
+      {
+        "day": "27 November 2026: Official 24-Hour Virtual Hackathon Schedule",
+        "sessions": [
+          "09:00 AM – 09:30 AM IST (03:30 – 04:00 UTC) - Phase 1: Global Keynote Address & Welcome Ceremony",
+          "09:30 AM – 10:00 AM IST (04:00 – 04:30 UTC) - Phase 1: Problem Statement Briefing & Technical Rules",
+          "10:00 AM IST (04:30 UTC) - Phase 2: Hackathon Clock Starts & Live Breakouts Open",
+          "02:00 PM – 03:00 PM IST (08:30 – 09:30 UTC) - Phase 2: Checkpoint 1 - Architecture & Git Repository Setup",
+          "06:00 PM – 08:00 PM IST (12:30 – 14:30 UTC) - Phase 2: International Jury & Industry Mentorship Office Hours",
+          "10:00 PM – 11:00 PM IST (16:30 – 17:30 UTC) - Phase 2: Mid-Hack Progress Review & Technical Validation",
+          "08:00 AM IST (28 Nov / 02:30 UTC) - Phase 3: Code Freeze & Final Project Submissions Locked",
+          "10:00 AM – 01:00 PM IST (28 Nov / 04:30 – 07:30 UTC) - Phase 4: Finalist Live Pitch Presentations & Jury Q&A",
+          "02:00 PM – 03:00 PM IST (28 Nov / 08:30 – 09:30 UTC) - Phase 4: Grand Valedictory, Award Ceremony & Closing Remarks"
+        ]
+      }
+    ],
+    "speakers": [],
+    "pricing": []
   }
 ];
