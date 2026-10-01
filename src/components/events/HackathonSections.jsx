@@ -2648,18 +2648,6 @@ const HackathonSections = () => {
         </div>
       </section>
 
-      {/* ── DIGITAL PROCEEDING ── */}
-      <section id="digital-proceeding">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>
-          <Globe size={18} style={{ color: '#b46ed2' }} />
-          <h3 style={{ fontSize: '1.15rem', fontWeight: 700, letterSpacing: '0.04em', color: '#e8e8ee' }}>Digital Proceeding</h3>
-        </div>
-        
-        <h4 style={{ fontSize: '1.05rem', fontWeight: 600, color: '#d2aa64', marginBottom: '1rem', marginTop: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-          Industrial Hackathon
-        </h4>
-      </section>
-
       {/* ── FREQUENTLY ASKED QUESTIONS ── */}
       <section id="faq">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.2rem' }}>

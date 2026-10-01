@@ -34,7 +34,12 @@ const Events = () => {
   const navigate = useNavigate();
 
   const filters = ['All', 'Technical Summit', 'Technical Conference'];
-  const pastEvents = eventsData.filter(e => e.id !== 'evt_012');
+  const upcomingEvents = [];
+  const pastEvents = [
+    eventsData.find(e => e.id === 'evt_012'),
+    eventsData.find(e => e.id === 'evt_013'),
+    ...eventsData.filter(e => e.id !== 'evt_012' && e.id !== 'evt_013'),
+  ].filter(Boolean);
   const filtered = activeFilter === 'All' ? pastEvents : pastEvents.filter(e => e.category === activeFilter);
 
   return (
@@ -116,85 +121,32 @@ const Events = () => {
             </p>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-            gap: '1.75rem',
-          }}>
-            {[
-              /*
-              {
-                id: 'evt_008',
-                slug: 'infratech-world-2026',
-                title: 'INFRATECH WORLD 2026: Global Conference on IT Infrastructure & Enterprise Technologies',
-                date: 'June 14, 2026',
-                dateShort: { month: 'JUN', day: '14' },
-                location: 'Virtual',
-                format: 'Virtual',
-                accent: 'rgba(0,220,180,0.85)',
-                glow: 'rgba(0,220,180,0.15)',
-                description: 'International Conference on AI, Computing & Nexus Technologies: bridging the frontiers of artificial intelligence, next-generation computing paradigms, and interconnected technology ecosystems through cutting-edge research presentations and global collaboration.',
-                tags: ['#AI', '#Computing', '#NexusTech', '#Research'],
-              },
-              {
-                id: 'evt_009',
-                slug: 'technexus-global-conference-2026',
-                title: 'TECHNEXUS GLOBAL CONFERENCE 2026 (TGC-26)',
-                date: 'May 17, 2026',
-                dateShort: { month: 'MAY', day: '17' },
-                location: 'Virtual',
-                format: 'Virtual',
-                accent: 'rgba(255,165,0,0.85)',
-                glow: 'rgba(255,165,0,0.15)',
-                description: 'International Conference on Advanced Computing, Systems & Enterprise Technologies: exploring breakthroughs in high-performance computing, scalable enterprise architectures, and intelligent systems that drive digital transformation across industries.',
-                tags: ['#AdvancedComputing', '#Enterprise', '#Systems', '#DigitalTransformation'],
-              },
-              {
-                id: 'evt_010',
-                slug: 'digitcore-conference-2026',
-                title: 'DIGITCORE CONFERENCE 2026 (DCC-26)',
-                date: 'May 24, 2026',
-                dateShort: { month: 'MAY', day: '24' },
-                location: 'Virtual',
-                format: 'Virtual',
-                accent: 'rgba(130,120,220,0.85)',
-                glow: 'rgba(130,120,220,0.15)',
-                description: 'International Conference on Digital Infrastructure & Core Technologies: examining the foundational layers of modern digital ecosystems, from cloud-native architectures and edge computing to data pipeline engineering and resilient infrastructure design.',
-                tags: ['#DigitalInfra', '#CoreTech', '#CloudNative', '#EdgeComputing'],
-              },
-              {
-                id: 'evt_011',
-                slug: 'coretech-summit-2026',
-                title: 'CORETECH SUMMIT 2026',
-                date: 'May 31, 2026',
-                dateShort: { month: 'MAY', day: '31' },
-                location: 'Virtual',
-                format: 'Virtual',
-                accent: 'rgba(220,60,60,0.85)',
-                glow: 'rgba(220,60,60,0.15)',
-                description: 'Global Conference on Core IT Infrastructure & Technologies: a premier summit uniting industry leaders and researchers to address mission-critical IT infrastructure, cybersecurity frameworks, networking innovations, and the future of enterprise technology stacks.',
-                tags: ['#ITInfra', '#CoreIT', '#Cybersecurity', '#Networking'],
-              },
-              */
-              {
-                id: 'evt_012',
-                slug: 'industrial-hackathon-2026',
-                title: 'TechryonGlobal Industrial Hackathon 2026: AI, Industry 5.0 & Smart Manufacturing',
-                date: '27 September 2026',
-                dateShort: { month: 'SEP', day: '27' },
-                format: 'Online Hackathon (Worldwide)',
-                duration: '24–48 Hours Online',
-                teamSize: '1–5 Members',
-                theme: 'Industry 5.0, Smart Manufacturing & Industrial AI',
-                accent: 'rgba(0,220,180,0.85)',
-                glow: 'rgba(0,220,180,0.15)',
-                description: 'A premier global online industrial hackathon. Build next-generation industrial AI, IoT, digital twins, robotics, and smart manufacturing solutions to revolutionize modern industry evaluated by international industry judges and keynote speakers.',
-                tags: ['#IndustrialHackathon', '#Industry5.0', '#SmartManufacturing', '#IndustrialAI', '#IoT', '#DigitalTwins'],
-              },
-            ].map((upcoming, idx) => (
-              <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />
-            ))}
-          </div>
+          {upcomingEvents.length > 0 ? (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+              gap: '1.75rem',
+            }}>
+              {upcomingEvents.map((upcoming, idx) => (
+                <UpcomingEventCard key={idx} event={upcoming} idx={idx} onLearnMore={() => navigate(`/events/${upcoming.slug}`)} />
+              ))}
+            </div>
+          ) : (
+            <div style={{
+              padding: '2.5rem 2rem',
+              borderRadius: '1.25rem',
+              background: 'rgba(255,255,255,0.02)',
+              border: '1px solid rgba(255,255,255,0.06)',
+              textAlign: 'center',
+            }}>
+              <p style={{ fontSize: '1.05rem', color: '#e8e8ee', fontWeight: 600, marginBottom: '0.4rem' }}>
+                Upcoming Events & Hackathons Announced Soon
+              </p>
+              <p style={{ fontSize: '0.88rem', color: '#8a8a9a', maxWidth: '520px', margin: '0 auto', lineHeight: 1.6 }}>
+                Our next season of international technical conferences, hackathons, and symposiums for 2026–2027 will be announced soon.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* ── Past Events Header ── */}
