@@ -1047,8 +1047,8 @@ const HackathonSections = () => {
             <div>
               <div style={{ fontSize: '0.74rem', textTransform: 'uppercase', color: '#64b4d2', fontWeight: 800, letterSpacing: '0.06em' }}>Registered Office</div>
               <div style={{ fontSize: '0.88rem', color: '#ffffff', fontWeight: 600, marginTop: '0.25rem', lineHeight: 1.5 }}>
-                B1-501, Nandan Acura, Laxman Nagar,<br />
-                Baner, Pune – 411045, Maharashtra, India
+                4th floor, Silviana, Opposite to Gera’s Regent Park and Towers,<br />
+                PAN Card Club Road, Baner, Pune, Maharashtra 411069
               </div>
             </div>
             <div>
@@ -2702,9 +2702,8 @@ const HackathonSections = () => {
                 </div>
               </div>
               <p style={{ fontSize: '0.86rem', color: '#cbd5e1', lineHeight: 1.6, margin: 0 }}>
-                B1-501, Nandan Acura, Laxman Nagar,<br />
-                Baner, Pune – 411045,<br />
-                Maharashtra, India
+                4th floor, Silviana, Opposite to Gera’s Regent Park and Towers,<br />
+                PAN Card Club Road, Baner, Pune, Maharashtra 411069
               </p>
             </div>
 

@@ -173,8 +173,8 @@ const Footer = () => {
           <div className="text-left md:text-right" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '300px' }}>
             <h3 style={{ color: t.text, fontSize: '1.1rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Office Address</h3>
             <p style={{ fontSize: '0.9rem', color: t.subtle, lineHeight: '1.6' }}>
-              B1-501, Nandan Acura, Laxman Nagar,<br />
-              Baner Pune -411045
+              4th floor, Silviana, Opposite to Gera’s Regent Park and Towers,<br />
+              PAN Card Club Road, Baner, Pune, Maharashtra 411069
             </p>
           </div>
         </div>

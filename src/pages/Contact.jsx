@@ -34,8 +34,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-secondary leading-relaxed text-lg">
-                      B1-501, Nandan Acura,<br />
-                      Laxman Nagar, Baner Pune -411045
+                      4th floor, Silviana, Opposite to Gera’s Regent Park and Towers,<br />
+                      PAN Card Club Road, Baner, Pune, Maharashtra 411069
                     </p>
                   </div>
                 </div>
