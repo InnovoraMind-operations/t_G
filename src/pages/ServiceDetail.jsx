@@ -1,15 +1,20 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Shield, Globe2, Database, Cpu, Cloud, ArrowLeft, Layers, Code2, ChevronRight, Tag, ArrowRight } from 'lucide-react';
+import { Shield, Globe2, Database, Cpu, Cloud, ArrowLeft, Layers, Code2, ChevronRight, Tag, ArrowRight, Smartphone, Sparkles, CheckCircle2 } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 
 /* ─── Visual Mapping ──────────────────────────────────────── */
 const visualMap = {
-  "srv_web":   { icon: Globe2,   accent: 'rgba(56,189,248,0.85)',  glow: 'rgba(56,189,248,0.14)'  },
-  "srv_data":  { icon: Database, accent: 'rgba(167,139,250,0.85)', glow: 'rgba(167,139,250,0.14)' },
-  "srv_ai":    { icon: Cpu,      accent: 'rgba(96,165,250,0.85)',  glow: 'rgba(96,165,250,0.14)'  },
-  "srv_cloud": { icon: Cloud,    accent: 'rgba(99,179,237,0.85)',  glow: 'rgba(99,179,237,0.14)'  },
-  "srv_cyber": { icon: Shield,   accent: 'rgba(251,113,133,0.85)', glow: 'rgba(251,113,133,0.14)' },
+  "srv_web":             { icon: Globe2,       accent: 'rgba(56,189,248,0.85)',  glow: 'rgba(56,189,248,0.14)'  },
+  "srv_data":            { icon: Database,     accent: 'rgba(167,139,250,0.85)', glow: 'rgba(167,139,250,0.14)' },
+  "srv_ai":              { icon: Cpu,          accent: 'rgba(96,165,250,0.85)',  glow: 'rgba(96,165,250,0.14)'  },
+  "srv_cloud":           { icon: Cloud,        accent: 'rgba(0,220,180,0.85)',   glow: 'rgba(0,220,180,0.14)'   },
+  "srv_cyber":           { icon: Shield,       accent: 'rgba(251,113,133,0.85)', glow: 'rgba(251,113,133,0.14)' },
+  "srv_custom_software": { icon: Code2,        accent: 'rgba(210,170,100,0.85)', glow: 'rgba(210,170,100,0.14)' },
+  "srv_mobile":          { icon: Smartphone,   accent: 'rgba(244,114,182,0.85)', glow: 'rgba(244,114,182,0.14)' },
+  "srv_iot":             { icon: Layers,       accent: 'rgba(45,212,191,0.85)',  glow: 'rgba(45,212,191,0.14)'  },
+  "srv_it_consulting":   { icon: Sparkles,     accent: 'rgba(251,191,36,0.85)',  glow: 'rgba(251,191,36,0.14)'  },
+  "srv_qa":              { icon: CheckCircle2, accent: 'rgba(52,211,153,0.85)',  glow: 'rgba(52,211,153,0.14)'  },
 };
 
 /* ─── Helper: Section Heading ─────────────────────────────── */
@@ -41,7 +46,8 @@ const ServiceDetail = () => {
     );
   }
 
-  const visual      = visualMap[service.id];
+  const fallbackVisual = { icon: Code2, accent: 'rgba(0, 240, 255, 0.85)', glow: 'rgba(0, 240, 255, 0.14)' };
+  const visual      = visualMap[service.id] || fallbackVisual;
   const IconComp    = visual.icon;
   const accentSolid = visual.accent.replace('0.85', '1');
 

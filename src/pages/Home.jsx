@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { 
   ArrowRight, ShieldCheck, Award, Globe2, Database, Cpu, Cloud, 
   Shield, CheckCircle2, Zap, Terminal, Sparkles, Lock, Layers,
-  ChevronRight, ArrowUpRight
+  ChevronRight, ArrowUpRight, Code2, Smartphone
 } from 'lucide-react';
 import tgLogo from '../assets/tg-logo.png';
 import { servicesData } from '../data/servicesData';
@@ -44,6 +44,41 @@ const serviceVisuals = {
     glow: 'rgba(251, 113, 133, 0.16)',
     border: 'rgba(251, 113, 133, 0.25)',
     tag: 'Zero-Trust Defense & Audit',
+  },
+  srv_custom_software: {
+    icon: Code2,
+    accent: '#d2aa64',
+    glow: 'rgba(210, 170, 100, 0.16)',
+    border: 'rgba(210, 170, 100, 0.25)',
+    tag: 'Custom Enterprise Software',
+  },
+  srv_mobile: {
+    icon: Smartphone,
+    accent: '#f472b6',
+    glow: 'rgba(244, 114, 182, 0.16)',
+    border: 'rgba(244, 114, 182, 0.25)',
+    tag: 'Mobile App Engineering',
+  },
+  srv_iot: {
+    icon: Layers,
+    accent: '#2dd4bf',
+    glow: 'rgba(45, 212, 191, 0.16)',
+    border: 'rgba(45, 212, 191, 0.25)',
+    tag: 'IoT & Industrial Automation',
+  },
+  srv_it_consulting: {
+    icon: Sparkles,
+    accent: '#fbbf24',
+    glow: 'rgba(251, 191, 36, 0.16)',
+    border: 'rgba(251, 191, 36, 0.25)',
+    tag: 'IT Consulting & Strategy',
+  },
+  srv_qa: {
+    icon: CheckCircle2,
+    accent: '#34d399',
+    glow: 'rgba(52, 211, 153, 0.16)',
+    border: 'rgba(52, 211, 153, 0.25)',
+    tag: 'QA Automation & SRE',
   },
 };
 
