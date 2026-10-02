@@ -56,7 +56,6 @@ const Events = () => {
   const pastEvents = [
     eventsData.find(e => e.id === 'evt_012'),
     eventsData.find(e => e.id === 'evt_013'),
-    ...eventsData.filter(e => e.id !== 'evt_012' && e.id !== 'evt_013' && e.id !== 'evt_014'),
   ].filter(Boolean);
   const filtered = activeFilter === 'All' ? pastEvents : pastEvents.filter(e => e.category === activeFilter);
 
@@ -88,9 +87,9 @@ const Events = () => {
           border: '1px solid rgba(255,255,255,0.05)', borderRadius: '1.25rem',
         }}>
           {[
-            { label: 'Our Events', value: '7' },
-            { label: 'Global Cities', value: '5' },
-            { label: 'Expert Speakers', value: '150+' },
+            { label: 'Completed Initiatives', value: '2' },
+            { label: 'Global Innovators', value: '500+' },
+            { label: 'Keynote Faculty & Jury', value: '35+' },
           ].map((stat, i) => (
             <div key={i} style={{ flexGrow: 1, minWidth: '120px' }}>
               <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#d2aa64', marginBottom: '0.1rem' }}>{stat.value}</div>
