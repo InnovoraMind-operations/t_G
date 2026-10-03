@@ -105,61 +105,7 @@ const Home = () => {
             Techryon<span className="text-accent">Global</span>
           </h1>
 
-          {/* ── ISO 9001:2015 HIGHLIGHTED BADGE ── */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.85rem',
-            padding: '0.65rem 1.35rem',
-            borderRadius: '2.5rem',
-            background: 'linear-gradient(135deg, rgba(210,170,100,0.18) 0%, rgba(0,240,255,0.08) 100%)',
-            border: '1px solid rgba(210,170,100,0.45)',
-            boxShadow: '0 0 30px rgba(210,170,100,0.15), inset 0 0 15px rgba(210,170,100,0.08)',
-            marginBottom: '1.75rem',
-            backdropFilter: 'blur(12px)',
-          }}>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '28px',
-              height: '28px',
-              borderRadius: '50%',
-              background: 'rgba(210,170,100,0.25)',
-              color: '#d2aa64',
-            }}>
-              <Award size={18} />
-            </div>
-            <div style={{ textAlign: 'left' }}>
-              <span style={{
-                fontSize: '0.82rem',
-                fontWeight: 800,
-                color: '#ffffff',
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                display: 'block'
-              }}>
-                ISO 9001:2015 Certified
-              </span>
-              <span style={{ fontSize: '0.74rem', color: '#d2aa64', fontWeight: 600 }}>
-                Quality Management System (QMS) Accredited Enterprise
-              </span>
-            </div>
-            <span style={{
-              fontSize: '0.68rem',
-              fontWeight: 800,
-              color: '#00f0ff',
-              background: 'rgba(0,240,255,0.12)',
-              border: '1px solid rgba(0,240,255,0.25)',
-              padding: '0.2rem 0.6rem',
-              borderRadius: '1rem',
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
-              marginLeft: '0.25rem'
-            }}>
-              ISO Certified
-            </span>
-          </div>
+
 
           {/* Main Headline */}
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight max-w-4xl" style={{ color: '#e8e8ee' }}>
