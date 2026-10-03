@@ -118,31 +118,7 @@ const Home = () => {
           </p>
         </div>
 
-        {/* ── Trust & Capabilities Bar ── */}
-        <div style={{
-          width: '100%',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))',
-          gap: '1.25rem',
-          marginBottom: '5rem',
-          padding: '1.5rem',
-          background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(255,255,255,0.06)',
-          borderRadius: '1.25rem',
-        }}>
-          {[
-            { label: 'Quality Standard', value: 'ISO 9001:2015', sub: 'Certified QMS Processes' },
-            { label: 'System Reliability', value: '99.99%', sub: 'High-Availability Architectures' },
-            { label: 'Security Model', value: 'Zero-Trust', sub: 'Intelligence-Driven Defense' },
-            { label: 'Delivery Model', value: 'Full-Lifecycle', sub: 'Consulting & Engineering' },
-          ].map((stat, i) => (
-            <div key={i} style={{ textAlign: 'center', padding: '0.5rem' }}>
-              <div style={{ fontSize: '1.45rem', fontWeight: 800, color: '#00f0ff', marginBottom: '0.2rem' }}>{stat.value}</div>
-              <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#e8e8ee', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{stat.label}</div>
-              <div style={{ fontSize: '0.72rem', color: '#8a8a9a', marginTop: '0.15rem' }}>{stat.sub}</div>
-            </div>
-          ))}
-        </div>
+
 
         {/* ── Core Services Section ── */}
         <div style={{ width: '100%', marginBottom: '4rem' }}>
