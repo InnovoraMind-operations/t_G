@@ -95,9 +95,35 @@ const Home = () => {
         {/* ── Top Hero Area ── */}
         <div className="flex flex-col items-center mb-12 mt-4" style={{ maxWidth: '960px' }}>
           
-          {/* Central Logo */}
-          <div className="p-5 rounded-2xl bg-white/10 shadow-[0_0_35px_rgba(0,240,255,0.35)] mb-6">
-            <img src={tgLogo} alt="Techryon Global Logo" style={{ width: 64, height: 64, objectFit: 'contain' }} />
+          {/* Central Logo + ISO badge */}
+          <div style={{ position: 'relative', display: 'inline-flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div className="p-5 rounded-2xl bg-white/10 shadow-[0_0_35px_rgba(0,240,255,0.35)]">
+              <img src={tgLogo} alt="Techryon Global Logo" style={{ width: 64, height: 64, objectFit: 'contain' }} />
+            </div>
+            {/* Small ISO certified pill under logo */}
+            <div style={{
+              marginTop: '0.6rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.3rem',
+              padding: '0.22rem 0.65rem',
+              borderRadius: '999px',
+              background: 'rgba(210,170,100,0.13)',
+              border: '1px solid rgba(210,170,100,0.4)',
+              backdropFilter: 'blur(8px)',
+            }}>
+              <Award size={11} style={{ color: '#d2aa64', flexShrink: 0 }} />
+              <span style={{
+                fontSize: '0.62rem',
+                fontWeight: 700,
+                color: '#d2aa64',
+                letterSpacing: '0.07em',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+              }}>
+                ISO 9001:2015 Certified
+              </span>
+            </div>
           </div>
 
           {/* Company Name */}
